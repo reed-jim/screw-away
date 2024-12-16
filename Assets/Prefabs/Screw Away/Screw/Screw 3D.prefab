@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 5360214704487115019}
   - component: {fileID: 1642428048320838645}
   - component: {fileID: 8469173260896894078}
+  - component: {fileID: 1697211288241465870}
+  - component: {fileID: 2480204014084754691}
+  - component: {fileID: 5059581111959322311}
   - component: {fileID: 4820946931393587339}
   - component: {fileID: 4567112148891185875}
   - component: {fileID: 4437216730832237330}
@@ -76,6 +79,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screwId: 0
+  screwServiceLocator: {fileID: 1697211288241465870}
+--- !u!114 &1697211288241465870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340868010685783976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6679447111a83a408aa26887e959f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screwFaction: {fileID: 2480204014084754691}
+  screwMaterialPropertyBlock: {fileID: 5059581111959322311}
+--- !u!114 &2480204014084754691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340868010685783976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44cc107c97437f344844cd596db266ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screwServiceLocator: {fileID: 1697211288241465870}
+  faction: 0
+--- !u!114 &5059581111959322311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340868010685783976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b0abec1b51aad4c866d9ebd51ff589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorReference: _BaseColor
+  _renderer: {fileID: 4437216730832237330}
 --- !u!135 &4820946931393587339
 SphereCollider:
   m_ObjectHideFlags: 0

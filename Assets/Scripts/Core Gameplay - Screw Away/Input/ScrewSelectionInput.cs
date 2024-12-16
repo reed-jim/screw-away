@@ -24,7 +24,7 @@ public class ScrewSelectionInput : MonoBehaviour
 
             if (screw != null)
             {
-                screw.Loose();
+                screw.Select();
             }
         }
     }

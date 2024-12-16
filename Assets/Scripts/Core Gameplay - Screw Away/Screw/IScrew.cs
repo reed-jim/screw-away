@@ -1,6 +1,12 @@
 using UnityEngine;
+using static GameEnum;
 
 public interface IScrew
 {
-    public void Loose();
+    public GameFaction Faction
+    {
+        get;
+    }
+
+    public void Select();
 }

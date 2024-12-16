@@ -1,4 +1,5 @@
 using UnityEngine;
+using static GameEnum;
 
 public class ScrewPort : MonoBehaviour
 {
@@ -7,15 +8,15 @@ public class ScrewPort : MonoBehaviour
 
     void Awake()
     {
-        BaseScrew.looseScrewEvent += OnScrewLoosed;
+        ScrewBoxManager.looseScrewEvent += OnScrewLoosed;
     }
 
     void OnDestroy()
     {
-        BaseScrew.looseScrewEvent -= OnScrewLoosed;
+        ScrewBoxManager.looseScrewEvent -= OnScrewLoosed;
     }
 
-    private void OnScrewLoosed(string screwId)
+    private void OnScrewLoosed(string screwId, GameFaction faction, Vector3 screwBoxPosition)
     {
         if (screwId == screw.ScrewId)
         {
