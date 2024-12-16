@@ -22,11 +22,14 @@ public class BaseScrew : MonoBehaviour, IScrew
 
     #region EVENT
     public static event Action<string, GameFaction> selectScrewEvent;
+    public static event Action<BaseScrew> addScrewToListEvent;
     #endregion
 
     void Awake()
     {
         ScrewBoxManager.looseScrewEvent += Loose;
+
+        AddScrewToList();
     }
 
     void OnDestroy()
@@ -48,5 +51,10 @@ public class BaseScrew : MonoBehaviour, IScrew
 
             // gameObject.SetActive(false);
         }
+    }
+
+    private void AddScrewToList()
+    {
+        addScrewToListEvent?.Invoke(this);
     }
 }
