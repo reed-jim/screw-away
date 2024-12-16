@@ -1,4 +1,5 @@
 using System;
+using PrimeTween;
 using UnityEngine;
 
 public class BaseScrew : MonoBehaviour, IScrew
@@ -17,6 +18,8 @@ public class BaseScrew : MonoBehaviour, IScrew
     public void Loose()
     {
         looseScrewEvent?.Invoke(screwId);
+
+        gameObject.SetActive(false);
     }
     #endregion
 }
