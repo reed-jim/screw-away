@@ -1,13 +1,16 @@
 using System;
+using System.Threading.Tasks;
 using PrimeTween;
 using UnityEngine;
 using static GameEnum;
 
 public class BaseScrew : MonoBehaviour, IScrew
 {
-    [SerializeField] private string screwId;
+    [SerializeField] protected string screwId;
 
     [SerializeField] private ScrewServiceLocator screwServiceLocator;
+
+    protected Vector3 _initialScale;
 
     public string ScrewId
     {
@@ -30,6 +33,8 @@ public class BaseScrew : MonoBehaviour, IScrew
         ScrewBoxManager.looseScrewEvent += Loose;
 
         AddScrewToList();
+
+        _initialScale = transform.localScale;
     }
 
     void OnDestroy()
@@ -42,19 +47,19 @@ public class BaseScrew : MonoBehaviour, IScrew
         selectScrewEvent?.Invoke(screwId, Faction);
     }
 
-    public void Loose(string screwId, GameFaction faction, Vector3 screwBoxPosition)
+    public virtual void Loose(string screwId, GameFaction faction, ScrewBoxSlot screwBoxSlot)
     {
         if (screwId == this.screwId)
         {
             Tween.Rotation(transform, Quaternion.Euler(new Vector3(-30, 180, 0)), duration: 1f);
-            Tween.Position(transform, screwBoxPosition, duration: 1f);
-
-            // gameObject.SetActive(false);
+            Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 1f);
         }
     }
 
-    private void AddScrewToList()
+    private async void AddScrewToList()
     {
+        await Task.Delay(200);
+
         addScrewToListEvent?.Invoke(this);
     }
 }

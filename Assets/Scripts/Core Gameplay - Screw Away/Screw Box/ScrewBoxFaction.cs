@@ -10,10 +10,18 @@ public class ScrewBoxFaction : MonoBehaviour
     public GameFaction Faction
     {
         get => faction;
+        set => SetFaction(value);
     }
 
     void Awake()
     {
+        screwBoxServiceLocator.screwBoxMaterialPropertyBlock.SetColor(FactionUtility.GetColorForFaction(faction));
+    }
+
+    private void SetFaction(GameFaction faction)
+    {
+        this.faction = faction;
+
         screwBoxServiceLocator.screwBoxMaterialPropertyBlock.SetColor(FactionUtility.GetColorForFaction(faction));
     }
 }

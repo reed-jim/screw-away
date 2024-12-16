@@ -15,33 +15,33 @@ public class GooglePlayGamesSignInManager : MonoBehaviour
 
     void Awake()
     {
-        PlayGamesPlatform.Activate();
+        // PlayGamesPlatform.Activate();
 
-        LoginGooglePlayGames();
+        // LoginGooglePlayGames();
     }
 
     public void LoginGooglePlayGames()
     {
-        PlayGamesPlatform.Instance.Authenticate((success) =>
-        {
-            Debug.Log("SAFERIO - " + success);
+        // PlayGamesPlatform.Instance.Authenticate((success) =>
+        // {
+        //     Debug.Log("SAFERIO - " + success);
 
-            if (success == SignInStatus.Success)
-            {
-                Debug.Log("Login with Google Play games successful.");
+        //     if (success == SignInStatus.Success)
+        //     {
+        //         Debug.Log("Login with Google Play games successful.");
 
-                PlayGamesPlatform.Instance.RequestServerSideAccess(true, async code =>
-                {
-                    Token = code;
+        //         PlayGamesPlatform.Instance.RequestServerSideAccess(true, async code =>
+        //         {
+        //             Token = code;
 
-                    await SignInWithGooglePlayGamesAsync(code);
-                });
-            }
-            else
-            {
-                Error = "Failed to retrieve Google play games authorization code";
-            }
-        });
+        //             await SignInWithGooglePlayGamesAsync(code);
+        //         });
+        //     }
+        //     else
+        //     {
+        //         Error = "Failed to retrieve Google play games authorization code";
+        //     }
+        // });
     }
 
     async Task SignInWithGooglePlayGamesAsync(string authCode)
