@@ -4,7 +4,14 @@ using static GameEnum;
 
 public class ScrewBoxSlot : MonoBehaviour
 {
+    private BaseScrew _screw;
     private bool _isFilled;
+
+    public BaseScrew Screw
+    {
+        get => _screw;
+        set => _screw = value;
+    }
 
     public bool IsFilled
     {
@@ -16,8 +23,10 @@ public class ScrewBoxSlot : MonoBehaviour
     public static event Action<int> screwBoxCompleteEvent;
     #endregion
 
-    public void Fill()
+    public void Fill(BaseScrew screw)
     {
+        _screw = screw;
+
         _isFilled = true;
 
         if (transform.GetSiblingIndex() == 2)

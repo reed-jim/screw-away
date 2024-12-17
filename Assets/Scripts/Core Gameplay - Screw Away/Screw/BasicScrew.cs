@@ -82,7 +82,7 @@ public class BasicScrew : BaseScrew
                     Tween.Scale(transform, 1.5f * _initialScale, duration: 0.5f)
                     .OnComplete(() =>
                     {
-                        screwBoxSlot.Fill();
+                        screwBoxSlot.Fill(this);
 
                         _isDone = true;
                     });
@@ -105,8 +105,6 @@ public class BasicScrew : BaseScrew
             {
                 if (hits[i].collider.GetComponent<IObjectPart>() != null)
                 {
-                    Debug.Log(Vector3.Distance(hits[i].point, transform.position));
-
                     if (Vector3.Distance(hits[i].point, transform.position) < 2)
                     {
                         number++;

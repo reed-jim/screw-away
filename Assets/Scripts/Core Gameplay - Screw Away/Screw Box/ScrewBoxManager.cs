@@ -19,6 +19,7 @@ public class ScrewBoxManager : MonoBehaviour
     {
         BaseScrew.selectScrewEvent += OnScrewSelected;
         ScrewManager.spawnScrewBoxEvent += SpawnScrewBox;
+        ScrewBox.screwBoxCompletedEvent += OnScrewBoxCompleted;
 
         screwBoxs = new ScrewBox[maxScrewBox];
     }
@@ -27,6 +28,7 @@ public class ScrewBoxManager : MonoBehaviour
     {
         BaseScrew.selectScrewEvent -= OnScrewSelected;
         ScrewManager.spawnScrewBoxEvent -= SpawnScrewBox;
+        ScrewBox.screwBoxCompletedEvent -= OnScrewBoxCompleted;
     }
 
     private ScrewBoxSlot CheckAvailableScrewBoxes(GameFaction selectedFaction)
@@ -71,6 +73,19 @@ public class ScrewBoxManager : MonoBehaviour
         }
     }
 
+    private void OnScrewBoxCompleted(ScrewBox screwBox)
+    {
+        for (int i = 0; i < screwBoxs.Length; i++)
+        {
+            if (screwBoxs[i] == screwBox)
+            {
+                screwBoxs[i] = null;
+
+                break;
+            }
+        }
+    }
+
     private void SpawnScrewBox(GameFaction faction)
     {
         ScrewBox screwBox = ObjectPoolingEverything.GetFromPool<ScrewBox>(GameConstants.SCREW_BOX);
@@ -93,6 +108,39 @@ public class ScrewBoxManager : MonoBehaviour
             }
         }
 
-        Tween.LocalPositionX(screwBox.transform, 4 - 2.5f * index, duration: 0.5f);
+        Tween.LocalPositionX(screwBox.transform, 4 - 2.5f * index, duration: 0.5f).OnComplete(() =>
+        {
+            MoveFromScrewPortToScrewBox();
+        });
+    }
+
+    private void MoveFromScrewPortToScrewBox()
+    {
+        for (int i = 0; i < screwBoxs.Length; i++)
+        {
+            if (screwBoxs[i] == null)
+            {
+                continue;
+            }
+
+            for (int j = 0; j < screwPorts.Length; j++)
+            {
+                if (screwPorts[j].IsFilled && screwPorts[j].Screw.Faction == screwBoxs[i].Faction)
+                {
+                    for (int k = 0; k < screwBoxs[i].ScrewBoxSlots.Length; k++)
+                    {
+                        if (!screwBoxs[i].ScrewBoxSlots[k].IsFilled)
+                        {
+                            Tween.Position(screwPorts[j].Screw.transform, screwBoxs[i].ScrewBoxSlots[k].transform.position + new Vector3(0, 0, -0.3f), duration: 0.5f)
+                            .OnComplete(() =>
+                            {
+                                screwPorts[j].IsFilled = false;
+                                screwBoxs[i].ScrewBoxSlots[k].Fill(screwPorts[j].Screw);
+                            });
+                        }
+                    }
+                }
+            }
+        }
     }
 }

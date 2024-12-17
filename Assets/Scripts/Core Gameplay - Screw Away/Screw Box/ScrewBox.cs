@@ -10,6 +10,7 @@ public class ScrewBox : MonoBehaviour
     [SerializeField] private ScrewBoxServiceLocator screwBoxServiceLocator;
 
     #region EVENT
+    public static event Action<ScrewBox> screwBoxCompletedEvent;
     public static event Action spawnNewScrewBoxEvent;
     #endregion
 
@@ -40,6 +41,7 @@ public class ScrewBox : MonoBehaviour
         {
             Tween.LocalPositionX(transform, 10, duration: 0.5f).OnComplete(() =>
             {
+                screwBoxCompletedEvent?.Invoke(this);
                 spawnNewScrewBoxEvent?.Invoke();
             });
         }

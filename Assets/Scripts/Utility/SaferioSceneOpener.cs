@@ -14,7 +14,7 @@ public class SaferioSceneOpener : EditorWindow
     [MenuItem("Tools/Open Scene/Gameplay")]
     public static void OpenGameplayScene()
     {
-        EditorSceneManager.OpenScene("Assets/Scenes/Gameplay.unity");
+        EditorSceneManager.OpenScene("Assets/Scenes/Gameplay - Screw Away.unity");
     }
 }
 #endif

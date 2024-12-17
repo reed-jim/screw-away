@@ -37,9 +37,35 @@ public class ScrewManager : MonoBehaviour
         _totalScrew++;
     }
 
+    private Dictionary<GameFaction, int> GetRemainingScrewByFaction()
+    {
+        Dictionary<GameFaction, int> remainingScrewByFaction = new Dictionary<GameFaction, int>();
+
+        for (int i = 0; i < _screws.Count; i++)
+        {
+            if (_screws[i].IsDone)
+            {
+                continue;
+            }
+
+            if (!remainingScrewByFaction.ContainsKey(_screws[i].Faction))
+            {
+                remainingScrewByFaction.Add(_screws[i].Faction, 1);
+            }
+            else
+            {
+                remainingScrewByFaction[_screws[i].Faction]++;
+            }
+        }
+
+        return remainingScrewByFaction;
+    }
+
     private async void SpawnScrewBox()
     {
         await Task.Delay(1000);
+
+        Debug.Log("TOTAL: " + _totalScrew);
 
         GameFaction? lastFaction = null;
 
@@ -75,7 +101,7 @@ public class ScrewManager : MonoBehaviour
 
     private async void SpawnNewScrewBox()
     {
-        int progress = 0;
+        float progress;
         int doneScrew = 0;
 
         int maxNumberBlockingObject = 0;
@@ -95,7 +121,7 @@ public class ScrewManager : MonoBehaviour
             }
         }
 
-        Debug.Log($"Current Progress: " + (float)doneScrew / _totalScrew);
+        progress = (float)doneScrew / _totalScrew;
 
         LevelDifficulty levelDifficulty = LevelDifficulty.Easy;
 
@@ -109,15 +135,29 @@ public class ScrewManager : MonoBehaviour
             }
         }
 
+        Debug.Log($"Current Progress: " + progress);
+        Debug.Log($"Current Progress: " + levelDifficulty);
+
+        Dictionary<GameFaction, int> remainingScrewByFaction = GetRemainingScrewByFaction();
+
+        foreach (var faction in remainingScrewByFaction.Keys)
+        {
+            Debug.Log($"Faction {faction} - {remainingScrewByFaction[faction]}");
+        }
+
+        bool isFound = false;
+
         for (int i = 0; i < _screws.Count; i++)
         {
-            if (!_screws[i].IsDone)
+            if (!_screws[i].IsDone && remainingScrewByFaction[_screws[i].Faction] >= 3)
             {
                 if (levelDifficulty == LevelDifficulty.Easy)
                 {
                     if (_screws[i].NumberBlockingObjects == 0)
                     {
                         Spawn(_screws[i].Faction);
+
+                        isFound = true;
 
                         break;
                     }
@@ -128,6 +168,8 @@ public class ScrewManager : MonoBehaviour
                     {
                         Spawn(_screws[i].Faction);
 
+                        isFound = true;
+
                         break;
                     }
                 }
@@ -137,11 +179,15 @@ public class ScrewManager : MonoBehaviour
                     {
                         Spawn(_screws[i].Faction);
 
+                        isFound = true;
+
                         break;
                     }
                 }
             }
         }
+
+        Debug.Log("FOUND " + isFound);
 
         void Spawn(GameFaction faction)
         {
