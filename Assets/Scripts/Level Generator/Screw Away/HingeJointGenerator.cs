@@ -41,7 +41,8 @@ public class HingeJointGenerator : EditorWindow
 
                 joint.connectedBody = screw.GetComponent<Rigidbody>();
                 joint.anchor = screw.transform.localPosition;
-                joint.axis = screw.transform.forward;
+                // joint.axis = screw.transform.forward;
+                joint.axis = new Vector3(0, 0, 1);
 
                 screw.Joint = joint;
             }
