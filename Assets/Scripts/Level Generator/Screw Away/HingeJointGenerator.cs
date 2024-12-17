@@ -1,4 +1,5 @@
 #if UNITY_EDITOR
+using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
 
@@ -24,12 +25,27 @@ public class HingeJointGenerator : EditorWindow
         {
             Generate(prefabPath);
         }
+
+        if (GUILayout.Button("Reset Local Rotation"))
+        {
+            ResetLocalRotation(target.transform);
+        }
+    }
+
+    private void GetForwardVector(Transform target)
+    {
+        Debug.Log(target.forward);
+    }
+
+    private void ResetLocalRotation(Transform target)
+    {
+        target.localPosition = Vector3.zero;
+        target.localRotation = Quaternion.Euler(Vector3.zero);
     }
 
     private void Generate(string path)
     {
         GameObject levelPrefab = PrefabUtility.LoadPrefabContents(path);
-
 
         for (int i = 0; i < target.transform.childCount; i++)
         {
@@ -39,18 +55,19 @@ public class HingeJointGenerator : EditorWindow
             {
                 HingeJoint joint = target.AddComponent<HingeJoint>();
 
+                // WARNING: HingeJoint axis gizmos may not update correctly, so be sure to double-check it.
+
                 joint.connectedBody = screw.GetComponent<Rigidbody>();
                 joint.anchor = screw.transform.localPosition;
-                // joint.axis = screw.transform.forward;
-                joint.axis = new Vector3(0, 0, 1);
+
+                // CRUCIAL
+                joint.axis = screw.transform.localRotation * Vector3.forward;
 
                 screw.Joint = joint;
             }
         }
 
-
-
-        EditorUtility.SetDirty(levelPrefab);
+        EditorUtility.SetDirty(target);
 
         PrefabUtility.SaveAsPrefabAsset(levelPrefab, path);
     }

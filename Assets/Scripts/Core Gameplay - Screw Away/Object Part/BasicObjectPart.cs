@@ -64,7 +64,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
     {
         if (_isFree)
         {
-            partRigidbody.AddForce(10f * direction);
+            partRigidbody.AddForce(-20f * direction);
         }
     }
 }

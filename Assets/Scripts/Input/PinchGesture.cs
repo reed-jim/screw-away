@@ -12,6 +12,12 @@ public class PinchGesture : MonoBehaviour
     public static event Action<float> pinchGestureEvent;
     #endregion
 
+    private void Awake()
+    {
+        minZoom = 0.85f * cameraToZoom.orthographicSize;
+        maxZoom = 1.15f * cameraToZoom.orthographicSize;
+    }
+
     private void Update()
     {
         if (Input.touchCount == 2)
