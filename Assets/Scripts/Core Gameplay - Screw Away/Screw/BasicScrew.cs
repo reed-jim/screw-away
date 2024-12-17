@@ -16,7 +16,7 @@ public class BasicScrew : BaseScrew
     {
         if (_isRotating)
         {
-            transform.RotateAround(transform.forward, 0.5f);
+            transform.RotateAround(transform.forward, 0.3f);
         }
     }
 
@@ -32,9 +32,11 @@ public class BasicScrew : BaseScrew
             {
                 _isRotating = false;
 
+                transform.SetParent(screwBoxSlot.transform);
+
                 Tween.Rotation(transform, Quaternion.Euler(new Vector3(-30, 180, 0)), duration: 0.5f);
-                Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 0.5f);
-                Tween.Scale(transform, 0.6f * _initialScale, duration: 0.5f)
+                Tween.LocalPosition(transform, new Vector3(0, 0, -0.3f), duration: 0.5f);
+                Tween.Scale(transform, 1.3f * _initialScale, duration: 0.5f)
                 .OnComplete(() =>
                 {
                     screwBoxSlot.Fill();
@@ -42,6 +44,8 @@ public class BasicScrew : BaseScrew
 
                 transform.SetParent(screwBoxSlot.transform);
             });
+
+            SoundManager.Instance.PlaySoundLoosenScrew();
         }
     }
 }

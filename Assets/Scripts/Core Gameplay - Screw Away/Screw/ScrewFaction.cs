@@ -14,6 +14,8 @@ public class ScrewFaction : MonoBehaviour
 
     void Awake()
     {
+        faction = (GameFaction)Random.Range(0, 4);
+
         screwServiceLocator.screwMaterialPropertyBlock.SetColor(FactionUtility.GetColorForFaction(faction));
     }
 }

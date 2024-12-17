@@ -7,6 +7,7 @@ using static GameEnum;
 public class ScrewBoxManager : MonoBehaviour
 {
     [SerializeField] private ScrewBox[] screwBoxs;
+    [SerializeField] private ScrewBoxSlot[] screwPorts;
 
     [SerializeField] private int maxScrewBox;
 
@@ -32,17 +33,28 @@ public class ScrewBoxManager : MonoBehaviour
     {
         foreach (var screwBox in screwBoxs)
         {
+            if (screwBox == null)
+            {
+                continue;
+            }
+
             if (selectedFaction == screwBox.Faction)
             {
                 foreach (var screwBoxSlot in screwBox.ScrewBoxSlots)
                 {
                     if (!screwBoxSlot.IsFilled)
                     {
-                        screwBoxSlot.IsFilled = true;
-
                         return screwBoxSlot;
                     }
                 }
+            }
+        }
+
+        foreach (var screwPort in screwPorts)
+        {
+            if (!screwPort.IsFilled)
+            {
+                return screwPort;
             }
         }
 
@@ -65,7 +77,7 @@ public class ScrewBoxManager : MonoBehaviour
 
         screwBox.Faction = faction;
 
-        screwBox.transform.position = new Vector3(-10, 9, screwBox.transform.position.z);
+        screwBox.transform.position = new Vector3(-10, 10, screwBox.transform.position.z);
 
         int index = 0;
 
@@ -81,6 +93,6 @@ public class ScrewBoxManager : MonoBehaviour
             }
         }
 
-        Tween.LocalPositionX(screwBox.transform, -4 + 3 * index, duration: 0.5f);
+        Tween.LocalPositionX(screwBox.transform, 4 - 2.5f * index, duration: 0.5f);
     }
 }

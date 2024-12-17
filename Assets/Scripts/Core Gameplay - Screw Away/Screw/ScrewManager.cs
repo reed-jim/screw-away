@@ -52,6 +52,8 @@ public class ScrewManager : MonoBehaviour
                 if (faction != lastFaction)
                 {
                     spawnScrewBoxEvent?.Invoke(faction);
+
+                    break;
                 }
             }
         }
