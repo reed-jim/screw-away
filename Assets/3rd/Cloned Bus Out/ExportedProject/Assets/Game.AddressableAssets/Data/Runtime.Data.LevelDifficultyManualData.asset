@@ -1,0 +1,4245 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a63dc5bf6a85b7ad28c696762b61606, type: 3}
+  m_Name: Runtime.Data.LevelDifficultyManualData
+  m_EditorClassIdentifier:
+  items:
+  - levelIndex: 1
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,160,162,161
+    pgcData:
+    - lppValue: 167
+      gcValue: 161
+    - lppValue: 83
+      gcValue: 162
+    phcData: []
+  - levelIndex: 2
+    pccData:
+    - lppValue: 239
+      ccsValue: 239,224
+    - lppValue: 228
+      ccsValue: 226
+    - lppValue: 203
+      ccsValue: 225
+    - lppValue: 209
+      ccsValue: 228
+    - lppValue: 32
+      ccsValue: 227
+    - lppValue: 63
+      ccsValue: 229
+    - lppValue: 55
+      ccsValue: 230
+    pgcData:
+    - lppValue: 239
+      gcValue: 225
+    - lppValue: 243
+      gcValue: 229
+    - lppValue: 205
+      gcValue: 227
+    - lppValue: 199
+      gcValue: 231
+    phcData: []
+  - levelIndex: 3
+    pccData:
+    - lppValue: 103
+      ccsValue: 96,98,97
+    - lppValue: 72
+      ccsValue: 103
+    - lppValue: 66
+      ccsValue: 94
+    - lppValue: 51
+      ccsValue: 99
+    - lppValue: 32
+      ccsValue: 93
+    - lppValue: 23
+      ccsValue: 92
+    pgcData:
+    - lppValue: 103
+      gcValue: 97
+    - lppValue: 83
+      gcValue: 98
+    - lppValue: 69
+      gcValue: 99
+    - lppValue: 23
+      gcValue: 98
+    phcData: []
+  - levelIndex: 4
+    pccData:
+    - lppValue: 447
+      ccsValue: 447,416,417
+    - lppValue: 420
+      ccsValue: 418
+    - lppValue: 91
+      ccsValue: 419
+    - lppValue: 69
+      ccsValue: 420
+    - lppValue: 76
+      ccsValue: 421
+    - lppValue: 96
+      ccsValue: 422
+    pgcData:
+    - lppValue: 447
+      gcValue: 417
+    - lppValue: 83
+      gcValue: 419
+    - lppValue: 93
+      gcValue: 421
+    - lppValue: 111
+      gcValue: 419
+    phcData: []
+  - levelIndex: 5
+    pccData:
+    - lppValue: 487
+      ccsValue: 487,480
+    - lppValue: 491
+      ccsValue: 481
+    - lppValue: 505
+      ccsValue: 482
+    - lppValue: 455
+      ccsValue: 483
+    - lppValue: 465
+      ccsValue: 493
+    - lppValue: 37
+      ccsValue: 492
+    - lppValue: 55
+      ccsValue: 494
+    pgcData:
+    - lppValue: 487
+      gcValue: 481
+    - lppValue: 499
+      gcValue: 482
+    - lppValue: 453
+      gcValue: 483
+    - lppValue: 55
+      gcValue: 482
+    phcData: []
+  - levelIndex: 6
+    pccData:
+    - lppValue: 111
+      ccsValue: 111,96,98
+    - lppValue: 95
+      ccsValue: 97
+    - lppValue: 72
+      ccsValue: 100
+    - lppValue: 71
+      ccsValue: 99
+    - lppValue: 49
+      ccsValue: 101
+    - lppValue: 39
+      ccsValue: 102
+    pgcData:
+    - lppValue: 111
+      gcValue: 97
+    - lppValue: 83
+      gcValue: 98
+    - lppValue: 77
+      gcValue: 99
+    - lppValue: 49
+      gcValue: 101
+    - lppValue: 43
+      gcValue: 99
+    phcData: []
+  - levelIndex: 7
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,160,161
+    - lppValue: 187
+      ccsValue: 162
+    - lppValue: 95
+      ccsValue: 163
+    - lppValue: 101
+      ccsValue: 188
+    - lppValue: 125
+      ccsValue: 189
+    - lppValue: 12
+      ccsValue: 190
+    pgcData:
+    - lppValue: 167
+      gcValue: 161
+    - lppValue: 179
+      gcValue: 163
+    - lppValue: 69
+      gcValue: 189
+    - lppValue: 81
+      gcValue: 188
+    - lppValue: 119
+      gcValue: 163
+    phcData: []
+  - levelIndex: 8
+    pccData:
+    - lppValue: 159
+      ccsValue: 159,224,225
+    - lppValue: 248
+      ccsValue: 226
+    - lppValue: 255
+      ccsValue: 227
+    - lppValue: 201
+      ccsValue: 228
+    - lppValue: 212
+      ccsValue: 229
+    - lppValue: 47
+      ccsValue: 230
+    pgcData:
+    - lppValue: 159
+      gcValue: 225
+    - lppValue: 243
+      gcValue: 226
+    - lppValue: 253
+      gcValue: 227
+    - lppValue: 47
+      gcValue: 226
+    phcData: []
+  - levelIndex: 9
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,96
+    - lppValue: 111
+      ccsValue: 97,98
+    - lppValue: 69
+      ccsValue: 99
+    - lppValue: 73
+      ccsValue: 109
+    - lppValue: 63
+      ccsValue: 108
+    - lppValue: 35
+      ccsValue: 110
+    pgcData:
+    - lppValue: 103
+      gcValue: 97
+    - lppValue: 83
+      gcValue: 108
+    - lppValue: 69
+      gcValue: 109
+    - lppValue: 23
+      gcValue: 99
+    phcData: []
+  - levelIndex: 10
+    pccData:
+    - lppValue: 943
+      ccsValue: 943,928,930
+    - lppValue: 72
+      ccsValue: 929
+    - lppValue: 66
+      ccsValue: 932
+    - lppValue: 95
+      ccsValue: 931
+    - lppValue: 103
+      ccsValue: 934
+    - lppValue: 113
+      ccsValue: 933
+    pgcData:
+    - lppValue: 943
+      gcValue: 929
+    - lppValue: 947
+      gcValue: 932
+    - lppValue: 77
+      gcValue: 932
+    - lppValue: 127
+      gcValue: 931
+    phcData: []
+  - levelIndex: 11
+    pccData:
+    - lppValue: 935
+      ccsValue: 935,928
+    - lppValue: 991
+      ccsValue: 929,930
+    - lppValue: 973
+      ccsValue: 931
+    - lppValue: 967
+      ccsValue: 988
+    - lppValue: 1023
+      ccsValue: 989
+    - lppValue: 29
+      ccsValue: 990
+    - lppValue: 23
+      ccsValue: 988,930
+    - lppValue: 12
+      ccsValue: 928
+    pgcData:
+    - lppValue: 935
+      gcValue: 929
+    - lppValue: 988
+      gcValue: 931
+    - lppValue: 982
+      gcValue: 931
+    - lppValue: 973
+      gcValue: 931
+    - lppValue: 965
+      gcValue: 989
+    phcData: []
+  - levelIndex: 12
+    pccData:
+    - lppValue: 127
+      ccsValue: 127,97
+    - lppValue: 100
+      ccsValue: 98,96
+    - lppValue: 88
+      ccsValue: 100
+    - lppValue: 66
+      ccsValue: 99
+    - lppValue: 73
+      ccsValue: 101
+    - lppValue: 56
+      ccsValue: 102
+    pgcData:
+    - lppValue: 127
+      gcValue: 97
+    - lppValue: 100
+      gcValue: 99
+    - lppValue: 110
+      gcValue: 97
+    - lppValue: 85
+      gcValue: 99
+    - lppValue: 93
+      gcValue: 101
+    phcData: []
+  - levelIndex: 13
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,160
+    - lppValue: 172
+      ccsValue: 162,161
+    - lppValue: 190
+      ccsValue: 174
+    - lppValue: 69
+      ccsValue: 163
+    - lppValue: 77
+      ccsValue: 172
+    - lppValue: 88
+      ccsValue: 173
+    - lppValue: 101
+      ccsValue: 162
+    - lppValue: 105
+      ccsValue: 167
+    pgcData:
+    - lppValue: 167
+      gcValue: 161
+    - lppValue: 172
+      gcValue: 163
+    - lppValue: 182
+      gcValue: 161
+    - lppValue: 189
+      gcValue: 163
+    - lppValue: 69
+      gcValue: 162
+    phcData: []
+  - levelIndex: 14
+    pccData:
+    - lppValue: 175
+      ccsValue: 160,161,162
+    - lppValue: 219
+      ccsValue: 175
+    - lppValue: 211
+      ccsValue: 164
+    - lppValue: 205
+      ccsValue: 163
+    - lppValue: 241
+      ccsValue: 165
+    - lppValue: 227
+      ccsValue: 166
+    - lppValue: 31
+      ccsValue: 164
+    pgcData:
+    - lppValue: 175
+      gcValue: 161
+    - lppValue: 164
+      gcValue: 163
+    - lppValue: 222
+      gcValue: 161
+    - lppValue: 213
+      gcValue: 163
+    - lppValue: 205
+      gcValue: 162
+    phcData: []
+  - levelIndex: 15
+    pccData:
+    - lppValue: 103
+      ccsValue: 96,98
+    - lppValue: 124
+      ccsValue: 103,97
+    - lppValue: 112
+      ccsValue: 124
+    - lppValue: 72
+      ccsValue: 125
+    - lppValue: 43
+      ccsValue: 126
+    - lppValue: 63
+      ccsValue: 98
+    - lppValue: 55
+      ccsValue: 96
+    pgcData:
+    - lppValue: 103
+      gcValue: 97
+    - lppValue: 124
+      gcValue: 99
+    - lppValue: 118
+      gcValue: 97
+    - lppValue: 77
+      gcValue: 99
+    - lppValue: 69
+      gcValue: 99
+    phcData: []
+  - levelIndex: 16
+    pccData:
+    - lppValue: 415
+      ccsValue: 416,418
+    - lppValue: 423
+      ccsValue: 415,417
+    - lppValue: 441
+      ccsValue: 422
+    - lppValue: 66
+      ccsValue: 419
+    - lppValue: 83
+      ccsValue: 421
+    - lppValue: 91
+      ccsValue: 420
+    - lppValue: 103
+      ccsValue: 416
+    pgcData:
+    - lppValue: 415
+      gcValue: 417
+    - lppValue: 425
+      gcValue: 418
+    - lppValue: 435
+      gcValue: 418
+    - lppValue: 71
+      gcValue: 417
+    - lppValue: 91
+      gcValue: 420
+    phcData: []
+  - levelIndex: 17
+    pccData:
+    - lppValue: 423
+      ccsValue: 423,418
+    - lppValue: 428
+      ccsValue: 417,416
+    - lppValue: 467
+      ccsValue: 428
+    - lppValue: 453
+      ccsValue: 419
+    - lppValue: 450
+      ccsValue: 429
+    - lppValue: 510
+      ccsValue: 430
+    - lppValue: 507
+      ccsValue: 429,419
+    pgcData:
+    - lppValue: 423
+      gcValue: 417
+    - lppValue: 425
+      gcValue: 418
+    - lppValue: 467
+      gcValue: 418
+    - lppValue: 463
+      gcValue: 417
+    - lppValue: 507
+      gcValue: 428
+    phcData: []
+  - levelIndex: 18
+    pccData:
+    - lppValue: 111
+      ccsValue: 111,97,98,96
+    - lppValue: 123
+      ccsValue: 111,97,98,96
+    - lppValue: 115
+      ccsValue: 100
+    - lppValue: 66
+      ccsValue: 99
+    - lppValue: 71
+      ccsValue: 96,97
+    - lppValue: 94
+      ccsValue: 101
+    - lppValue: 83
+      ccsValue: 111,97,98,96
+    - lppValue: 58
+      ccsValue: 102
+    - lppValue: 61
+      ccsValue: 111,97,98,96
+    - lppValue: 51
+      ccsValue: 99,100,101,102
+    pgcData:
+    - lppValue: 111
+      gcValue: 97
+    - lppValue: 121
+      gcValue: 98
+    - lppValue: 115
+      gcValue: 98
+    - lppValue: 71
+      gcValue: 97
+    - lppValue: 43
+      gcValue: 100
+    phcData: []
+  - levelIndex: 19
+    pccData:
+    - lppValue: 231
+      ccsValue: 224,226
+    - lppValue: 220
+      ccsValue: 231,225
+    - lppValue: 201
+      ccsValue: 222
+    - lppValue: 194
+      ccsValue: 220
+    - lppValue: 52
+      ccsValue: 221
+    - lppValue: 43
+      ccsValue: 227
+    - lppValue: 31
+      ccsValue: 224
+    pgcData:
+    - lppValue: 231
+      gcValue: 225
+    - lppValue: 217
+      gcValue: 226
+    - lppValue: 211
+      gcValue: 226
+    - lppValue: 63
+      gcValue: 225
+    - lppValue: 43
+      gcValue: 220
+    phcData: []
+  - levelIndex: 20
+    pccData:
+    - lppValue: 191
+      ccsValue: 160,162,191,161
+    - lppValue: 216
+      ccsValue: 164
+    - lppValue: 194
+      ccsValue: 163
+    - lppValue: 204
+      ccsValue: 165
+    - lppValue: 229
+      ccsValue: 166
+    - lppValue: 231
+      ccsValue: 160
+    pgcData:
+    - lppValue: 191
+      gcValue: 161
+    - lppValue: 169
+      gcValue: 162
+    - lppValue: 211
+      gcValue: 162
+    - lppValue: 199
+      gcValue: 161
+    - lppValue: 251
+      gcValue: 164
+    phcData: []
+  - levelIndex: 21
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,98,97
+    - lppValue: 108
+      ccsValue: 96
+    - lppValue: 115
+      ccsValue: 99
+    - lppValue: 66
+      ccsValue: 108
+    - lppValue: 79
+      ccsValue: 109
+    - lppValue: 47
+      ccsValue: 110
+    - lppValue: 55
+      ccsValue: 97
+    pgcData:
+    - lppValue: 103
+      gcValue: 97
+    - lppValue: 108
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 98
+    - lppValue: 115
+      gcValue: 98
+    - lppValue: 79
+      gcValue: 99
+    - lppValue: 91
+      gcValue: 108
+    phcData: []
+  - levelIndex: 22
+    pccData:
+    - lppValue: 2031
+      ccsValue: 2016,2017
+    - lppValue: 2020
+      ccsValue: 2018,2031
+    - lppValue: 2001
+      ccsValue: 2019
+    - lppValue: 1987
+      ccsValue: 2020
+    - lppValue: 1991
+      ccsValue: 2016
+    - lppValue: 51
+      ccsValue: 2021
+    - lppValue: 34
+      ccsValue: 2031
+    - lppValue: 39
+      ccsValue: 2022
+    pgcData:
+    - lppValue: 2031
+      gcValue: 2017
+    - lppValue: 2009
+      gcValue: 2019
+    - lppValue: 2003
+      gcValue: 2019
+    - lppValue: 1999
+      gcValue: 2021
+    - lppValue: 55
+      gcValue: 2023
+    - lppValue: 43
+      gcValue: 2017
+    phcData: []
+  - levelIndex: 23
+    pccData:
+    - lppValue: 1959
+      ccsValue: 1959,1954
+    - lppValue: 1980
+      ccsValue: 1952,1953
+    - lppValue: 1969
+      ccsValue: 1955
+    - lppValue: 1992
+      ccsValue: 1980
+    - lppValue: 1987
+      ccsValue: 1959,1952
+    - lppValue: 2004
+      ccsValue: 1981
+    - lppValue: 2024
+      ccsValue: 1955
+    - lppValue: 2047
+      ccsValue: 1982
+    - lppValue: 2035
+      ccsValue: 1953,1954
+    pgcData:
+    - lppValue: 1959
+      gcValue: 1955
+    - lppValue: 1977
+      gcValue: 1955
+    - lppValue: 1998
+      gcValue: 1955
+    - lppValue: 2014
+      gcValue: 1953
+    - lppValue: 2000
+      gcValue: 1981
+    - lppValue: 2029
+      gcValue: 1954
+    - lppValue: 2044
+      gcValue: 1953
+    phcData: []
+  - levelIndex: 24
+    pccData:
+    - lppValue: 159
+      ccsValue: 98,159,96
+    - lppValue: 100
+      ccsValue: 97
+    - lppValue: 113
+      ccsValue: 100
+    - lppValue: 123
+      ccsValue: 99
+    - lppValue: 71
+      ccsValue: 98,97
+    - lppValue: 91
+      ccsValue: 101
+    - lppValue: 41
+      ccsValue: 102
+    pgcData:
+    - lppValue: 159
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 118
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 101
+    - lppValue: 85
+      gcValue: 98
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 25
+    pccData:
+    - lppValue: 231
+      ccsValue: 226,231,224
+    - lppValue: 236
+      ccsValue: 225
+    - lppValue: 221
+      ccsValue: 236
+    - lppValue: 197
+      ccsValue: 225
+    - lppValue: 193
+      ccsValue: 226,231
+    - lppValue: 207
+      ccsValue: 227
+    - lppValue: 50
+      ccsValue: 237
+    - lppValue: 45
+      ccsValue: 238
+    pgcData:
+    - lppValue: 231
+      gcValue: 227
+    - lppValue: 233
+      gcValue: 227
+    - lppValue: 222
+      gcValue: 227
+    - lppValue: 206
+      gcValue: 225
+    - lppValue: 48
+      gcValue: 237
+    - lppValue: 61
+      gcValue: 226
+    - lppValue: 44
+      gcValue: 225
+    phcData: []
+  - levelIndex: 26
+    pccData:
+    - lppValue: 175
+      ccsValue: 175,161
+    - lppValue: 164
+      ccsValue: 162,160
+    - lppValue: 177
+      ccsValue: 163
+    - lppValue: 204
+      ccsValue: 164
+    - lppValue: 220
+      ccsValue: 166
+    - lppValue: 213
+      ccsValue: 165
+    - lppValue: 228
+      ccsValue: 166
+    pgcData:
+    - lppValue: 175
+      gcValue: 163
+    - lppValue: 185
+      gcValue: 163
+    - lppValue: 182
+      gcValue: 163
+    - lppValue: 198
+      gcValue: 161
+    - lppValue: 208
+      gcValue: 165
+    - lppValue: 213
+      gcValue: 162
+    - lppValue: 228
+      gcValue: 161
+    phcData: []
+  - levelIndex: 27
+    pccData:
+    - lppValue: 423
+      ccsValue: 418,417,423,416
+    - lppValue: 86
+      ccsValue: 419
+    - lppValue: 78
+      ccsValue: 423,417
+    - lppValue: 71
+      ccsValue: 418
+    - lppValue: 66
+      ccsValue: 92
+    - lppValue: 127
+      ccsValue: 94
+    - lppValue: 31
+      ccsValue: 93
+    pgcData:
+    - lppValue: 423
+      gcValue: 419
+    - lppValue: 89
+      gcValue: 419
+    - lppValue: 78
+      gcValue: 419
+    - lppValue: 126
+      gcValue: 417
+    - lppValue: 112
+      gcValue: 93
+    - lppValue: 109
+      gcValue: 418
+    - lppValue: 28
+      gcValue: 417
+    phcData: []
+  - levelIndex: 28
+    pccData:
+    - lppValue: 511
+      ccsValue: 480,482,481,511
+    - lppValue: 464
+      ccsValue: 484
+    - lppValue: 467
+      ccsValue: 481
+    - lppValue: 475
+      ccsValue: 483
+    - lppValue: 460
+      ccsValue: 485
+    - lppValue: 32
+      ccsValue: 486
+    pgcData:
+    - lppValue: 511
+      gcValue: 483
+    - lppValue: 489
+      gcValue: 483
+    - lppValue: 470
+      gcValue: 483
+    - lppValue: 454
+      gcValue: 481
+    - lppValue: 48
+      gcValue: 485
+    - lppValue: 53
+      gcValue: 482
+    - lppValue: 36
+      gcValue: 481
+    phcData: []
+  - levelIndex: 29
+    pccData:
+    - lppValue: 423
+      ccsValue: 423,418,417
+    - lppValue: 428
+      ccsValue: 416
+    - lppValue: 427
+      ccsValue: 428
+    - lppValue: 435
+      ccsValue: 419
+    - lppValue: 461
+      ccsValue: 429
+    - lppValue: 465
+      ccsValue: 430
+    pgcData:
+    - lppValue: 423
+      gcValue: 419
+    - lppValue: 425
+      gcValue: 419
+    - lppValue: 446
+      gcValue: 419
+    - lppValue: 462
+      gcValue: 417
+    - lppValue: 464
+      gcValue: 429
+    - lppValue: 477
+      gcValue: 418
+    - lppValue: 492
+      gcValue: 417
+    phcData: []
+  - levelIndex: 30
+    pccData:
+    - lppValue: 175
+      ccsValue: 160,162
+    - lppValue: 164
+      ccsValue: 175
+    - lppValue: 89
+      ccsValue: 161
+    - lppValue: 81
+      ccsValue: 164
+    - lppValue: 75
+      ccsValue: 163
+    - lppValue: 77
+      ccsValue: 175
+    - lppValue: 117
+      ccsValue: 165
+    - lppValue: 107
+      ccsValue: 166
+    pgcData:
+    - lppValue: 175
+      gcValue: 163
+    - lppValue: 89
+      gcValue: 163
+    - lppValue: 86
+      gcValue: 163
+    - lppValue: 70
+      gcValue: 161
+    - lppValue: 112
+      gcValue: 165
+    - lppValue: 117
+      gcValue: 162
+    - lppValue: 100
+      gcValue: 161
+    phcData: []
+  - levelIndex: 31
+    pccData:
+    - lppValue: 231
+      ccsValue: 231,224
+    - lppValue: 251
+      ccsValue: 225,226
+    - lppValue: 243
+      ccsValue: 227
+    - lppValue: 197
+      ccsValue: 252
+    - lppValue: 223
+      ccsValue: 253
+    - lppValue: 46
+      ccsValue: 254
+    pgcData:
+    - lppValue: 231
+      gcValue: 225
+    - lppValue: 249
+      gcValue: 227
+    - lppValue: 206
+      gcValue: 227
+    - lppValue: 222
+      gcValue: 225
+    - lppValue: 208
+      gcValue: 253
+    - lppValue: 45
+      gcValue: 226
+    - lppValue: 60
+      gcValue: 225
+    phcData: []
+  - levelIndex: 32
+    pccData:
+    - lppValue: 159
+      ccsValue: 160,162
+    - lppValue: 164
+      ccsValue: 161
+    - lppValue: 169
+      ccsValue: 159
+    - lppValue: 177
+      ccsValue: 164
+    - lppValue: 182
+      ccsValue: 163
+    - lppValue: 207
+      ccsValue: 166
+    - lppValue: 215
+      ccsValue: 163
+    - lppValue: 219
+      ccsValue: 165
+    - lppValue: 231
+      ccsValue: 162,161
+    - lppValue: 246
+      ccsValue: 159
+    pgcData:
+    - lppValue: 159
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 182
+      gcValue: 163
+    - lppValue: 198
+      gcValue: 161
+    - lppValue: 208
+      gcValue: 165
+    - lppValue: 213
+      gcValue: 162
+    - lppValue: 228
+      gcValue: 161
+    phcData: []
+  - levelIndex: 33
+    pccData:
+    - lppValue: 935
+      ccsValue: 928,930
+    - lppValue: 940
+      ccsValue: 935,929
+    - lppValue: 937
+      ccsValue: 935
+    - lppValue: 81
+      ccsValue: 929,930
+    - lppValue: 95
+      ccsValue: 931
+    - lppValue: 69
+      ccsValue: 935
+    - lppValue: 66
+      ccsValue: 940
+    - lppValue: 73
+      ccsValue: 941
+    - lppValue: 105
+      ccsValue: 942
+    - lppValue: 23
+      ccsValue: 935
+    - lppValue: 25
+      ccsValue: 942
+    pgcData:
+    - lppValue: 935
+      gcValue: 929
+    - lppValue: 937
+      gcValue: 931
+    - lppValue: 94
+      gcValue: 931
+    - lppValue: 78
+      gcValue: 929
+    - lppValue: 112
+      gcValue: 941
+    - lppValue: 125
+      gcValue: 930
+    - lppValue: 108
+      gcValue: 929
+    phcData: []
+  - levelIndex: 34
+    pccData:
+    - lppValue: 1007
+      ccsValue: 1007,994
+    - lppValue: 1016
+      ccsValue: 992,993
+    - lppValue: 1019
+      ccsValue: 993
+    - lppValue: 1009
+      ccsValue: 1007
+    - lppValue: 968
+      ccsValue: 995
+    - lppValue: 962
+      ccsValue: 997
+    - lppValue: 988
+      ccsValue: 1007
+    - lppValue: 981
+      ccsValue: 996
+    - lppValue: 32
+      ccsValue: 998
+    - lppValue: 37
+      ccsValue: 994
+    - lppValue: 9
+      ccsValue: 995,998
+    pgcData:
+    - lppValue: 1007
+      gcValue: 995
+    - lppValue: 1017
+      gcValue: 995
+    - lppValue: 1014
+      gcValue: 995
+    - lppValue: 966
+      gcValue: 993
+    - lppValue: 976
+      gcValue: 997
+    - lppValue: 981
+      gcValue: 994
+    - lppValue: 36
+      gcValue: 993
+    phcData: []
+  - levelIndex: 35
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,98
+    - lppValue: 92
+      ccsValue: 97,96
+    - lppValue: 89
+      ccsValue: 97
+    - lppValue: 72
+      ccsValue: 93
+    - lppValue: 63
+      ccsValue: 92
+    - lppValue: 46
+      ccsValue: 99
+    - lppValue: 29
+      ccsValue: 94
+    - lppValue: 45
+      ccsValue: 103
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 89
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 99
+    - lppValue: 62
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 93
+    - lppValue: 45
+      gcValue: 98
+    - lppValue: 28
+      gcValue: 97
+    phcData: []
+  - levelIndex: 36
+    pccData:
+    - lppValue: 191
+      ccsValue: 191,162,161
+    - lppValue: 164
+      ccsValue: 160
+    - lppValue: 66
+      ccsValue: 163
+    - lppValue: 77
+      ccsValue: 164
+    - lppValue: 123
+      ccsValue: 165
+    - lppValue: 101
+      ccsValue: 166
+    pgcData:
+    - lppValue: 191
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 86
+      gcValue: 163
+    - lppValue: 70
+      gcValue: 161
+    - lppValue: 112
+      gcValue: 165
+    - lppValue: 117
+      gcValue: 162
+    - lppValue: 100
+      gcValue: 161
+    phcData: []
+  - levelIndex: 37
+    pccData:
+    - lppValue: 231
+      ccsValue: 231,224,225
+    - lppValue: 236
+      ccsValue: 226
+    - lppValue: 241
+      ccsValue: 227
+    - lppValue: 197
+      ccsValue: 236
+    - lppValue: 211
+      ccsValue: 237
+    - lppValue: 42
+      ccsValue: 238
+    pgcData:
+    - lppValue: 231
+      gcValue: 227
+    - lppValue: 233
+      gcValue: 227
+    - lppValue: 254
+      gcValue: 227
+    - lppValue: 206
+      gcValue: 225
+    - lppValue: 208
+      gcValue: 237
+    - lppValue: 221
+      gcValue: 226
+    - lppValue: 44
+      gcValue: 225
+    phcData: []
+  - levelIndex: 38
+    pccData:
+    - lppValue: 111
+      ccsValue: 111,96,97,98
+    - lppValue: 81
+      ccsValue: 99
+    - lppValue: 77
+      ccsValue: 100
+    - lppValue: 51
+      ccsValue: 101
+    - lppValue: 26
+      ccsValue: 102
+    pgcData:
+    - lppValue: 111
+      gcValue: 99
+    - lppValue: 89
+      gcValue: 99
+    - lppValue: 86
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 101
+    - lppValue: 53
+      gcValue: 98
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 39
+    pccData:
+    - lppValue: 423
+      ccsValue: 418,416,417
+    - lppValue: 444
+      ccsValue: 423
+    - lppValue: 433
+      ccsValue: 419
+    - lppValue: 79
+      ccsValue: 444
+    - lppValue: 65
+      ccsValue: 445
+    - lppValue: 96
+      ccsValue: 446
+    pgcData:
+    - lppValue: 423
+      gcValue: 419
+    - lppValue: 441
+      gcValue: 419
+    - lppValue: 78
+      gcValue: 419
+    - lppValue: 94
+      gcValue: 417
+    - lppValue: 80
+      gcValue: 445
+    - lppValue: 109
+      gcValue: 418
+    - lppValue: 124
+      gcValue: 417
+    phcData: []
+  - levelIndex: 40
+    pccData:
+    - lppValue: 415
+      ccsValue: 415,482
+    - lppValue: 484
+      ccsValue: 481,480
+    - lppValue: 489
+      ccsValue: 481
+    - lppValue: 495
+      ccsValue: 484
+    - lppValue: 501
+      ccsValue: 480,482
+    - lppValue: 511
+      ccsValue: 483
+    - lppValue: 457
+      ccsValue: 415
+    - lppValue: 463
+      ccsValue: 485
+    - lppValue: 469
+      ccsValue: 415
+    - lppValue: 34
+      ccsValue: 486
+    - lppValue: 43
+      ccsValue: 480
+    - lppValue: 47
+      ccsValue: 415
+    - lppValue: 51
+      ccsValue: 415
+    - lppValue: 53
+      ccsValue: 480
+    pgcData:
+    - lppValue: 415
+      gcValue: 483
+    - lppValue: 489
+      gcValue: 483
+    - lppValue: 502
+      gcValue: 483
+    - lppValue: 454
+      gcValue: 481
+    - lppValue: 464
+      gcValue: 485
+    - lppValue: 469
+      gcValue: 482
+    - lppValue: 36
+      gcValue: 481
+    phcData: []
+  - levelIndex: 41
+    pccData:
+    - lppValue: 103
+      ccsValue: 97,96
+    - lppValue: 108
+      ccsValue: 103,98
+    - lppValue: 105
+      ccsValue: 97
+    - lppValue: 87
+      ccsValue: 108
+    - lppValue: 93
+      ccsValue: 103,96
+    - lppValue: 71
+      ccsValue: 109
+    - lppValue: 77
+      ccsValue: 99
+    - lppValue: 73
+      ccsValue: 103
+    - lppValue: 55
+      ccsValue: 109
+    - lppValue: 43
+      ccsValue: 110
+    - lppValue: 23
+      ccsValue: 103
+    - lppValue: 19
+      ccsValue: 99
+    - lppValue: 29
+      ccsValue: 96
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 94
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 109
+    - lppValue: 61
+      gcValue: 98
+    - lppValue: 44
+      gcValue: 97
+    phcData: []
+  - levelIndex: 42
+    pccData:
+    - lppValue: 175
+      ccsValue: 175,160
+    - lppValue: 164
+      ccsValue: 162,161
+    - lppValue: 185
+      ccsValue: 161
+    - lppValue: 191
+      ccsValue: 163
+    - lppValue: 181
+      ccsValue: 175
+    - lppValue: 79
+      ccsValue: 164
+    - lppValue: 71
+      ccsValue: 165
+    - lppValue: 95
+      ccsValue: 166
+    - lppValue: 81
+      ccsValue: 163
+    - lppValue: 109
+      ccsValue: 175
+    - lppValue: 121
+      ccsValue: 166
+    pgcData:
+    - lppValue: 175
+      gcValue: 163
+    - lppValue: 185
+      gcValue: 163
+    - lppValue: 182
+      gcValue: 163
+    - lppValue: 70
+      gcValue: 161
+    - lppValue: 80
+      gcValue: 165
+    - lppValue: 85
+      gcValue: 162
+    - lppValue: 100
+      gcValue: 161
+    phcData: []
+  - levelIndex: 43
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,162
+    - lppValue: 220
+      ccsValue: 161,160
+    - lppValue: 217
+      ccsValue: 161
+    - lppValue: 209
+      ccsValue: 220
+    - lppValue: 199
+      ccsValue: 163
+    - lppValue: 249
+      ccsValue: 221
+    - lppValue: 247
+      ccsValue: 162
+    - lppValue: 237
+      ccsValue: 222
+    - lppValue: 229
+      ccsValue: 167
+    - lppValue: 224
+      ccsValue: 167
+    - lppValue: 227
+      ccsValue: 167
+    - lppValue: 29
+      ccsValue: 221
+    pgcData:
+    - lppValue: 167
+      gcValue: 163
+    - lppValue: 217
+      gcValue: 163
+    - lppValue: 206
+      gcValue: 163
+    - lppValue: 254
+      gcValue: 161
+    - lppValue: 240
+      gcValue: 221
+    - lppValue: 237
+      gcValue: 162
+    - lppValue: 28
+      gcValue: 161
+    phcData: []
+  - levelIndex: 44
+    pccData:
+    - lppValue: 127
+      ccsValue: 96,127
+    - lppValue: 100
+      ccsValue: 98,97
+    - lppValue: 105
+      ccsValue: 97
+    - lppValue: 81
+      ccsValue: 98
+    - lppValue: 85
+      ccsValue: 99
+    - lppValue: 95
+      ccsValue: 100
+    - lppValue: 69
+      ccsValue: 96
+    - lppValue: 73
+      ccsValue: 102
+    - lppValue: 79
+      ccsValue: 101
+    - lppValue: 53
+      ccsValue: 127
+    - lppValue: 34
+      ccsValue: 102
+    pgcData:
+    - lppValue: 127
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 86
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 101
+    - lppValue: 53
+      gcValue: 98
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 45
+    pccData:
+    - lppValue: 16295
+      ccsValue: 16290,16288,16295
+    - lppValue: 16300
+      ccsValue: 16289
+    - lppValue: 16297
+      ccsValue: 16290
+    - lppValue: 16307
+      ccsValue: 16300
+    - lppValue: 16317
+      ccsValue: 16288,16290
+    - lppValue: 71
+      ccsValue: 16291
+    - lppValue: 77
+      ccsValue: 16301
+    - lppValue: 73
+      ccsValue: 16288
+    - lppValue: 93
+      ccsValue: 16302
+    - lppValue: 98
+      ccsValue: 16302
+    - lppValue: 109
+      ccsValue: 16290
+    pgcData:
+    - lppValue: 16295
+      gcValue: 16291
+    - lppValue: 16297
+      gcValue: 16291
+    - lppValue: 16318
+      gcValue: 16291
+    - lppValue: 78
+      gcValue: 16289
+    - lppValue: 80
+      gcValue: 16301
+    - lppValue: 93
+      gcValue: 16290
+    - lppValue: 108
+      gcValue: 16289
+    phcData: []
+  - levelIndex: 46
+    pccData:
+    - lppValue: 4015
+      ccsValue: 4015,4002,4000
+    - lppValue: 4007
+      ccsValue: 4001
+    - lppValue: 4057
+      ccsValue: 4001
+    - lppValue: 4051
+      ccsValue: 4003
+    - lppValue: 4042
+      ccsValue: 4003
+    - lppValue: 4047
+      ccsValue: 4004
+    - lppValue: 4037
+      ccsValue: 4015
+    - lppValue: 4089
+      ccsValue: 4005
+    - lppValue: 4095
+      ccsValue: 4003
+    - lppValue: 4085
+      ccsValue: 4006
+    - lppValue: 4076
+      ccsValue: 4005
+    - lppValue: 4066
+      ccsValue: 4006
+    pgcData:
+    - lppValue: 4015
+      gcValue: 4003
+    - lppValue: 4057
+      gcValue: 4003
+    - lppValue: 4054
+      gcValue: 4003
+    - lppValue: 4038
+      gcValue: 4001
+    - lppValue: 4080
+      gcValue: 4005
+    - lppValue: 4085
+      gcValue: 4002
+    - lppValue: 4068
+      gcValue: 4001
+    phcData: []
+  - levelIndex: 47
+    pccData:
+    - lppValue: 103
+      ccsValue: 96,97
+    - lppValue: 124
+      ccsValue: 103,98
+    - lppValue: 121
+      ccsValue: 97
+    - lppValue: 115
+      ccsValue: 124
+    - lppValue: 77
+      ccsValue: 96,98
+    - lppValue: 71
+      ccsValue: 103,97
+    - lppValue: 93
+      ccsValue: 125
+    - lppValue: 89
+      ccsValue: 124
+    - lppValue: 87
+      ccsValue: 126
+    - lppValue: 45
+      ccsValue: 103
+    - lppValue: 34
+      ccsValue: 99
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 121
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 99
+    - lppValue: 94
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 125
+    - lppValue: 45
+      gcValue: 98
+    - lppValue: 60
+      gcValue: 97
+    phcData: []
+  - levelIndex: 48
+    pccData:
+    - lppValue: 159
+      ccsValue: 159,160,161,162
+    - lppValue: 165
+      ccsValue: 162,159
+    - lppValue: 179
+      ccsValue: 164
+    - lppValue: 181
+      ccsValue: 162
+    - lppValue: 191
+      ccsValue: 163
+    - lppValue: 69
+      ccsValue: 161
+    - lppValue: 73
+      ccsValue: 165
+    - lppValue: 79
+      ccsValue: 163
+    - lppValue: 98
+      ccsValue: 166
+    pgcData:
+    - lppValue: 159
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 182
+      gcValue: 163
+    - lppValue: 70
+      gcValue: 161
+    - lppValue: 80
+      gcValue: 165
+    - lppValue: 85
+      gcValue: 162
+    - lppValue: 100
+      gcValue: 161
+    phcData: []
+  - levelIndex: 49
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,162
+    - lppValue: 172
+      ccsValue: 161,160
+    - lppValue: 169
+      ccsValue: 161
+    - lppValue: 211
+      ccsValue: 172
+    - lppValue: 221
+      ccsValue: 160,162
+    - lppValue: 199
+      ccsValue: 163
+    - lppValue: 205
+      ccsValue: 167
+    - lppValue: 201
+      ccsValue: 173
+    - lppValue: 247
+      ccsValue: 163
+    - lppValue: 253
+      ccsValue: 167
+    - lppValue: 226
+      ccsValue: 174
+    pgcData:
+    - lppValue: 167
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 222
+      gcValue: 163
+    - lppValue: 206
+      gcValue: 161
+    - lppValue: 240
+      gcValue: 173
+    - lppValue: 253
+      gcValue: 162
+    - lppValue: 236
+      gcValue: 161
+    phcData: []
+  - levelIndex: 50
+    pccData:
+    - lppValue: 111
+      ccsValue: 111,98
+    - lppValue: 100
+      ccsValue: 97,96
+    - lppValue: 121
+      ccsValue: 97
+    - lppValue: 115
+      ccsValue: 101
+    - lppValue: 117
+      ccsValue: 96,98
+    - lppValue: 79
+      ccsValue: 100
+    - lppValue: 89
+      ccsValue: 99
+    - lppValue: 95
+      ccsValue: 96
+    - lppValue: 85
+      ccsValue: 111
+    - lppValue: 37
+      ccsValue: 102
+    pgcData:
+    - lppValue: 111
+      gcValue: 99
+    - lppValue: 121
+      gcValue: 99
+    - lppValue: 118
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 101
+    - lppValue: 85
+      gcValue: 98
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 51
+    pccData:
+    - lppValue: 487
+      ccsValue: 487,482
+    - lppValue: 476
+      ccsValue: 481,480
+    - lppValue: 473
+      ccsValue: 481
+    - lppValue: 467
+      ccsValue: 476
+    - lppValue: 461
+      ccsValue: 480,482
+    - lppValue: 455
+      ccsValue: 483
+    - lppValue: 57
+      ccsValue: 477
+    - lppValue: 55
+      ccsValue: 482
+    - lppValue: 45
+      ccsValue: 487
+    - lppValue: 34
+      ccsValue: 478
+    - lppValue: 27
+      ccsValue: 481
+    pgcData:
+    - lppValue: 487
+      gcValue: 483
+    - lppValue: 473
+      gcValue: 483
+    - lppValue: 462
+      gcValue: 483
+    - lppValue: 62
+      gcValue: 481
+    - lppValue: 48
+      gcValue: 477
+    - lppValue: 45
+      gcValue: 482
+    - lppValue: 28
+      gcValue: 481
+    phcData: []
+  - levelIndex: 52
+    pccData:
+    - lppValue: 447
+      ccsValue: 447,416
+    - lppValue: 420
+      ccsValue: 417,418
+    - lppValue: 425
+      ccsValue: 418
+    - lppValue: 467
+      ccsValue: 420
+    - lppValue: 469
+      ccsValue: 416,418
+    - lppValue: 479
+      ccsValue: 419
+    - lppValue: 457
+      ccsValue: 421
+    - lppValue: 463
+      ccsValue: 447
+    - lppValue: 501
+      ccsValue: 447
+    - lppValue: 482
+      ccsValue: 422
+    - lppValue: 488
+      ccsValue: 422
+    - lppValue: 17
+      ccsValue: 418
+    pgcData:
+    - lppValue: 447
+      gcValue: 419
+    - lppValue: 425
+      gcValue: 419
+    - lppValue: 470
+      gcValue: 419
+    - lppValue: 454
+      gcValue: 417
+    - lppValue: 496
+      gcValue: 421
+    - lppValue: 501
+      gcValue: 418
+    - lppValue: 484
+      gcValue: 417
+    phcData: []
+  - levelIndex: 53
+    pccData:
+    - lppValue: 103
+      ccsValue: 97,96
+    - lppValue: 104
+      ccsValue: 103,98
+    - lppValue: 127
+      ccsValue: 108
+    - lppValue: 69
+      ccsValue: 96,98
+    - lppValue: 77
+      ccsValue: 99
+    - lppValue: 73
+      ccsValue: 97
+    - lppValue: 81
+      ccsValue: 109
+    - lppValue: 88
+      ccsValue: 99
+    - lppValue: 39
+      ccsValue: 110
+    - lppValue: 45
+      ccsValue: 109
+    - lppValue: 54
+      ccsValue: 103
+    - lppValue: 61
+      ccsValue: 96
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 126
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 109
+    - lppValue: 93
+      gcValue: 98
+    - lppValue: 44
+      gcValue: 97
+    phcData: []
+  - levelIndex: 54
+    pccData:
+    - lppValue: 239
+      ccsValue: 239,224
+    - lppValue: 228
+      ccsValue: 225,226
+    - lppValue: 217
+      ccsValue: 239
+    - lppValue: 211
+      ccsValue: 228
+    - lppValue: 213
+      ccsValue: 224,226
+    - lppValue: 205
+      ccsValue: 227
+    - lppValue: 199
+      ccsValue: 229
+    - lppValue: 34
+      ccsValue: 230
+    - lppValue: 24
+      ccsValue: 230
+    - lppValue: 17
+      ccsValue: 226
+    pgcData:
+    - lppValue: 239
+      gcValue: 227
+    - lppValue: 217
+      gcValue: 227
+    - lppValue: 214
+      gcValue: 227
+    - lppValue: 198
+      gcValue: 225
+    - lppValue: 48
+      gcValue: 229
+    - lppValue: 53
+      gcValue: 226
+    - lppValue: 36
+      gcValue: 225
+    phcData: []
+  - levelIndex: 55
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,160
+    - lppValue: 188
+      ccsValue: 161,162
+    - lppValue: 185
+      ccsValue: 167
+    - lppValue: 179
+      ccsValue: 188
+    - lppValue: 205
+      ccsValue: 160,162
+    - lppValue: 197
+      ccsValue: 163
+    - lppValue: 209
+      ccsValue: 189
+    - lppValue: 226
+      ccsValue: 190
+    - lppValue: 248
+      ccsValue: 190
+    - lppValue: 241
+      ccsValue: 162
+    pgcData:
+    - lppValue: 167
+      gcValue: 163
+    - lppValue: 185
+      gcValue: 163
+    - lppValue: 206
+      gcValue: 163
+    - lppValue: 222
+      gcValue: 161
+    - lppValue: 208
+      gcValue: 189
+    - lppValue: 237
+      gcValue: 162
+    - lppValue: 252
+      gcValue: 161
+    phcData: []
+  - levelIndex: 56
+    pccData:
+    - lppValue: 927
+      ccsValue: 927,96,97
+    - lppValue: 103
+      ccsValue: 98
+    - lppValue: 115
+      ccsValue: 100
+    - lppValue: 117
+      ccsValue: 96,98
+    - lppValue: 127
+      ccsValue: 101
+    - lppValue: 73
+      ccsValue: 99
+    - lppValue: 93
+      ccsValue: 96
+    - lppValue: 40
+      ccsValue: 102
+    - lppValue: 49
+      ccsValue: 98
+    pgcData:
+    - lppValue: 927
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 118
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 101
+    - lppValue: 85
+      gcValue: 98
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 57
+    pccData:
+    - lppValue: 999
+      ccsValue: 999,992
+    - lppValue: 1004
+      ccsValue: 993,994
+    - lppValue: 1001
+      ccsValue: 994
+    - lppValue: 979
+      ccsValue: 1004
+    - lppValue: 989
+      ccsValue: 992,994
+    - lppValue: 967
+      ccsValue: 1006
+    - lppValue: 969
+      ccsValue: 1005
+    - lppValue: 55
+      ccsValue: 999
+    - lppValue: 61
+      ccsValue: 993
+    - lppValue: 34
+      ccsValue: 995
+    - lppValue: 40
+      ccsValue: 1006
+    - lppValue: 17
+      ccsValue: 994
+    pgcData:
+    - lppValue: 999
+      gcValue: 995
+    - lppValue: 1001
+      gcValue: 995
+    - lppValue: 990
+      gcValue: 995
+    - lppValue: 974
+      gcValue: 993
+    - lppValue: 48
+      gcValue: 1005
+    - lppValue: 61
+      gcValue: 994
+    - lppValue: 44
+      gcValue: 993
+    phcData: []
+  - levelIndex: 58
+    pccData:
+    - lppValue: 943
+      ccsValue: 943,928
+    - lppValue: 932
+      ccsValue: 929,930
+    - lppValue: 953
+      ccsValue: 930
+    - lppValue: 947
+      ccsValue: 932
+    - lppValue: 949
+      ccsValue: 928,930
+    - lppValue: 963
+      ccsValue: 931
+    - lppValue: 991
+      ccsValue: 943
+    - lppValue: 981
+      ccsValue: 933
+    - lppValue: 994
+      ccsValue: 934
+    - lppValue: 1016
+      ccsValue: 934
+    - lppValue: 1009
+      ccsValue: 930
+    pgcData:
+    - lppValue: 943
+      gcValue: 931
+    - lppValue: 953
+      gcValue: 931
+    - lppValue: 950
+      gcValue: 931
+    - lppValue: 966
+      gcValue: 929
+    - lppValue: 976
+      gcValue: 933
+    - lppValue: 981
+      gcValue: 930
+    - lppValue: 996
+      gcValue: 929
+    phcData: []
+  - levelIndex: 59
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,160,162
+    - lppValue: 95
+      ccsValue: 161,162
+    - lppValue: 87
+      ccsValue: 92
+    - lppValue: 77
+      ccsValue: 160,162
+    - lppValue: 71
+      ccsValue: 93
+    - lppValue: 121
+      ccsValue: 163
+    - lppValue: 113
+      ccsValue: 167
+    - lppValue: 98
+      ccsValue: 94
+    - lppValue: 24
+      ccsValue: 94
+    - lppValue: 17
+      ccsValue: 162
+    pgcData:
+    - lppValue: 167
+      gcValue: 163
+    - lppValue: 89
+      gcValue: 163
+    - lppValue: 78
+      gcValue: 163
+    - lppValue: 126
+      gcValue: 161
+    - lppValue: 112
+      gcValue: 93
+    - lppValue: 109
+      gcValue: 162
+    - lppValue: 28
+      gcValue: 161
+    phcData: []
+  - levelIndex: 60
+    pccData:
+    - lppValue: 255
+      ccsValue: 255,224
+    - lppValue: 228
+      ccsValue: 225,226
+    - lppValue: 233
+      ccsValue: 226
+    - lppValue: 211
+      ccsValue: 228
+    - lppValue: 213
+      ccsValue: 224,226
+    - lppValue: 223
+      ccsValue: 227
+    - lppValue: 201
+      ccsValue: 229
+    - lppValue: 53
+      ccsValue: 255
+    - lppValue: 34
+      ccsValue: 230
+    - lppValue: 40
+      ccsValue: 230
+    - lppValue: 17
+      ccsValue: 224
+    pgcData:
+    - lppValue: 255
+      gcValue: 227
+    - lppValue: 233
+      gcValue: 227
+    - lppValue: 214
+      gcValue: 227
+    - lppValue: 198
+      gcValue: 225
+    - lppValue: 48
+      gcValue: 229
+    - lppValue: 53
+      gcValue: 226
+    - lppValue: 36
+      gcValue: 225
+    phcData: []
+  - levelIndex: 61
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,160,161
+    - lppValue: 172
+      ccsValue: 162
+    - lppValue: 169
+      ccsValue: 162
+    - lppValue: 179
+      ccsValue: 163
+    - lppValue: 189
+      ccsValue: 167,161
+    - lppValue: 199
+      ccsValue: 172
+    - lppValue: 201
+      ccsValue: 173
+    - lppValue: 221
+      ccsValue: 167
+    - lppValue: 226
+      ccsValue: 174
+    - lppValue: 232
+      ccsValue: 162
+    - lppValue: 241
+      ccsValue: 160
+    - lppValue: 249
+      ccsValue: 172
+    pgcData:
+    - lppValue: 167
+      gcValue: 161
+    - lppValue: 169
+      gcValue: 161
+    - lppValue: 179
+      gcValue: 163
+    - lppValue: 199
+      gcValue: 161
+    - lppValue: 201
+      gcValue: 173
+    - lppValue: 221
+      gcValue: 163
+    - lppValue: 236
+      gcValue: 161
+    phcData: []
+  - levelIndex: 62
+    pccData:
+    - lppValue: 431
+      ccsValue: 416,417,418
+    - lppValue: 423
+      ccsValue: 431
+    - lppValue: 89
+      ccsValue: 431
+    - lppValue: 83
+      ccsValue: 419
+    - lppValue: 85
+      ccsValue: 416,418
+    - lppValue: 75
+      ccsValue: 420
+    - lppValue: 127
+      ccsValue: 421
+    - lppValue: 117
+      ccsValue: 431
+    - lppValue: 98
+      ccsValue: 422
+    - lppValue: 24
+      ccsValue: 422
+    - lppValue: 17
+      ccsValue: 416
+    pgcData:
+    - lppValue: 431
+      gcValue: 419
+    - lppValue: 89
+      gcValue: 419
+    - lppValue: 86
+      gcValue: 419
+    - lppValue: 70
+      gcValue: 417
+    - lppValue: 112
+      gcValue: 421
+    - lppValue: 117
+      gcValue: 418
+    - lppValue: 100
+      gcValue: 417
+    phcData: []
+  - levelIndex: 63
+    pccData:
+    - lppValue: 487
+      ccsValue: 487,480
+    - lppValue: 508
+      ccsValue: 481,482
+    - lppValue: 505
+      ccsValue: 482
+    - lppValue: 456
+      ccsValue: 508
+    - lppValue: 455
+      ccsValue: 483
+    - lppValue: 473
+      ccsValue: 509
+    - lppValue: 45
+      ccsValue: 483
+    - lppValue: 34
+      ccsValue: 510
+    - lppValue: 56
+      ccsValue: 510
+    - lppValue: 49
+      ccsValue: 487
+    pgcData:
+    - lppValue: 487
+      gcValue: 483
+    - lppValue: 505
+      gcValue: 483
+    - lppValue: 462
+      gcValue: 483
+    - lppValue: 478
+      gcValue: 481
+    - lppValue: 464
+      gcValue: 509
+    - lppValue: 45
+      gcValue: 482
+    - lppValue: 60
+      gcValue: 481
+    phcData: []
+  - levelIndex: 64
+    pccData:
+    - lppValue: 415
+      ccsValue: 415,416,418
+    - lppValue: 422
+      ccsValue: 417
+    - lppValue: 435
+      ccsValue: 420
+    - lppValue: 437
+      ccsValue: 416,418
+    - lppValue: 453
+      ccsValue: 419
+    - lppValue: 464
+      ccsValue: 421
+    - lppValue: 471
+      ccsValue: 415
+    - lppValue: 482
+      ccsValue: 422
+    - lppValue: 488
+      ccsValue: 422
+    - lppValue: 497
+      ccsValue: 416
+    pgcData:
+    - lppValue: 415
+      gcValue: 419
+    - lppValue: 425
+      gcValue: 419
+    - lppValue: 438
+      gcValue: 419
+    - lppValue: 454
+      gcValue: 417
+    - lppValue: 464
+      gcValue: 421
+    - lppValue: 469
+      gcValue: 418
+    - lppValue: 484
+      gcValue: 417
+    phcData: []
+  - levelIndex: 65
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,160,161,162
+    - lppValue: 169
+      ccsValue: 160
+    - lppValue: 83
+      ccsValue: 172
+    - lppValue: 93
+      ccsValue: 167,161
+    - lppValue: 71
+      ccsValue: 163
+    - lppValue: 73
+      ccsValue: 173
+    - lppValue: 125
+      ccsValue: 167
+    - lppValue: 123
+      ccsValue: 174
+    - lppValue: 104
+      ccsValue: 162
+    - lppValue: 17
+      ccsValue: 167
+    - lppValue: 25
+      ccsValue: 172
+    pgcData:
+    - lppValue: 167
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 94
+      gcValue: 163
+    - lppValue: 78
+      gcValue: 161
+    - lppValue: 112
+      gcValue: 173
+    - lppValue: 125
+      gcValue: 162
+    - lppValue: 108
+      gcValue: 161
+    phcData: []
+  - levelIndex: 66
+    pccData:
+    - lppValue: 239
+      ccsValue: 239,224,225,226
+    - lppValue: 249
+      ccsValue: 224
+    - lppValue: 243
+      ccsValue: 228
+    - lppValue: 245
+      ccsValue: 239,225
+    - lppValue: 207
+      ccsValue: 227
+    - lppValue: 217
+      ccsValue: 229
+    - lppValue: 213
+      ccsValue: 239
+    - lppValue: 43
+      ccsValue: 230
+    - lppValue: 56
+      ccsValue: 226
+    - lppValue: 49
+      ccsValue: 239
+    - lppValue: 9
+      ccsValue: 228
+    pgcData:
+    - lppValue: 239
+      gcValue: 227
+    - lppValue: 249
+      gcValue: 227
+    - lppValue: 246
+      gcValue: 227
+    - lppValue: 198
+      gcValue: 225
+    - lppValue: 208
+      gcValue: 229
+    - lppValue: 213
+      gcValue: 226
+    - lppValue: 36
+      gcValue: 225
+    phcData: []
+  - levelIndex: 67
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,98
+    - lppValue: 92
+      ccsValue: 97,96
+    - lppValue: 89
+      ccsValue: 97
+    - lppValue: 83
+      ccsValue: 92
+    - lppValue: 71
+      ccsValue: 99
+    - lppValue: 61
+      ccsValue: 94
+    - lppValue: 57
+      ccsValue: 92
+    - lppValue: 55
+      ccsValue: 93
+    - lppValue: 45
+      ccsValue: 103
+    - lppValue: 34
+      ccsValue: 94
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 89
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 99
+    - lppValue: 62
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 93
+    - lppValue: 45
+      gcValue: 98
+    - lppValue: 28
+      gcValue: 97
+    phcData: []
+  - levelIndex: 68
+    pccData:
+    - lppValue: 1983
+      ccsValue: 1952,1953,1954
+    - lppValue: 1956
+      ccsValue: 1983
+    - lppValue: 1961
+      ccsValue: 1953
+    - lppValue: 83
+      ccsValue: 1956
+    - lppValue: 70
+      ccsValue: 1955
+    - lppValue: 73
+      ccsValue: 1957
+    - lppValue: 117
+      ccsValue: 1958
+    - lppValue: 98
+      ccsValue: 1952
+    - lppValue: 105
+      ccsValue: 1958
+    pgcData:
+    - lppValue: 1983
+      gcValue: 1955
+    - lppValue: 1961
+      gcValue: 1955
+    - lppValue: 86
+      gcValue: 1955
+    - lppValue: 70
+      gcValue: 1953
+    - lppValue: 112
+      gcValue: 1957
+    - lppValue: 117
+      gcValue: 1954
+    - lppValue: 100
+      gcValue: 1953
+    phcData: []
+  - levelIndex: 69
+    pccData:
+    - lppValue: 2023
+      ccsValue: 2023,2017,2018
+    - lppValue: 2028
+      ccsValue: 2016
+    - lppValue: 2040
+      ccsValue: 2028
+    - lppValue: 1986
+      ccsValue: 2019
+    - lppValue: 1993
+      ccsValue: 2030
+    - lppValue: 2007
+      ccsValue: 2028
+    - lppValue: 2012
+      ccsValue: 2029
+    - lppValue: 2009
+      ccsValue: 2023
+    - lppValue: 34
+      ccsValue: 2030
+    pgcData:
+    - lppValue: 2023
+      gcValue: 2019
+    - lppValue: 2025
+      gcValue: 2019
+    - lppValue: 2046
+      gcValue: 2019
+    - lppValue: 1998
+      gcValue: 2017
+    - lppValue: 2000
+      gcValue: 2029
+    - lppValue: 2013
+      gcValue: 2018
+    - lppValue: 44
+      gcValue: 2017
+    phcData: []
+  - levelIndex: 70
+    pccData:
+    - lppValue: 111
+      ccsValue: 111,97,98
+    - lppValue: 100
+      ccsValue: 96
+    - lppValue: 72
+      ccsValue: 100
+    - lppValue: 66
+      ccsValue: 99
+    - lppValue: 57
+      ccsValue: 102
+    - lppValue: 52
+      ccsValue: 101
+    - lppValue: 41
+      ccsValue: 111
+    - lppValue: 24
+      ccsValue: 102
+    pgcData:
+    - lppValue: 111
+      gcValue: 99
+    - lppValue: 89
+      gcValue: 99
+    - lppValue: 86
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 101
+    - lppValue: 53
+      gcValue: 98
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 71
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,161,162
+    - lppValue: 188
+      ccsValue: 160
+    - lppValue: 79
+      ccsValue: 161,162
+    - lppValue: 75
+      ccsValue: 167,160
+    - lppValue: 71
+      ccsValue: 188
+    - lppValue: 95
+      ccsValue: 160
+    - lppValue: 87
+      ccsValue: 189
+    - lppValue: 105
+      ccsValue: 163
+    - lppValue: 103
+      ccsValue: 190
+    - lppValue: 119
+      ccsValue: 163
+    pgcData:
+    - lppValue: 167
+      gcValue: 163
+    - lppValue: 185
+      gcValue: 163
+    - lppValue: 78
+      gcValue: 163
+    - lppValue: 94
+      gcValue: 161
+    - lppValue: 80
+      gcValue: 189
+    - lppValue: 109
+      gcValue: 162
+    - lppValue: 124
+      gcValue: 161
+    phcData: []
+  - levelIndex: 72
+    pccData:
+    - lppValue: 159
+      ccsValue: 159,225,226,224
+    - lppValue: 235
+      ccsValue: 159,225,226,224
+    - lppValue: 243
+      ccsValue: 228
+    - lppValue: 194
+      ccsValue: 227
+    - lppValue: 201
+      ccsValue: 224,225
+    - lppValue: 212
+      ccsValue: 229
+    - lppValue: 223
+      ccsValue: 230
+    - lppValue: 40
+      ccsValue: 224,225
+    pgcData:
+    - lppValue: 159
+      gcValue: 227
+    - lppValue: 233
+      gcValue: 227
+    - lppValue: 246
+      gcValue: 227
+    - lppValue: 198
+      gcValue: 225
+    - lppValue: 208
+      gcValue: 229
+    - lppValue: 213
+      gcValue: 226
+    - lppValue: 36
+      gcValue: 225
+    phcData: []
+  - levelIndex: 73
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,97,98,96
+    - lppValue: 107
+      ccsValue: 103,97,98,96
+    - lppValue: 83
+      ccsValue: 108
+    - lppValue: 66
+      ccsValue: 99
+    - lppValue: 79
+      ccsValue: 96,97
+    - lppValue: 49
+      ccsValue: 109
+    - lppValue: 62
+      ccsValue: 103,97,98,96
+    - lppValue: 59
+      ccsValue: 110
+    - lppValue: 35
+      ccsValue: 103,97,98,96
+    - lppValue: 21
+      ccsValue: 103,97,98,96
+    - lppValue: 19
+      ccsValue: 99,108,109,110
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 94
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 109
+    - lppValue: 61
+      gcValue: 98
+    - lppValue: 44
+      gcValue: 97
+    phcData: []
+  - levelIndex: 74
+    pccData:
+    - lppValue: 431
+      ccsValue: 431,417,418,416
+    - lppValue: 443
+      ccsValue: 431,417,418,416
+    - lppValue: 435
+      ccsValue: 420
+    - lppValue: 66
+      ccsValue: 419
+    - lppValue: 71
+      ccsValue: 416,417
+    - lppValue: 81
+      ccsValue: 421
+    - lppValue: 86
+      ccsValue: 431,417,418,416
+    - lppValue: 107
+      ccsValue: 422
+    - lppValue: 99
+      ccsValue: 431,417,418,416
+    - lppValue: 125
+      ccsValue: 431,417,418,416
+    - lppValue: 115
+      ccsValue: 419,420,421,422
+    pgcData:
+    - lppValue: 431
+      gcValue: 419
+    - lppValue: 441
+      gcValue: 419
+    - lppValue: 438
+      gcValue: 419
+    - lppValue: 70
+      gcValue: 417
+    - lppValue: 80
+      gcValue: 421
+    - lppValue: 85
+      gcValue: 418
+    - lppValue: 100
+      gcValue: 417
+    phcData: []
+  - levelIndex: 75
+    pccData:
+    - lppValue: 423
+      ccsValue: 423,417,418,416
+    - lppValue: 475
+      ccsValue: 423,417,418,416
+    - lppValue: 467
+      ccsValue: 476
+    - lppValue: 450
+      ccsValue: 419
+    - lppValue: 511
+      ccsValue: 416,417
+    - lppValue: 497
+      ccsValue: 477
+    - lppValue: 494
+      ccsValue: 423,417,418,416
+    - lppValue: 491
+      ccsValue: 478
+    - lppValue: 483
+      ccsValue: 423,417,418,416
+    - lppValue: 21
+      ccsValue: 423,417,418,416
+    - lppValue: 19
+      ccsValue: 419,476,477,478
+    pgcData:
+    - lppValue: 423
+      gcValue: 419
+    - lppValue: 473
+      gcValue: 419
+    - lppValue: 462
+      gcValue: 419
+    - lppValue: 510
+      gcValue: 417
+    - lppValue: 496
+      gcValue: 477
+    - lppValue: 493
+      gcValue: 418
+    - lppValue: 28
+      gcValue: 417
+    phcData: []
+  - levelIndex: 76
+    pccData:
+    - lppValue: 127
+      ccsValue: 127,97,98,96
+    - lppValue: 107
+      ccsValue: 127,97,98,96
+    - lppValue: 83
+      ccsValue: 100
+    - lppValue: 66
+      ccsValue: 99
+    - lppValue: 71
+      ccsValue: 96,97
+    - lppValue: 78
+      ccsValue: 101
+    - lppValue: 51
+      ccsValue: 127,97,98,96
+    - lppValue: 57
+      ccsValue: 102
+    - lppValue: 35
+      ccsValue: 127,97,98,96
+    - lppValue: 45
+      ccsValue: 127,97,98,96
+    - lppValue: 19
+      ccsValue: 99,100,101,102
+    pgcData:
+    - lppValue: 127
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 86
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 101
+    - lppValue: 53
+      gcValue: 98
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 77
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,161,162,160
+    - lppValue: 171
+      ccsValue: 167,161,162,160
+    - lppValue: 179
+      ccsValue: 172
+    - lppValue: 66
+      ccsValue: 163
+    - lppValue: 79
+      ccsValue: 160,161
+    - lppValue: 81
+      ccsValue: 173
+    - lppValue: 94
+      ccsValue: 167,161,162,160
+    - lppValue: 91
+      ccsValue: 174
+    - lppValue: 99
+      ccsValue: 167,161,162,160
+    - lppValue: 117
+      ccsValue: 167,161,162,160
+    - lppValue: 115
+      ccsValue: 163,172,173,174
+    pgcData:
+    - lppValue: 167
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 190
+      gcValue: 163
+    - lppValue: 78
+      gcValue: 161
+    - lppValue: 80
+      gcValue: 173
+    - lppValue: 93
+      gcValue: 162
+    - lppValue: 108
+      gcValue: 161
+    phcData: []
+  - levelIndex: 78
+    pccData:
+    - lppValue: 175
+      ccsValue: 175,161,162,160
+    - lppValue: 219
+      ccsValue: 175,161,162,160
+    - lppValue: 211
+      ccsValue: 164
+    - lppValue: 194
+      ccsValue: 165
+    - lppValue: 241
+      ccsValue: 163
+    - lppValue: 246
+      ccsValue: 175,161,162,160
+    - lppValue: 235
+      ccsValue: 166
+    - lppValue: 227
+      ccsValue: 175,161,162,160
+    - lppValue: 29
+      ccsValue: 175,161,162,160
+    - lppValue: 19
+      ccsValue: 163,164,165,166
+    pgcData:
+    - lppValue: 175
+      gcValue: 163
+    - lppValue: 217
+      gcValue: 163
+    - lppValue: 214
+      gcValue: 163
+    - lppValue: 205
+      gcValue: 163
+    - lppValue: 240
+      gcValue: 165
+    - lppValue: 245
+      gcValue: 162
+    - lppValue: 228
+      gcValue: 161
+    phcData: []
+  - levelIndex: 79
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,97,98,96
+    - lppValue: 123
+      ccsValue: 103,97,98,96
+    - lppValue: 115
+      ccsValue: 124
+    - lppValue: 95
+      ccsValue: 125
+    - lppValue: 81
+      ccsValue: 99
+    - lppValue: 46
+      ccsValue: 103,97,98,96
+    - lppValue: 35
+      ccsValue: 126
+    - lppValue: 57
+      ccsValue: 103,97,98,96
+    - lppValue: 55
+      ccsValue: 99,124,125,126
+    - lppValue: 8
+      ccsValue: 103,97,98,96
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 121
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 99
+    - lppValue: 69
+      gcValue: 99
+    - lppValue: 80
+      gcValue: 125
+    - lppValue: 45
+      gcValue: 98
+    - lppValue: 60
+      gcValue: 97
+    phcData: []
+  - levelIndex: 80
+    pccData:
+    - lppValue: 927
+      ccsValue: 927,929,930,928
+    - lppValue: 939
+      ccsValue: 927,929,930,928
+    - lppValue: 947
+      ccsValue: 932
+    - lppValue: 71
+      ccsValue: 933
+    - lppValue: 81
+      ccsValue: 931
+    - lppValue: 86
+      ccsValue: 927,929,930,928
+    - lppValue: 99
+      ccsValue: 934
+    - lppValue: 107
+      ccsValue: 927,929,930,928
+    - lppValue: 111
+      ccsValue: 931,932,933,934
+    - lppValue: 120
+      ccsValue: 927,929,930,928
+    pgcData:
+    - lppValue: 927
+      gcValue: 931
+    - lppValue: 937
+      gcValue: 931
+    - lppValue: 950
+      gcValue: 931
+    - lppValue: 70
+      gcValue: 929
+    - lppValue: 80
+      gcValue: 933
+    - lppValue: 85
+      gcValue: 930
+    - lppValue: 100
+      gcValue: 929
+    phcData: []
+  - levelIndex: 81
+    pccData:
+    - lppValue: 935
+      ccsValue: 935,929,930,928
+    - lppValue: 939
+      ccsValue: 935,929,930,928
+    - lppValue: 979
+      ccsValue: 940
+    - lppValue: 962
+      ccsValue: 941
+    - lppValue: 1009
+      ccsValue: 931
+    - lppValue: 1022
+      ccsValue: 935,929,930,928
+    - lppValue: 995
+      ccsValue: 942
+    - lppValue: 1001
+      ccsValue: 935,929,930,928
+    - lppValue: 21
+      ccsValue: 935,929,930,928
+    - lppValue: 19
+      ccsValue: 931,940,941,942
+    pgcData:
+    - lppValue: 935
+      gcValue: 929
+    - lppValue: 937
+      gcValue: 931
+    - lppValue: 990
+      gcValue: 931
+    - lppValue: 974
+      gcValue: 941
+    - lppValue: 1008
+      gcValue: 941
+    - lppValue: 1021
+      gcValue: 930
+    - lppValue: 1004
+      gcValue: 929
+    phcData: []
+  - levelIndex: 82
+    pccData:
+    - lppValue: 111
+      ccsValue: 111,97,98,96
+    - lppValue: 123
+      ccsValue: 111,97,98,96
+    - lppValue: 115
+      ccsValue: 100
+    - lppValue: 66
+      ccsValue: 99
+    - lppValue: 81
+      ccsValue: 101
+    - lppValue: 86
+      ccsValue: 111,97,98,96
+    - lppValue: 35
+      ccsValue: 102
+    - lppValue: 61
+      ccsValue: 111,97,98,96
+    - lppValue: 51
+      ccsValue: 99,100,101,102
+    - lppValue: 9
+      ccsValue: 111,97,98,96
+    pgcData:
+    - lppValue: 111
+      gcValue: 97
+    - lppValue: 121
+      gcValue: 99
+    - lppValue: 118
+      gcValue: 101
+    - lppValue: 70
+      gcValue: 99
+    - lppValue: 80
+      gcValue: 101
+    - lppValue: 85
+      gcValue: 98
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 83
+    pccData:
+    - lppValue: 231
+      ccsValue: 231,225,226,224
+    - lppValue: 219
+      ccsValue: 231,225,226,224
+    - lppValue: 211
+      ccsValue: 220
+    - lppValue: 199
+      ccsValue: 227
+    - lppValue: 55
+      ccsValue: 231,225,226,224
+    - lppValue: 51
+      ccsValue: 222
+    - lppValue: 35
+      ccsValue: 231,225,226,224
+    - lppValue: 25
+      ccsValue: 227,220,221,222
+    - lppValue: 18
+      ccsValue: 231,225,226,224
+    pgcData:
+    - lppValue: 231
+      gcValue: 227
+    - lppValue: 217
+      gcValue: 227
+    - lppValue: 206
+      gcValue: 227
+    - lppValue: 62
+      gcValue: 225
+    - lppValue: 48
+      gcValue: 221
+    - lppValue: 45
+      gcValue: 227
+    - lppValue: 28
+      gcValue: 221
+    phcData: []
+  - levelIndex: 84
+    pccData:
+    - lppValue: 191
+      ccsValue: 191,161,162,160
+    - lppValue: 171
+      ccsValue: 191,161,162,160
+    - lppValue: 211
+      ccsValue: 164
+    - lppValue: 194
+      ccsValue: 165
+    - lppValue: 241
+      ccsValue: 163
+    - lppValue: 246
+      ccsValue: 191,161,162,160
+    - lppValue: 251
+      ccsValue: 166
+    - lppValue: 227
+      ccsValue: 191,161,162,160
+    - lppValue: 237
+      ccsValue: 191,161,162,160
+    - lppValue: 19
+      ccsValue: 163,164,165,166
+    pgcData:
+    - lppValue: 191
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 214
+      gcValue: 163
+    - lppValue: 198
+      gcValue: 161
+    - lppValue: 240
+      gcValue: 165
+    - lppValue: 245
+      gcValue: 163
+    - lppValue: 228
+      gcValue: 165
+    phcData: []
+  - levelIndex: 85
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,97,98,96
+    - lppValue: 107
+      ccsValue: 103,97,98,96
+    - lppValue: 115
+      ccsValue: 108
+    - lppValue: 66
+      ccsValue: 109
+    - lppValue: 81
+      ccsValue: 99
+    - lppValue: 94
+      ccsValue: 103,97,98,96
+    - lppValue: 91
+      ccsValue: 110
+    - lppValue: 35
+      ccsValue: 103,97,98,96
+    - lppValue: 53
+      ccsValue: 103,97,98,96
+    - lppValue: 51
+      ccsValue: 99,108,109,110
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 126
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 109
+    - lppValue: 93
+      gcValue: 98
+    - lppValue: 44
+      gcValue: 97
+    phcData: []
+  - levelIndex: 86
+    pccData:
+    - lppValue: 495
+      ccsValue: 495,481,482,480
+    - lppValue: 475
+      ccsValue: 495,481,482,480
+    - lppValue: 467
+      ccsValue: 484
+    - lppValue: 450
+      ccsValue: 485
+    - lppValue: 60
+      ccsValue: 483
+    - lppValue: 54
+      ccsValue: 495,481,482,480
+    - lppValue: 41
+      ccsValue: 486
+    - lppValue: 35
+      ccsValue: 495,481,482,480
+    - lppValue: 29
+      ccsValue: 495,481,482,480
+    - lppValue: 19
+      ccsValue: 483,484,485,486
+    pgcData:
+    - lppValue: 495
+      gcValue: 483
+    - lppValue: 473
+      gcValue: 483
+    - lppValue: 470
+      gcValue: 483
+    - lppValue: 454
+      gcValue: 481
+    - lppValue: 48
+      gcValue: 485
+    - lppValue: 53
+      gcValue: 482
+    - lppValue: 36
+      gcValue: 481
+    phcData: []
+  - levelIndex: 87
+    pccData:
+    - lppValue: 423
+      ccsValue: 423,417,418,416
+    - lppValue: 443
+      ccsValue: 423,417,418,416
+    - lppValue: 435
+      ccsValue: 444
+    - lppValue: 450
+      ccsValue: 445
+    - lppValue: 468
+      ccsValue: 419
+    - lppValue: 494
+      ccsValue: 423,417,418,416
+    - lppValue: 489
+      ccsValue: 446
+    - lppValue: 483
+      ccsValue: 423,417,418,416
+    - lppValue: 501
+      ccsValue: 423,417,418,416
+    - lppValue: 499
+      ccsValue: 419,444,445,446
+    pgcData:
+    - lppValue: 423
+      gcValue: 417
+    - lppValue: 441
+      gcValue: 419
+    - lppValue: 462
+      gcValue: 445
+    - lppValue: 478
+      gcValue: 445
+    - lppValue: 464
+      gcValue: 445
+    - lppValue: 493
+      gcValue: 418
+    - lppValue: 508
+      gcValue: 417
+    phcData: []
+  - levelIndex: 88
+    pccData:
+    - lppValue: 159
+      ccsValue: 159,97,98,96
+    - lppValue: 107
+      ccsValue: 159,97,98,96
+    - lppValue: 115
+      ccsValue: 100
+    - lppValue: 66
+      ccsValue: 101
+    - lppValue: 76
+      ccsValue: 99
+    - lppValue: 86
+      ccsValue: 159,97,98,96
+    - lppValue: 89
+      ccsValue: 102
+    - lppValue: 35
+      ccsValue: 159,97,98,96
+    - lppValue: 45
+      ccsValue: 159,97,98,96
+    - lppValue: 51
+      ccsValue: 99,100,101,102
+    pgcData:
+    - lppValue: 159
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 118
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 101
+    - lppValue: 85
+      gcValue: 98
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 89
+    pccData:
+    - lppValue: 231
+      ccsValue: 231,225,226,224
+    - lppValue: 235
+      ccsValue: 231,225,226,224
+    - lppValue: 211
+      ccsValue: 236
+    - lppValue: 194
+      ccsValue: 237
+    - lppValue: 52
+      ccsValue: 227
+    - lppValue: 62
+      ccsValue: 231,225,226,224
+    - lppValue: 57
+      ccsValue: 238
+    - lppValue: 35
+      ccsValue: 231,225,226,224
+    - lppValue: 21
+      ccsValue: 231,225,226,224
+    - lppValue: 19
+      ccsValue: 227,236,237,238
+    pgcData:
+    - lppValue: 231
+      gcValue: 227
+    - lppValue: 233
+      gcValue: 227
+    - lppValue: 222
+      gcValue: 227
+    - lppValue: 206
+      gcValue: 225
+    - lppValue: 48
+      gcValue: 237
+    - lppValue: 61
+      gcValue: 227
+    - lppValue: 44
+      gcValue: 237
+    phcData: []
+  - levelIndex: 90
+    pccData:
+    - lppValue: 175
+      ccsValue: 175,161,162,160
+    - lppValue: 187
+      ccsValue: 175,161,162,160
+    - lppValue: 176
+      ccsValue: 164
+    - lppValue: 205
+      ccsValue: 165
+    - lppValue: 220
+      ccsValue: 163
+    - lppValue: 214
+      ccsValue: 175,161,162,160
+    - lppValue: 233
+      ccsValue: 166
+    - lppValue: 227
+      ccsValue: 175,161,162,160
+    - lppValue: 253
+      ccsValue: 175,161,162,160
+    - lppValue: 243
+      ccsValue: 163,164,165,166
+    pgcData:
+    - lppValue: 175
+      gcValue: 163
+    - lppValue: 185
+      gcValue: 163
+    - lppValue: 182
+      gcValue: 163
+    - lppValue: 198
+      gcValue: 161
+    - lppValue: 208
+      gcValue: 165
+    - lppValue: 213
+      gcValue: 162
+    - lppValue: 228
+      gcValue: 161
+    phcData: []
+  - levelIndex: 91
+    pccData:
+    - lppValue: 4007
+      ccsValue: 4007,4001,4002,4000
+    - lppValue: 91
+      ccsValue: 4007,4001,4002,4000
+    - lppValue: 80
+      ccsValue: 92
+    - lppValue: 69
+      ccsValue: 93
+    - lppValue: 116
+      ccsValue: 4003
+    - lppValue: 110
+      ccsValue: 4007,4001,4002,4000
+    - lppValue: 105
+      ccsValue: 94
+    - lppValue: 99
+      ccsValue: 4007,4001,4002,4000
+    - lppValue: 21
+      ccsValue: 4007,4001,4002,4000
+    - lppValue: 19
+      ccsValue: 4003,92,93,94
+    pgcData:
+    - lppValue: 4007
+      gcValue: 4003
+    - lppValue: 89
+      gcValue: 4003
+    - lppValue: 78
+      gcValue: 4003
+    - lppValue: 126
+      gcValue: 4001
+    - lppValue: 112
+      gcValue: 93
+    - lppValue: 109
+      gcValue: 4003
+    - lppValue: 28
+      gcValue: 93
+    phcData: []
+  - levelIndex: 92
+    pccData:
+    - lppValue: 8191
+      ccsValue: 8191,8161,8162,8160
+    - lppValue: 8171
+      ccsValue: 8191,8161,8162,8160
+    - lppValue: 8144
+      ccsValue: 8164
+    - lppValue: 8157
+      ccsValue: 8165
+    - lppValue: 8140
+      ccsValue: 8163
+    - lppValue: 54
+      ccsValue: 8191,8161,8162,8160
+    - lppValue: 57
+      ccsValue: 8166
+    - lppValue: 45
+      ccsValue: 8191,8161,8162,8160
+    - lppValue: 22
+      ccsValue: 8163,8164,8165,8166
+    pgcData:
+    - lppValue: 8191
+      gcValue: 8163
+    - lppValue: 8169
+      gcValue: 8163
+    - lppValue: 8150
+      gcValue: 8163
+    - lppValue: 8134
+      gcValue: 8163
+    - lppValue: 48
+      gcValue: 8165
+    - lppValue: 53
+      gcValue: 8162
+    - lppValue: 36
+      gcValue: 8161
+    phcData: []
+  - levelIndex: 93
+    pccData:
+    - lppValue: 4007
+      ccsValue: 4007,4001,4002,4000
+    - lppValue: 4011
+      ccsValue: 4007,4001,4002,4000
+    - lppValue: 4016
+      ccsValue: 4012
+    - lppValue: 4037
+      ccsValue: 4013
+    - lppValue: 4052
+      ccsValue: 4003
+    - lppValue: 4062
+      ccsValue: 4007,4001,4002,4000
+    - lppValue: 4057
+      ccsValue: 4014
+    - lppValue: 4067
+      ccsValue: 4007,4001,4002,4000
+    - lppValue: 4085
+      ccsValue: 4007,4001,4002,4000
+    - lppValue: 4083
+      ccsValue: 4003,4012,4013,4014
+    pgcData:
+    - lppValue: 4007
+      gcValue: 4003
+    - lppValue: 4009
+      gcValue: 4003
+    - lppValue: 4030
+      gcValue: 4003
+    - lppValue: 4046
+      gcValue: 4001
+    - lppValue: 4048
+      gcValue: 4013
+    - lppValue: 4061
+      gcValue: 4003
+    - lppValue: 4076
+      gcValue: 4013
+    phcData: []
+  - levelIndex: 94
+    pccData:
+    - lppValue: 175
+      ccsValue: 175,161,162,160
+    - lppValue: 91
+      ccsValue: 175,161,162,160
+    - lppValue: 80
+      ccsValue: 164
+    - lppValue: 77
+      ccsValue: 165
+    - lppValue: 124
+      ccsValue: 163
+    - lppValue: 118
+      ccsValue: 175,161,162,160
+    - lppValue: 105
+      ccsValue: 166
+    - lppValue: 99
+      ccsValue: 175,161,162,160
+    - lppValue: 29
+      ccsValue: 175,161,162,160
+    - lppValue: 19
+      ccsValue: 163,164,165,166
+    pgcData:
+    - lppValue: 175
+      gcValue: 163
+    - lppValue: 89
+      gcValue: 163
+    - lppValue: 86
+      gcValue: 163
+    - lppValue: 70
+      gcValue: 161
+    - lppValue: 112
+      gcValue: 165
+    - lppValue: 117
+      gcValue: 162
+    - lppValue: 100
+      gcValue: 161
+    phcData: []
+  - levelIndex: 95
+    pccData:
+    - lppValue: 231
+      ccsValue: 231,225,226,224
+    - lppValue: 251
+      ccsValue: 231,225,226,224
+    - lppValue: 243
+      ccsValue: 252
+    - lppValue: 197
+      ccsValue: 253
+    - lppValue: 212
+      ccsValue: 227
+    - lppValue: 46
+      ccsValue: 231,225,226,224
+    - lppValue: 41
+      ccsValue: 254
+    - lppValue: 35
+      ccsValue: 231,225,226,224
+    - lppValue: 53
+      ccsValue: 231,225,226,224
+    - lppValue: 51
+      ccsValue: 227,252,253,254
+    pgcData:
+    - lppValue: 231
+      gcValue: 227
+    - lppValue: 249
+      gcValue: 227
+    - lppValue: 206
+      gcValue: 227
+    - lppValue: 222
+      gcValue: 225
+    - lppValue: 208
+      gcValue: 253
+    - lppValue: 45
+      gcValue: 226
+    - lppValue: 60
+      gcValue: 225
+    phcData: []
+  - levelIndex: 96
+    pccData:
+    - lppValue: 159
+      ccsValue: 159,161,162,160
+    - lppValue: 171
+      ccsValue: 159,161,162,160
+    - lppValue: 176
+      ccsValue: 164
+    - lppValue: 189
+      ccsValue: 165
+    - lppValue: 204
+      ccsValue: 163
+    - lppValue: 214
+      ccsValue: 159,161,162,160
+    - lppValue: 219
+      ccsValue: 166
+    - lppValue: 227
+      ccsValue: 159,161,162,160
+    - lppValue: 237
+      ccsValue: 159,161,162,160
+    - lppValue: 243
+      ccsValue: 163,164,165,166
+    pgcData:
+    - lppValue: 159
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 182
+      gcValue: 163
+    - lppValue: 198
+      gcValue: 161
+    - lppValue: 208
+      gcValue: 165
+    - lppValue: 213
+      gcValue: 162
+    - lppValue: 228
+      gcValue: 161
+    phcData: []
+  - levelIndex: 97
+    pccData:
+    - lppValue: 423
+      ccsValue: 423,417,418,416
+    - lppValue: 427
+      ccsValue: 423,417,418,416
+    - lppValue: 80
+      ccsValue: 428
+    - lppValue: 69
+      ccsValue: 419
+    - lppValue: 116
+      ccsValue: 429
+    - lppValue: 121
+      ccsValue: 430
+    - lppValue: 21
+      ccsValue: 423,417,418,416
+    - lppValue: 19
+      ccsValue: 419,428,429,430
+    pgcData:
+    - lppValue: 423
+      gcValue: 419
+    - lppValue: 425
+      gcValue: 419
+    - lppValue: 94
+      gcValue: 419
+    - lppValue: 78
+      gcValue: 417
+    - lppValue: 112
+      gcValue: 429
+    - lppValue: 125
+      gcValue: 418
+    - lppValue: 108
+      gcValue: 417
+    phcData: []
+  - levelIndex: 98
+    pccData:
+    - lppValue: 495
+      ccsValue: 495,481,482,480
+    - lppValue: 507
+      ccsValue: 495,481,482,480
+    - lppValue: 496
+      ccsValue: 484
+    - lppValue: 461
+      ccsValue: 485
+    - lppValue: 476
+      ccsValue: 483
+    - lppValue: 470
+      ccsValue: 495,481,482,480
+    - lppValue: 41
+      ccsValue: 486
+    - lppValue: 35
+      ccsValue: 495,481,482,480
+    - lppValue: 61
+      ccsValue: 495,481,482,480
+    - lppValue: 51
+      ccsValue: 483,484,485,486
+    pgcData:
+    - lppValue: 495
+      gcValue: 483
+    - lppValue: 505
+      gcValue: 483
+    - lppValue: 502
+      gcValue: 483
+    - lppValue: 454
+      gcValue: 481
+    - lppValue: 464
+      gcValue: 485
+    - lppValue: 469
+      gcValue: 483
+    - lppValue: 36
+      gcValue: 485
+    phcData: []
+  - levelIndex: 99
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,97,98,96
+    - lppValue: 91
+      ccsValue: 103,97,98,96
+    - lppValue: 80
+      ccsValue: 92
+    - lppValue: 69
+      ccsValue: 93
+    - lppValue: 52
+      ccsValue: 99
+    - lppValue: 46
+      ccsValue: 103,97,98,96
+    - lppValue: 41
+      ccsValue: 94
+    - lppValue: 35
+      ccsValue: 103,97,98,96
+    - lppValue: 21
+      ccsValue: 103,97,98,96
+    - lppValue: 19
+      ccsValue: 99,92,93,94
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 89
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 99
+    - lppValue: 62
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 93
+    - lppValue: 45
+      gcValue: 99
+    - lppValue: 28
+      gcValue: 93
+    phcData: []
+  - levelIndex: 100
+    pccData:
+    - lppValue: 191
+      ccsValue: 191,161,162,160
+    - lppValue: 171
+      ccsValue: 191,161,162,160
+    - lppValue: 80
+      ccsValue: 164
+    - lppValue: 93
+      ccsValue: 165
+    - lppValue: 76
+      ccsValue: 163
+    - lppValue: 118
+      ccsValue: 191,161,162,160
+    - lppValue: 121
+      ccsValue: 166
+    - lppValue: 99
+      ccsValue: 191,161,162,160
+    - lppValue: 109
+      ccsValue: 191,161,162,160
+    - lppValue: 19
+      ccsValue: 163,164,165,166
+    pgcData:
+    - lppValue: 191
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 86
+      gcValue: 163
+    - lppValue: 70
+      gcValue: 161
+    - lppValue: 112
+      gcValue: 165
+    - lppValue: 117
+      gcValue: 163
+    - lppValue: 100
+      gcValue: 165
+    phcData: []
+  - levelIndex: 101
+    pccData:
+    - lppValue: 231
+      ccsValue: 231,225,226,224
+    - lppValue: 235
+      ccsValue: 231,225,226,224
+    - lppValue: 240
+      ccsValue: 236
+    - lppValue: 197
+      ccsValue: 227
+    - lppValue: 212
+      ccsValue: 237
+    - lppValue: 222
+      ccsValue: 231,225,226,224
+    - lppValue: 217
+      ccsValue: 238
+    - lppValue: 35
+      ccsValue: 231,225,226,224
+    - lppValue: 53
+      ccsValue: 231,225,226,224
+    - lppValue: 51
+      ccsValue: 227,236,237,238
+    pgcData:
+    - lppValue: 231
+      gcValue: 227
+    - lppValue: 233
+      gcValue: 227
+    - lppValue: 254
+      gcValue: 227
+    - lppValue: 206
+      gcValue: 225
+    - lppValue: 208
+      gcValue: 237
+    - lppValue: 221
+      gcValue: 226
+    - lppValue: 44
+      gcValue: 225
+    phcData: []
+  - levelIndex: 102
+    pccData:
+    - lppValue: 111
+      ccsValue: 111,97,98,96
+    - lppValue: 91
+      ccsValue: 111,97,98,96
+    - lppValue: 80
+      ccsValue: 100
+    - lppValue: 77
+      ccsValue: 99
+    - lppValue: 60
+      ccsValue: 101
+    - lppValue: 54
+      ccsValue: 111,97,98,96
+    - lppValue: 41
+      ccsValue: 102
+    - lppValue: 35
+      ccsValue: 111,97,98,96
+    - lppValue: 29
+      ccsValue: 111,97,98,96
+    - lppValue: 19
+      ccsValue: 99,100,101,102
+    pgcData:
+    - lppValue: 111
+      gcValue: 99
+    - lppValue: 89
+      gcValue: 99
+    - lppValue: 86
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 101
+    - lppValue: 53
+      gcValue: 98
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 103
+    pccData:
+    - lppValue: 935
+      ccsValue: 935,929,930,928
+    - lppValue: 955
+      ccsValue: 935,929,930,928
+    - lppValue: 944
+      ccsValue: 956
+    - lppValue: 69
+      ccsValue: 957
+    - lppValue: 84
+      ccsValue: 931
+    - lppValue: 110
+      ccsValue: 935,929,930,928
+    - lppValue: 105
+      ccsValue: 958
+    - lppValue: 99
+      ccsValue: 935,929,930,928
+    - lppValue: 117
+      ccsValue: 935,929,930,928
+    - lppValue: 115
+      ccsValue: 931,956,957,958
+    pgcData:
+    - lppValue: 935
+      gcValue: 931
+    - lppValue: 953
+      gcValue: 931
+    - lppValue: 78
+      gcValue: 931
+    - lppValue: 94
+      gcValue: 929
+    - lppValue: 80
+      gcValue: 957
+    - lppValue: 109
+      gcValue: 931
+    - lppValue: 124
+      gcValue: 957
+    phcData: []
+  - levelIndex: 104
+    pccData:
+    - lppValue: 927
+      ccsValue: 927,993,994,992
+    - lppValue: 1003
+      ccsValue: 927,993,994,992
+    - lppValue: 1008
+      ccsValue: 996
+    - lppValue: 1021
+      ccsValue: 997
+    - lppValue: 972
+      ccsValue: 995
+    - lppValue: 982
+      ccsValue: 927,993,994,992
+    - lppValue: 985
+      ccsValue: 998
+    - lppValue: 35
+      ccsValue: 927,993,994,992
+    - lppValue: 45
+      ccsValue: 927,993,994,992
+    - lppValue: 51
+      ccsValue: 995,996,997,998
+    pgcData:
+    - lppValue: 927
+      gcValue: 995
+    - lppValue: 1001
+      gcValue: 995
+    - lppValue: 1014
+      gcValue: 995
+    - lppValue: 966
+      gcValue: 993
+    - lppValue: 976
+      gcValue: 997
+    - lppValue: 981
+      gcValue: 995
+    - lppValue: 36
+      gcValue: 997
+    phcData: []
+  - levelIndex: 105
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,97,98,96
+    - lppValue: 107
+      ccsValue: 103,97,98,96
+    - lppValue: 80
+      ccsValue: 108
+    - lppValue: 69
+      ccsValue: 109
+    - lppValue: 52
+      ccsValue: 99
+    - lppValue: 62
+      ccsValue: 103,97,98,96
+    - lppValue: 57
+      ccsValue: 110
+    - lppValue: 35
+      ccsValue: 103,97,98,96
+    - lppValue: 21
+      ccsValue: 103,97,98,96
+    - lppValue: 19
+      ccsValue: 99,108,109,110
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 94
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 109
+    - lppValue: 61
+      gcValue: 98
+    - lppValue: 44
+      gcValue: 97
+    phcData: []
+  - levelIndex: 106
+    pccData:
+    - lppValue: 175
+      ccsValue: 175,161,162
+    - lppValue: 164
+      ccsValue: 160
+    - lppValue: 72
+      ccsValue: 164
+    - lppValue: 66
+      ccsValue: 163
+    - lppValue: 89
+      ccsValue: 166
+    - lppValue: 84
+      ccsValue: 165
+    - lppValue: 105
+      ccsValue: 175
+    - lppValue: 120
+      ccsValue: 166
+    pgcData:
+    - lppValue: 175
+      gcValue: 161
+    - lppValue: 185
+      gcValue: 163
+    - lppValue: 182
+      gcValue: 165
+    - lppValue: 70
+      gcValue: 161
+    - lppValue: 80
+      gcValue: 163
+    - lppValue: 85
+      gcValue: 165
+    - lppValue: 100
+      gcValue: 163
+    phcData: []
+  - levelIndex: 107
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,161,162
+    - lppValue: 220
+      ccsValue: 160
+    - lppValue: 200
+      ccsValue: 220
+    - lppValue: 194
+      ccsValue: 163
+    - lppValue: 249
+      ccsValue: 222
+    - lppValue: 236
+      ccsValue: 221
+    - lppValue: 233
+      ccsValue: 167
+    - lppValue: 24
+      ccsValue: 222
+    pgcData:
+    - lppValue: 167
+      gcValue: 163
+    - lppValue: 217
+      gcValue: 163
+    - lppValue: 206
+      gcValue: 163
+    - lppValue: 254
+      gcValue: 161
+    - lppValue: 240
+      gcValue: 221
+    - lppValue: 237
+      gcValue: 162
+    - lppValue: 28
+      gcValue: 161
+    phcData: []
+  - levelIndex: 108
+    pccData:
+    - lppValue: 127
+      ccsValue: 127,97,98
+    - lppValue: 100
+      ccsValue: 96
+    - lppValue: 88
+      ccsValue: 100
+    - lppValue: 66
+      ccsValue: 99
+    - lppValue: 73
+      ccsValue: 102
+    - lppValue: 52
+      ccsValue: 101
+    - lppValue: 57
+      ccsValue: 127
+    - lppValue: 40
+      ccsValue: 102
+    pgcData:
+    - lppValue: 127
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 86
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 48
+      gcValue: 101
+    - lppValue: 53
+      gcValue: 99
+    - lppValue: 36
+      gcValue: 101
+    phcData: []
+  - levelIndex: 109
+    pccData:
+    - lppValue: 423
+      ccsValue: 423,417,418,416
+    - lppValue: 427
+      ccsValue: 423,417,418,416
+    - lppValue: 432
+      ccsValue: 428
+    - lppValue: 69
+      ccsValue: 429
+    - lppValue: 84
+      ccsValue: 419
+    - lppValue: 94
+      ccsValue: 423,417,418,416
+    - lppValue: 89
+      ccsValue: 430
+    - lppValue: 99
+      ccsValue: 423,417,418,416
+    - lppValue: 115
+      ccsValue: 419,428,429,430
+    pgcData:
+    - lppValue: 423
+      gcValue: 419
+    - lppValue: 425
+      gcValue: 419
+    - lppValue: 446
+      gcValue: 419
+    - lppValue: 78
+      gcValue: 417
+    - lppValue: 80
+      gcValue: 429
+    - lppValue: 93
+      gcValue: 418
+    - lppValue: 108
+      gcValue: 417
+    phcData: []
+  - levelIndex: 110
+    pccData:
+    - lppValue: 431
+      ccsValue: 431,417,418,416
+    - lppValue: 475
+      ccsValue: 431,417,418,416
+    - lppValue: 464
+      ccsValue: 420
+    - lppValue: 461
+      ccsValue: 421
+    - lppValue: 508
+      ccsValue: 419
+    - lppValue: 502
+      ccsValue: 431,417,418,416
+    - lppValue: 489
+      ccsValue: 422
+    - lppValue: 483
+      ccsValue: 431,417,418,416
+    - lppValue: 29
+      ccsValue: 431,417,418,416
+    - lppValue: 19
+      ccsValue: 419,420,421,422
+    pgcData:
+    - lppValue: 431
+      gcValue: 419
+    - lppValue: 473
+      gcValue: 419
+    - lppValue: 470
+      gcValue: 419
+    - lppValue: 454
+      gcValue: 417
+    - lppValue: 496
+      gcValue: 421
+    - lppValue: 501
+      gcValue: 418
+    - lppValue: 484
+      gcValue: 417
+    phcData: []
+  - levelIndex: 111
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,97,98,96
+    - lppValue: 123
+      ccsValue: 103,97,98,96
+    - lppValue: 112
+      ccsValue: 124
+    - lppValue: 69
+      ccsValue: 99
+    - lppValue: 84
+      ccsValue: 125
+    - lppValue: 46
+      ccsValue: 103,97,98,96
+    - lppValue: 41
+      ccsValue: 126
+    - lppValue: 53
+      ccsValue: 103,97,98,96
+    - lppValue: 51
+      ccsValue: 99,124,125,126
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 121
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 99
+    - lppValue: 94
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 125
+    - lppValue: 45
+      gcValue: 99
+    - lppValue: 60
+      gcValue: 125
+    phcData: []
+  - levelIndex: 112
+    pccData:
+    - lppValue: 159
+      ccsValue: 159,161,162,160
+    - lppValue: 171
+      ccsValue: 159,161,162,160
+    - lppValue: 176
+      ccsValue: 164
+    - lppValue: 189
+      ccsValue: 163
+    - lppValue: 76
+      ccsValue: 165
+    - lppValue: 86
+      ccsValue: 159,161,162,160
+    - lppValue: 89
+      ccsValue: 166
+    - lppValue: 109
+      ccsValue: 159,161,162,160
+    - lppValue: 115
+      ccsValue: 163,164,165,166
+    pgcData:
+    - lppValue: 159
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 182
+      gcValue: 163
+    - lppValue: 70
+      gcValue: 161
+    - lppValue: 80
+      gcValue: 165
+    - lppValue: 85
+      gcValue: 163
+    - lppValue: 100
+      gcValue: 161
+    phcData: []
+  - levelIndex: 113
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,161,162,160
+    - lppValue: 171
+      ccsValue: 167,161,162,160
+    - lppValue: 208
+      ccsValue: 172
+    - lppValue: 197
+      ccsValue: 163
+    - lppValue: 244
+      ccsValue: 173
+    - lppValue: 254
+      ccsValue: 167,161,162,160
+    - lppValue: 249
+      ccsValue: 174
+    - lppValue: 21
+      ccsValue: 167,161,162,160
+    - lppValue: 19
+      ccsValue: 163,172,173,174
+    pgcData:
+    - lppValue: 167
+      gcValue: 163
+    - lppValue: 169
+      gcValue: 163
+    - lppValue: 222
+      gcValue: 163
+    - lppValue: 206
+      gcValue: 161
+    - lppValue: 240
+      gcValue: 173
+    - lppValue: 253
+      gcValue: 163
+    - lppValue: 236
+      gcValue: 161
+    phcData: []
+  - levelIndex: 114
+    pccData:
+    - lppValue: 111
+      ccsValue: 111,97,98,96
+    - lppValue: 123
+      ccsValue: 111,97,98,96
+    - lppValue: 112
+      ccsValue: 100
+    - lppValue: 77
+      ccsValue: 99
+    - lppValue: 92
+      ccsValue: 101
+    - lppValue: 86
+      ccsValue: 111,97,98,96
+    - lppValue: 41
+      ccsValue: 102
+    - lppValue: 61
+      ccsValue: 111,97,98,96
+    - lppValue: 51
+      ccsValue: 99,100,101,102
+    pgcData:
+    - lppValue: 111
+      gcValue: 99
+    - lppValue: 121
+      gcValue: 99
+    - lppValue: 118
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 101
+    - lppValue: 85
+      gcValue: 99
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
+  - levelIndex: 115
+    pccData:
+    - lppValue: 2023
+      ccsValue: 2023,2017,2018,2016
+    - lppValue: 2011
+      ccsValue: 2023,2017,2018,2016
+    - lppValue: 2000
+      ccsValue: 2012
+    - lppValue: 1989
+      ccsValue: 2019
+    - lppValue: 52
+      ccsValue: 2013
+    - lppValue: 46
+      ccsValue: 2023,2017,2018,2016
+    - lppValue: 41
+      ccsValue: 2014
+    - lppValue: 21
+      ccsValue: 2023,2017,2018,2016
+    - lppValue: 19
+      ccsValue: 2019,2012,2013,2014
+    pgcData:
+    - lppValue: 2023
+      gcValue: 2019
+    - lppValue: 2009
+      gcValue: 2019
+    - lppValue: 1998
+      gcValue: 2019
+    - lppValue: 62
+      gcValue: 2017
+    - lppValue: 48
+      gcValue: 2013
+    - lppValue: 45
+      gcValue: 2019
+    - lppValue: 28
+      gcValue: 2017
+    phcData: []
+  - levelIndex: 116
+    pccData:
+    - lppValue: 1983
+      ccsValue: 1983,1953,1954,1952
+    - lppValue: 1963
+      ccsValue: 1983,1953,1954,1952
+    - lppValue: 2000
+      ccsValue: 1956
+    - lppValue: 2013
+      ccsValue: 1955
+    - lppValue: 1996
+      ccsValue: 1957
+    - lppValue: 2041
+      ccsValue: 1958
+    - lppValue: 2029
+      ccsValue: 1983,1953,1954,1952
+    - lppValue: 19
+      ccsValue: 1955,1956,1957,1958
+    pgcData:
+    - lppValue: 1983
+      gcValue: 1955
+    - lppValue: 1961
+      gcValue: 1955
+    - lppValue: 2006
+      gcValue: 1955
+    - lppValue: 1990
+      gcValue: 1953
+    - lppValue: 2032
+      gcValue: 1957
+    - lppValue: 2037
+      gcValue: 1955
+    - lppValue: 2020
+      gcValue: 1953
+    phcData: []
+  - levelIndex: 117
+    pccData:
+    - lppValue: 103
+      ccsValue: 103,97,98,96
+    - lppValue: 107
+      ccsValue: 103,97,98,96
+    - lppValue: 112
+      ccsValue: 108
+    - lppValue: 69
+      ccsValue: 99
+    - lppValue: 84
+      ccsValue: 109
+    - lppValue: 94
+      ccsValue: 103,97,98,96
+    - lppValue: 89
+      ccsValue: 110
+    - lppValue: 53
+      ccsValue: 103,97,98,96
+    - lppValue: 51
+      ccsValue: 99,108,109,110
+    pgcData:
+    - lppValue: 103
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 126
+      gcValue: 99
+    - lppValue: 78
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 109
+    - lppValue: 93
+      gcValue: 99
+    - lppValue: 44
+      gcValue: 109
+    phcData: []
+  - levelIndex: 118
+    pccData:
+    - lppValue: 239
+      ccsValue: 239,225,226,224
+    - lppValue: 219
+      ccsValue: 239,225,226,224
+    - lppValue: 208
+      ccsValue: 228
+    - lppValue: 194
+      ccsValue: 227
+    - lppValue: 63
+      ccsValue: 229
+    - lppValue: 54
+      ccsValue: 239,225,226,224
+    - lppValue: 41
+      ccsValue: 230
+    - lppValue: 29
+      ccsValue: 239,225,226,224
+    - lppValue: 19
+      ccsValue: 227,228,229,230
+    pgcData:
+    - lppValue: 239
+      gcValue: 227
+    - lppValue: 217
+      gcValue: 227
+    - lppValue: 214
+      gcValue: 227
+    - lppValue: 198
+      gcValue: 225
+    - lppValue: 48
+      gcValue: 229
+    - lppValue: 53
+      gcValue: 227
+    - lppValue: 36
+      gcValue: 225
+    phcData: []
+  - levelIndex: 119
+    pccData:
+    - lppValue: 167
+      ccsValue: 167,161,162,160
+    - lppValue: 187
+      ccsValue: 167,161,162,160
+    - lppValue: 176
+      ccsValue: 188
+    - lppValue: 197
+      ccsValue: 163
+    - lppValue: 212
+      ccsValue: 189
+    - lppValue: 238
+      ccsValue: 167,161,162,160
+    - lppValue: 233
+      ccsValue: 190
+    - lppValue: 245
+      ccsValue: 167,161,162,160
+    - lppValue: 243
+      ccsValue: 163,188,189,190
+    pgcData:
+    - lppValue: 167
+      gcValue: 163
+    - lppValue: 185
+      gcValue: 163
+    - lppValue: 206
+      gcValue: 163
+    - lppValue: 222
+      gcValue: 161
+    - lppValue: 208
+      gcValue: 189
+    - lppValue: 237
+      gcValue: 163
+    - lppValue: 252
+      gcValue: 161
+    phcData: []
+  - levelIndex: 120
+    pccData:
+    - lppValue: 415
+      ccsValue: 415,97,98,96
+    - lppValue: 107
+      ccsValue: 415,97,98,96
+    - lppValue: 112
+      ccsValue: 100
+    - lppValue: 125
+      ccsValue: 99
+    - lppValue: 76
+      ccsValue: 101
+    - lppValue: 86
+      ccsValue: 415,97,98,96
+    - lppValue: 89
+      ccsValue: 102
+    - lppValue: 45
+      ccsValue: 415,97,98,96
+    - lppValue: 51
+      ccsValue: 99,100,101,102
+    pgcData:
+    - lppValue: 415
+      gcValue: 99
+    - lppValue: 105
+      gcValue: 99
+    - lppValue: 118
+      gcValue: 99
+    - lppValue: 70
+      gcValue: 97
+    - lppValue: 80
+      gcValue: 101
+    - lppValue: 85
+      gcValue: 99
+    - lppValue: 36
+      gcValue: 97
+    phcData: []
