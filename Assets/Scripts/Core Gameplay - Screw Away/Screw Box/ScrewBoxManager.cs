@@ -108,6 +108,20 @@ public class ScrewBoxManager : MonoBehaviour
             }
         }
 
+        for (int i = 0; i < screwBox.ScrewBoxSlots.Length; i++)
+        {
+            ScrewBoxSlot screwBoxSlot = screwBox.ScrewBoxSlots[i];
+
+            if (screwBoxSlot.IsFilled)
+            {
+                screwBoxSlot.Screw.gameObject.SetActive(false);
+
+                screwBoxSlot.Screw = null;
+
+                screwBoxSlot.IsFilled = false;
+            }
+        }
+
         Tween.LocalPositionX(screwBox.transform, 4 - 2.5f * index, duration: 0.5f).OnComplete(() =>
         {
             MoveFromScrewPortToScrewBox();
@@ -131,12 +145,24 @@ public class ScrewBoxManager : MonoBehaviour
                     {
                         if (!screwBoxs[i].ScrewBoxSlots[k].IsFilled)
                         {
-                            Tween.Position(screwPorts[j].Screw.transform, screwBoxs[i].ScrewBoxSlots[k].transform.position + new Vector3(0, 0, -0.3f), duration: 0.5f)
+                            int screwPortIndex = j;
+                            int screwBoxIndex = i;
+                            int screwBoxSlotIndex = k;
+
+                            screwBoxs[screwBoxIndex].ScrewBoxSlots[screwBoxSlotIndex].Fill(screwPorts[screwPortIndex].Screw);
+
+                            screwPorts[screwPortIndex].Screw.transform.SetParent(screwBoxs[screwBoxIndex].ScrewBoxSlots[screwBoxSlotIndex].transform);
+
+                            Tween.Position(screwPorts[screwPortIndex].Screw.transform,
+                                screwBoxs[screwBoxIndex].ScrewBoxSlots[screwBoxSlotIndex].transform.position + new Vector3(0, 0, -0.3f), duration: 0.5f)
                             .OnComplete(() =>
                             {
-                                screwPorts[j].IsFilled = false;
-                                screwBoxs[i].ScrewBoxSlots[k].Fill(screwPorts[j].Screw);
+                                screwPorts[screwPortIndex].IsFilled = false;
+
+                                screwBoxs[screwBoxIndex].ScrewBoxSlots[screwBoxSlotIndex].CompleteFill();
                             });
+
+                            break;
                         }
                     }
                 }

@@ -29,6 +29,14 @@ public class ScrewBoxSlot : MonoBehaviour
 
         _isFilled = true;
 
+        // if (transform.GetSiblingIndex() == 2)
+        // {
+        //     screwBoxCompleteEvent?.Invoke(transform.parent.gameObject.GetInstanceID());
+        // }
+    }
+
+    public void CompleteFill()
+    {
         if (transform.GetSiblingIndex() == 2)
         {
             screwBoxCompleteEvent?.Invoke(transform.parent.gameObject.GetInstanceID());

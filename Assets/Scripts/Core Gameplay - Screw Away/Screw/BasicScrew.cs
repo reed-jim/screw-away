@@ -82,7 +82,7 @@ public class BasicScrew : BaseScrew
                     Tween.Scale(transform, 1.5f * _initialScale, duration: 0.5f)
                     .OnComplete(() =>
                     {
-                        screwBoxSlot.Fill(this);
+                        screwBoxSlot.CompleteFill();
 
                         _isDone = true;
                     });
@@ -90,6 +90,8 @@ public class BasicScrew : BaseScrew
             });
 
             SoundManager.Instance.PlaySoundLoosenScrew();
+
+            screwBoxSlot.Fill(this);
         }
     }
 
