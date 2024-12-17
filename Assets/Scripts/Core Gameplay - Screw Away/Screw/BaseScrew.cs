@@ -10,7 +10,9 @@ public class BaseScrew : MonoBehaviour, IScrew
 
     [SerializeField] private ScrewServiceLocator screwServiceLocator;
 
+    protected int _numberBlockingObjects;
     protected Vector3 _initialScale;
+    protected bool _isDone;
 
     public string ScrewId
     {
@@ -21,6 +23,16 @@ public class BaseScrew : MonoBehaviour, IScrew
     public GameFaction Faction
     {
         get => screwServiceLocator.screwFaction.Faction;
+    }
+
+    public int NumberBlockingObjects
+    {
+        get => _numberBlockingObjects;
+    }
+
+    public bool IsDone
+    {
+        get => _isDone;
     }
 
     #region EVENT
@@ -61,5 +73,10 @@ public class BaseScrew : MonoBehaviour, IScrew
         await Task.Delay(200);
 
         addScrewToListEvent?.Invoke(this);
+    }
+
+    public virtual int CountBlockingObjects()
+    {
+        return 0;
     }
 }

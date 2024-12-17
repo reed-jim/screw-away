@@ -10,6 +10,10 @@ public class ScrewManager : MonoBehaviour
 
     public static event Action<GameFaction> spawnScrewBoxEvent;
 
+    private int _totalScrew;
+
+    [SerializeField] private LevelDifficultyConfiguration levelDifficultyConfiguration;
+
     void Awake()
     {
         BaseScrew.addScrewToListEvent += AddScrew;
@@ -29,6 +33,8 @@ public class ScrewManager : MonoBehaviour
     private void AddScrew(BaseScrew screw)
     {
         _screws.Add(screw);
+
+        _totalScrew++;
     }
 
     private async void SpawnScrewBox()
@@ -39,35 +45,107 @@ public class ScrewManager : MonoBehaviour
 
         for (int i = 0; i < _screws.Count; i++)
         {
-            GameFaction faction = _screws[i].Faction;
+            _screws[i].CountBlockingObjects();
+        }
 
-            if (lastFaction == null)
+        for (int i = 0; i < _screws.Count; i++)
+        {
+            if (_screws[i].NumberBlockingObjects == 0)
             {
-                spawnScrewBoxEvent?.Invoke(faction);
+                GameFaction faction = _screws[i].Faction;
 
-                lastFaction = faction;
-            }
-            else
-            {
-                if (faction != lastFaction)
+                if (lastFaction == null)
                 {
                     spawnScrewBoxEvent?.Invoke(faction);
 
-                    break;
+                    lastFaction = faction;
+                }
+                else
+                {
+                    if (faction != lastFaction)
+                    {
+                        spawnScrewBoxEvent?.Invoke(faction);
+
+                        break;
+                    }
                 }
             }
         }
     }
 
-    private void SpawnNewScrewBox()
+    private async void SpawnNewScrewBox()
     {
+        int progress = 0;
+        int doneScrew = 0;
+
+        int maxNumberBlockingObject = 0;
+
         for (int i = 0; i < _screws.Count; i++)
         {
-            GameFaction faction = _screws[i].Faction;
+            _screws[i].CountBlockingObjects();
 
+            if (_screws[i].NumberBlockingObjects > maxNumberBlockingObject)
+            {
+                maxNumberBlockingObject = _screws[i].NumberBlockingObjects;
+            }
+
+            if (_screws[i].IsDone)
+            {
+                doneScrew++;
+            }
+        }
+
+        Debug.Log($"Current Progress: " + (float)doneScrew / _totalScrew);
+
+        LevelDifficulty levelDifficulty = LevelDifficulty.Easy;
+
+        foreach (var phase in levelDifficultyConfiguration.LevelPhases)
+        {
+            if (progress >= phase.StartProgress && progress <= phase.EndProgress)
+            {
+                levelDifficulty = phase.LevelDifficulty;
+
+                break;
+            }
+        }
+
+        for (int i = 0; i < _screws.Count; i++)
+        {
+            if (!_screws[i].IsDone)
+            {
+                if (levelDifficulty == LevelDifficulty.Easy)
+                {
+                    if (_screws[i].NumberBlockingObjects == 0)
+                    {
+                        Spawn(_screws[i].Faction);
+
+                        break;
+                    }
+                }
+                else if (levelDifficulty == LevelDifficulty.Normal)
+                {
+                    if (_screws[i].NumberBlockingObjects == 1)
+                    {
+                        Spawn(_screws[i].Faction);
+
+                        break;
+                    }
+                }
+                else if (levelDifficulty == LevelDifficulty.Hard)
+                {
+                    if (_screws[i].NumberBlockingObjects == 2)
+                    {
+                        Spawn(_screws[i].Faction);
+
+                        break;
+                    }
+                }
+            }
+        }
+
+        void Spawn(GameFaction faction)
+        {
             spawnScrewBoxEvent?.Invoke(faction);
-
-            break;
         }
     }
 }

@@ -9,4 +9,6 @@ public interface IScrew
     }
 
     public void Select();
+
+    public int CountBlockingObjects();
 }

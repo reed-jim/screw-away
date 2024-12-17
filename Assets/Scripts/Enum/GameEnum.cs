@@ -29,4 +29,11 @@ public class GameEnum : MonoBehaviour
         Idle = 0,
         Walking = 1
     }
+
+    public enum LevelDifficulty
+    {
+        Easy,
+        Normal,
+        Hard
+    }
 }
