@@ -8,7 +8,7 @@ public class BaseScrew : MonoBehaviour, IScrew
 {
     [SerializeField] protected string screwId;
 
-    [SerializeField] private ScrewServiceLocator screwServiceLocator;
+    [SerializeField] protected ScrewServiceLocator screwServiceLocator;
 
     protected int _numberBlockingObjects;
     protected Vector3 _initialScale;

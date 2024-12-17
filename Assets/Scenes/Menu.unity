@@ -4304,8 +4304,9 @@ MonoBehaviour:
   getInVehicleSoundPrefab: {fileID: 0}
   vehicleMoveOutSoundPrefab: {fileID: 0}
   screwBox: {fileID: 4363298669875526981, guid: 6286f3aa69f2b6d43bfda7063dc91718, type: 3}
+  fakeScrewPrefab: {fileID: 6710606468282035728, guid: 5c8555dd61afb2d4ca38da896b985fa3, type: 3}
   loosenScrewSoundPrefab: {fileID: 7606835583939712495, guid: 417e3d5be33e2fc46a8408e8402f46d7, type: 3}
-  loosenScrewFailSoundPrefab: {fileID: 0}
+  loosenScrewFailSoundPrefab: {fileID: 7606835583939712495, guid: 7f34b7c9be49f164daab10167200312d, type: 3}
 --- !u!4 &2114209551
 Transform:
   m_ObjectHideFlags: 0

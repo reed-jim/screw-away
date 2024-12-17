@@ -1,3 +1,4 @@
+using System;
 using PrimeTween;
 using UnityEngine;
 
@@ -12,6 +13,15 @@ public class BasicScrew : BaseScrew
         set => joint = value;
     }
 
+    public bool IsRotating
+    {
+        get => _isRotating;
+        set => _isRotating = value;
+    }
+
+    public static event Action disableInputEvent;
+    public static event Action<int> breakJointEvent;
+
     private void Update()
     {
         if (_isRotating)
@@ -24,7 +34,36 @@ public class BasicScrew : BaseScrew
     {
         if (screwId == this.screwId)
         {
+            CountBlockingObjects();
+
+            if (_numberBlockingObjects > 0)
+            {
+                FakeScrew fakeScrew = ObjectPoolingEverything.GetFromPool<FakeScrew>(GameConstants.FAKE_SCREW);
+
+                fakeScrew.CloneFromScrew(this);
+
+                GetComponent<MeshRenderer>().enabled = false;
+
+                fakeScrew.IsRotating = true;
+
+                SoundManager.Instance.PlaySoundLoosenScrewFail();
+
+                Tween.Position(fakeScrew.transform, transform.position + 0.3f * transform.forward, cycles: 2, cycleMode: CycleMode.Yoyo, duration: 0.5f)
+                .OnComplete(() =>
+                {
+                    fakeScrew.IsRotating = false;
+
+                    fakeScrew.gameObject.SetActive(false);
+
+                    GetComponent<MeshRenderer>().enabled = true;
+                });
+
+                return;
+            }
+
             joint.breakForce = 0;
+
+            breakJointEvent?.Invoke(joint.gameObject.GetInstanceID());
 
             _isRotating = true;
 
@@ -32,17 +71,21 @@ public class BasicScrew : BaseScrew
             {
                 _isRotating = false;
 
-                transform.SetParent(screwBoxSlot.transform);
-                gameObject.layer = LayerMask.NameToLayer("UI");
-
-                Tween.Rotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: 0.5f);
-                Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 0.5f);
-                Tween.Scale(transform, 1.5f * _initialScale, duration: 0.5f)
+                Tween.Position(transform, transform.position - 1f * transform.forward, duration: 0.5f)
                 .OnComplete(() =>
                 {
-                    screwBoxSlot.Fill();
+                    transform.SetParent(screwBoxSlot.transform);
+                    gameObject.layer = LayerMask.NameToLayer("UI");
 
-                    _isDone = true;
+                    Tween.Rotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: 0.5f);
+                    Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 0.5f);
+                    Tween.Scale(transform, 1.5f * _initialScale, duration: 0.5f)
+                    .OnComplete(() =>
+                    {
+                        screwBoxSlot.Fill();
+
+                        _isDone = true;
+                    });
                 });
             });
 
