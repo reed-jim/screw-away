@@ -59,6 +59,8 @@ public class ScrewBox : MonoBehaviour
             {
                 screwBoxCompletedEvent?.Invoke(this);
                 spawnNewScrewBoxEvent?.Invoke();
+
+                ObjectPoolingEverything.ReturnToPool(GameConstants.SCREW_BOX, gameObject);
             });
         }
     }

@@ -29,6 +29,11 @@ public class ObjectPoolingEverything : MonoBehaviour
         instance._poolGroup.Add(key, pool);
     }
 
+    public static void ReturnToPool(string key, GameObject pooledGameObject)
+    {
+        instance._poolGroup[key].ReturnPool(pooledGameObject);
+    }
+
     public static GameObject SpawnGameObject(GameObject prefab)
     {
         return Instantiate(prefab, instance.transform);
@@ -87,6 +92,16 @@ public class ObjectPool
 
     public T GetFromPool<T>()
     {
+        for (int i = 0; i < _pool.Length; i++)
+        {
+            if (!_pool[i].gameObject.activeSelf)
+            {
+                _currentIndex = i;
+
+                break;
+            }
+        }
+
         _pool[_currentIndex].gameObject.SetActive(true);
 
         T componentToGet = (T)_pool[_currentIndex].component;
@@ -101,10 +116,10 @@ public class ObjectPool
         return componentToGet;
     }
 
-    // public void ReturnPool(GameObject gameObject)
-    // {
-
-    // }
+    public void ReturnPool(GameObject gameObject)
+    {
+        gameObject.SetActive(false);
+    }
 }
 
 public class GameObjectWithComponent

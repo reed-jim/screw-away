@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using PrimeTween;
 using UnityEngine;
@@ -196,5 +197,39 @@ public class ScrewBoxManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public Dictionary<GameFaction, int> GetScrewPortAvailableByFaction()
+    {
+        Dictionary<GameFaction, int> screwPortAvailableByFaction = new Dictionary<GameFaction, int>();
+
+        GameFaction[] factions = new GameFaction[5] { GameFaction.Red, GameFaction.Blue, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
+
+        for (int i = 0; i < factions.Length; i++)
+        {
+            screwPortAvailableByFaction.Add(factions[i], 0);
+        }
+
+        for (int i = 0; i < screwBoxs.Length; i++)
+        {
+            if (screwBoxs[i] == null || screwBoxs[i].IsLocked)
+            {
+                continue;
+            }
+
+            GameFaction faction = screwBoxs[i].Faction;
+
+            for (int j = 0; j < screwBoxs[i].ScrewBoxSlots.Length; j++)
+            {
+                ScrewBoxSlot screwBoxSlot = screwBoxs[i].ScrewBoxSlots[j];
+
+                if (!screwBoxSlot.IsFilled)
+                {
+                    screwPortAvailableByFaction[faction]++;
+                }
+            }
+        }
+
+        return screwPortAvailableByFaction;
     }
 }
