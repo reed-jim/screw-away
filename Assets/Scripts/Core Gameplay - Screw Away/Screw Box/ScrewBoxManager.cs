@@ -19,6 +19,7 @@ public class ScrewBoxManager : MonoBehaviour
     {
         BaseScrew.selectScrewEvent += OnScrewSelected;
         ScrewManager.spawnScrewBoxEvent += SpawnScrewBox;
+        ScrewManager.spawnAdsScrewBoxesEvent += SpawnAdsScrewBoxes;
         ScrewBox.screwBoxCompletedEvent += OnScrewBoxCompleted;
 
         screwBoxs = new ScrewBox[maxScrewBox];
@@ -28,6 +29,7 @@ public class ScrewBoxManager : MonoBehaviour
     {
         BaseScrew.selectScrewEvent -= OnScrewSelected;
         ScrewManager.spawnScrewBoxEvent -= SpawnScrewBox;
+        ScrewManager.spawnAdsScrewBoxesEvent -= SpawnAdsScrewBoxes;
         ScrewBox.screwBoxCompletedEvent -= OnScrewBoxCompleted;
     }
 
@@ -36,6 +38,11 @@ public class ScrewBoxManager : MonoBehaviour
         foreach (var screwBox in screwBoxs)
         {
             if (screwBox == null)
+            {
+                continue;
+            }
+
+            if (screwBox.IsLocked)
             {
                 continue;
             }
@@ -122,10 +129,31 @@ public class ScrewBoxManager : MonoBehaviour
             }
         }
 
-        Tween.LocalPositionX(screwBox.transform, 4 - 2.5f * index, duration: 0.5f).OnComplete(() =>
+        Tween.LocalPositionX(screwBox.transform, (-(maxScrewBox - 1) / 2f + index) * 2.5f, duration: 0.5f).OnComplete(() =>
         {
             MoveFromScrewPortToScrewBox();
         });
+    }
+
+    private void SpawnAdsScrewBoxes()
+    {
+        for (int i = 0; i < screwBoxs.Length; i++)
+        {
+            if (screwBoxs[i] == null)
+            {
+                ScrewBox screwBox = ObjectPoolingEverything.GetFromPool<ScrewBox>(GameConstants.SCREW_BOX);
+
+                screwBox.transform.position = new Vector3(10, 10, screwBox.transform.position.z);
+
+                screwBox.Lock();
+
+                int index = i;
+
+                Tween.LocalPositionX(screwBox.transform, (-(maxScrewBox - 1) / 2f + index) * 2.5f, duration: 0.5f);
+
+                screwBoxs[i] = screwBox;
+            }
+        }
     }
 
     private void MoveFromScrewPortToScrewBox()
