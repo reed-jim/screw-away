@@ -34,6 +34,11 @@ public class BasicScrew : BaseScrew
     {
         if (screwId == this.screwId)
         {
+            if (_isDone)
+            {
+                return;
+            }
+
             CountBlockingObjects();
 
             if (_numberBlockingObjects > 0)
@@ -67,19 +72,19 @@ public class BasicScrew : BaseScrew
 
             _isRotating = true;
 
-            Tween.Position(transform, transform.position + 3f * transform.forward, duration: 0.5f).OnComplete(() =>
+            Tween.Position(transform, transform.position + 3f * transform.forward, duration: 0.3f).OnComplete(() =>
             {
                 _isRotating = false;
 
-                Tween.Position(transform, transform.position - 1f * transform.forward, duration: 0.5f)
+                Tween.Delay(duration: 0.1f)
                 .OnComplete(() =>
                 {
                     transform.SetParent(screwBoxSlot.transform);
                     gameObject.layer = LayerMask.NameToLayer("UI");
 
-                    Tween.Rotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: 0.5f);
-                    Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 0.5f);
-                    Tween.Scale(transform, 1.5f * _initialScale, duration: 0.5f)
+                    Tween.Rotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: 0.3f);
+                    Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 0.3f);
+                    Tween.Scale(transform, 1.5f * _initialScale, duration: 0.3f)
                     .OnComplete(() =>
                     {
                         screwBoxSlot.CompleteFill();
