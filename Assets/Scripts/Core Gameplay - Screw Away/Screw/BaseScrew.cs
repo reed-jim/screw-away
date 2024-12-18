@@ -40,18 +40,37 @@ public class BaseScrew : MonoBehaviour, IScrew
     public static event Action<BaseScrew> addScrewToListEvent;
     #endregion
 
-    void Awake()
+    protected virtual void Awake()
     {
         ScrewBoxManager.looseScrewEvent += Loose;
+        RegisterMoreEvent();
 
         AddScrewToList();
 
         _initialScale = transform.localScale;
+
+        MoreLogicInAwake();
     }
 
     void OnDestroy()
     {
         ScrewBoxManager.looseScrewEvent -= Loose;
+        UnregisterMoreEvent();
+    }
+
+    protected virtual void MoreLogicInAwake()
+    {
+
+    }
+
+    protected virtual void RegisterMoreEvent()
+    {
+
+    }
+
+    protected virtual void UnregisterMoreEvent()
+    {
+
     }
 
     public void Select()

@@ -21,6 +21,7 @@ public class BasicScrew : BaseScrew
 
     public static event Action disableInputEvent;
     public static event Action<int> breakJointEvent;
+    public static event Action screwLoosenedEvent;
 
     private void Update()
     {
@@ -90,6 +91,8 @@ public class BasicScrew : BaseScrew
                         screwBoxSlot.CompleteFill();
 
                         _isDone = true;
+
+                        screwLoosenedEvent?.Invoke();
                     });
                 });
             });
