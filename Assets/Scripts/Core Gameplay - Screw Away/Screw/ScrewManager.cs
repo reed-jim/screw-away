@@ -222,6 +222,15 @@ public class ScrewManager : MonoBehaviour
 
         bool isFound = false;
 
+        // Debug.Log("---------------------------------------");
+
+        // for (int i = 0; i < factionSortedByDifficulty.Length; i++)
+        // {
+        //     GameFaction faction = factionSortedByDifficulty[i];
+
+        //     Debug.Log($"{faction} Remaining: {remainingScrewByFaction[faction]} Available: {screwPortAvailableByFaction[faction]}");
+        // }
+
         for (int i = 0; i < factionSortedByDifficulty.Length; i++)
         {
             GameFaction faction = factionSortedByDifficulty[i];
@@ -274,6 +283,8 @@ public class ScrewManager : MonoBehaviour
                     nextFaction = faction;
 
                     isFound = true;
+
+                    break;
                 }
             }
         }
