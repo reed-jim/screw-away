@@ -1,17 +1,28 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 using static GameEnum;
 
 public class BasePopup : MonoBehaviour
 {
+    [Header("UI")]
+    [SerializeField] private Button closeButton;
+
     [Header("CUSTOMIZE")]
     [SerializeField] private ScreenRoute route;
     [SerializeField] private bool isRouteActiveFromStart;
 
     private ISaferioUIAnimation _transitionAnimation;
 
+    public static event Action popupShowEvent;
+    public static event Action popupHideEvent;
+
     private void Awake()
     {
         SwitchRouteButton.switchRouteEvent += OnRouteSwitched;
+        TopBar.showPopupEvent += OnRouteSwitched;
+
+        closeButton.onClick.AddListener(Hide);
 
         RegisterMoreEvent();
 
@@ -32,6 +43,7 @@ public class BasePopup : MonoBehaviour
     private void OnDestroy()
     {
         SwitchRouteButton.switchRouteEvent -= OnRouteSwitched;
+        TopBar.showPopupEvent -= OnRouteSwitched;
 
         UnregisterMoreEvent();
     }
@@ -65,11 +77,17 @@ public class BasePopup : MonoBehaviour
 
     protected void Show()
     {
+        gameObject.SetActive(true);
+
         _transitionAnimation.Show();
+
+        popupShowEvent?.Invoke();
     }
 
     protected void Hide()
     {
         _transitionAnimation.Hide();
+
+        popupHideEvent?.Invoke();
     }
 }
