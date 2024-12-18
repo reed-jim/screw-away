@@ -27,7 +27,7 @@ public class ScrewBoxUI : MonoBehaviour
             await Task.Delay(1000);
         }
 
-        await Task.Delay(3000);
+        await Task.Delay(1000);
 
         unlockByAdsButtonRT.localPosition = screwBoxCameraObserver.ScrewBoxCamera.WorldToScreenPoint(transform.position) - 0.5f * (Vector3)canvasSize.Value;
     }
