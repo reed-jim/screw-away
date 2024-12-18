@@ -78,7 +78,7 @@ public class ScrewManager : MonoBehaviour
             // Compensate
             if (numberBlockObject == 0)
             {
-                numberBlockObject = -1;
+                numberBlockObject = -2;
             }
 
             if (!totalBlockObjectsByFaction.ContainsKey(_screws[i].Faction))
@@ -99,6 +99,16 @@ public class ScrewManager : MonoBehaviour
         await Task.Delay(1000);
 
         Debug.Log("TOTAL: " + _totalScrew);
+
+        Dictionary<GameFaction, int> remainingScrewByFaction = GetRemainingScrewByFaction();
+        Dictionary<GameFaction, int> totalBlockObjectsByFaction = GetTotalBlockObjectsByFaction();
+
+        GameFaction[] factionSortedByDifficulty = totalBlockObjectsByFaction.OrderByDescending(item => item.Value).Select(item => item.Key).ToArray();
+
+        foreach (var faction in remainingScrewByFaction.Keys)
+        {
+            Debug.Log($"Faction {faction} - {remainingScrewByFaction[faction]} - {totalBlockObjectsByFaction[faction]}");
+        }
 
         GameFaction? lastFaction = null;
 
@@ -180,7 +190,7 @@ public class ScrewManager : MonoBehaviour
 
         foreach (var faction in remainingScrewByFaction.Keys)
         {
-            Debug.Log($"Faction {faction} - {remainingScrewByFaction[faction]} - {totalBlockObjectsByFaction[faction]}");
+            Debug.Log($"Faction {faction} / {remainingScrewByFaction[faction]} / {totalBlockObjectsByFaction[faction]}");
         }
 
         foreach (var faction in factionSortedByDifficulty)
@@ -201,6 +211,7 @@ public class ScrewManager : MonoBehaviour
                     isFound = true;
 
                     break;
+                    
                     // if (_screws[i].NumberBlockingObjects == 0)
                     // {
                     //     Spawn(_screws[i].Faction);

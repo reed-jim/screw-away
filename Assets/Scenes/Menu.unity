@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottom Bar Item (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5993101232635966093, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6397290014691165987, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_SizeDelta.x
       value: 76.92385
@@ -910,7 +914,7 @@ PrefabInstance:
     - target: {fileID: 272389357015289065, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3919716c06ec6834d907dfbc986d4d96, type: 2}
+      objectReference: {fileID: 21300000, guid: a7fab48f0e07ce145a11c15f1a2318b2, type: 2}
     - target: {fileID: 1391730936252555156, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: route
       value: 4
@@ -1001,11 +1005,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6397290014691165987, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 76.92385
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 6397290014691165987, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 77.46195
+      value: 107
       objectReference: {fileID: 0}
     - target: {fileID: 6435992977377931879, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_TargetGraphic
@@ -1232,7 +1236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e1d2687273f2960419d87795865c8f19, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 53581851705e95548ae459037f74714c, type: 2}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1269,7 +1273,7 @@ PrefabInstance:
     - target: {fileID: 272389357015289065, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aabc542688c9e1a468b1d4512dce491a, type: 2}
+      objectReference: {fileID: 21300000, guid: c9295825df507cb439dffd2b1b27d7de, type: 2}
     - target: {fileID: 1391730936252555156, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: route
       value: 5
@@ -1360,11 +1364,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6397290014691165987, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 90.92385
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 6397290014691165987, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 78
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 6435992977377931879, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_TargetGraphic
@@ -1572,7 +1576,7 @@ MonoBehaviour:
   m_text: Level 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea321c4dec4cdd74fae016f2a45adbe2, type: 2}
-  m_sharedMaterial: {fileID: -8589212015780818781, guid: ea321c4dec4cdd74fae016f2a45adbe2, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e457c2cb9daee9c40a010770422f3d46, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2442,6 +2446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottom Bar Item (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5993101232635966093, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6397290014691165987, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_SizeDelta.x
       value: 76.92385
@@ -2583,7 +2591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 592c5d21462029644bf3095857f79eeb, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 6970bf9e2e6ea7446abf548a9ba67fe1, type: 2}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4234,6 +4242,107 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container: {fileID: 1972218272}
   canvasSize: {fileID: 11400000, guid: cff3c506c9f63d645a923fa57c7a07c1, type: 2}
+--- !u!1 &1996801591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1996801595}
+  - component: {fileID: 1996801594}
+  - component: {fileID: 1996801593}
+  - component: {fileID: 1996801592}
+  m_Layer: 5
+  m_Name: Debug Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1996801592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996801591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1996801593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996801591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1996801594
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996801591}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1996801595
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996801591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &2016661294
 GameObject:
   m_ObjectHideFlags: 0
@@ -4330,6 +4439,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1182727808}
     m_Modifications:
+    - target: {fileID: 272389357015289065, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f8c8f7ea7542c634bb21e157170062b5, type: 2}
     - target: {fileID: 1391730936252555156, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: route
       value: 3
@@ -4418,6 +4531,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottom Bar Item
       objectReference: {fileID: 0}
+    - target: {fileID: 6397290014691165987, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397290014691165987, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 102
+      objectReference: {fileID: 0}
     - target: {fileID: 6435992977377931879, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -4441,3 +4562,4 @@ SceneRoots:
   - {fileID: 1118778396}
   - {fileID: 2114209551}
   - {fileID: 478938924}
+  - {fileID: 1996801595}
