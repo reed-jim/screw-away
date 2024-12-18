@@ -166,6 +166,11 @@ public class ScrewBoxManager : MonoBehaviour
                 continue;
             }
 
+            if (screwBoxs[i].IsLocked)
+            {
+                continue;
+            }
+
             for (int j = 0; j < screwPorts.Length; j++)
             {
                 if (screwPorts[j].IsFilled && screwPorts[j].Screw.Faction == screwBoxs[i].Faction)

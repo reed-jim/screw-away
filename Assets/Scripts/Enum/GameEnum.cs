@@ -21,7 +21,8 @@ public class GameEnum : MonoBehaviour
         Green,
         Purple,
         Orange,
-        All
+        All,
+        None
     }
 
     public enum CharacterAnimationState

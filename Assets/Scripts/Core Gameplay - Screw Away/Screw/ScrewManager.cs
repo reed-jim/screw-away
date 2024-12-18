@@ -51,6 +51,13 @@ public class ScrewManager : MonoBehaviour
     {
         Dictionary<GameFaction, int> remainingScrewByFaction = new Dictionary<GameFaction, int>();
 
+        GameFaction[] factions = new GameFaction[5] { GameFaction.Red, GameFaction.Blue, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
+
+        for (int i = 0; i < factions.Length; i++)
+        {
+            remainingScrewByFaction.Add(factions[i], 0);
+        }
+
         for (int i = 0; i < _screws.Count; i++)
         {
             if (_screws[i].IsDone)
@@ -58,14 +65,7 @@ public class ScrewManager : MonoBehaviour
                 continue;
             }
 
-            if (!remainingScrewByFaction.ContainsKey(_screws[i].Faction))
-            {
-                remainingScrewByFaction.Add(_screws[i].Faction, 1);
-            }
-            else
-            {
-                remainingScrewByFaction[_screws[i].Faction]++;
-            }
+            remainingScrewByFaction[_screws[i].Faction]++;
         }
 
         return remainingScrewByFaction;
@@ -74,6 +74,13 @@ public class ScrewManager : MonoBehaviour
     private Dictionary<GameFaction, int> GetTotalBlockObjectsByFaction()
     {
         Dictionary<GameFaction, int> totalBlockObjectsByFaction = new Dictionary<GameFaction, int>();
+
+        GameFaction[] factions = new GameFaction[5] { GameFaction.Red, GameFaction.Blue, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
+
+        for (int i = 0; i < factions.Length; i++)
+        {
+            totalBlockObjectsByFaction.Add(factions[i], 0);
+        }
 
         for (int i = 0; i < _screws.Count; i++)
         {
@@ -90,14 +97,7 @@ public class ScrewManager : MonoBehaviour
                 numberBlockObject = -2;
             }
 
-            if (!totalBlockObjectsByFaction.ContainsKey(_screws[i].Faction))
-            {
-                totalBlockObjectsByFaction.Add(_screws[i].Faction, numberBlockObject);
-            }
-            else
-            {
-                totalBlockObjectsByFaction[_screws[i].Faction] += numberBlockObject;
-            }
+            totalBlockObjectsByFaction[_screws[i].Faction] += numberBlockObject;
         }
 
         return totalBlockObjectsByFaction;
@@ -145,125 +145,12 @@ public class ScrewManager : MonoBehaviour
 
     private async void SpawnNewScrewBox()
     {
-        // float progress;
-        // int doneScrew = 0;
-
-        // int maxNumberBlockingObject = 0;
-
-        // for (int i = 0; i < _screws.Count; i++)
-        // {
-        //     if (_screws[i].IsDone)
-        //     {
-        //         doneScrew++;
-        //     }
-        //     else
-        //     {
-        //         _screws[i].CountBlockingObjects();
-
-        //         if (_screws[i].NumberBlockingObjects > maxNumberBlockingObject)
-        //         {
-        //             maxNumberBlockingObject = _screws[i].NumberBlockingObjects;
-        //         }
-        //     }
-        // }
-
-        // progress = (float)doneScrew / _totalScrew;
-
-        // LevelDifficulty levelDifficulty = LevelDifficulty.Easy;
-
-        // foreach (var phase in levelDifficultyConfiguration.LevelPhases)
-        // {
-        //     if (progress >= phase.StartProgress && progress <= phase.EndProgress)
-        //     {
-        //         levelDifficulty = phase.LevelDifficulty;
-
-        //         break;
-        //     }
-        // }
-
-        // Debug.Log($"Current Progress: " + progress);
-        // Debug.Log($"Current Progress: " + levelDifficulty);
-
-        // Dictionary<GameFaction, int> remainingScrewByFaction = GetRemainingScrewByFaction();
-        // Dictionary<GameFaction, int> totalBlockObjectsByFaction = GetTotalBlockObjectsByFaction();
-
-        // GameFaction[] factionSortedByDifficulty = totalBlockObjectsByFaction.OrderByDescending(item => item.Value).Select(item => item.Key).ToArray();
-
-        // foreach (var faction in remainingScrewByFaction.Keys)
-        // {
-        //     Debug.Log($"Faction {faction} / {remainingScrewByFaction[faction]} / {totalBlockObjectsByFaction[faction]}");
-        // }
-
-        // foreach (var faction in factionSortedByDifficulty)
-        // {
-        //     Debug.Log($"HARD Faction: {faction}");
-        // }
-
-        // bool isFound = false;
-
-        // GameFaction nextFaction;
-
-        // for (int i = 0; i < _screws.Count; i++)
-        // {
-        //     if (!_screws[i].IsDone && remainingScrewByFaction[_screws[i].Faction] >= 3)
-        //     {
-        //         if (levelDifficulty == LevelDifficulty.Easy)
-        //         {
-        //             Spawn(factionSortedByDifficulty[4]);
-
-        //             isFound = true;
-
-        //             break;
-
-        //             // if (_screws[i].NumberBlockingObjects == 0)
-        //             // {
-        //             //     Spawn(_screws[i].Faction);
-
-        //             //     isFound = true;
-
-        //             //     break;
-        //             // }
-        //         }
-        //         else if (levelDifficulty == LevelDifficulty.Normal)
-        //         {
-        //             Spawn(factionSortedByDifficulty[1]);
-
-        //             isFound = true;
-
-        //             break;
-
-        //             // if (_screws[i].NumberBlockingObjects == 1)
-        //             // {
-        //             //     Spawn(_screws[i].Faction);
-
-        //             //     isFound = true;
-
-        //             //     break;
-        //             // }
-        //         }
-        //         else if (levelDifficulty == LevelDifficulty.Hard)
-        //         {
-        //             Spawn(factionSortedByDifficulty[0]);
-
-        //             isFound = true;
-
-        //             break;
-
-        //             // if (_screws[i].NumberBlockingObjects == 2)
-        //             // {
-        //             //     Spawn(_screws[i].Faction);
-
-        //             //     isFound = true;
-
-        //             //     break;
-        //             // }
-        //         }
-        //     }
-        // }
-
-        // Debug.Log("FOUND " + isFound);
-
         GameFaction faction = GetFactionForNewScrewBox();
+
+        if (faction == GameFaction.None)
+        {
+            return;
+        }
 
         Spawn(faction);
 
@@ -276,6 +163,11 @@ public class ScrewManager : MonoBehaviour
     private void AssignFactionForNewScrewBox(ScrewBox screwBox)
     {
         GameFaction faction = GetFactionForNewScrewBox();
+
+        if (faction == GameFaction.None)
+        {
+            return;
+        }
 
         screwBox.Faction = faction;
     }
@@ -324,32 +216,94 @@ public class ScrewManager : MonoBehaviour
 
         GameFaction[] factionSortedByDifficulty = totalBlockObjectsByFaction.OrderByDescending(item => item.Value).Select(item => item.Key).ToArray();
 
-        GameFaction nextFaction = GameFaction.Red;
+        GameFaction nextFaction = GameFaction.None;
 
-        for (int i = 0; i < _screws.Count; i++)
+        int difficultyLevel = factionSortedByDifficulty.Length;
+
+        bool isFound = false;
+
+        for (int i = 0; i < factionSortedByDifficulty.Length; i++)
         {
-            if (!_screws[i].IsDone && remainingScrewByFaction[_screws[i].Faction] - screwPortAvailableByFaction[_screws[i].Faction] >= 3)
+            GameFaction faction = factionSortedByDifficulty[i];
+
+            if ((remainingScrewByFaction[faction] - screwPortAvailableByFaction[faction]) < 3)
             {
-                if (levelDifficulty == LevelDifficulty.Easy)
-                {
-                    nextFaction = factionSortedByDifficulty[4];
+                continue;
+            }
 
-                    break;
+            if (levelDifficulty == LevelDifficulty.Easy && difficultyLevel <= 3)
+            {
+                nextFaction = factionSortedByDifficulty[4];
+
+                isFound = true;
+
+                break;
+            }
+            else if (levelDifficulty == LevelDifficulty.Normal && difficultyLevel <= 4)
+            {
+                nextFaction = factionSortedByDifficulty[1];
+
+                isFound = true;
+
+                break;
+            }
+            else if (levelDifficulty == LevelDifficulty.Hard && difficultyLevel <= 5)
+            {
+                nextFaction = factionSortedByDifficulty[0];
+
+                isFound = true;
+
+                break;
+            }
+
+            levelDifficulty--;
+        }
+
+        if (!isFound)
+        {
+            for (int i = 0; i < factionSortedByDifficulty.Length; i++)
+            {
+                GameFaction faction = factionSortedByDifficulty[i];
+
+                if ((remainingScrewByFaction[faction] - screwPortAvailableByFaction[faction]) < 3)
+                {
+                    continue;
                 }
-                else if (levelDifficulty == LevelDifficulty.Normal)
+                else
                 {
-                    nextFaction = factionSortedByDifficulty[1];
+                    nextFaction = faction;
 
-                    break;
-                }
-                else if (levelDifficulty == LevelDifficulty.Hard)
-                {
-                    nextFaction = factionSortedByDifficulty[0];
-
-                    break;
+                    isFound = true;
                 }
             }
         }
+
+        // for (int i = 0; i < _screws.Count; i++)
+        // {
+        //     Debug.Log(remainingScrewByFaction[_screws[i].Faction] + "/" + screwPortAvailableByFaction[_screws[i].Faction]);
+
+        //     if (!_screws[i].IsDone && (remainingScrewByFaction[_screws[i].Faction] - screwPortAvailableByFaction[_screws[i].Faction]) >= 3)
+        //     {
+        //         if (levelDifficulty == LevelDifficulty.Easy)
+        //         {
+        //             nextFaction = factionSortedByDifficulty[4];
+
+        //             break;
+        //         }
+        //         else if (levelDifficulty == LevelDifficulty.Normal)
+        //         {
+        //             nextFaction = factionSortedByDifficulty[1];
+
+        //             break;
+        //         }
+        //         else if (levelDifficulty == LevelDifficulty.Hard)
+        //         {
+        //             nextFaction = factionSortedByDifficulty[0];
+
+        //             break;
+        //         }
+        //     }
+        // }
 
         return nextFaction;
     }
