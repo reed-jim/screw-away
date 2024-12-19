@@ -13,8 +13,6 @@ public class ScrewMaterialPropertyBlock : MonoBehaviour
     private void Awake()
     {
         Init();
-
-        SetColor(Color.green);
     }
 
     private void Init()

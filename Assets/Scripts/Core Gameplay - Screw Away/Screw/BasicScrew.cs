@@ -85,7 +85,7 @@ public class BasicScrew : BaseScrew
 
                     Tween.Rotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: 0.3f);
                     Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 0.3f);
-                    Tween.Scale(transform, 1.5f * _initialScale, duration: 0.3f)
+                    Tween.Scale(transform, scaleOnScrewBox, duration: 0.3f)
                     .OnComplete(() =>
                     {
                         screwBoxSlot.CompleteFill();

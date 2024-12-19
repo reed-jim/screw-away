@@ -9,7 +9,7 @@ public class UIScreen : MonoBehaviour
     [SerializeField] private RectTransform content;
 
     [Header("SCRIPTABLE OBJECT")]
-    [SerializeField] private Vector2Variable canvasSize;
+    [SerializeField] protected Vector2Variable canvasSize;
 
     [Header("CUSTOMIZE")]
     [SerializeField] private ScreenRoute route;

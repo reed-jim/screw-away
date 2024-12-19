@@ -75,7 +75,7 @@ public class SaferioIAPManager : MonoBehaviour, IDetailedStoreListener
 
     public void OnInitializeFailed(InitializationFailureReason error, string message)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("SAFERIO " + error);
     }
 }
 

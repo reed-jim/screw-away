@@ -14,17 +14,14 @@ namespace Saferio.Prototype.ColoringBook
         [SerializeField] private Image fadeBackground;
         [SerializeField] private RectTransform winTextRT;
 
-        [Header("SCRIPTABLE OBJECT")]
-        [SerializeField] private Vector2Variable canvasSize;
-
         protected override void RegisterMoreEvent()
         {
-            
+
         }
 
         protected override void UnregisterMoreEvent()
         {
-            
+
         }
 
         protected override void MoreActionInAwake()

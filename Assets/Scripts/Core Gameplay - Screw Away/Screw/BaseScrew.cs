@@ -10,6 +10,9 @@ public class BaseScrew : MonoBehaviour, IScrew
 
     [SerializeField] protected ScrewServiceLocator screwServiceLocator;
 
+    [Header("CUSTOMIZE")]
+    [SerializeField] protected float scaleOnScrewBox;
+
     protected int _numberBlockingObjects;
     protected Vector3 _initialScale;
     protected bool _isDone;

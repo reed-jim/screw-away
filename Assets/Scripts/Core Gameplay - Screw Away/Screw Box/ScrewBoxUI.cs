@@ -16,18 +16,51 @@ public class ScrewBoxUI : MonoBehaviour
     public static event Action<int> unlockScrewBox;
     #endregion
 
-    async void Awake()
+    private void Awake()
     {
+        ScrewBoxCameraManager.setCameraEvent += OnCameraSet;
+
         unlockByAdsButton.gameObject.SetActive(false);
 
         unlockByAdsButton.onClick.AddListener(Unlock);
 
+        // while (screwBoxCameraObserver.ScrewBoxCamera == null)
+        // {
+        //     await Task.Delay(1000);
+        // }
+
+        // unlockByAdsButtonRT.localPosition = screwBoxCameraObserver.ScrewBoxCamera.WorldToScreenPoint(transform.position) - 0.5f * (Vector3)canvasSize.Value;
+
+        // await Task.Delay(6000);
+
+        // Debug.Log(screwBoxCameraObserver.ScrewBoxCamera.WorldToScreenPoint(transform.position) + "/" + canvasSize.Value);
+
+        // unlockByAdsButtonRT.localPosition = screwBoxCameraObserver.ScrewBoxCamera.WorldToScreenPoint(transform.position) - 0.5f * (Vector3)canvasSize.Value;
+    }
+
+    void OnDestroy()
+    {
+        ScrewBoxCameraManager.setCameraEvent -= OnCameraSet;
+    }
+
+    private async void OnCameraSet(Camera camera)
+    {
+        await Task.Delay(1500);
+
+        unlockByAdsButtonRT.localPosition = camera.WorldToScreenPoint(transform.position) - 0.5f * (Vector3)canvasSize.Value;
+    }
+
+    private async Task DelaySetPositionAsync()
+    {
         while (screwBoxCameraObserver.ScrewBoxCamera == null)
         {
+            Debug.Log("SAFERIO Awake " + screwBoxCameraObserver.ScrewBoxCamera);
             await Task.Delay(1000);
         }
 
-        await Task.Delay(1000);
+        await Task.Delay(3000);
+
+        Debug.Log(screwBoxCameraObserver.ScrewBoxCamera.WorldToScreenPoint(transform.position) + " SAFERIO/" + canvasSize.Value);
 
         unlockByAdsButtonRT.localPosition = screwBoxCameraObserver.ScrewBoxCamera.WorldToScreenPoint(transform.position) - 0.5f * (Vector3)canvasSize.Value;
     }
@@ -40,7 +73,7 @@ public class ScrewBoxUI : MonoBehaviour
     private void Unlock()
     {
         unlockByAdsButton.gameObject.SetActive(false);
-        
+
         unlockScrewBox?.Invoke(gameObject.GetInstanceID());
     }
 }
