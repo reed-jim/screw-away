@@ -44,7 +44,7 @@ public class MultiPhaseScrew : BasicScrew
         manageScrewEvent?.Invoke(this);
     }
 
-    public override void Loose(string screwId, GameEnum.GameFaction faction, ScrewBoxSlot screwBoxSlot)
+    public override void Loose(int screwId, GameEnum.GameFaction faction, ScrewBoxSlot screwBoxSlot)
     {
         if (_isLocked)
         {

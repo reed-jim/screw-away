@@ -20,6 +20,7 @@ public class ScrewManager : MonoBehaviour
     #region EVENT
     public static event Action<GameFaction> spawnScrewBoxEvent;
     public static event Action spawnAdsScrewBoxesEvent;
+    public static event Action winLevelEvent;
     #endregion
 
     void Awake()
@@ -66,6 +67,13 @@ public class ScrewManager : MonoBehaviour
             }
 
             remainingScrewByFaction[_screws[i].Faction]++;
+        }
+
+        int remainingScrew = remainingScrewByFaction.Sum(item => item.Value);
+
+        if (remainingScrew == 0)
+        {
+            winLevelEvent?.Invoke();
         }
 
         return remainingScrewByFaction;

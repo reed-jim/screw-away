@@ -22,7 +22,10 @@ public class BasePopup : MonoBehaviour
         SwitchRouteButton.switchRouteEvent += OnRouteSwitched;
         TopBar.showPopupEvent += OnRouteSwitched;
 
-        closeButton.onClick.AddListener(Hide);
+        if (closeButton != null)
+        {
+            closeButton.onClick.AddListener(Hide);
+        }
 
         RegisterMoreEvent();
 

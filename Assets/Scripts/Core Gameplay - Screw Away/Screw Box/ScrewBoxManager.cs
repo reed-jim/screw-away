@@ -13,7 +13,7 @@ public class ScrewBoxManager : MonoBehaviour
     [SerializeField] private int maxScrewBox;
 
     #region EVENT
-    public static event Action<string, GameFaction, ScrewBoxSlot> looseScrewEvent;
+    public static event Action<int, GameFaction, ScrewBoxSlot> looseScrewEvent;
     #endregion
 
     void Awake()
@@ -71,7 +71,7 @@ public class ScrewBoxManager : MonoBehaviour
         return null;
     }
 
-    private void OnScrewSelected(string screwId, GameFaction selectedFaction)
+    private void OnScrewSelected(int screwId, GameFaction selectedFaction)
     {
         ScrewBoxSlot screwBoxSlot = CheckAvailableScrewBoxes(selectedFaction);
 

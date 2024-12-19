@@ -6,7 +6,7 @@ using static GameEnum;
 
 public class BaseScrew : MonoBehaviour, IScrew
 {
-    [SerializeField] protected string screwId;
+    [SerializeField] protected int screwId;
 
     [SerializeField] protected ScrewServiceLocator screwServiceLocator;
 
@@ -17,7 +17,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     protected Vector3 _initialScale;
     protected bool _isDone;
 
-    public string ScrewId
+    public int ScrewId
     {
         get => screwId;
         set => screwId = value;
@@ -39,7 +39,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     }
 
     #region EVENT
-    public static event Action<string, GameFaction> selectScrewEvent;
+    public static event Action<int, GameFaction> selectScrewEvent;
     public static event Action<BaseScrew> addScrewToListEvent;
     #endregion
 
@@ -47,6 +47,8 @@ public class BaseScrew : MonoBehaviour, IScrew
     {
         ScrewBoxManager.looseScrewEvent += Loose;
         RegisterMoreEvent();
+
+        screwId = gameObject.GetInstanceID();
 
         AddScrewToList();
 
@@ -81,7 +83,7 @@ public class BaseScrew : MonoBehaviour, IScrew
         selectScrewEvent?.Invoke(screwId, Faction);
     }
 
-    public virtual void Loose(string screwId, GameFaction faction, ScrewBoxSlot screwBoxSlot)
+    public virtual void Loose(int screwId, GameFaction faction, ScrewBoxSlot screwBoxSlot)
     {
         if (screwId == this.screwId)
         {

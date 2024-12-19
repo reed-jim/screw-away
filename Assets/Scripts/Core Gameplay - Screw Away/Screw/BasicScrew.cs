@@ -31,7 +31,7 @@ public class BasicScrew : BaseScrew
         }
     }
 
-    public override void Loose(string screwId, GameEnum.GameFaction faction, ScrewBoxSlot screwBoxSlot)
+    public override void Loose(int screwId, GameEnum.GameFaction faction, ScrewBoxSlot screwBoxSlot)
     {
         if (screwId == this.screwId)
         {
