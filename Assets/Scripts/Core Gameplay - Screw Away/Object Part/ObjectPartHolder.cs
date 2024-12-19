@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class ObjectPartHolder : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
+        IObjectPart objectPart = other.GetComponent<IObjectPart>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (objectPart != null)
+        {
+            other.gameObject.SetActive(false);
+        }
     }
 }

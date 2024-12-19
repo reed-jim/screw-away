@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using PrimeTween;
 using UnityEngine;
 
 public class BasicObjectPart : MonoBehaviour, IObjectPart
@@ -11,6 +12,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
     private bool _isSelecting;
     private bool _isFree;
+    private bool _isImmuneSwipeForce;
 
     void Awake()
     {
@@ -60,11 +62,17 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
         }
     }
 
-    private void OnSwipe(Vector2 direction)
+    private async void OnSwipe(Vector2 direction)
     {
-        if (_isFree)
+        if (_isFree && !_isImmuneSwipeForce)
         {
             partRigidbody.AddForce(-10f * direction);
+
+            _isImmuneSwipeForce = true;
+
+            await Task.Delay(200);
+
+            _isImmuneSwipeForce = false;
         }
     }
 }
