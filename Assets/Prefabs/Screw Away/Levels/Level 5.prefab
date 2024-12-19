@@ -2637,8 +2637,10 @@ GameObject:
   - component: {fileID: 6077733622520846751}
   - component: {fileID: 4159735364412337424}
   - component: {fileID: 18221179880358601}
-  - component: {fileID: 5850813665915913976}
-  - component: {fileID: 4525771968531199674}
+  - component: {fileID: 915548610822205233}
+  - component: {fileID: 3549776384075813483}
+  - component: {fileID: 9007575443960623058}
+  - component: {fileID: 5409879565604108366}
   m_Layer: 0
   m_Name: SM_Generic_TreeStump_01 7(Clone)
   m_TagString: Untagged
@@ -2661,6 +2663,8 @@ Transform:
   m_Children:
   - {fileID: 1570303369748712301}
   - {fileID: 1479556415189906672}
+  - {fileID: 6282282194958572595}
+  - {fileID: 4131162378443420353}
   m_Father: {fileID: 8340430499134300678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3210274593086704683
@@ -2795,7 +2799,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!59 &5850813665915913976
+--- !u!59 &915548610822205233
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2834,7 +2838,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &4525771968531199674
+--- !u!59 &3549776384075813483
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2873,6 +2877,84 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!59 &9007575443960623058
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563050946314742323}
+  serializedVersion: 3
+  m_ConnectedBody: {fileID: 830768014060080845}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0.1856, y: 0.4095, z: -0.1619}
+  m_Axis: {x: 0.6941079, y: 0.22025631, z: -0.6853477}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_ExtendedLimits: 0
+  m_UseAcceleration: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!59 &5409879565604108366
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563050946314742323}
+  serializedVersion: 3
+  m_ConnectedBody: {fileID: 7348901592748875839}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0.1507, y: 0.4191, z: -0.0456}
+  m_Axis: {x: -0.9905031, y: 0, z: -0.13749027}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_ExtendedLimits: 0
+  m_UseAcceleration: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1001 &579279194353054943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2881,6 +2963,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3393143116121684910}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (2)
@@ -2972,6 +3058,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 723281588081943929}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D
@@ -3067,6 +3157,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3393143116121684910}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D
@@ -3158,6 +3252,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9171324171042135323}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D
@@ -3240,6 +3338,105 @@ Rigidbody:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
   m_PrefabInstance: {fileID: 1939893131967693095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2111177227877217592
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 637976185609671671}
+    m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_Name
+      value: Screw 3D (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820946931393587339, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: joint
+      value: 
+      objectReference: {fileID: 9007575443960623058}
+    - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: screwId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1856
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4095
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1619
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.2823519
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.8121672
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.4278531
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.27857414
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -12.724
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 134.636
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -119.103
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+--- !u!54 &830768014060080845 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1642428048320838645, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+  m_PrefabInstance: {fileID: 2111177227877217592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6282282194958572595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+  m_PrefabInstance: {fileID: 2111177227877217592}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2524672948048564406
 PrefabInstance:
@@ -3340,6 +3537,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6009573026766164972}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (1)
@@ -3522,6 +3723,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 723281588081943929}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (2)
@@ -3708,6 +3913,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7659284611823629164}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (1)
@@ -3890,6 +4099,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6009573026766164972}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (2)
@@ -3981,6 +4194,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9171324171042135323}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (1)
@@ -4163,6 +4380,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3393143116121684910}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (3)
@@ -4254,6 +4475,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9171324171042135323}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (3)
@@ -4436,6 +4661,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6009573026766164972}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (3)
@@ -4527,6 +4756,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3393143116121684910}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (1)
@@ -4709,6 +4942,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 723281588081943929}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (1)
@@ -4895,6 +5132,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 637976185609671671}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (1)
@@ -4906,7 +5147,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 4525771968531199674}
+      objectReference: {fileID: 3549776384075813483}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 4
@@ -4990,6 +5231,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 637976185609671671}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D
@@ -5001,7 +5246,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 5850813665915913976}
+      objectReference: {fileID: 915548610822205233}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 3
@@ -5085,6 +5330,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7659284611823629164}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (2)
@@ -5176,6 +5425,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9171324171042135323}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (2)
@@ -5358,6 +5611,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 723281588081943929}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (3)
@@ -5445,6 +5702,105 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1642428048320838645, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
   m_PrefabInstance: {fileID: 8139630056085036358}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8302272200985304010
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 637976185609671671}
+    m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_Name
+      value: Screw 3D (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820946931393587339, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: joint
+      value: 
+      objectReference: {fileID: 5409879565604108366}
+    - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: screwId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1507
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4191
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0456
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.65669996
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.75415194
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1340542.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+--- !u!4 &4131162378443420353 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+  m_PrefabInstance: {fileID: 8302272200985304010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &7348901592748875839 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1642428048320838645, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+  m_PrefabInstance: {fileID: 8302272200985304010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8619428137083357052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5453,6 +5809,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5323053904241479296}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D
@@ -5544,6 +5904,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7659284611823629164}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D
@@ -5635,6 +5999,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6009573026766164972}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (4)
