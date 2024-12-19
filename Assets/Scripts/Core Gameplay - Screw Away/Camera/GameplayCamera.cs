@@ -9,6 +9,8 @@ public class GameplayCamera : MonoBehaviour
     void Awake()
     {
         PinchGesture.pinchGestureEvent += Zoom;
+
+        _targetOrthographicSize = gameplayCamera.orthographicSize;
     }
 
     void OnDestroy()

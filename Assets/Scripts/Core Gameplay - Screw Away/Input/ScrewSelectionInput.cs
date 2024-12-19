@@ -5,6 +5,8 @@ public class ScrewSelectionInput : MonoBehaviour
 {
     [SerializeField] private LayerMask layerMaskCheck;
 
+    [SerializeField] private bool _isBreakObjectMode;
+
     #region EVENT
     public static event Action mouseUpEvent;
     #endregion
@@ -43,7 +45,14 @@ public class ScrewSelectionInput : MonoBehaviour
 
             if (objectPart != null)
             {
-                objectPart.Select();
+                if (_isBreakObjectMode)
+                {
+                    objectPart.Break();
+                }
+                else
+                {
+                    objectPart.Select();
+                }
             }
         }
     }

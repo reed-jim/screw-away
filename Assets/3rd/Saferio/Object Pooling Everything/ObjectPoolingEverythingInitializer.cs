@@ -7,6 +7,7 @@ public class ObjectPoolingEverythingInitializer : MonoBehaviour
     [SerializeField] private GameObject getInVehicleSoundPrefab;
     [SerializeField] private GameObject vehicleMoveOutSoundPrefab;
     [SerializeField] private GameObject screwBox;
+    [SerializeField] private GameObject screwPortPrefab;
     [SerializeField] private GameObject fakeScrewPrefab;
     [SerializeField] private GameObject loosenScrewSoundPrefab;
     [SerializeField] private GameObject loosenScrewFailSoundPrefab;
@@ -30,6 +31,7 @@ public class ObjectPoolingEverythingInitializer : MonoBehaviour
         // RegisterPool<AudioSource>(GameConstants.GET_IN_VEHICLE_SOUND, getInVehicleSoundPrefab, 3);
         // RegisterPool<AudioSource>(GameConstants.VEHICLE_MOVE_OUT_SOUND, vehicleMoveOutSoundPrefab, 3);
         RegisterPool<ScrewBox>(GameConstants.SCREW_BOX, screwBox, 5);
+        RegisterPool<ScrewBoxSlot>(GameConstants.SCREW_PORT_SLOT, screwPortPrefab, 3);
         RegisterPool<FakeScrew>(GameConstants.FAKE_SCREW, fakeScrewPrefab, 3);
         RegisterPool<AudioSource>(GameConstants.LOOSEN_SCREW_SOUND, loosenScrewSoundPrefab, 3);
         RegisterPool<AudioSource>(GameConstants.LOOSEN_SCREW_FAIL_SOUND, loosenScrewFailSoundPrefab, 3);

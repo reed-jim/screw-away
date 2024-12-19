@@ -7,6 +7,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 {
     public static event Action<int> selectObjectPartEvent;
     public static event Action<int> deselectObjectPartEvent;
+    public static event Action<BaseScrew> loosenScrewOnObjectBrokenEvent;
 
     [SerializeField] private Rigidbody partRigidbody;
 
@@ -74,5 +75,24 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
             _isImmuneSwipeForce = false;
         }
+    }
+
+    public void Break()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            BaseScrew screw = transform.GetChild(i).GetComponent<BaseScrew>();
+
+            if (screw.IsValidToLoose())
+            {
+                loosenScrewOnObjectBrokenEvent?.Invoke(screw);
+            }
+            else
+            {
+                screw.ForceUnscrew();
+            }
+        }
+
+        gameObject.SetActive(false);
     }
 }

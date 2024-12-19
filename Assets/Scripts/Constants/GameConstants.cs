@@ -40,6 +40,7 @@ public static class GameConstants
     #region OBJECT POOLING
     public static string TAG_SOUND = "Tag Sound";
     public static string SCREW_BOX = "Screw Box";
+    public static string SCREW_PORT_SLOT = "Screw Port Slot";
     public static string FAKE_SCREW = "Fake Screw";
     #endregion
 

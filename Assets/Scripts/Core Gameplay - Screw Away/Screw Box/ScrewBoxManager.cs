@@ -8,11 +8,11 @@ using static GameEnum;
 public class ScrewBoxManager : MonoBehaviour
 {
     [SerializeField] private ScrewBox[] screwBoxs;
-    [SerializeField] private ScrewBoxSlot[] screwPorts;
+    [SerializeField] private List<ScrewBoxSlot> screwPorts;
 
     [SerializeField] private int maxScrewBox;
 
-    public ScrewBoxSlot[] ScrewPorts
+    public List<ScrewBoxSlot> ScrewPorts
     {
         get => screwPorts;
     }
@@ -28,6 +28,9 @@ public class ScrewBoxManager : MonoBehaviour
         ScrewManager.spawnAdsScrewBoxesEvent += SpawnAdsScrewBoxes;
         ScrewBox.screwBoxCompletedEvent += OnScrewBoxCompleted;
         ScrewBox.screwBoxUnlockedEvent += MoveFromScrewPortToScrewBox;
+        BoosterUI.addMoreScrewPortEvent += AddMoreScrewPort;
+        BoosterUI.clearAllScrewPortsEvent += ClearAllScrewPorts;
+        BasicObjectPart.loosenScrewOnObjectBrokenEvent += LoosenScrewOnObjectBroken;
 
         screwBoxs = new ScrewBox[maxScrewBox];
     }
@@ -39,9 +42,17 @@ public class ScrewBoxManager : MonoBehaviour
         ScrewManager.spawnAdsScrewBoxesEvent -= SpawnAdsScrewBoxes;
         ScrewBox.screwBoxCompletedEvent -= OnScrewBoxCompleted;
         ScrewBox.screwBoxUnlockedEvent -= MoveFromScrewPortToScrewBox;
+        BoosterUI.addMoreScrewPortEvent -= AddMoreScrewPort;
+        BoosterUI.clearAllScrewPortsEvent -= ClearAllScrewPorts;
+        BasicObjectPart.loosenScrewOnObjectBrokenEvent -= LoosenScrewOnObjectBroken;
     }
 
     private ScrewBoxSlot CheckAvailableScrewBoxes(GameFaction selectedFaction)
+    {
+        return CheckAvailableScrewBoxes(selectedFaction, isIncludeScrewPorts: true);
+    }
+
+    private ScrewBoxSlot CheckAvailableScrewBoxes(GameFaction selectedFaction, bool isIncludeScrewPorts)
     {
         foreach (var screwBox in screwBoxs)
         {
@@ -67,11 +78,14 @@ public class ScrewBoxManager : MonoBehaviour
             }
         }
 
-        foreach (var screwPort in screwPorts)
+        if (isIncludeScrewPorts)
         {
-            if (!screwPort.IsFilled)
+            foreach (var screwPort in screwPorts)
             {
-                return screwPort;
+                if (!screwPort.IsFilled)
+                {
+                    return screwPort;
+                }
             }
         }
 
@@ -85,6 +99,20 @@ public class ScrewBoxManager : MonoBehaviour
         if (screwBoxSlot != null)
         {
             looseScrewEvent?.Invoke(screwId, selectedFaction, screwBoxSlot);
+        }
+    }
+
+    private void LoosenScrewOnObjectBroken(BaseScrew screw)
+    {
+        ScrewBoxSlot screwBoxSlot = CheckAvailableScrewBoxes(screw.Faction, isIncludeScrewPorts: false);
+
+        if (screwBoxSlot != null)
+        {
+            looseScrewEvent?.Invoke(screw.ScrewId, screw.Faction, screwBoxSlot);
+        }
+        else
+        {
+            screw.ForceUnscrew();
         }
     }
 
@@ -178,7 +206,7 @@ public class ScrewBoxManager : MonoBehaviour
                 continue;
             }
 
-            for (int j = 0; j < screwPorts.Length; j++)
+            for (int j = 0; j < screwPorts.Count; j++)
             {
                 if (screwPorts[j].IsFilled && screwPorts[j].Screw.Faction == screwBoxs[i].Faction)
                 {
@@ -243,5 +271,40 @@ public class ScrewBoxManager : MonoBehaviour
         }
 
         return screwPortAvailableByFaction;
+    }
+
+    public void AddMoreScrewPort()
+    {
+        ScrewBoxSlot screwBoxSlot = ObjectPoolingEverything.GetFromPool<ScrewBoxSlot>(GameConstants.SCREW_PORT_SLOT);
+
+        screwPorts.Add(screwBoxSlot);
+
+        screwBoxSlot.transform.SetParent(screwPorts[0].transform.parent);
+
+        screwBoxSlot.transform.localScale = screwPorts[0].transform.localScale;
+
+        Vector3 position = screwPorts[0].transform.position;
+
+        for (int i = 0; i < screwPorts.Count; i++)
+        {
+            position.x = (-(screwPorts.Count - 1) / 2f + i) * 0.8f;
+
+            screwPorts[i].transform.position = position;
+        }
+    }
+
+    private void ClearAllScrewPorts()
+    {
+        for (int i = 0; i < screwPorts.Count; i++)
+        {
+            if (screwPorts[i].IsFilled)
+            {
+                screwPorts[i].IsFilled = false;
+
+                screwPorts[i].Screw.gameObject.SetActive(false);
+
+                screwPorts[i].Screw = null;
+            }
+        }
     }
 }

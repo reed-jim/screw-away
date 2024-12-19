@@ -99,6 +99,27 @@ public class BaseScrew : MonoBehaviour, IScrew
         addScrewToListEvent?.Invoke(this);
     }
 
+    public bool IsValidToLoose()
+    {
+        CountBlockingObjects();
+
+        if (_numberBlockingObjects > 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public void ForceUnscrew()
+    {
+        _isDone = true;
+
+        gameObject.SetActive(false);
+    }
+
     public virtual int CountBlockingObjects()
     {
         return 0;

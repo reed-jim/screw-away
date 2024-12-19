@@ -70,7 +70,7 @@ public class ScrewManager : MonoBehaviour
         }
 
         // CHECK SCREW PORTS
-        for (int i = 0; i < screwBoxManager.ScrewPorts.Length; i++)
+        for (int i = 0; i < screwBoxManager.ScrewPorts.Count; i++)
         {
             ScrewBoxSlot screwBoxSlot = screwBoxManager.ScrewPorts[i];
 
