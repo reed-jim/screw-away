@@ -12,6 +12,11 @@ public class ScrewBoxManager : MonoBehaviour
 
     [SerializeField] private int maxScrewBox;
 
+    public ScrewBoxSlot[] ScrewPorts
+    {
+        get => screwPorts;
+    }
+
     #region EVENT
     public static event Action<int, GameFaction, ScrewBoxSlot> looseScrewEvent;
     #endregion
@@ -22,6 +27,7 @@ public class ScrewBoxManager : MonoBehaviour
         ScrewManager.spawnScrewBoxEvent += SpawnScrewBox;
         ScrewManager.spawnAdsScrewBoxesEvent += SpawnAdsScrewBoxes;
         ScrewBox.screwBoxCompletedEvent += OnScrewBoxCompleted;
+        ScrewBox.screwBoxUnlockedEvent += MoveFromScrewPortToScrewBox;
 
         screwBoxs = new ScrewBox[maxScrewBox];
     }
@@ -32,6 +38,7 @@ public class ScrewBoxManager : MonoBehaviour
         ScrewManager.spawnScrewBoxEvent -= SpawnScrewBox;
         ScrewManager.spawnAdsScrewBoxesEvent -= SpawnAdsScrewBoxes;
         ScrewBox.screwBoxCompletedEvent -= OnScrewBoxCompleted;
+        ScrewBox.screwBoxUnlockedEvent -= MoveFromScrewPortToScrewBox;
     }
 
     private ScrewBoxSlot CheckAvailableScrewBoxes(GameFaction selectedFaction)

@@ -11,9 +11,16 @@ public class ObjectPoolingEverythingInitializer : MonoBehaviour
     [SerializeField] private GameObject loosenScrewSoundPrefab;
     [SerializeField] private GameObject loosenScrewFailSoundPrefab;
 
+    private bool _isInitialized;
+
     private void Start()
     {
-        InitPool();
+        if (!_isInitialized)
+        {
+            InitPool();
+
+            _isInitialized = true;
+        }
     }
 
     private void InitPool()

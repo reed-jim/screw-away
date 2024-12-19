@@ -3,7 +3,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Formats.Fbx.Exporter;
 
 #if UNITY_EDITOR
 using UnityEditor;

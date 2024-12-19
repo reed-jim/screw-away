@@ -15,6 +15,7 @@ public class ScrewBox : MonoBehaviour
     public static event Action<ScrewBox> screwBoxCompletedEvent;
     public static event Action spawnNewScrewBoxEvent;
     public static event Action<ScrewBox> setFactionForScrewBoxEvent;
+    public static event Action screwBoxUnlockedEvent;
     #endregion
 
     public GameFaction Faction
@@ -79,6 +80,8 @@ public class ScrewBox : MonoBehaviour
             isLocked = false;
 
             setFactionForScrewBoxEvent?.Invoke(this);
+
+            screwBoxUnlockedEvent?.Invoke();
         }
     }
 }

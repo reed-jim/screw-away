@@ -69,6 +69,17 @@ public class ScrewManager : MonoBehaviour
             remainingScrewByFaction[_screws[i].Faction]++;
         }
 
+        // CHECK SCREW PORTS
+        for (int i = 0; i < screwBoxManager.ScrewPorts.Length; i++)
+        {
+            ScrewBoxSlot screwBoxSlot = screwBoxManager.ScrewPorts[i];
+
+            if (screwBoxSlot.IsFilled)
+            {
+                remainingScrewByFaction[screwBoxSlot.Screw.Faction]++;
+            }
+        }
+
         int remainingScrew = remainingScrewByFaction.Sum(item => item.Value);
 
         if (remainingScrew == 0)
