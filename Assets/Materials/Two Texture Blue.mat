@@ -305,7 +305,7 @@ Material:
     - _Clipping_Level: 0
     - _CoatMask: 0
     - _ColorShift_Speed: 0
-    - _ColorStrength: 1
+    - _ColorStrength: 6
     - _ComposerMaskMode: 0
     - _Cull: 2
     - _CullMode: 2
@@ -436,6 +436,7 @@ Material:
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RThreshHold: 0
     - _ReceiveShadows: 1
     - _ReceivesSSR: 1
     - _RefractionModel: 0
@@ -555,7 +556,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColorMaskColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.11764706, g: 0.11764706, b: 0.98039216, a: 1}
+    - _Color: {r: 0.50980395, g: 0.7454618, b: 0.98039216, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
@@ -569,7 +570,7 @@ Material:
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _MainTextureOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _MainTextureTiling: {r: 0, g: 0, b: 0, a: 0}
+    - _MainTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineMaskColor: {r: 0, g: 0, b: 0, a: 1}
     - _Outline_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -585,7 +586,7 @@ Material:
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
     - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
     - _WoodTextureOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _WoodTextureTiling: {r: 1, g: 0.4, b: 0, a: 0}
+    - _WoodTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - emissive: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

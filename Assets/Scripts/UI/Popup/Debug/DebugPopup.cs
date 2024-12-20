@@ -28,5 +28,7 @@ public class DebugPopup : BasePopup
         int level = int.Parse(levelInput.text);
 
         toLevelEvent?.Invoke(level);
+
+        Hide();
     }
 }
