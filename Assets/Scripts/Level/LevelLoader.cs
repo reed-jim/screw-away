@@ -11,7 +11,14 @@ public class LevelLoader : MonoBehaviour
 
     private void Awake()
     {
+        DebugPopup.toLevelEvent += GoLevel;
+
         LoadLevel();
+    }
+
+    void OnDestroy()
+    {
+        DebugPopup.toLevelEvent -= GoLevel;
     }
 
     private void LoadLevel()
@@ -22,8 +29,17 @@ public class LevelLoader : MonoBehaviour
         {
             if (op.Status == AsyncOperationStatus.Succeeded)
             {
-                GameObject loadedObject = Instantiate(op.Result);
+                GameObject loadedObject = Instantiate(op.Result, transform);
             }
         };
+    }
+
+    private void GoLevel(int level)
+    {
+        Destroy(gameObject.transform.GetChild(0).gameObject);
+
+        currentLevel.Value = level;
+
+        LoadLevel();
     }
 }

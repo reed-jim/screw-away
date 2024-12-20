@@ -13,7 +13,8 @@ public class GameEnum : MonoBehaviour
         Screen4,
         Screen5,
         Setting,
-        Win
+        Win,
+        Debug
     }
 
     public enum GameFaction
