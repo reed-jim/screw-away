@@ -253,31 +253,32 @@ public class ScrewManager : MonoBehaviour
         for (int i = 0; i < factionSortedByDifficulty.Length; i++)
         {
             GameFaction faction = factionSortedByDifficulty[i];
+            int factionIndex = i;
 
             if ((remainingScrewByFaction[faction] - screwPortAvailableByFaction[faction]) < 3)
             {
                 continue;
             }
 
-            if (levelDifficulty == LevelDifficulty.Easy && difficultyLevel <= 3)
+            if (levelDifficulty == LevelDifficulty.Easy && factionIndex >= 4)
             {
-                nextFaction = factionSortedByDifficulty[4];
+                nextFaction = faction;
 
                 isFound = true;
 
                 break;
             }
-            else if (levelDifficulty == LevelDifficulty.Normal && difficultyLevel <= 4)
+            else if (levelDifficulty == LevelDifficulty.Normal && factionIndex >= 2)
             {
-                nextFaction = factionSortedByDifficulty[1];
+                nextFaction = faction;
 
                 isFound = true;
 
                 break;
             }
-            else if (levelDifficulty == LevelDifficulty.Hard && difficultyLevel <= 5)
+            else if (levelDifficulty == LevelDifficulty.Hard && factionIndex >= 1)
             {
-                nextFaction = factionSortedByDifficulty[0];
+                nextFaction = faction;
 
                 isFound = true;
 

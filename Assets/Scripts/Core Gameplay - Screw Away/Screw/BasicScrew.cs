@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using PrimeTween;
 using UnityEngine;
 
@@ -31,7 +32,7 @@ public class BasicScrew : BaseScrew
         }
     }
 
-    public override void Loose(int screwId, GameEnum.GameFaction faction, ScrewBoxSlot screwBoxSlot)
+    public override async void Loose(int screwId, GameEnum.GameFaction faction, ScrewBoxSlot screwBoxSlot)
     {
         if (screwId == this.screwId)
         {
@@ -72,6 +73,8 @@ public class BasicScrew : BaseScrew
             breakJointEvent?.Invoke(joint.gameObject.GetInstanceID());
 
             _isRotating = true;
+
+            await Task.Delay(100);
 
             Tween.Position(transform, transform.position + 3f * transform.forward, duration: 0.3f).OnComplete(() =>
             {

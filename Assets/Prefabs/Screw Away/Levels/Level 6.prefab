@@ -56,6 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &6507744964396810962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 1555496262274554089}
 --- !u!33 &886491670795909480
 MeshFilter:
@@ -167,7 +168,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -345,6 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &7475850472996634323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 5103961784789435612}
 --- !u!33 &7145708785380858704
 MeshFilter:
@@ -456,7 +458,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -636,6 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &1448221758819385211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,7 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 6590924447001630383}
 --- !u!33 &4377021939789753615
 MeshFilter:
@@ -747,7 +750,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -944,7 +947,7 @@ Transform:
   m_GameObject: {fileID: 1634053968491264398}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -6, z: 0}
+  m_LocalPosition: {x: -2, y: -6.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -968,6 +971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &6564160664773660565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,7 +984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 5824836945046165119}
 --- !u!33 &8607306907125290149
 MeshFilter:
@@ -1079,7 +1083,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1314,7 +1318,7 @@ Transform:
   m_GameObject: {fileID: 1989220654639642337}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -9.08, z: 0}
+  m_LocalPosition: {x: 0, y: -9.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1337,6 +1341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &230359336202620545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,7 +1354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 5621142093206681844}
 --- !u!33 &7335422116551259423
 MeshFilter:
@@ -1448,7 +1453,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1663,6 +1668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &6704530732873334157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1675,7 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 3390938300427710162}
 --- !u!33 &1611388594608013438
 MeshFilter:
@@ -1774,7 +1780,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1915,6 +1921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &5299514205689702128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1927,7 +1934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 5815035923418232412}
 --- !u!33 &2875316608944630726
 MeshFilter:
@@ -2026,7 +2033,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2222,7 +2229,7 @@ Transform:
   m_GameObject: {fileID: 3806708811277885662}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: -3.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2245,6 +2252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &3100580066747614981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2257,7 +2265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 4342775086610027596}
 --- !u!33 &8052452208393461776
 MeshFilter:
@@ -2356,7 +2364,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2575,6 +2583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &1321319611587629956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2587,7 +2596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 6784385977732906858}
 --- !u!33 &6571970057217881812
 MeshFilter:
@@ -2686,7 +2695,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2882,7 +2891,7 @@ Transform:
   m_GameObject: {fileID: 5698587283707077823}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -0, y: 3.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2905,6 +2914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &3662505264975986089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2917,7 +2927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 3014462764367735823}
 --- !u!33 &7328735843114494654
 MeshFilter:
@@ -3016,7 +3026,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -3231,6 +3241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &6488966770932421362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3243,7 +3254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 4572698492515865107}
 --- !u!33 &2479363800643321465
 MeshFilter:
@@ -3342,7 +3353,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -3481,6 +3492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &9090634341486740284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3493,7 +3505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 4458288785540215715}
 --- !u!33 &3998277217264352154
 MeshFilter:
@@ -3592,7 +3604,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -3739,10 +3751,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7933706479049773955}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -2.2, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8077472018178752912}
   - {fileID: 7751169285347529506}
@@ -3758,7 +3770,7 @@ Transform:
   - {fileID: 1774287207196979831}
   - {fileID: 4291118471288025004}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &127410866101679589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3828,6 +3840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partRigidbody: {fileID: 0}
+  _totalJoint: 0
 --- !u!114 &1470564797487068106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3840,7 +3853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab1e578925c8c46947526d3ce3ba73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaValueReference: _Object_Alpha
+  alphaValueReference: _ObjectAlpha
   _renderer: {fileID: 5551048605703521347}
 --- !u!33 &979549178000677801
 MeshFilter:
@@ -3939,7 +3952,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0

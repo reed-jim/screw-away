@@ -6,8 +6,6 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class LevelLoader : MonoBehaviour
 {
-    [SerializeField] private NavMeshSurface navMeshSurface;
-
     [Header("SCRIPTABLE OBJECT")]
     [SerializeField] private IntVariable currentLevel;
 
@@ -24,9 +22,7 @@ public class LevelLoader : MonoBehaviour
         {
             if (op.Status == AsyncOperationStatus.Succeeded)
             {
-                GameObject loadedObject = Instantiate(op.Result, transform.position, Quaternion.identity);
-
-                // navMeshSurface.BuildNavMesh();
+                GameObject loadedObject = Instantiate(op.Result);
             }
         };
     }

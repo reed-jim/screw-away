@@ -14,6 +14,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
     private bool _isSelecting;
     private bool _isFree;
     private bool _isImmuneSwipeForce;
+    [SerializeField] private int _totalJoint;
 
     void Awake()
     {
@@ -22,6 +23,8 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
         SwipeGesture.swipeGestureEvent += OnSwipe;
 
         partRigidbody = GetComponent<Rigidbody>();
+
+        _totalJoint = GetComponents<HingeJoint>().Length;
     }
 
     void OnDestroy()
@@ -52,12 +55,12 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
     {
         if (instanceId == gameObject.GetInstanceID())
         {
-            await Task.Delay(200);
+            await Task.Delay(1500);
 
-            if (GetComponent<HingeJoint>() == null)
+            _totalJoint--;
+
+            if (_totalJoint == 0)
             {
-                // partRigidbody.AddForce(150f * Vector3.forward);
-
                 _isFree = true;
             }
         }
@@ -65,13 +68,32 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
     private async void OnSwipe(Vector2 direction)
     {
-        if (_isFree && !_isImmuneSwipeForce)
+        if (_totalJoint <= 1 && !_isImmuneSwipeForce)
         {
-            partRigidbody.AddForce(-10f * direction);
+            // partRigidbody.AddForce(-30f * direction);
+
+            if (partRigidbody.linearVelocity.magnitude > 5)
+            {
+                return;
+            }
+
+            // OUT OF CENTER
+            if (_totalJoint == 0)
+            {
+                Vector3 forceDirection = direction;
+
+                forceDirection.y = 0;
+
+                partRigidbody.AddForce(-20f * forceDirection);
+            }
+            else
+            {
+                partRigidbody.AddForce(20f * (Vector3.zero - transform.localPosition));
+            }
 
             _isImmuneSwipeForce = true;
 
-            await Task.Delay(200);
+            // await Task.Delay(1000);
 
             _isImmuneSwipeForce = false;
         }
