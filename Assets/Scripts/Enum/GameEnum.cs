@@ -39,4 +39,11 @@ public class GameEnum : MonoBehaviour
         Normal,
         Hard
     }
+
+    public enum InputMode
+    {
+        Select,
+        BreakObject,
+        Disabled
+    }
 }

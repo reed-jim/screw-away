@@ -1,15 +1,30 @@
 using System;
 using UnityEngine;
+using static GameEnum;
 
 public class ScrewSelectionInput : MonoBehaviour
 {
     [SerializeField] private LayerMask layerMaskCheck;
 
-    [SerializeField] private bool _isBreakObjectMode;
+    [SerializeField] private InputMode _inputMode;
 
     #region EVENT
     public static event Action mouseUpEvent;
     #endregion
+
+    void Awake()
+    {
+        SwipeGesture.swipeGestureEvent += DisableInput;
+        SwipeGesture.stopSwipeGestureEvent += EnableInput;
+        BoosterUI.enableBreakObjectModeEvent += EnableBreakObjectMode;
+    }
+
+    void OnDestroy()
+    {
+        SwipeGesture.swipeGestureEvent -= DisableInput;
+        SwipeGesture.stopSwipeGestureEvent -= EnableInput;
+        BoosterUI.enableBreakObjectModeEvent -= EnableBreakObjectMode;
+    }
 
     void Update()
     {
@@ -26,6 +41,11 @@ public class ScrewSelectionInput : MonoBehaviour
 
     private void Select()
     {
+        if (_inputMode == InputMode.Disabled)
+        {
+            return;
+        }
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         Physics.Raycast(ray, out RaycastHit hit, layerMaskCheck);
@@ -45,9 +65,11 @@ public class ScrewSelectionInput : MonoBehaviour
 
             if (objectPart != null)
             {
-                if (_isBreakObjectMode)
+                if (_inputMode == InputMode.BreakObject)
                 {
                     objectPart.Break();
+
+                    _inputMode = InputMode.Select;
                 }
                 else
                 {
@@ -55,5 +77,20 @@ public class ScrewSelectionInput : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void EnableInput()
+    {
+        _inputMode = InputMode.Select;
+    }
+
+    private void DisableInput(Vector2 swipeDirection)
+    {
+        _inputMode = InputMode.Disabled;
+    }
+
+    private void EnableBreakObjectMode()
+    {
+        _inputMode = InputMode.BreakObject;
     }
 }
