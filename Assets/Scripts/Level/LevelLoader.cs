@@ -1,5 +1,5 @@
+using System;
 using System.Threading.Tasks;
-using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -9,11 +9,13 @@ public class LevelLoader : MonoBehaviour
     [Header("SCRIPTABLE OBJECT")]
     [SerializeField] private IntVariable currentLevel;
 
+    public static event Action startLevelEvent;
+
     private void Awake()
     {
         DebugPopup.toLevelEvent += GoLevel;
 
-        LoadLevel();
+        GoLevel(currentLevel.Value);
     }
 
     void OnDestroy()
@@ -34,11 +36,18 @@ public class LevelLoader : MonoBehaviour
         };
     }
 
-    private void GoLevel(int level)
+    private async void GoLevel(int level)
     {
-        Destroy(gameObject.transform.GetChild(0).gameObject);
+        await Task.Delay(500);
+
+        if (gameObject.transform.childCount > 0)
+        {
+            Destroy(gameObject.transform.GetChild(0).gameObject);
+        }
 
         currentLevel.Value = level;
+
+        startLevelEvent?.Invoke();
 
         LoadLevel();
     }

@@ -23,6 +23,7 @@ public class ScrewBoxManager : MonoBehaviour
 
     void Awake()
     {
+        LevelLoader.startLevelEvent += OnLevelStart;
         BaseScrew.selectScrewEvent += OnScrewSelected;
         ScrewManager.spawnScrewBoxEvent += SpawnScrewBox;
         ScrewManager.spawnAdsScrewBoxesEvent += SpawnAdsScrewBoxes;
@@ -31,12 +32,11 @@ public class ScrewBoxManager : MonoBehaviour
         BoosterUI.addMoreScrewPortEvent += AddMoreScrewPort;
         BoosterUI.clearAllScrewPortsEvent += ClearAllScrewPorts;
         BasicObjectPart.loosenScrewOnObjectBrokenEvent += LoosenScrewOnObjectBroken;
-
-        screwBoxs = new ScrewBox[maxScrewBox];
     }
 
     void OnDestroy()
     {
+        LevelLoader.startLevelEvent -= OnLevelStart;
         BaseScrew.selectScrewEvent -= OnScrewSelected;
         ScrewManager.spawnScrewBoxEvent -= SpawnScrewBox;
         ScrewManager.spawnAdsScrewBoxesEvent -= SpawnAdsScrewBoxes;
@@ -45,6 +45,19 @@ public class ScrewBoxManager : MonoBehaviour
         BoosterUI.addMoreScrewPortEvent -= AddMoreScrewPort;
         BoosterUI.clearAllScrewPortsEvent -= ClearAllScrewPorts;
         BasicObjectPart.loosenScrewOnObjectBrokenEvent -= LoosenScrewOnObjectBroken;
+    }
+
+    private void OnLevelStart()
+    {
+        if (screwBoxs != null)
+        {
+            for (int i = 0; i < screwBoxs.Length; i++)
+            {
+                ObjectPoolingEverything.ReturnToPool(GameConstants.SCREW_BOX, screwBoxs[i].gameObject);
+            }
+        }
+
+        screwBoxs = new ScrewBox[maxScrewBox];
     }
 
     private ScrewBoxSlot CheckAvailableScrewBoxes(GameFaction selectedFaction)
@@ -185,7 +198,11 @@ public class ScrewBoxManager : MonoBehaviour
 
                 int index = i;
 
-                Tween.LocalPositionX(screwBox.transform, (-(maxScrewBox - 1) / 2f + index) * 2.5f, duration: 0.5f);
+                Tween.LocalPositionX(screwBox.transform, (-(maxScrewBox - 1) / 2f + index) * 2.5f, duration: 0.5f)
+                .OnComplete(() =>
+                {
+                    screwBox.ScrewBoxServiceLocator.screwBoxUI.SetUnlockByAdsButtonPosition();
+                });
 
                 screwBoxs[i] = screwBox;
             }

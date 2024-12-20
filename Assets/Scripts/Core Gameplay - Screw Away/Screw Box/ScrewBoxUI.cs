@@ -12,6 +12,8 @@ public class ScrewBoxUI : MonoBehaviour
     [SerializeField] private ScrewBoxCameraObserver screwBoxCameraObserver;
     [SerializeField] private Vector2Variable canvasSize;
 
+    private Camera _screwBoxCamera;
+
     #region EVENT
     public static event Action<int> unlockScrewBox;
     #endregion
@@ -43,11 +45,14 @@ public class ScrewBoxUI : MonoBehaviour
         ScrewBoxCameraManager.setCameraEvent -= OnCameraSet;
     }
 
-    private async void OnCameraSet(Camera camera)
+    private void OnCameraSet(Camera camera)
     {
-        await Task.Delay(1500);
+        _screwBoxCamera = camera;
+    }
 
-        unlockByAdsButtonRT.localPosition = camera.WorldToScreenPoint(transform.position) - 0.5f * (Vector3)canvasSize.Value;
+    public void SetUnlockByAdsButtonPosition()
+    {
+        unlockByAdsButtonRT.localPosition = _screwBoxCamera.WorldToScreenPoint(transform.position) - 0.5f * (Vector3)canvasSize.Value;
     }
 
     private async Task DelaySetPositionAsync()

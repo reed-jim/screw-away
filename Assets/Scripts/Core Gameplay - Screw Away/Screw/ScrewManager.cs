@@ -25,17 +25,15 @@ public class ScrewManager : MonoBehaviour
 
     void Awake()
     {
+        LevelLoader.startLevelEvent += OnLevelStart;
         BaseScrew.addScrewToListEvent += AddScrew;
         ScrewBox.spawnNewScrewBoxEvent += SpawnNewScrewBox;
         ScrewBox.setFactionForScrewBoxEvent += AssignFactionForNewScrewBox;
-
-        _screws = new List<BaseScrew>();
-
-        SpawnScrewBox();
     }
 
     void OnDestroy()
     {
+        LevelLoader.startLevelEvent -= OnLevelStart;
         BaseScrew.addScrewToListEvent -= AddScrew;
         ScrewBox.spawnNewScrewBoxEvent -= SpawnNewScrewBox;
         ScrewBox.setFactionForScrewBoxEvent -= AssignFactionForNewScrewBox;
@@ -46,6 +44,15 @@ public class ScrewManager : MonoBehaviour
         _screws.Add(screw);
 
         _totalScrew++;
+    }
+
+    private void OnLevelStart()
+    {
+        _screws = new List<BaseScrew>();
+
+        _totalScrew = 0;
+
+        SpawnScrewBox();
     }
 
     private Dictionary<GameFaction, int> GetRemainingScrewByFaction()
