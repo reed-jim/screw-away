@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1716578225, guid: fb90042e856c1560c777f858ba74d6dd, type: 3}
+  m_Name: BarViewSymbolConfig
+  m_EditorClassIdentifier:
+  symbols:
+  - color: 2
+    symbol: {fileID: 21300000, guid: 77865fdea8c349641ae48fd4b9f89637, type: 2}
+    backgroundColor: {r: 0.9843137, g: 0, b: 0, a: 1}
+    shelfColor: {r: 0.8784314, g: 0.16862746, b: 0.16862746, a: 1}
+  - color: 7
+    symbol: {fileID: 21300000, guid: 749e82948b9f0cd4c80f0104d55539d7, type: 2}
+    backgroundColor: {r: 1, g: 0.27058825, b: 0, a: 1}
+    shelfColor: {r: 0.854902, g: 0.2784314, b: 0.0627451, a: 1}
+  - color: 6
+    symbol: {fileID: 21300000, guid: 53fb18a3db48bb14bb174c815b01d09f, type: 2}
+    backgroundColor: {r: 0, g: 0.9960785, b: 0.54901963, a: 1}
+    shelfColor: {r: 0.121568635, g: 0.69411767, b: 0.39607847, a: 1}
+  - color: 1
+    symbol: {fileID: 21300000, guid: 1381227fde9aa8644934106772824638, type: 2}
+    backgroundColor: {r: 1, g: 0.7058824, b: 0, a: 1}
+    shelfColor: {r: 0.909804, g: 0.56078434, b: 0.10588236, a: 1}
+  - color: 3
+    symbol: {fileID: 21300000, guid: 95198c455c1c2a74ab9966019b2aea6f, type: 2}
+    backgroundColor: {r: 0.40000004, g: 1, b: 0, a: 1}
+    shelfColor: {r: 0.53333336, g: 0.7411765, b: 0.1764706, a: 1}
+  - color: 5
+    symbol: {fileID: 21300000, guid: 7d85e3b44c2834b44849a98981cee62b, type: 2}
+    backgroundColor: {r: 0.5921569, g: 0.08627451, b: 0.9803922, a: 1}
+    shelfColor: {r: 0.65882355, g: 0.17254902, b: 0.77647066, a: 1}
+  - color: 0
+    symbol: {fileID: 21300000, guid: df6448bbdd3a7434e93a94c41165a5af, type: 2}
+    backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+    shelfColor: {r: 1, g: 1, b: 1, a: 1}
+  - color: 9
+    symbol: {fileID: 21300000, guid: 15f7c48947cca1747921b99082ead46a, type: 2}
+    backgroundColor: {r: 0, g: 0.9058824, b: 1, a: 1}
+    shelfColor: {r: 0, g: 0.7019608, b: 0.77647066, a: 1}
+  - color: 8
+    symbol: {fileID: 21300000, guid: 7153488b94f87074090165012dde43cd, type: 2}
+    backgroundColor: {r: 0.80392164, g: 0, b: 1, a: 1}
+    shelfColor: {r: 0.8705883, g: 0.24705884, b: 0.8470589, a: 1}
+  - color: 4
+    symbol: {fileID: 21300000, guid: 1771dd1581929004d996c0d1ecf0b21a, type: 2}
+    backgroundColor: {r: 0, g: 0.48627454, b: 1, a: 1}
+    shelfColor: {r: 0.2784314, g: 0.54509807, b: 0.8313726, a: 1}
+  - color: 13
+    symbol: {fileID: 21300000, guid: 796b9effdf1ea0642b15b658c33d450d, type: 2}
+    backgroundColor: {r: 1, g: 0.33333334, b: 0.5058824, a: 1}
+    shelfColor: {r: 0.86666673, g: 0.34117648, b: 0.3803922, a: 1}
+  - color: 10
+    symbol: {fileID: 21300000, guid: c32fff9e6ba7b7d42b667f7ad1a8daa5, type: 2}
+    backgroundColor: {r: 1, g: 0.6745098, b: 0.058823533, a: 1}
+    shelfColor: {r: 0.7490196, g: 0.45098042, b: 0.12941177, a: 1}
+  - color: 12
+    symbol: {fileID: 21300000, guid: 2f09e5d2646371544b2a8c51d0e1f432, type: 2}
+    backgroundColor: {r: 0.8196079, g: 0.9686275, b: 0, a: 1}
+    shelfColor: {r: 0.77647066, g: 0.6666667, b: 0, a: 1}
+  - color: 11
+    symbol: {fileID: 21300000, guid: 6545af8b3304ca04eafc7a52a41b13a4, type: 2}
+    backgroundColor: {r: 0.16078432, g: 0.14901961, b: 0.21176472, a: 1}
+    shelfColor: {r: 0.3019608, g: 0.28235295, b: 0.37254903, a: 1}

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 423421514, guid: 910a8e94d0c01c8f5eb667b87af6a9bb, type: 3}
+  m_Name: LocalSpritesDictionaryConfig
+  m_EditorClassIdentifier:
+  spriteDataList:
+    sprites:
+    - key: coins_0
+      sprite: {fileID: 21300000, guid: c3eb47683980f1340a6eeaaed92c1dfe, type: 2}
+    - key: coins_1
+      sprite: {fileID: 21300000, guid: 1d94ea9b315fb2e49b2b03fd8c3233ae, type: 2}
+    - key: coins_2
+      sprite: {fileID: 21300000, guid: 647a1a35d65d2ca48831b9c3c7ad9f97, type: 2}
+    - key: coins_3
+      sprite: {fileID: 21300000, guid: 508d69f39dd246a4783df555a63cbd84, type: 2}
+    - key: coins_4
+      sprite: {fileID: 21300000, guid: b6cfa303b5048f040b9da30c36872c3a, type: 2}
+    - key: coins_5
+      sprite: {fileID: 21300000, guid: c60ae45b8599e49458f4f7d1ac39bec1, type: 2}
+    - key: coins_6
+      sprite: {fileID: 21300000, guid: 92ff3b2f24e32ac45a861aabba5a8154, type: 2}
+    - key: coins_7
+      sprite: {fileID: 21300000, guid: 2dc6c3e960086704785bc2a316031018, type: 2}
+    - key: CO
+      sprite: {fileID: 21300000, guid: f7b663bfe35324a4abac0e9aed7bb112, type: 2}
+    - key: booster/undo
+      sprite: {fileID: 21300000, guid: 62079d7e83858a2458c4e208ffdc2b63, type: 2}
+    - key: booster/addcell
+      sprite: {fileID: 21300000, guid: d00cf0e63c4c1224ab63fa75e45700e4, type: 2}
+    - key: addcellBig
+      sprite: {fileID: 21300000, guid: 62079d7e83858a2458c4e208ffdc2b63, type: 2}
+    - key: specialOfferViolet
+      sprite: {fileID: 21300000, guid: 84c61278478ee5745906d4ff4630cd4e, type: 2}
+    - key: noAds
+      sprite: {fileID: 21300000, guid: df4e678483b659344bdd35704f72c604, type: 2}
+    - key: booster/revealunknown
+      sprite: {fileID: 21300000, guid: b58d12ae9024edb4285179c3594ee015, type: 2}
+    - key: progressBarFeature/key
+      sprite: {fileID: 21300000, guid: d00cf0e63c4c1224ab63fa75e45700e4, type: 2}
+    - key: progressBarFeature/undo
+      sprite: {fileID: 21300000, guid: deeef95357a33b04195a2ae68173db65, type: 2}
+    - key: progressBarFeature/buffer
+      sprite: {fileID: 21300000, guid: 4407976ec8a389d45b6d17b3c2df353d, type: 2}
+    - key: progressBarFeature/symbol
+      sprite: {fileID: 21300000, guid: 4556a45dbc7aa2b4aa5e2ff3b840025b, type: 2}
+    - key: progressBarFeature/time
+      sprite: {fileID: 21300000, guid: ff7a39e938485204cb2db05ad33f4d82, type: 2}
+    - key: progressBarFeature/stage
+      sprite: {fileID: 21300000, guid: 1cd664b624f7b5747a4578fffd7b630f, type: 2}
+    - key: progressBarFeature/gift
+      sprite: {fileID: 21300000, guid: afc7041f7d6664d4d8c837502518fea7, type: 2}
+    - key: progressBarFeature/hidden
+      sprite: {fileID: 21300000, guid: 16677b83c0ef5814191441c34fb1fc13, type: 2}
+    - key: progressBarFeature/generator
+      sprite: {fileID: 21300000, guid: 2406970241ac06949af06715f80d5e17, type: 2}
+    - key: progressBarFeature/refresh
+      sprite: {fileID: 21300000, guid: 36b955b6f0f8dc345a43444a658caec2, type: 2}
+    - key: progressBarFeature/curtain
+      sprite: {fileID: 21300000, guid: e9eb6efd1adada0408cef90266ca4a44, type: 2}

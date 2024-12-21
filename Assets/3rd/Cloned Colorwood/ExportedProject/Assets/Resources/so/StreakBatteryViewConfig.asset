@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1581431549, guid: ed5ef9a925115b23ebd160f944999ea8, type: 3}
+  m_Name: StreakBatteryViewConfig
+  m_EditorClassIdentifier:
+  views:
+  - type: 0
+    sprite: {fileID: 21300000, guid: abe068525c8645441839f6771a6ca8b4, type: 2}
+    color: {r: 1, g: 0.5803922, b: 0.5803922, a: 1}
+  - type: 1
+    sprite: {fileID: 21300000, guid: 5939d71d0cfd972459b8820b0dd23dd7, type: 2}
+    color: {r: 0.58431375, g: 0.8862746, b: 0.3921569, a: 1}
+  - type: 2
+    sprite: {fileID: 21300000, guid: 20308f80e52e2b94eaf18c3041dc816b, type: 2}
+    color: {r: 0.38823533, g: 0.80392164, b: 0.93725497, a: 1}
+  - type: 3
+    sprite: {fileID: 21300000, guid: cfbcd2ee06149674f824f62edeb4aad4, type: 2}
+    color: {r: 0.48235297, g: 0.627451, b: 1, a: 1}
+  - type: 4
+    sprite: {fileID: 21300000, guid: 8c4b8dd2ecc9bdd4098109383bb122b0, type: 2}
+    color: {r: 0.7254902, g: 0.52156866, b: 0.9803922, a: 1}
+  - type: 5
+    sprite: {fileID: 21300000, guid: 61d336da9c387274bb2bed0fe6ea142d, type: 2}
+    color: {r: 1, g: 0.8235295, b: 0.19215688, a: 1}

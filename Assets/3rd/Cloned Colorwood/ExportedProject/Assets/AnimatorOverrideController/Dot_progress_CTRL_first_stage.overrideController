@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Dot_progress_CTRL_first_stage
+  m_Controller: {fileID: 9100000, guid: 159382a401d47c949a4304143576d47e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 74eb48b170c615b41b75a0b40738c426, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 04a39e337e9432e458e743f5201ba3ac, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c4f84080436d9644182f25341f7f408a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c4f84080436d9644182f25341f7f408a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cda51407a6bbdbf42bfe0b7cc1d41c50, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cda51407a6bbdbf42bfe0b7cc1d41c50, type: 2}

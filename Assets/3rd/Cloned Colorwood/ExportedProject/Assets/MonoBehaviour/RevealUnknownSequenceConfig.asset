@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -646060183, guid: fb90042e856c1560c777f858ba74d6dd, type: 3}
+  m_Name: RevealUnknownSequenceConfig
+  m_EditorClassIdentifier:
+  revealUnknownFlyingElement: {fileID: 114063412824507332, guid: f6bf79205ba669640bc8833cd7a753bb, type: 2}
+  revealUnknownStaticElement: {fileID: 1629750223611732, guid: 5dc8c5e86c07a6d4eac8b4fe1333b903, type: 2}
+  maxDuration: 0.5
+  minDuration: 0.25
+  sqrtMagnitudeForMaxDuration: 160000
+  sqrtMagnitudeForMinDuration: 40000
+  delayAfterFinish: 0.5
+  delay: 0.1
+  colorPairs:
+  - CubeColor: 0
+    Material: {fileID: 2100000, guid: aa7e1c6e40c43dc459c8f9bc4d42d4a2, type: 2}
+    Sprite: {fileID: 21300000, guid: df6448bbdd3a7434e93a94c41165a5af, type: 2}
+  - CubeColor: 1
+    Material: {fileID: 2100000, guid: 057a6b5033928e9448996670def49787, type: 2}
+    Sprite: {fileID: 21300000, guid: 1381227fde9aa8644934106772824638, type: 2}
+  - CubeColor: 2
+    Material: {fileID: 2100000, guid: e2fb55919d5ad5f479d0a547a579996c, type: 2}
+    Sprite: {fileID: 21300000, guid: 77865fdea8c349641ae48fd4b9f89637, type: 2}
+  - CubeColor: 3
+    Material: {fileID: 2100000, guid: cb8e7c4879bc0114c9b3b959727c7cbc, type: 2}
+    Sprite: {fileID: 21300000, guid: 95198c455c1c2a74ab9966019b2aea6f, type: 2}
+  - CubeColor: 4
+    Material: {fileID: 2100000, guid: 386e3730faed1a140a6eb5b5b3873750, type: 2}
+    Sprite: {fileID: 21300000, guid: 1771dd1581929004d996c0d1ecf0b21a, type: 2}
+  - CubeColor: 5
+    Material: {fileID: 2100000, guid: 22e02aecd72abf04585ce5c1554eba32, type: 2}
+    Sprite: {fileID: 21300000, guid: 7d85e3b44c2834b44849a98981cee62b, type: 2}
+  - CubeColor: 6
+    Material: {fileID: 2100000, guid: 2d61e80ab65bad841ab7c826a9adb97b, type: 2}
+    Sprite: {fileID: 21300000, guid: 53fb18a3db48bb14bb174c815b01d09f, type: 2}
+  - CubeColor: 7
+    Material: {fileID: 2100000, guid: 6935ae4947466ab4289e4fa91f3d9787, type: 2}
+    Sprite: {fileID: 21300000, guid: 749e82948b9f0cd4c80f0104d55539d7, type: 2}
+  - CubeColor: 8
+    Material: {fileID: 2100000, guid: 68054ab9eddd252449aa855ace87585d, type: 2}
+    Sprite: {fileID: 21300000, guid: 7153488b94f87074090165012dde43cd, type: 2}
+  - CubeColor: 9
+    Material: {fileID: 2100000, guid: 148b81214ccd16d41aa113a22810c44d, type: 2}
+    Sprite: {fileID: 21300000, guid: 15f7c48947cca1747921b99082ead46a, type: 2}
+  - CubeColor: 10
+    Material: {fileID: 2100000, guid: 49449eb02078f4848b315e3f24a43882, type: 2}
+    Sprite: {fileID: 21300000, guid: c32fff9e6ba7b7d42b667f7ad1a8daa5, type: 2}
+  - CubeColor: 11
+    Material: {fileID: 2100000, guid: d14439f3e6e87c74ab348ecd88628e7b, type: 2}
+    Sprite: {fileID: 21300000, guid: 6545af8b3304ca04eafc7a52a41b13a4, type: 2}
+  - CubeColor: 99
+    Material: {fileID: 0}
+    Sprite: {fileID: 0}
+  - CubeColor: 100
+    Material: {fileID: 0}
+    Sprite: {fileID: 0}
