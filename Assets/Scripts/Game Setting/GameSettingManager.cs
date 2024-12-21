@@ -1,4 +1,5 @@
 using System;
+using Lean.Localization;
 using UnityEngine;
 
 public class GameSettingManager : MonoBehaviour

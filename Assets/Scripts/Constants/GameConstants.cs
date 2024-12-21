@@ -52,4 +52,8 @@ public static class GameConstants
     #region ANIMATION
     public static string ANIMATION_STATE = "AnimationState";
     #endregion
+
+    #region LANGUAGE
+    public static string[] AvailableLanguages = { "English", "French", "German", "Italian", "Japanese" };
+    #endregion
 }
