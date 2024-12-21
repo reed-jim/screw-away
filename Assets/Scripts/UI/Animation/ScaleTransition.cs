@@ -17,7 +17,8 @@ public class ScaleTransition : MonoBehaviour, ISaferioUIAnimation
 
         target.localScale = Vector3.zero;
 
-        Tween.Scale(target, 1, duration: duration);
+        Tween.Scale(target, 1.1f, duration: 0.5f * duration)
+            .Chain(Tween.Scale(target, 1f, duration: 0.5f * duration));
 
         // SaferioTween.LocalPositionAsync(target, Vector2.zero, duration: duration);
     }

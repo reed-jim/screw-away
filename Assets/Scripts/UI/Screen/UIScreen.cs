@@ -17,7 +17,7 @@ public class UIScreen : MonoBehaviour
 
     #region PRIVATE FIELD
     private Vector3 _initialContainerPosititon;
-    private ISaferioUIAnimation _transitionAnimation;
+    protected ISaferioUIAnimation _transitionAnimation;
     #endregion
 
     #region ACTION
@@ -29,6 +29,7 @@ public class UIScreen : MonoBehaviour
         SwitchRouteButton.switchRouteEvent += OnRouteSwitched;
         BottomBarItem.switchRouteEvent += OnRouteSwitched;
         SwipingScreen.hideOutsideScreenEvent += HideOutsideScreen;
+        MenuScreen.switchRouteEvent += OnRouteSwitched;
 
         RegisterMoreEvent();
 
@@ -52,6 +53,7 @@ public class UIScreen : MonoBehaviour
         SwitchRouteButton.switchRouteEvent -= OnRouteSwitched;
         BottomBarItem.switchRouteEvent -= OnRouteSwitched;
         SwipingScreen.hideOutsideScreenEvent -= HideOutsideScreen;
+        MenuScreen.switchRouteEvent -= OnRouteSwitched;
 
         UnregisterMoreEvent();
     }
@@ -83,14 +85,14 @@ public class UIScreen : MonoBehaviour
         }
     }
 
-    protected void Show()
+    protected virtual void Show()
     {
         moveSwipingScreenEvent?.Invoke(_initialContainerPosititon.x);
 
         // _transitionAnimation.Show();
     }
 
-    protected void Hide()
+    protected virtual void Hide()
     {
         // _transitionAnimation.Hide();
     }

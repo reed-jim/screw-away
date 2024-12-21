@@ -14,7 +14,8 @@ public class GameEnum : MonoBehaviour
         Screen5,
         Setting,
         Win,
-        Debug
+        Debug,
+        LuckyWheel
     }
 
     public enum GameFaction
