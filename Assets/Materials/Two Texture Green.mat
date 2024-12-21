@@ -236,7 +236,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WoodTexture:
-        m_Texture: {fileID: 2800000, guid: cc7387fd85b341b48ae69de536749dd1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6d6b34ced9660b74fadefb679105b958, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -305,7 +305,7 @@ Material:
     - _Clipping_Level: 0
     - _CoatMask: 0
     - _ColorShift_Speed: 0
-    - _ColorStrength: 6
+    - _ColorStrength: 16
     - _ComposerMaskMode: 0
     - _Cull: 2
     - _CullMode: 2
@@ -458,7 +458,7 @@ Material:
     - _SecondShadeVisible: 1
     - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0
-    - _Shades: 0.85
+    - _Shades: 0.15
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -556,7 +556,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColorMaskColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.50980395, g: 1, b: 0.50980395, a: 1}
+    - _Color: {r: 0.35294116, g: 1, b: 0.627451, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
@@ -569,8 +569,8 @@ Material:
     - _HighlightMaskColor: {r: 1, g: 1, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _MainTextureOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _MainTextureTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _MainTextureOffset: {r: 0.5, g: 0, b: 0, a: 0}
+    - _MainTextureTiling: {r: 0.5, g: 1, b: 0, a: 0}
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineMaskColor: {r: 0, g: 0, b: 0, a: 1}
     - _Outline_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -579,6 +579,7 @@ Material:
     - _SecondShadeMaskColor: {r: 0, g: 0, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Substract: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
@@ -586,7 +587,7 @@ Material:
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
     - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
     - _WoodTextureOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _WoodTextureTiling: {r: 1, g: 0.5, b: 0, a: 0}
+    - _WoodTextureTiling: {r: 0.05, g: 0.05, b: 0, a: 0}
     - emissive: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
