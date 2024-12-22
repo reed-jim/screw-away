@@ -7,6 +7,7 @@ using static GameEnum;
 public class MenuScreen : MonoBehaviour
 {
     [SerializeField] private Button startGameButton;
+    [SerializeField] private Button openRemoveAdPopupButton;
     [SerializeField] private Button luckyWheelButton;
     [SerializeField] private Button weeklyTaskButton;
 
@@ -15,6 +16,7 @@ public class MenuScreen : MonoBehaviour
     private void Awake()
     {
         startGameButton.onClick.AddListener(StartGame);
+        openRemoveAdPopupButton.onClick.AddListener(OpenRemoveAdPopup);
         luckyWheelButton.onClick.AddListener(OpenLuckyWheelScreen);
         weeklyTaskButton.onClick.AddListener(OpenWeeklyTaskScreen);
     }
@@ -22,6 +24,11 @@ public class MenuScreen : MonoBehaviour
     private void StartGame()
     {
         Addressables.LoadSceneAsync(GameConstants.GAMEPLAY_SCENE);
+    }
+
+    private void OpenRemoveAdPopup()
+    {
+        switchRouteEvent?.Invoke(ScreenRoute.RemoveAd);
     }
 
     private void OpenLuckyWheelScreen()

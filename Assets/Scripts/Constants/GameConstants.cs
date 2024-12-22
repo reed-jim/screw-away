@@ -64,6 +64,10 @@ public static class GameConstants
     public static string COMPLETE_LEVEL_TRANSLATION_NAME = "Complete Level Task Description";
     #endregion
 
+    #region IAP
+    public static string REMOVE_AD_ID = "remove_ad";
+    #endregion
+
     #region SAVE/LOAD
     public static string SAVE_FILE_NAME = "Game Local Data";
     public static string WEEKLY_TASKS = "Weekly Tasks";

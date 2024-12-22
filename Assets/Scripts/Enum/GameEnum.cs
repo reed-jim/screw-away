@@ -19,7 +19,8 @@ public class GameEnum : MonoBehaviour
         LuckyWheel,
         WeeklyTask,
         IAPShop,
-        Pause
+        Pause,
+        RemoveAd
     }
 
     public enum GameFaction

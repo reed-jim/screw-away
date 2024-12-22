@@ -12,11 +12,13 @@ public class SaferioIAPManager : MonoBehaviour, IDetailedStoreListener
 
     #region EVENT
     public static event Action iapProductPurchasedCompletedEvent;
+    public static event Action removeAdPurchasedCompletedEvent;
     #endregion
 
     private void Awake()
     {
         IAPShopItem.buyIAPEvent += BuyProduct;
+        RemoveAdPopup.buyRemoveAdEvent += BuyProduct;
 
         Init();
 
@@ -26,6 +28,7 @@ public class SaferioIAPManager : MonoBehaviour, IDetailedStoreListener
     private void OnDestroy()
     {
         IAPShopItem.buyIAPEvent -= BuyProduct;
+        RemoveAdPopup.buyRemoveAdEvent -= BuyProduct;
     }
 
     private void Init()
@@ -60,7 +63,14 @@ public class SaferioIAPManager : MonoBehaviour, IDetailedStoreListener
 
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs e)
     {
-        iapProductPurchasedCompletedEvent?.Invoke();
+        if (e.purchasedProduct.definition.id == GameConstants.REMOVE_AD_ID)
+        {
+            removeAdPurchasedCompletedEvent?.Invoke();
+        }
+        else
+        {
+            iapProductPurchasedCompletedEvent?.Invoke();
+        }
 
         return PurchaseProcessingResult.Complete;
     }
