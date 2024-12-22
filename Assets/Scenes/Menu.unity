@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 125615508}
   - component: {fileID: 125615509}
   m_Layer: 0
-  m_Name: Task Description
+  m_Name: Unscrew Task Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1552,7 +1552,7 @@ GameObject:
   - component: {fileID: 619569312}
   - component: {fileID: 619569313}
   m_Layer: 0
-  m_Name: MANAGER
+  m_Name: MANAGER - DontDestroyOnLoad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1582,6 +1582,7 @@ Transform:
   - {fileID: 2114209551}
   - {fileID: 478938924}
   - {fileID: 1028748849}
+  - {fileID: 1341924456}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &619569313
@@ -3577,6 +3578,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 619569312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1133022160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1133022161}
+  - component: {fileID: 1133022162}
+  m_Layer: 0
+  m_Name: Restart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1133022161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133022160}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1341924456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1133022162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133022160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Restart
+    Object: {fileID: 0}
+  - Language: French
+    Text: "Red\xE9marrage"
+    Object: {fileID: 0}
+  - Language: German
+    Text: Neustart
+    Object: {fileID: 0}
+  - Language: Italian
+    Text: Ricomincia
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "\u518D\u8D77\u52D5"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "\uB2E4\uC2DC \uC2DC\uC791"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Reiniciar
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u041F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u043A"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Reanudar
+    Object: {fileID: 0}
 --- !u!1 &1170355051
 GameObject:
   m_ObjectHideFlags: 0
@@ -4020,6 +4094,153 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -160}
   m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1230055506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1230055507}
+  - component: {fileID: 1230055508}
+  m_Layer: 0
+  m_Name: Unlock Box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1230055507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230055506}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1341924456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1230055508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230055506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Unlock Box
+    Object: {fileID: 0}
+  - Language: French
+    Text: "Bo\xEEte de d\xE9verrouillage"
+    Object: {fileID: 0}
+  - Language: German
+    Text: Box entsperren
+    Object: {fileID: 0}
+  - Language: Italian
+    Text: Sblocca casella
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "\u30DC\u30C3\u30AF\u30B9\u306E\u30ED\u30C3\u30AF\u3092\u89E3\u9664\u3059\u308B"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "\uC0C1\uC790 \uC7A0\uAE08 \uD574\uC81C"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Caixa de desbloqueio
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0420\u0430\u0437\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u0442\u044C
+      \u043A\u043E\u0440\u043E\u0431\u043A\u0443"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Desbloquear caja
+    Object: {fileID: 0}
+--- !u!1 &1238877138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1238877139}
+  - component: {fileID: 1238877140}
+  m_Layer: 0
+  m_Name: Pause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1238877139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238877138}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1341924456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1238877140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238877138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Pause
+    Object: {fileID: 0}
+  - Language: French
+    Text: Pause
+    Object: {fileID: 0}
+  - Language: German
+    Text: Pause
+    Object: {fileID: 0}
+  - Language: Italian
+    Text: Pausa
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "\u4E00\u6642\u505C\u6B62"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "\uC815\uC9C0\uC2DC\uD0A4\uB2E4"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Pausa
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u041F\u0430\u0443\u0437\u0430"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Pausa
+    Object: {fileID: 0}
 --- !u!1 &1285423032
 GameObject:
   m_ObjectHideFlags: 0
@@ -4066,6 +4287,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 619569312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1286881319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286881320}
+  - component: {fileID: 1286881321}
+  m_Layer: 0
+  m_Name: Home
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1286881320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286881319}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1341924456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1286881321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286881319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Home
+    Object: {fileID: 0}
+  - Language: French
+    Text: Maison
+    Object: {fileID: 0}
+  - Language: German
+    Text: Heim
+    Object: {fileID: 0}
+  - Language: Italian
+    Text: Casa
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "\u5BB6"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "\uC9D1"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Lar
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0414\u043E\u043C"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Hogar
+    Object: {fileID: 0}
 --- !u!1 &1341924454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,7 +4402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341924454}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4125,7 +4419,12 @@ Transform:
   - {fileID: 295727848}
   - {fileID: 1423521239}
   - {fileID: 125615508}
-  m_Father: {fileID: 0}
+  - {fileID: 1753229277}
+  - {fileID: 1238877139}
+  - {fileID: 1286881320}
+  - {fileID: 1133022161}
+  - {fileID: 1230055507}
+  m_Father: {fileID: 619569312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343520904
 GameObject:
@@ -5667,6 +5966,80 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6548393395528160456, guid: f74b941e47297af45988eefa261895b9, type: 3}
   m_PrefabInstance: {fileID: 1745133421}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1753229276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753229277}
+  - component: {fileID: 1753229278}
+  m_Layer: 0
+  m_Name: Complete Level Task Description
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1753229277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753229276}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1341924456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1753229278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753229276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'Complete {task_requirement_value} levels '
+    Object: {fileID: 0}
+  - Language: French
+    Text: "Terminez les niveaux\_{task_requirement_value}"
+    Object: {fileID: 0}
+  - Language: German
+    Text: "Schlie\xDFe {task_requirement_value} Level ab"
+    Object: {fileID: 0}
+  - Language: Italian
+    Text: Completa i livelli {task_requirement_value}
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "{task_requirement_value} \u30EC\u30D9\u30EB\u3092\u5B8C\u4E86\u3059\u308B"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "{task_requirement_value} \uB808\uBCA8 \uC644\uB8CC"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: "Concluir n\xEDveis de {task_requirement_value}"
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u0435 \u0443\u0440\u043E\u0432\u043D\u0438
+      {task_requirement_value}"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Completa {task_requirement_value} niveles
+    Object: {fileID: 0}
 --- !u!1001 &1818030305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6069,11 +6442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSettingPopupButton: {fileID: 626605300}
---- !u!224 &2105875986 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5454484095045264607, guid: cf6c603c01b29ad44a33805df4be6c51, type: 3}
-  m_PrefabInstance: {fileID: 2117921227240821958}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2114209549
 GameObject:
   m_ObjectHideFlags: 0
@@ -6198,10 +6566,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1190179010}
     m_Modifications:
-    - target: {fileID: 1687805292609297435, guid: cf6c603c01b29ad44a33805df4be6c51, type: 3}
-      propertyPath: taskContainer
-      value: 
-      objectReference: {fileID: 2105875986}
     - target: {fileID: 1687805292609297435, guid: cf6c603c01b29ad44a33805df4be6c51, type: 3}
       propertyPath: gameTaskManager
       value: 
@@ -6659,4 +7023,3 @@ SceneRoots:
   - {fileID: 844664052}
   - {fileID: 619569312}
   - {fileID: 1713746182}
-  - {fileID: 1341924456}

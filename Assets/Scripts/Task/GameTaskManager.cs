@@ -67,18 +67,22 @@ public class GameTaskManager : MonoBehaviour
 
         TaskType randomTaskType = GetRandomEnumValue<TaskType>();
 
+        int randomDifficultyFactor = Random.Range(1, 5);
+
         if (randomTaskType == TaskType.Uncrew)
         {
             task = new UnscrewTask();
 
-            task.RequirementValue = Random.Range(50, 300);
+            task.RequirementValue = randomDifficultyFactor * 50;
         }
         else
         {
-            task = new UnscrewTask();
+            task = new CompleteLevelTask();
 
-            task.RequirementValue = Random.Range(3, 8);
+            task.RequirementValue = randomDifficultyFactor * 2;
         }
+
+        task.Reward = randomDifficultyFactor * 2;
 
         return task;
     }

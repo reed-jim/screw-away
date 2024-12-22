@@ -9,17 +9,29 @@ public class TaskItemUI : MonoBehaviour
     [SerializeField] private RectTransform container;
     [SerializeField] private TMP_Text progressText;
     [SerializeField] private Image progressBarFill;
+    [SerializeField] private TMP_Text rewardText;
+    [SerializeField] private RectTransform rewardContainer;
+    [SerializeField] private RectTransform doneTick;
 
     [SerializeField] private LeanLocalizedTextMeshProUGUI localizedDescriptionText;
 
     #region CACHE
-    private float _cachedRequirementValue;
-    private float _cachedCurrentValue;
+    private BaseWeeklyTask _cachedTaskData;
     #endregion
 
     public RectTransform Container
     {
         get => container;
+    }
+
+    private void Awake()
+    {
+        BaseWeeklyTask.taskCompletedEvent += OnTaskCompleted;
+    }
+
+    private void OnDestroy()
+    {
+        BaseWeeklyTask.taskCompletedEvent -= OnTaskCompleted;
     }
 
     private async void OnEnable()
@@ -31,19 +43,43 @@ public class TaskItemUI : MonoBehaviour
 
     public void SetDescription()
     {
-        localizedDescriptionText.UpdateTranslationWithParameter(
-            LeanLocalization.GetTranslation(localizedDescriptionText.TranslationName), "task_requirement_value", _cachedRequirementValue.ToString());
+        if (_cachedTaskData == null)
+        {
+            return;
+        }
+
+        string translationName;
+        string parameter;
+
+        _cachedTaskData.GetDesription(out translationName, out parameter);
+
+        localizedDescriptionText.TranslationName = translationName;
+
+        localizedDescriptionText.UpdateTranslationWithParameter(parameter, _cachedTaskData.RequirementValue.ToString());
     }
 
-    public void SetProgress(float current, float requirement)
+    public void Setup(BaseWeeklyTask taskData)
     {
-        float progress = current / requirement;
+        float progress = taskData.CurrentValue / taskData.RequirementValue;
 
-        progressText.text = $"{current}/{requirement}";
+        progressText.text = $"{taskData.CurrentValue}/{taskData.RequirementValue}";
 
         progressBarFill.fillAmount = progress;
 
-        _cachedCurrentValue = current;
-        _cachedRequirementValue = requirement;
+        rewardText.text = $"{taskData.Reward}";
+
+        _cachedTaskData = taskData;
+
+        rewardContainer.gameObject.SetActive(!taskData.IsDone);
+        doneTick.gameObject.SetActive(taskData.IsDone);
+    }
+
+    private void OnTaskCompleted(BaseWeeklyTask taskData)
+    {
+        if (taskData == _cachedTaskData)
+        {
+            rewardContainer.gameObject.SetActive(false);
+            doneTick.gameObject.SetActive(true);
+        }
     }
 }

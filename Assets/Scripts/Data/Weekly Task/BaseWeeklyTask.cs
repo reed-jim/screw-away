@@ -19,15 +19,36 @@ public abstract class BaseWeeklyTask
         get => CurrentValue / RequirementValue;
     }
 
+    public abstract int Reward
+    {
+        get; set;
+    }
+
+    public abstract bool IsDone
+    {
+        get; set;
+    }
+
+    public static event Action<BaseWeeklyTask> taskCompletedEvent;
+
     public abstract void Init();
 
-    // public void SetRequirement(float value)
-    // {
-    //     _requirementValue = value;
-    // }
+    public abstract void GetDesription(out string translationName, out string parameter);
 
     public void MakeProgress(float addedValue)
     {
-        CurrentValue += addedValue;
+        if (!IsDone)
+        {
+            CurrentValue += addedValue;
+
+            if (CurrentValue >= RequirementValue)
+            {
+                taskCompletedEvent?.Invoke(this);
+
+                CurrentValue = RequirementValue;
+
+                IsDone = true;
+            }
+        }
     }
 }

@@ -13,14 +13,7 @@ public class DebugPopup : BasePopup
 
     protected override void RegisterMoreEvent()
     {
-        GameplayScreen.openDebugPopupEvent += Show;
-
         debugPlayLevelButton.onClick.AddListener(DebugPlayLevel);
-    }
-
-    protected override void UnregisterMoreEvent()
-    {
-        GameplayScreen.openDebugPopupEvent -= Show;
     }
 
     private void DebugPlayLevel()

@@ -23,6 +23,7 @@ public class BasePopup : MonoBehaviour
         SwitchRouteButton.switchRouteEvent += OnRouteSwitched;
         TopBar.showPopupEvent += OnRouteSwitched;
         MenuScreen.switchRouteEvent += OnRouteSwitched;
+        GameplayScreen.switchRouteEvent += OnRouteSwitched;
 
         if (closeButton != null)
         {
@@ -52,6 +53,7 @@ public class BasePopup : MonoBehaviour
         SwitchRouteButton.switchRouteEvent -= OnRouteSwitched;
         TopBar.showPopupEvent -= OnRouteSwitched;
         MenuScreen.switchRouteEvent -= OnRouteSwitched;
+        GameplayScreen.switchRouteEvent -= OnRouteSwitched;
 
         UnregisterMoreEvent();
     }
@@ -103,6 +105,13 @@ public class BasePopup : MonoBehaviour
             popupHideEvent?.Invoke();
 
             _isShown = false;
+
+            AfterHide();
         }
+    }
+
+    protected virtual void AfterHide()
+    {
+
     }
 }

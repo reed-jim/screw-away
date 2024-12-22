@@ -13,6 +13,8 @@ public class GameSettingManager : MonoBehaviour
     {
         SettingPopup.enableBackgroundMusicEvent += EnableBackgroundMusic;
         SettingPopup.enableGameSoundEvent += EnableGameSound;
+        PausePopup.enableBackgroundMusicEvent += EnableBackgroundMusic;
+        PausePopup.enableGameSoundEvent += EnableGameSound;
 
         EnableBackgroundMusic(gameSetting.IsTurnOnBackgroundMusic);
         EnableGameSound(gameSetting.IsTurnOnSound);
@@ -24,6 +26,8 @@ public class GameSettingManager : MonoBehaviour
     {
         SettingPopup.enableBackgroundMusicEvent -= EnableBackgroundMusic;
         SettingPopup.enableGameSoundEvent -= EnableGameSound;
+        PausePopup.enableBackgroundMusicEvent -= EnableBackgroundMusic;
+        PausePopup.enableGameSoundEvent -= EnableGameSound;
     }
 
     private void EnableBackgroundMusic(bool isEnable)

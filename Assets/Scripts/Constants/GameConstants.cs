@@ -59,6 +59,9 @@ public static class GameConstants
 
     #region TASK
     public static string TASK_ITEM_UI = "Task Item UI";
+    public static string TASK_DESCRIPTION_PARAMETER = "task_requirement_value";
+    public static string UNSCREW_TASK_TRANSLATION_NAME = "Unscrew Task Description";
+    public static string COMPLETE_LEVEL_TRANSLATION_NAME = "Complete Level Task Description";
     #endregion
 
     #region SAVE/LOAD

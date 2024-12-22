@@ -37,7 +37,7 @@ namespace Lean.Localization
 		}
 
 		// SAFERIO - CUSTOMIZATION
-		public void UpdateTranslationWithParameter(LeanTranslation translation, string parameter, string value)
+		public void UpdateTranslationWithParameter(string parameter, string value)
 		{
 			var textMeshPro = GetComponent<TextMeshProUGUI>();
 

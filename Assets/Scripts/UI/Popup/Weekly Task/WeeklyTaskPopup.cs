@@ -1,11 +1,11 @@
 using System.Threading.Tasks;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class WeeklyTaskPopup : BasePopup
 {
     [SerializeField] private RectTransform taskContainer;
+    [SerializeField] private Image progressBarFill;
     [SerializeField] private GameTaskManager gameTaskManager;
 
     protected override void MoreActionInAwake()
@@ -17,9 +17,12 @@ public class WeeklyTaskPopup : BasePopup
     {
         await Task.Delay(2000);
 
+        int currentTotalScore = 0;
+        int totalScore = 0;
+
         for (int i = 0; i < gameTaskManager.Tasks.Length; i++)
         {
-            BaseWeeklyTask task = gameTaskManager.Tasks[i];
+            BaseWeeklyTask taskData = gameTaskManager.Tasks[i];
 
             TaskItemUI taskItemUI = ObjectPoolingEverything.GetFromPool<TaskItemUI>(GameConstants.TASK_ITEM_UI);
 
@@ -28,7 +31,16 @@ public class WeeklyTaskPopup : BasePopup
             UIUtil.SetLocalPositionX(taskItemUI.Container, 0);
             UIUtil.SetLocalPositionY(taskItemUI.Container, 240 - i * 1.1f * taskItemUI.Container.sizeDelta.y);
 
-            taskItemUI.SetProgress(task.CurrentValue, task.RequirementValue);
+            taskItemUI.Setup(taskData);
+
+            if (taskData.IsDone)
+            {
+                currentTotalScore += taskData.Reward;
+            }
+
+            totalScore += taskData.Reward;
         }
+
+        progressBarFill.fillAmount = (float)currentTotalScore / totalScore;
     }
 }

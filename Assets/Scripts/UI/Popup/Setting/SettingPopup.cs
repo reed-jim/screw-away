@@ -15,8 +15,6 @@ public class SettingPopup : BasePopup
     [SerializeField] private RectTransform chooseLanguageContainer;
     [SerializeField] private Button openLanguageDropdownButton;
     [SerializeField] private Button[] chooseLanguageButtons;
-    [SerializeField] private TMP_Text currentLanguageText;
-    [SerializeField] private LeanLocalizedTextMeshProUGUI currentLanguageLocalized;
     #endregion
 
     [SerializeField] private GameSetting gameSetting;

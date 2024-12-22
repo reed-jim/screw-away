@@ -13,9 +13,26 @@ public class UnscrewTask : BaseWeeklyTask
         get; set;
     }
 
+    public override int Reward
+    {
+        get; set;
+    }
+
+    public override bool IsDone
+    {
+        get; set;
+    }
+
     public override void Init()
     {
         BasicScrew.screwLoosenedEvent += OnScrewLoosened;
+    }
+
+    public override void GetDesription(out string translationName, out string parameter)
+    {
+        translationName = GameConstants.UNSCREW_TASK_TRANSLATION_NAME;
+
+        parameter = GameConstants.TASK_DESCRIPTION_PARAMETER;
     }
 
     private void OnScrewLoosened()
