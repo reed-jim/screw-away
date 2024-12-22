@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using System.Text;
+using System;
 
 namespace Lean.Localization
 {
@@ -10,6 +13,8 @@ namespace Lean.Localization
 	[AddComponentMenu(LeanLocalization.ComponentPathPrefix + "Localized TextMeshProUGUI")]
 	public class LeanLocalizedTextMeshProUGUI : LeanLocalizedBehaviour
 	{
+		[SerializeField] private string parameter;
+
 		[Tooltip("If PhraseName couldn't be found, this text will be used")]
 		public string FallbackText;
 
@@ -29,6 +34,20 @@ namespace Lean.Localization
 			{
 				text.text = LeanTranslation.FormatText(FallbackText, text.text, this, gameObject);
 			}
+		}
+
+		// SAFERIO - CUSTOMIZATION
+		public void UpdateTranslationWithParameter(LeanTranslation translation, string parameter, string value)
+		{
+			var textMeshPro = GetComponent<TextMeshProUGUI>();
+
+			StringBuilder pattern = new StringBuilder();
+
+			pattern.Append("{");
+			pattern.Append(parameter);
+			pattern.Append("}");
+
+			textMeshPro.text = textMeshPro.text.Replace(pattern.ToString(), value);
 		}
 
 		protected virtual void Awake()

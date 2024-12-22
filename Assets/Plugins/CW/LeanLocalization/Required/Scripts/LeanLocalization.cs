@@ -102,6 +102,7 @@ namespace Lean.Localization
 			}
 		}
 
+		// SAFERIO - CUSTOMIZATION
 		public static string GetCurrentLanguage()
 		{
 			return Instances[0].currentLanguage;
