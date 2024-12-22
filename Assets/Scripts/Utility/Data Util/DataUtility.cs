@@ -5,6 +5,12 @@ using UnityEngine;
 
 public static class DataUtility
 {
+    // use to save interface or abstract class
+    private static JsonSerializerSettings settings = new JsonSerializerSettings
+    {
+        TypeNameHandling = TypeNameHandling.All
+    };
+
     public static void Save<T>(string fileName, string key, T data)
     {
         string filePath = Application.persistentDataPath + $"/{fileName}.json";
@@ -20,12 +26,12 @@ public static class DataUtility
 
         if (json.ContainsKey(key))
         {
-            json[key] = JsonConvert.SerializeObject(data);
+            json[key] = JsonConvert.SerializeObject(data, settings);
             // json[key] = JsonUtility.ToJson(data);
         }
         else
         {
-            json.Add(key, JsonConvert.SerializeObject(data));
+            json.Add(key, JsonConvert.SerializeObject(data, settings));
             // json.Add(key, JsonUtility.ToJson(data));
         }
 
@@ -47,11 +53,11 @@ public static class DataUtility
 
         if (json.ContainsKey(key))
         {
-            json[key] = JsonConvert.SerializeObject(data);
+            json[key] = JsonConvert.SerializeObject(data, settings);
         }
         else
         {
-            json.Add(key, JsonConvert.SerializeObject(data));
+            json.Add(key, JsonConvert.SerializeObject(data, settings));
         }
 
         await File.WriteAllTextAsync(filePath, json.ToString());
@@ -71,7 +77,7 @@ public static class DataUtility
 
                 if (json.ContainsKey(key))
                 {
-                    return JsonConvert.DeserializeObject<T>(json[key].ToString());
+                    return JsonConvert.DeserializeObject<T>(json[key].ToString(), settings);
                 }
                 else
                 {

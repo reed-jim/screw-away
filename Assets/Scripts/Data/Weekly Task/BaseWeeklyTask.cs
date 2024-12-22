@@ -1,40 +1,33 @@
-using Unity.Mathematics;
+using System;
 using UnityEngine;
 
-public abstract class BaseWeeklyTask : MonoBehaviour
+[Serializable]
+public abstract class BaseWeeklyTask
 {
-    private float _requirementValue;
-    private float _currentValue;
-
-    public float RequirementValue
+    public abstract float RequirementValue
     {
-        get => _requirementValue;
+        get; set;
     }
 
-    public float CurrentValue
+    public abstract float CurrentValue
     {
-        get => _currentValue;
+        get; set;
     }
 
     public float Progress
     {
-        get => _currentValue / _requirementValue;
+        get => CurrentValue / RequirementValue;
     }
 
     public abstract void Init();
 
-    public void SetRequirement(float value)
-    {
-        _requirementValue = value;
-    }
+    // public void SetRequirement(float value)
+    // {
+    //     _requirementValue = value;
+    // }
 
     public void MakeProgress(float addedValue)
     {
-        _currentValue += addedValue;
-    }
-
-    public void Save()
-    {
-        DataUtility.Save(GameConstants.SAVE_FILE_NAME, "", this);
+        CurrentValue += addedValue;
     }
 }

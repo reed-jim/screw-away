@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using static GameEnum;
@@ -15,16 +16,28 @@ public class GameTaskManager : MonoBehaviour
     {
         _tasks = LoadTasks();
 
-        PeriodicallySaving();
+        InitTasks();
+
+        StartCoroutine(PeriodicallySaving());
     }
 
-    private async void PeriodicallySaving()
+    private IEnumerator PeriodicallySaving()
     {
-        while (gameObject.activeSelf)
+        WaitForSeconds waitForSeconds = new WaitForSeconds(2);
+
+        while (true)
         {
-            await Task.Delay(5000);
+            yield return waitForSeconds;
 
             SaveTasks();
+        }
+    }
+
+    private void InitTasks()
+    {
+        for (int i = 0; i < _tasks.Length; i++)
+        {
+            _tasks[i].Init();
         }
     }
 
@@ -45,7 +58,7 @@ public class GameTaskManager : MonoBehaviour
 
     public void SaveTasks()
     {
-        DataUtility.Load(GameConstants.SAVE_FILE_NAME, GameConstants.WEEKLY_TASKS, _tasks);
+        DataUtility.SaveAsync(GameConstants.SAVE_FILE_NAME, GameConstants.WEEKLY_TASKS, _tasks);
     }
 
     private BaseWeeklyTask GenerateTask()
@@ -58,13 +71,13 @@ public class GameTaskManager : MonoBehaviour
         {
             task = new UnscrewTask();
 
-            task.SetRequirement(Random.Range(50, 300));
+            task.RequirementValue = Random.Range(50, 300);
         }
         else
         {
-            task = new CompleteLevelTask();
+            task = new UnscrewTask();
 
-            task.SetRequirement(Random.Range(3, 8));
+            task.RequirementValue = Random.Range(3, 8);
         }
 
         return task;

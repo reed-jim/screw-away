@@ -388,6 +388,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &125615507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 125615508}
+  - component: {fileID: 125615509}
+  m_Layer: 0
+  m_Name: Task Description
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &125615508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125615507}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1341924456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &125615509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125615507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'Collect {task_requirement_value} screws '
+    Object: {fileID: 0}
+  - Language: French
+    Text: "R\xE9cup\xE9rez des vis {task_requirement_value}"
+    Object: {fileID: 0}
+  - Language: German
+    Text: Sammle {task_requirement_value} Schrauben
+    Object: {fileID: 0}
+  - Language: Italian
+    Text: Raccogli le viti {task_requirement_value}
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "{task_requirement_value} \u500B\u306E\u30CD\u30B8\u3092\u96C6\u3081\u308B"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "{task_requirement_value} \uB098\uC0AC \uC218\uC9D1"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Colete {task_requirement_value} parafusos
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0421\u043E\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0438\u043D\u0442\u044B
+      ({task_requirement_value})"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Recoge {task_requirement_value} tornillos
+    Object: {fileID: 0}
 --- !u!1 &137714989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,7 +3178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028748848}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4050,6 +4124,7 @@ Transform:
   - {fileID: 1091637322}
   - {fileID: 295727848}
   - {fileID: 1423521239}
+  - {fileID: 125615508}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343520904
