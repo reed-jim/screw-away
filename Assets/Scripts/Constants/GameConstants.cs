@@ -62,6 +62,8 @@ public static class GameConstants
     public static string TASK_DESCRIPTION_PARAMETER = "task_requirement_value";
     public static string UNSCREW_TASK_TRANSLATION_NAME = "Unscrew Task Description";
     public static string COMPLETE_LEVEL_TRANSLATION_NAME = "Complete Level Task Description";
+    public static string LEVEL_COMPLETED = "Level Completed";
+    public static string LEVEL_PARAMETER = "level";
     #endregion
 
     #region IAP

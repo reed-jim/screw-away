@@ -13,6 +13,7 @@ public class LevelLoader : MonoBehaviour
 
     private void Awake()
     {
+        LosePopup.replayLevelEvent += Replay;
         DebugPopup.toLevelEvent += GoLevel;
 
         GoLevel(currentLevel.Value);
@@ -20,6 +21,7 @@ public class LevelLoader : MonoBehaviour
 
     void OnDestroy()
     {
+        LosePopup.replayLevelEvent -= Replay;
         DebugPopup.toLevelEvent -= GoLevel;
     }
 
@@ -50,5 +52,10 @@ public class LevelLoader : MonoBehaviour
         startLevelEvent?.Invoke();
 
         LoadLevel();
+    }
+
+    private void Replay()
+    {
+        GoLevel(currentLevel.Value);
     }
 }

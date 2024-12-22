@@ -56,6 +56,8 @@ public class BasePopup : MonoBehaviour
         GameplayScreen.switchRouteEvent -= OnRouteSwitched;
 
         UnregisterMoreEvent();
+
+        MoreActionOnDestroy();
     }
 
     protected virtual void RegisterMoreEvent()
@@ -69,6 +71,11 @@ public class BasePopup : MonoBehaviour
     }
 
     protected virtual void MoreActionInAwake()
+    {
+
+    }
+
+    protected virtual void MoreActionOnDestroy()
     {
 
     }

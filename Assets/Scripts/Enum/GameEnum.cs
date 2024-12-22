@@ -20,7 +20,8 @@ public class GameEnum : MonoBehaviour
         WeeklyTask,
         IAPShop,
         Pause,
-        RemoveAd
+        RemoveAd,
+        Lose
     }
 
     public enum GameFaction

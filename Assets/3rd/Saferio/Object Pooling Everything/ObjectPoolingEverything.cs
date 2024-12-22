@@ -9,39 +9,45 @@ public enum SaferioPrefabIdentifier
 
 public class ObjectPoolingEverything : MonoBehaviour
 {
-    private static ObjectPoolingEverything instance;
+    public static ObjectPoolingEverything Instance;
     private Dictionary<string, ObjectPool> _poolGroup;
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance != null && Instance != this)
         {
-            instance = this;
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+
+            DontDestroyOnLoad(gameObject);
         }
 
         _poolGroup = new Dictionary<string, ObjectPool>();
-
-        DontDestroyOnLoad(gameObject);
     }
 
     public static void AddToPool(string key, ObjectPool pool)
     {
-        instance._poolGroup.Add(key, pool);
+        Instance._poolGroup.Add(key, pool);
     }
 
     public static void ReturnToPool(string key, GameObject pooledGameObject)
     {
-        instance._poolGroup[key].ReturnPool(pooledGameObject);
+        Instance._poolGroup[key].ReturnPool(pooledGameObject);
     }
 
     public static GameObject SpawnGameObject(GameObject prefab)
     {
-        return Instantiate(prefab, instance.transform);
+        return Instantiate(prefab, Instance.transform);
     }
 
     public static T GetFromPool<T>(string identifier)
     {
-        foreach (var group in instance._poolGroup)
+        Debug.Log(Instance.gameObject.GetInstanceID() + " dasdsads");
+
+        foreach (var group in Instance._poolGroup)
         {
             if (identifier == group.Key)
             {
@@ -70,6 +76,7 @@ public class ObjectPool
     private GameObjectWithComponent[] _pool;
 
     private int _currentIndex;
+    private GameObject _cachedPrefab;
 
     public void Init<T>(GameObject prefab, int poolSize)
     {
@@ -88,12 +95,32 @@ public class ObjectPool
 
             gameObject.SetActive(false);
         }
+
+        _cachedPrefab = prefab;
     }
 
     public T GetFromPool<T>()
     {
         for (int i = 0; i < _pool.Length; i++)
         {
+            Debug.Log(_pool[i].gameObject + " dasdsads");
+
+            if (_pool[i].gameObject == null)
+            {
+                GameObject gameObject = ObjectPoolingEverything.SpawnGameObject(_cachedPrefab);
+
+                GameObjectWithComponent gameObjectWithComponent = new GameObjectWithComponent();
+
+                gameObjectWithComponent.gameObject = gameObject;
+                gameObjectWithComponent.component = gameObject.GetComponent<T>();
+
+                _pool[i] = gameObjectWithComponent;
+
+                gameObject.SetActive(false);
+
+                continue;
+            }
+
             if (!_pool[i].gameObject.activeSelf)
             {
                 _currentIndex = i;
@@ -118,6 +145,8 @@ public class ObjectPool
 
     public void ReturnPool(GameObject gameObject)
     {
+        gameObject.transform.SetParent(ObjectPoolingEverything.Instance.transform);
+
         gameObject.SetActive(false);
     }
 }

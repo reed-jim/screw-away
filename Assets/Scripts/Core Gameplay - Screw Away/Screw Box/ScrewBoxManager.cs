@@ -19,6 +19,7 @@ public class ScrewBoxManager : MonoBehaviour
 
     #region EVENT
     public static event Action<int, GameFaction, ScrewBoxSlot> looseScrewEvent;
+    public static event Action loseLevelEvent;
     #endregion
 
     void Awake()
@@ -58,6 +59,18 @@ public class ScrewBoxManager : MonoBehaviour
         }
 
         screwBoxs = new ScrewBox[maxScrewBox];
+
+        for (int i = 0; i < screwPorts.Count; i++)
+        {
+            if (screwPorts[i].IsFilled)
+            {
+                screwPorts[i].IsFilled = false;
+
+                Destroy(screwPorts[i].Screw.gameObject);
+
+                screwPorts[i].Screw = null;
+            }
+        }
     }
 
     private ScrewBoxSlot CheckAvailableScrewBoxes(GameFaction selectedFaction)
@@ -97,6 +110,11 @@ public class ScrewBoxManager : MonoBehaviour
             {
                 if (!screwPort.IsFilled)
                 {
+                    if (screwPort == screwPorts.Last())
+                    {
+                        loseLevelEvent?.Invoke();
+                    }
+
                     return screwPort;
                 }
             }

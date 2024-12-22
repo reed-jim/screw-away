@@ -1,4 +1,6 @@
+using System;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,10 +9,13 @@ public class WeeklyTaskPopup : BasePopup
     [SerializeField] private RectTransform taskContainer;
     [SerializeField] private Image progressBarFill;
     [SerializeField] private GameTaskManager gameTaskManager;
+    [SerializeField] private TMP_Text remainingTime;
 
     protected override void MoreActionInAwake()
     {
         DelaySpawnTasks();
+
+        CountingTime();
     }
 
     private async void DelaySpawnTasks()
@@ -42,5 +47,30 @@ public class WeeklyTaskPopup : BasePopup
         }
 
         progressBarFill.fillAmount = (float)currentTotalScore / totalScore;
+    }
+
+    private async void CountingTime()
+    {
+        while (true)
+        {
+            remainingTime.text = GetRemainingTime();
+
+            await Task.Delay(60000);
+        }
+    }
+
+    private string GetRemainingTime()
+    {
+        DateTime currentTime = DateTime.Now;
+        DateTime endOfWeek = currentTime.AddDays(DayOfWeek.Sunday - currentTime.DayOfWeek).Date.AddDays(1).AddTicks(-1);
+        TimeSpan remainingTime = endOfWeek - currentTime;
+
+        int days = remainingTime.Days;
+        int hours = remainingTime.Hours;
+        int minutes = remainingTime.Minutes;
+
+        string formattedTime = $"{days:D2}:{hours:D2}:{minutes:D2}";
+
+        return formattedTime;
     }
 }

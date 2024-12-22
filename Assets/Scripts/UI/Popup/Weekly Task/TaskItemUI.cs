@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Lean.Localization;
+using PrimeTween;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -64,7 +65,10 @@ public class TaskItemUI : MonoBehaviour
 
         progressText.text = $"{taskData.CurrentValue}/{taskData.RequirementValue}";
 
-        progressBarFill.fillAmount = progress;
+        Tween.Custom(progressBarFill.fillAmount, progress, duration: 0.3f, onValueChange: newVal =>
+        {
+            progressBarFill.fillAmount = newVal;
+        });
 
         rewardText.text = $"{taskData.Reward}";
 

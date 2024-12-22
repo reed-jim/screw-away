@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ObjectPoolingEverythingInitializer : MonoBehaviour
 {
+    public static ObjectPoolingEverythingInitializer Instance;
+
     [SerializeField] private GameObject vehicleEngineSoundPrefab;
     [SerializeField] private GameObject hitObstacleSoundPrefab;
     [SerializeField] private GameObject getInVehicleSoundPrefab;
@@ -16,13 +18,25 @@ public class ObjectPoolingEverythingInitializer : MonoBehaviour
 
     private bool _isInitialized;
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+
+            _isInitialized = true;
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     private void Start()
     {
         if (!_isInitialized)
         {
             InitPool();
-
-            _isInitialized = true;
         }
     }
 
