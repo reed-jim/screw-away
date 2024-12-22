@@ -13,6 +13,7 @@ public class BasePopup : MonoBehaviour
     [SerializeField] private bool isRouteActiveFromStart;
 
     private ISaferioUIAnimation _transitionAnimation;
+    private bool _isShown;
 
     public static event Action popupShowEvent;
     public static event Action popupHideEvent;
@@ -21,6 +22,7 @@ public class BasePopup : MonoBehaviour
     {
         SwitchRouteButton.switchRouteEvent += OnRouteSwitched;
         TopBar.showPopupEvent += OnRouteSwitched;
+        MenuScreen.switchRouteEvent += OnRouteSwitched;
 
         if (closeButton != null)
         {
@@ -34,6 +36,8 @@ public class BasePopup : MonoBehaviour
         if (isRouteActiveFromStart)
         {
             gameObject.SetActive(true);
+
+            _isShown = true;
         }
         else
         {
@@ -47,6 +51,7 @@ public class BasePopup : MonoBehaviour
     {
         SwitchRouteButton.switchRouteEvent -= OnRouteSwitched;
         TopBar.showPopupEvent -= OnRouteSwitched;
+        MenuScreen.switchRouteEvent -= OnRouteSwitched;
 
         UnregisterMoreEvent();
     }
@@ -85,12 +90,19 @@ public class BasePopup : MonoBehaviour
         _transitionAnimation.Show();
 
         popupShowEvent?.Invoke();
+
+        _isShown = true;
     }
 
     protected void Hide()
     {
-        _transitionAnimation.Hide();
+        if (_isShown)
+        {
+            _transitionAnimation.Hide();
 
-        popupHideEvent?.Invoke();
+            popupHideEvent?.Invoke();
+
+            _isShown = false;
+        }
     }
 }

@@ -8,6 +8,7 @@ public class MenuScreen : MonoBehaviour
 {
     [SerializeField] private Button startGameButton;
     [SerializeField] private Button luckyWheelButton;
+    [SerializeField] private Button weeklyTaskButton;
 
     public static event Action<ScreenRoute> switchRouteEvent;
 
@@ -15,6 +16,7 @@ public class MenuScreen : MonoBehaviour
     {
         startGameButton.onClick.AddListener(StartGame);
         luckyWheelButton.onClick.AddListener(OpenLuckyWheelScreen);
+        weeklyTaskButton.onClick.AddListener(OpenWeeklyTaskScreen);
     }
 
     private void StartGame()
@@ -25,5 +27,10 @@ public class MenuScreen : MonoBehaviour
     private void OpenLuckyWheelScreen()
     {
         switchRouteEvent?.Invoke(ScreenRoute.LuckyWheel);
+    }
+
+    private void OpenWeeklyTaskScreen()
+    {
+        switchRouteEvent?.Invoke(ScreenRoute.WeeklyTask);
     }
 }

@@ -56,4 +56,13 @@ public static class GameConstants
     #region LANGUAGE
     public static string[] AvailableLanguages = { "English", "French", "German", "Italian", "Japanese" };
     #endregion
+
+    #region TASK
+    public static string TASK_ITEM_UI = "Task Item UI";
+    #endregion
+
+    #region SAVE/LOAD
+    public static string SAVE_FILE_NAME = "Game Local Data";
+    public static string WEEKLY_TASKS = "Weekly Tasks";
+    #endregion
 }

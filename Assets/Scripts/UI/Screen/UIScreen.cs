@@ -18,6 +18,7 @@ public class UIScreen : MonoBehaviour
     #region PRIVATE FIELD
     private Vector3 _initialContainerPosititon;
     protected ISaferioUIAnimation _transitionAnimation;
+    private bool _isShown;
     #endregion
 
     #region ACTION
@@ -89,12 +90,19 @@ public class UIScreen : MonoBehaviour
     {
         moveSwipingScreenEvent?.Invoke(_initialContainerPosititon.x);
 
+        _isShown = true;
+
         // _transitionAnimation.Show();
     }
 
     protected virtual void Hide()
     {
-        // _transitionAnimation.Hide();
+        if (_isShown)
+        {
+            // _transitionAnimation.Hide();
+
+            _isShown = false;
+        }
     }
 
     private void HideOutsideScreen(float swipingScreenPositionX)

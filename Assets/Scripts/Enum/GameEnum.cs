@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameEnum : MonoBehaviour
@@ -15,7 +16,9 @@ public class GameEnum : MonoBehaviour
         Setting,
         Win,
         Debug,
-        LuckyWheel
+        LuckyWheel,
+        WeeklyTask,
+        IAPShop
     }
 
     public enum GameFaction
@@ -47,5 +50,20 @@ public class GameEnum : MonoBehaviour
         Select,
         BreakObject,
         Disabled
+    }
+
+    public enum TaskType
+    {
+        Uncrew,
+        CompleteLevel,
+    }
+
+    public static T GetRandomEnumValue<T>()
+    {
+        Array enumValues = Enum.GetValues(typeof(T));
+
+        System.Random random = new System.Random();
+
+        return (T)enumValues.GetValue(random.Next(enumValues.Length));
     }
 }

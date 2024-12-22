@@ -12,6 +12,8 @@ public class ObjectPoolingEverythingInitializer : MonoBehaviour
     [SerializeField] private GameObject loosenScrewSoundPrefab;
     [SerializeField] private GameObject loosenScrewFailSoundPrefab;
 
+    [SerializeField] private GameObject taskItemUIPrefab;
+
     private bool _isInitialized;
 
     private void Start()
@@ -35,6 +37,7 @@ public class ObjectPoolingEverythingInitializer : MonoBehaviour
         RegisterPool<FakeScrew>(GameConstants.FAKE_SCREW, fakeScrewPrefab, 3);
         RegisterPool<AudioSource>(GameConstants.LOOSEN_SCREW_SOUND, loosenScrewSoundPrefab, 3);
         RegisterPool<AudioSource>(GameConstants.LOOSEN_SCREW_FAIL_SOUND, loosenScrewFailSoundPrefab, 3);
+        RegisterPool<TaskItemUI>(GameConstants.TASK_ITEM_UI, taskItemUIPrefab, 5);
     }
 
     private void RegisterPool<T>(string key, GameObject prefab, int poolSize)
