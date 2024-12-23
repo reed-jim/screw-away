@@ -58,15 +58,6 @@ public class ScrewSelectionInput : MonoBehaviour
 
         if (hit.collider != null)
         {
-            IScrew screw = hit.collider.GetComponent<IScrew>();
-
-            if (screw != null)
-            {
-                screw.Select();
-
-                return;
-            }
-
             IObjectPart objectPart = hit.collider.GetComponent<IObjectPart>();
 
             if (objectPart != null)
@@ -81,6 +72,17 @@ public class ScrewSelectionInput : MonoBehaviour
                 {
                     objectPart.Select();
                 }
+
+                return;
+            }
+
+            IScrew screw = hit.collider.GetComponent<IScrew>();
+
+            if (screw != null)
+            {
+                screw.Select();
+
+                return;
             }
         }
     }

@@ -8,6 +8,15 @@ using static GameEnum;
 public class HingeJointGenerator : EditorWindow
 {
     private GameObject target;
+    private GameObject screwPrefab;
+
+
+
+    private Vector3 dimensionSize;
+    private Vector3 distance;
+    private float expectedScale;
+
+
 
     private string prefabPath = "Assets/Prefabs/MyPrefab.prefab";
 
@@ -22,6 +31,11 @@ public class HingeJointGenerator : EditorWindow
         prefabPath = EditorGUILayout.TextField("Prefab Path", prefabPath);
 
         target = (GameObject)EditorGUILayout.ObjectField("Target", target, typeof(GameObject), true);
+        screwPrefab = (GameObject)EditorGUILayout.ObjectField("Screw Prefab", screwPrefab, typeof(GameObject), true);
+
+        dimensionSize = EditorGUILayout.Vector3Field("Dimension Size", dimensionSize);
+        distance = EditorGUILayout.Vector3Field("Distance", distance);
+        expectedScale = EditorGUILayout.FloatField("Expected Scale", expectedScale);
 
         if (GUILayout.Button("Generate"))
         {
@@ -41,6 +55,11 @@ public class HingeJointGenerator : EditorWindow
         if (GUILayout.Button("Auto Assign Screw Faction"))
         {
             AutoAssignScrewFaction(prefabPath);
+        }
+
+        if (GUILayout.Button("Spawn Screw"))
+        {
+            SpawnScrew(prefabPath);
         }
     }
 
@@ -198,6 +217,88 @@ public class HingeJointGenerator : EditorWindow
         PrefabUtility.SaveAsPrefabAsset(levelPrefab, path);
     }
 
+    private void SpawnScrew(string path)
+    {
+        GameObject levelPrefab = PrefabUtility.LoadPrefabContents(path);
+
+        Vector3 position = new Vector3();
+
+        int currentX = 0;
+        int currentY = 0;
+        int currentZ = 0;
+
+        for (int i = 0; i < dimensionSize.x * dimensionSize.y * dimensionSize.z; i++)
+        {
+            GameObject screw = (GameObject)PrefabUtility.InstantiatePrefab(screwPrefab, target.transform);
+
+            position.x = (-(dimensionSize.x - 1) / 2f + currentX) * distance.x + target.transform.position.x;
+            position.y = (-(dimensionSize.y - 1) / 2f + currentY) * distance.y + target.transform.position.y;
+            position.z = (-(dimensionSize.z - 1) / 2f + currentZ) * distance.z + target.transform.position.z;
+
+            currentX++;
+
+            if (currentX >= dimensionSize.x)
+            {
+                currentY++;
+
+                if (currentY >= dimensionSize.y)
+                {
+                    currentZ++;
+
+                    currentY = 0;
+                }
+
+                currentX = 0;
+            }
+
+            // for (int j = 0; j < dimensionSize.x; j++)
+            // {
+            //     position.x = (-(dimensionSize.x - 1) / 2f + currentX) * distance.x + target.transform.position.x;
+            // }
+
+            // for (int j = 0; j < dimensionSize.y; j++)
+            // {
+            //     position.y = (-(dimensionSize.y - 1) / 2f + currentY) * distance.y + target.transform.position.y;
+            // }
+
+            // for (int j = 0; j < dimensionSize.z; j++)
+            // {
+            //     position.z = (-(dimensionSize.z - 1) / 2f + currentZ) * distance.z + target.transform.position.z;
+            // }
+
+            screw.transform.position = position;
+            screw.transform.localScale = TransformUtil.ComponentWiseDivine(expectedScale * Vector3.one, target.transform.localScale);
+        }
+
+
+
+
+        // for (int i = 0; i < dimensionSize.x; i++)
+        // {
+        //     for (int j = 0; j < dimensionSize.y; j++)
+        //     {
+        //         GameObject screw = (GameObject)PrefabUtility.InstantiatePrefab(screwPrefab, target.transform);
+
+        //         Vector3 position;
+
+        //         position.x = (-(dimensionSize.x - 1) / 2f + j) * distance.x;
+        //         position.y = (-(dimensionSize.y - 1) / 2f + i) * distance.y;
+        //         position.z = (-(dimensionSize.y - 1) / 2f + i) * distance.z;
+
+        //         position += target.transform.position;
+
+        //         screw.transform.position = position;
+        //         screw.transform.localScale = TransformUtil.ComponentWiseDivine(expectedScale * Vector3.one, target.transform.localScale);
+        //     }
+        // }
+
+        EditorUtility.SetDirty(levelPrefab);
+
+        PrefabUtility.SaveAsPrefabAsset(levelPrefab, path);
+    }
+
+
+    #region UTIL
     public List<T> GetComponentsFromAllChildren<T>(Transform parent) where T : Component
     {
         List<T> components = new List<T>();
@@ -218,5 +319,6 @@ public class HingeJointGenerator : EditorWindow
             GetComponentsFromAllChildrenRecursive<T>(child, components);
         }
     }
+    #endregion
 }
 #endif

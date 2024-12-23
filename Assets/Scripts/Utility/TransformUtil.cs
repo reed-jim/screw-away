@@ -89,4 +89,9 @@ public static class TransformUtil
     {
         return new Vector3(firstVector.x * secondVector.x, firstVector.y * secondVector.y, firstVector.z * secondVector.z);
     }
+
+    public static Vector3 ComponentWiseDivine(Vector3 firstVector, Vector3 secondVector)
+    {
+        return new Vector3(firstVector.x / secondVector.x, firstVector.y / secondVector.y, firstVector.z / secondVector.z);
+    }
 }
