@@ -19,6 +19,8 @@ namespace Lean.Localization
 		private string _cachedParameterValue;
 		#endregion
 
+		public event Action textTranslatedEvent;
+
 		[Tooltip("If PhraseName couldn't be found, this text will be used")]
 		public string FallbackText;
 
@@ -39,10 +41,12 @@ namespace Lean.Localization
 				text.text = LeanTranslation.FormatText(FallbackText, text.text, this, gameObject);
 			}
 
-			if (!String.IsNullOrEmpty(parameter))
-			{
-				UpdateTranslationWithParameter(parameter, _cachedParameterValue);
-			}
+			// if (!String.IsNullOrEmpty(parameter))
+			// {
+			// 	UpdateTranslationWithParameter(parameter, _cachedParameterValue);
+			// }
+
+			textTranslatedEvent?.Invoke();
 		}
 
 		// SAFERIO - CUSTOMIZATION

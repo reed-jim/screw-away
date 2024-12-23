@@ -25,13 +25,16 @@ public class MenuScreen : MonoBehaviour
         luckyWheelButton.onClick.AddListener(OpenLuckyWheelScreen);
         weeklyTaskButton.onClick.AddListener(OpenWeeklyTaskScreen);
 
-        DelaySetLevelText();
+        localizedLevelText.textTranslatedEvent += OnLevelTextTranslated;
     }
 
-    private async void DelaySetLevelText()
+    void OnDestroy()
     {
-        await Task.Delay(500);
+        localizedLevelText.textTranslatedEvent -= OnLevelTextTranslated;
+    }
 
+    private void OnLevelTextTranslated()
+    {
         localizedLevelText.UpdateTranslationWithParameter(GameConstants.LEVEL_PARAMETER, $"{currentLevel.Value}");
     }
 
