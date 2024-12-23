@@ -11,6 +11,9 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
     [SerializeField] private Rigidbody partRigidbody;
 
+    [Header("CUSTOMIZE")]
+    [SerializeField] private Vector3 throwForceMultiplier = new Vector3(133, 66, 133);
+
     private bool _isSelecting;
     private bool _isFree;
     private bool _isImmuneSwipeForce;
@@ -55,19 +58,25 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
     {
         if (instanceId == gameObject.GetInstanceID())
         {
-            await Task.Delay(1500);
+            await Task.Delay(500);
 
             _totalJoint--;
 
             if (_totalJoint == 0)
             {
                 _isFree = true;
+
+                Vector3 direction = transform.position - transform.parent.position;
+
+                partRigidbody.AddForce(TransformUtil.ComponentWiseMultiply(throwForceMultiplier, direction));
             }
         }
     }
 
     private async void OnSwipe(Vector2 direction)
     {
+        return;
+
         if (_totalJoint <= 1 && !_isImmuneSwipeForce)
         {
             // partRigidbody.AddForce(-30f * direction);

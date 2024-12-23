@@ -84,4 +84,9 @@ public static class TransformUtil
 
         return null;
     }
+
+    public static Vector3 ComponentWiseMultiply(Vector3 firstVector, Vector3 secondVector)
+    {
+        return new Vector3(firstVector.x * secondVector.x, firstVector.y * secondVector.y, firstVector.z * secondVector.z);
+    }
 }
