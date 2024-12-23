@@ -30,6 +30,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     public GameFaction Faction
     {
         get => screwServiceLocator.screwFaction.Faction;
+        set => screwServiceLocator.screwFaction.Faction = value;
     }
 
     public int NumberBlockingObjects

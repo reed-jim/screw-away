@@ -28,6 +28,7 @@ public class BasicScrew : BaseScrew
     {
         if (_isRotating)
         {
+            // transform.Rotate(transform.forward * 300f * Time.deltaTime);
             transform.RotateAround(transform.forward, 0.3f);
         }
     }
@@ -88,7 +89,7 @@ public class BasicScrew : BaseScrew
 
                     _tweens.Add(Tween.Rotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: 0.3f));
                     _tweens.Add(Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 0.3f));
-                    _tweens.Add(Tween.Scale(transform, scaleOnScrewBox, duration: 0.3f)
+                    _tweens.Add(Tween.Scale(transform, scaleOnScrewBox * Vector3.one, duration: 0.3f)
                     .OnComplete(() =>
                     {
                         screwBoxSlot.CompleteFill();

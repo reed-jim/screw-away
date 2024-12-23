@@ -1,7 +1,9 @@
 #if UNITY_EDITOR
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
+using static GameEnum;
 
 public class HingeJointGenerator : EditorWindow
 {
@@ -34,6 +36,11 @@ public class HingeJointGenerator : EditorWindow
         if (GUILayout.Button("Reset Local Rotation"))
         {
             ResetLocalRotation(target.transform);
+        }
+
+        if (GUILayout.Button("Auto Assign Screw Faction"))
+        {
+            AutoAssignScrewFaction(prefabPath);
         }
     }
 
@@ -159,6 +166,57 @@ public class HingeJointGenerator : EditorWindow
         EditorUtility.SetDirty(levelPrefab);
 
         PrefabUtility.SaveAsPrefabAsset(levelPrefab, path);
+    }
+
+    private void AutoAssignScrewFaction(string path)
+    {
+        GameObject levelPrefab = PrefabUtility.LoadPrefabContents(path);
+
+        BaseScrew[] screws = GetComponentsFromAllChildren<BaseScrew>(levelPrefab.transform).ToArray();
+
+        GameFaction[] factions = new GameFaction[5] { GameFaction.Blue, GameFaction.Red, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
+
+        int currentFaction = 0;
+
+        for (int i = 0; i < screws.Length; i++)
+        {
+            screws[i].Faction = factions[currentFaction];
+
+            if (i > 0 && (i + 1) % 3 == 0)
+            {
+                currentFaction++;
+
+                if (currentFaction >= factions.Length)
+                {
+                    currentFaction = 0;
+                }
+            }
+        }
+
+        EditorUtility.SetDirty(levelPrefab);
+
+        PrefabUtility.SaveAsPrefabAsset(levelPrefab, path);
+    }
+
+    public List<T> GetComponentsFromAllChildren<T>(Transform parent) where T : Component
+    {
+        List<T> components = new List<T>();
+        GetComponentsFromAllChildrenRecursive<T>(parent, components);
+        return components;
+    }
+
+    private void GetComponentsFromAllChildrenRecursive<T>(Transform parent, List<T> components) where T : Component
+    {
+        T component = parent.GetComponent<T>();
+        if (component != null)
+        {
+            components.Add(component);
+        }
+
+        foreach (Transform child in parent)
+        {
+            GetComponentsFromAllChildrenRecursive<T>(child, components);
+        }
     }
 }
 #endif

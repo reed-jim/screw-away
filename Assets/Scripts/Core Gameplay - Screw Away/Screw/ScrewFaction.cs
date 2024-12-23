@@ -10,6 +10,7 @@ public class ScrewFaction : MonoBehaviour
     public GameFaction Faction
     {
         get => faction;
+        set => faction = value;
     }
 
     void Awake()

@@ -56,6 +56,10 @@ public class ScrewBox : MonoBehaviour
     {
         if (instanceId == gameObject.GetInstanceID())
         {
+            AudioSource screwBoxDoneSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.SCREW_BOX_DONE_SOUND);
+
+            screwBoxDoneSound.Play();
+
             Tween.LocalPositionX(transform, 10, duration: 0.5f).OnComplete(() =>
             {
                 screwBoxCompletedEvent?.Invoke(this);
