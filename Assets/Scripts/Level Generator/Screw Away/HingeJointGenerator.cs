@@ -46,6 +46,7 @@ public class HingeJointGenerator : EditorWindow
     {
         target.localPosition = Vector3.zero;
         target.localRotation = Quaternion.Euler(Vector3.zero);
+        target.localScale = new Vector3(1 / target.transform.parent.localScale.x, 1 / target.transform.parent.localScale.y, 1 / target.transform.parent.localScale.z);
     }
 
     private void Generate(string path)
