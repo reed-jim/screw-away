@@ -1302,8 +1302,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 07f4c426523c65543b8e6844970b5004, type: 2}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4c1f04de50db3de4cae1bb246498af88, type: 2}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1374,7 +1374,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 170261827282403018, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_text
-      value: Rank
+      value: Home
       objectReference: {fileID: 0}
     - target: {fileID: 170261827282403018, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_fontSizeBase
@@ -1662,6 +1662,7 @@ Transform:
   - {fileID: 478938924}
   - {fileID: 1341924456}
   - {fileID: 1742706160}
+  - {fileID: 790147928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &619569313
@@ -2064,7 +2065,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 170261827282403018, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_text
-      value: Shop
+      value: Home
       objectReference: {fileID: 0}
     - target: {fileID: 170261827282403018, guid: d855d6df8bc266d45b2608f7c3885a83, type: 3}
       propertyPath: m_fontSizeBase
@@ -2327,8 +2328,9 @@ GameObject:
   - component: {fileID: 746027519}
   - component: {fileID: 746027521}
   - component: {fileID: 746027520}
+  - component: {fileID: 746027522}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Level Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2373,7 +2375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 1
+  m_text: 'Livello '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea321c4dec4cdd74fae016f2a45adbe2, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e457c2cb9daee9c40a010770422f3d46, type: 2}
@@ -2452,6 +2454,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746027518}
   m_CullTransparentMesh: 1
+--- !u!114 &746027522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746027518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level
+  parameter: level
+  FallbackText: Level 1
 --- !u!1 &778606284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,6 +2567,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1527055450098318974, guid: 30a3bd0f941f9f249b5d05be35e9e39c, type: 3}
   m_PrefabInstance: {fileID: 786974596}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &790147927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 790147928}
+  - component: {fileID: 790147929}
+  m_Layer: 0
+  m_Name: Saferio Tween Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &790147928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790147927}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 619569312}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &790147929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790147927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673581ad998b8f4428a5b1fe4ad34c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lists: []
 --- !u!224 &796804794 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4734510700054930343, guid: abb97f3942e90694ebf000a3c1f988e2, type: 3}
@@ -2685,6 +2747,8 @@ MonoBehaviour:
   openRemoveAdPopupButton: {fileID: 1748569531}
   luckyWheelButton: {fileID: 435159279}
   weeklyTaskButton: {fileID: 733359006}
+  localizedLevelText: {fileID: 746027522}
+  currentLevel: {fileID: 11400000, guid: dfc7835bc5f6fb64d9f4b1582f01db6e, type: 2}
 --- !u!1 &815539594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,7 +4693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLanguage: German
+  currentLanguage: Italian
   detectLanguage: 1
   defaultLanguage: English
   saveLoad: 1
@@ -4669,6 +4733,7 @@ Transform:
   - {fileID: 401198160}
   - {fileID: 1006315756}
   - {fileID: 1769130283}
+  - {fileID: 1823468930}
   m_Father: {fileID: 619569312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343520904
@@ -6645,6 +6710,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1527055450098318974, guid: 72996ab11fe463149bc90e287a08077d, type: 3}
   m_PrefabInstance: {fileID: 1818030305}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1823468929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823468930}
+  - component: {fileID: 1823468931}
+  m_Layer: 0
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1823468930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823468929}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1341924456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1823468931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823468929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Level {level}
+    Object: {fileID: 0}
+  - Language: French
+    Text: Niveau {level}
+    Object: {fileID: 0}
+  - Language: German
+    Text: Ebene {level}
+    Object: {fileID: 0}
+  - Language: Italian
+    Text: Livello {level}
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "\u30EC\u30D9\u30EB {level}"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "\uB808\uBCA8 {level}"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: "N\xEDvel {level}"
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C {level}"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Nivel {level}
+    Object: {fileID: 0}
 --- !u!1 &1824817630
 GameObject:
   m_ObjectHideFlags: 0
@@ -6913,7 +7051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2012005755
 RectTransform:
   m_ObjectHideFlags: 0

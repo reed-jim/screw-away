@@ -45,8 +45,6 @@ public class ObjectPoolingEverything : MonoBehaviour
 
     public static T GetFromPool<T>(string identifier)
     {
-        Debug.Log(Instance.gameObject.GetInstanceID() + " dasdsads");
-
         foreach (var group in Instance._poolGroup)
         {
             if (identifier == group.Key)
@@ -103,8 +101,6 @@ public class ObjectPool
     {
         for (int i = 0; i < _pool.Length; i++)
         {
-            Debug.Log(_pool[i].gameObject + " dasdsads");
-
             if (_pool[i].gameObject == null)
             {
                 GameObject gameObject = ObjectPoolingEverything.SpawnGameObject(_cachedPrefab);

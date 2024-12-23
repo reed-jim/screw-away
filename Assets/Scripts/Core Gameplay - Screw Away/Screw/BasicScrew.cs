@@ -55,7 +55,7 @@ public class BasicScrew : BaseScrew
 
                 SoundManager.Instance.PlaySoundLoosenScrewFail();
 
-                Tween.Position(fakeScrew.transform, transform.position + 0.3f * transform.forward, cycles: 2, cycleMode: CycleMode.Yoyo, duration: 0.5f)
+                _tweens.Add(Tween.Position(fakeScrew.transform, transform.position + 0.3f * transform.forward, cycles: 2, cycleMode: CycleMode.Yoyo, duration: 0.5f)
                 .OnComplete(() =>
                 {
                     fakeScrew.IsRotating = false;
@@ -63,7 +63,7 @@ public class BasicScrew : BaseScrew
                     fakeScrew.gameObject.SetActive(false);
 
                     GetComponent<MeshRenderer>().enabled = true;
-                });
+                }));
 
                 return;
             }
@@ -76,19 +76,19 @@ public class BasicScrew : BaseScrew
 
             await Task.Delay(100);
 
-            Tween.Position(transform, transform.position + 3f * transform.forward, duration: 0.3f).OnComplete(() =>
+            _tweens.Add(Tween.Position(transform, transform.position + 3f * transform.forward, duration: 0.3f).OnComplete(() =>
             {
                 _isRotating = false;
 
-                Tween.Delay(duration: 0.1f)
+                _tweens.Add(Tween.Delay(duration: 0.1f)
                 .OnComplete(() =>
                 {
                     transform.SetParent(screwBoxSlot.transform);
                     gameObject.layer = LayerMask.NameToLayer("UI");
 
-                    Tween.Rotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: 0.3f);
-                    Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 0.3f);
-                    Tween.Scale(transform, scaleOnScrewBox, duration: 0.3f)
+                    _tweens.Add(Tween.Rotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: 0.3f));
+                    _tweens.Add(Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 0.3f));
+                    _tweens.Add(Tween.Scale(transform, scaleOnScrewBox, duration: 0.3f)
                     .OnComplete(() =>
                     {
                         screwBoxSlot.CompleteFill();
@@ -96,9 +96,9 @@ public class BasicScrew : BaseScrew
                         _isDone = true;
 
                         screwLoosenedEvent?.Invoke();
-                    });
-                });
-            });
+                    }));
+                }));
+            }));
 
             SoundManager.Instance.PlaySoundLoosenScrew();
 

@@ -395,8 +395,6 @@ namespace Saferio.Util.SaferioTween
 
                 int delayTimeEachStepMilliSecond = (int)(updateDuration * 1000);
 
-                WaitForSeconds waitForSeconds = new WaitForSeconds(updateDuration);
-
                 Vector3 deltaValue = (end - target.localScale) / (duration / updateDuration);
 
                 int totalStep = (int)((end - target.localScale).magnitude / deltaValue.magnitude);

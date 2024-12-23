@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using PrimeTween;
 using UnityEngine;
@@ -13,9 +14,12 @@ public class BaseScrew : MonoBehaviour, IScrew
     [Header("CUSTOMIZE")]
     [SerializeField] protected float scaleOnScrewBox;
 
+    #region PRIVATE FIELD
+    protected List<Tween> _tweens = new List<Tween>();
     protected int _numberBlockingObjects;
     protected Vector3 _initialScale;
     protected bool _isDone;
+    #endregion
 
     public int ScrewId
     {
@@ -61,6 +65,8 @@ public class BaseScrew : MonoBehaviour, IScrew
     {
         ScrewBoxManager.looseScrewEvent -= Loose;
         UnregisterMoreEvent();
+
+        CommonUtil.StopAllTweens(_tweens);
     }
 
     protected virtual void MoreLogicInAwake()

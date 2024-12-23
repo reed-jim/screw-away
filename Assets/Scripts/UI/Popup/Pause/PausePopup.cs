@@ -34,6 +34,8 @@ public class PausePopup : BasePopup
 
     private void ReturnHome()
     {
+        Time.timeScale = 1;
+
         Addressables.LoadSceneAsync(GameConstants.MENU_SCENE);
     }
 

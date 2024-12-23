@@ -32,6 +32,7 @@ public class WeeklyTaskPopup : BasePopup
             TaskItemUI taskItemUI = ObjectPoolingEverything.GetFromPool<TaskItemUI>(GameConstants.TASK_ITEM_UI);
 
             taskItemUI.Container.SetParent(taskContainer);
+            taskItemUI.Container.localScale = Vector3.one;
 
             UIUtil.SetLocalPositionX(taskItemUI.Container, 0);
             UIUtil.SetLocalPositionY(taskItemUI.Container, 240 - i * 1.1f * taskItemUI.Container.sizeDelta.y);
@@ -62,7 +63,7 @@ public class WeeklyTaskPopup : BasePopup
     private string GetRemainingTime()
     {
         DateTime currentTime = DateTime.Now;
-        DateTime endOfWeek = currentTime.AddDays(DayOfWeek.Sunday - currentTime.DayOfWeek).Date.AddDays(1).AddTicks(-1);
+        DateTime endOfWeek = currentTime.AddDays(DayOfWeek.Saturday - currentTime.DayOfWeek).Date.AddDays(1).AddTicks(-1);
         TimeSpan remainingTime = endOfWeek - currentTime;
 
         int days = remainingTime.Days;

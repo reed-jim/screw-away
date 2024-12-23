@@ -15,6 +15,10 @@ namespace Lean.Localization
 	{
 		[SerializeField] private string parameter;
 
+		#region PRIVATE FIELD
+		private string _cachedParameterValue;
+		#endregion
+
 		[Tooltip("If PhraseName couldn't be found, this text will be used")]
 		public string FallbackText;
 
@@ -34,6 +38,11 @@ namespace Lean.Localization
 			{
 				text.text = LeanTranslation.FormatText(FallbackText, text.text, this, gameObject);
 			}
+
+			if (!String.IsNullOrEmpty(parameter))
+			{
+				UpdateTranslationWithParameter(parameter, _cachedParameterValue);
+			}
 		}
 
 		// SAFERIO - CUSTOMIZATION
@@ -48,6 +57,8 @@ namespace Lean.Localization
 			pattern.Append("}");
 
 			textMeshPro.text = textMeshPro.text.Replace(pattern.ToString(), value);
+
+			_cachedParameterValue = value;
 		}
 
 		protected virtual void Awake()

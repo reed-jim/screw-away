@@ -7,10 +7,17 @@ using UnityEngine;
 
 public static class CommonUtil
 {
-    public static void StopAllTweens(List<Tween> tweens) {
-        
+    public static void StopAllTweens(List<Tween> tweens)
+    {
+        for (int i = 0; i < tweens.Count; i++)
+        {
+            if (tweens[i].isAlive)
+            {
+                tweens[i].Stop();
+            }
+        }
     }
-    
+
     public static void OnHitColorEffect(
         Renderer meshRenderer,
         MaterialPropertyBlock materialPropertyBlock,

@@ -1,4 +1,5 @@
 using PrimeTween;
+using Saferio.Util.SaferioTween;
 using UnityEngine;
 
 public class ScaleTransition : MonoBehaviour, ISaferioUIAnimation
@@ -17,6 +18,11 @@ public class ScaleTransition : MonoBehaviour, ISaferioUIAnimation
 
         target.localScale = Vector3.zero;
 
+        // SaferioTween.ScaleAsync(target, 1.1f * Vector3.one, duration: 0.5f * duration, onCompletedAction: () =>
+        // {
+        //     SaferioTween.ScaleAsync(target, Vector3.one, duration: 0.5f * duration);
+        // });
+
         Tween.Scale(target, 1.1f, duration: 0.5f * duration)
             .Chain(Tween.Scale(target, 1f, duration: 0.5f * duration));
 
@@ -25,6 +31,11 @@ public class ScaleTransition : MonoBehaviour, ISaferioUIAnimation
 
     public void Hide()
     {
+        // SaferioTween.ScaleAsync(target, Vector3.zero, duration: 0.5f * duration, onCompletedAction: () =>
+        // {
+        //     target.gameObject.SetActive(false);
+        // });
+
         Tween.Scale(target, 0, duration: duration).OnComplete(() =>
         {
             target.gameObject.SetActive(false);

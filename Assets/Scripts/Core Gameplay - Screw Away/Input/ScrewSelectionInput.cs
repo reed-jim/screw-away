@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using static GameEnum;
 
 public class ScrewSelectionInput : MonoBehaviour
@@ -42,6 +43,11 @@ public class ScrewSelectionInput : MonoBehaviour
     private void Select()
     {
         if (_inputMode == InputMode.Disabled)
+        {
+            return;
+        }
+
+        if (IsClickedOnUI())
         {
             return;
         }
@@ -92,5 +98,27 @@ public class ScrewSelectionInput : MonoBehaviour
     private void EnableBreakObjectMode()
     {
         _inputMode = InputMode.BreakObject;
+    }
+
+    private bool IsClickedOnUI()
+    {
+        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        {
+            position = Input.mousePosition
+        };
+
+        RaycastResult raycastResult = new RaycastResult();
+
+        var raycastResults = new System.Collections.Generic.List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, raycastResults);
+
+        if (raycastResults.Count > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
