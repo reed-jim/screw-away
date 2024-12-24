@@ -48,9 +48,9 @@ GameObject:
   - component: {fileID: 4019206119772243218}
   - component: {fileID: 91127237233341258}
   - component: {fileID: 6949236201307704187}
-  - component: {fileID: 1287344032551188357}
-  - component: {fileID: 6221530282391562678}
-  - component: {fileID: 6119473818877061763}
+  - component: {fileID: 5328238471492092333}
+  - component: {fileID: 6661856182762509086}
+  - component: {fileID: 3628825477789762628}
   m_Layer: 0
   m_Name: SM_Generic_TreeStump_01 4(Clone)
   m_TagString: Untagged
@@ -88,7 +88,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431076ef134a85847a3be8e2673db5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
+  throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
+  _totalJoint: 0
 --- !u!114 &3994005362407951525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +213,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!59 &1287344032551188357
+--- !u!59 &5328238471492092333
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,7 +252,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &6221530282391562678
+--- !u!59 &6661856182762509086
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -288,7 +291,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &6119473818877061763
+--- !u!59 &3628825477789762628
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,8 +301,8 @@ HingeJoint:
   serializedVersion: 3
   m_ConnectedBody: {fileID: 8217013829694408996}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0.009, y: 0.199, z: 0.085}
-  m_Axis: {x: -0.0035008788, y: 0.99038357, z: 0.13830444}
+  m_Anchor: {x: 0.009, y: 0.1878, z: 0.0833}
+  m_Axis: {x: 0, y: 1.0000001, z: -0.00000011920929}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
@@ -353,7 +356,7 @@ Transform:
   m_GameObject: {fileID: 2191227381863762654}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -396,11 +399,11 @@ GameObject:
   - component: {fileID: 2153179511925596854}
   - component: {fileID: 92579713548700159}
   - component: {fileID: 2560599663884612640}
-  - component: {fileID: 5788504606000779422}
-  - component: {fileID: 6782151014797657917}
-  - component: {fileID: 6125014191034001066}
-  - component: {fileID: 6495596952915338069}
-  - component: {fileID: 2353546137955807415}
+  - component: {fileID: 4699036972880591586}
+  - component: {fileID: 4296479087010436269}
+  - component: {fileID: 3840100257067013367}
+  - component: {fileID: 3927405076174592986}
+  - component: {fileID: 2732780850003712978}
   m_Layer: 0
   m_Name: SM_Generic_TreeStump_01 3
   m_TagString: Untagged
@@ -440,7 +443,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431076ef134a85847a3be8e2673db5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
+  throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
+  _totalJoint: 0
 --- !u!114 &4936167440998044845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,7 +566,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!59 &5788504606000779422
+--- !u!59 &4699036972880591586
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -599,7 +605,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &6782151014797657917
+--- !u!59 &4296479087010436269
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -609,7 +615,7 @@ HingeJoint:
   serializedVersion: 3
   m_ConnectedBody: {fileID: 3885967634895171400}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: -0.032, y: 0.108, z: -0.21}
+  m_Anchor: {x: -0.032, y: 0.0992, z: -0.2103}
   m_Axis: {x: 0, y: 0.99928325, z: 0.037856936}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
@@ -638,7 +644,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &6125014191034001066
+--- !u!59 &3840100257067013367
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -677,7 +683,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &6495596952915338069
+--- !u!59 &3927405076174592986
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -716,7 +722,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &2353546137955807415
+--- !u!59 &2732780850003712978
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -770,10 +776,10 @@ GameObject:
   - component: {fileID: 5118299432307716606}
   - component: {fileID: 6993235497951581853}
   - component: {fileID: 9098759885372132047}
-  - component: {fileID: 2421671422157314961}
-  - component: {fileID: 2646083020248893526}
-  - component: {fileID: 4128772372531558003}
-  - component: {fileID: 2114726790889545034}
+  - component: {fileID: 8245647032311141753}
+  - component: {fileID: 3696202410739357515}
+  - component: {fileID: 6846303660711305571}
+  - component: {fileID: 1650513571503863105}
   m_Layer: 0
   m_Name: SM_Generic_TreeStump_01 4(Clone)
   m_TagString: Untagged
@@ -812,7 +818,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431076ef134a85847a3be8e2673db5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
+  throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
+  _totalJoint: 0
 --- !u!114 &2620049259802490670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,7 +943,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!59 &2421671422157314961
+--- !u!59 &8245647032311141753
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -973,7 +982,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &2646083020248893526
+--- !u!59 &3696202410739357515
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1012,7 +1021,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &4128772372531558003
+--- !u!59 &6846303660711305571
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1051,7 +1060,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &2114726790889545034
+--- !u!59 &1650513571503863105
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1061,7 +1070,7 @@ HingeJoint:
   serializedVersion: 3
   m_ConnectedBody: {fileID: 2827017754948892900}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0.157, y: 0.192, z: -0.009}
+  m_Anchor: {x: 0.1572, y: 0.1894, z: -0.0089}
   m_Axis: {x: -0.060260564, y: 0.9968784, z: -0.051012278}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
@@ -1105,10 +1114,10 @@ GameObject:
   - component: {fileID: 5417816860135646378}
   - component: {fileID: 5805534064299233515}
   - component: {fileID: 3848772379213093573}
-  - component: {fileID: 8749404417015896366}
-  - component: {fileID: 7126054822569453957}
-  - component: {fileID: 1532863544436016874}
-  - component: {fileID: 7766758913093887209}
+  - component: {fileID: 2345592804833297974}
+  - component: {fileID: 4577999701696050198}
+  - component: {fileID: 8676843192680780644}
+  - component: {fileID: 1362232747302983289}
   m_Layer: 0
   m_Name: SM_Generic_TreeStump_01 6(Clone)
   m_TagString: Untagged
@@ -1147,7 +1156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431076ef134a85847a3be8e2673db5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
+  throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
+  _totalJoint: 0
 --- !u!114 &8249602394450740528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,7 +1279,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!59 &8749404417015896366
+--- !u!59 &2345592804833297974
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1306,7 +1318,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &7126054822569453957
+--- !u!59 &4577999701696050198
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1345,7 +1357,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &1532863544436016874
+--- !u!59 &8676843192680780644
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1384,7 +1396,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &7766758913093887209
+--- !u!59 &1362232747302983289
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1438,12 +1450,12 @@ GameObject:
   - component: {fileID: 4428072847363464567}
   - component: {fileID: 9057506963114728567}
   - component: {fileID: 4032761119867177875}
-  - component: {fileID: 6931664851758956345}
-  - component: {fileID: 8783306378795689991}
-  - component: {fileID: 7208674569273110044}
-  - component: {fileID: 560557030709507401}
-  - component: {fileID: 8480188627672671367}
-  - component: {fileID: 4628256731566659658}
+  - component: {fileID: 8543854068570585479}
+  - component: {fileID: 4602327981873417398}
+  - component: {fileID: 3170086734644419887}
+  - component: {fileID: 1493171839497122749}
+  - component: {fileID: 2394176986217018277}
+  - component: {fileID: 7706904256765915182}
   m_Layer: 0
   m_Name: SM_Generic_TreeStump_01 6(Clone)
   m_TagString: Untagged
@@ -1484,7 +1496,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431076ef134a85847a3be8e2673db5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
+  throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
+  _totalJoint: 0
 --- !u!114 &4383448578509462718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1604,7 +1619,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!59 &6931664851758956345
+--- !u!59 &8543854068570585479
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1643,7 +1658,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &8783306378795689991
+--- !u!59 &4602327981873417398
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1682,7 +1697,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &7208674569273110044
+--- !u!59 &3170086734644419887
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1721,7 +1736,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &560557030709507401
+--- !u!59 &1493171839497122749
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1760,7 +1775,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &8480188627672671367
+--- !u!59 &2394176986217018277
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1799,7 +1814,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &4628256731566659658
+--- !u!59 &7706904256765915182
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1853,10 +1868,10 @@ GameObject:
   - component: {fileID: 4694426763527791642}
   - component: {fileID: 1038895083687774608}
   - component: {fileID: 6644290730911001401}
-  - component: {fileID: 193118599218217645}
-  - component: {fileID: 1158572673069942911}
-  - component: {fileID: 4814843408445806924}
-  - component: {fileID: 5850799835551519194}
+  - component: {fileID: 2978749646291010650}
+  - component: {fileID: 3763515724487328545}
+  - component: {fileID: 1497695073696021163}
+  - component: {fileID: 6942049608910285174}
   m_Layer: 0
   m_Name: SM_Generic_TreeStump_01 7(Clone)
   m_TagString: Untagged
@@ -1895,7 +1910,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431076ef134a85847a3be8e2673db5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
+  throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
+  _totalJoint: 0
 --- !u!114 &8882823857108786463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2015,7 +2033,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!59 &193118599218217645
+--- !u!59 &2978749646291010650
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2054,7 +2072,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &1158572673069942911
+--- !u!59 &3763515724487328545
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2093,7 +2111,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &4814843408445806924
+--- !u!59 &1497695073696021163
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2132,7 +2150,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &5850799835551519194
+--- !u!59 &6942049608910285174
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2186,10 +2204,10 @@ GameObject:
   - component: {fileID: 499305509314510237}
   - component: {fileID: 8126465422297042135}
   - component: {fileID: 6230745720961623529}
-  - component: {fileID: 5529325401408688512}
-  - component: {fileID: 4079579178645169649}
-  - component: {fileID: 3190981214521196250}
-  - component: {fileID: 4948998387643284633}
+  - component: {fileID: 8419243441969598726}
+  - component: {fileID: 8052520105090577150}
+  - component: {fileID: 6290875165523815663}
+  - component: {fileID: 148803436734525393}
   m_Layer: 0
   m_Name: SM_Generic_TreeStump_01 3(Clone)
   m_TagString: Untagged
@@ -2228,7 +2246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431076ef134a85847a3be8e2673db5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
+  throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
+  _totalJoint: 0
 --- !u!114 &3669086081737975385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2349,7 +2370,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!59 &5529325401408688512
+--- !u!59 &8419243441969598726
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2388,7 +2409,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &4079579178645169649
+--- !u!59 &8052520105090577150
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2398,7 +2419,7 @@ HingeJoint:
   serializedVersion: 3
   m_ConnectedBody: {fileID: 6255500696950253563}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: -0.2227, y: 0.1619, z: -0.0533}
+  m_Anchor: {x: -0.2155, y: 0.1619, z: -0.0494}
   m_Axis: {x: -0.87882715, y: 0.0009739399, z: -0.47713965}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
@@ -2427,7 +2448,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &3190981214521196250
+--- !u!59 &6290875165523815663
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2466,7 +2487,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &4948998387643284633
+--- !u!59 &148803436734525393
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2678,9 +2699,9 @@ GameObject:
   - component: {fileID: 6077733622520846751}
   - component: {fileID: 4159735364412337424}
   - component: {fileID: 18221179880358601}
-  - component: {fileID: 6196897286711672757}
-  - component: {fileID: 3228734490152871979}
-  - component: {fileID: 3215741464475153316}
+  - component: {fileID: 7722119529508733088}
+  - component: {fileID: 3827107458551571768}
+  - component: {fileID: 5832758451078428886}
   m_Layer: 0
   m_Name: SM_Generic_TreeStump_01 7(Clone)
   m_TagString: Untagged
@@ -2718,7 +2739,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431076ef134a85847a3be8e2673db5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
+  throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
+  _totalJoint: 0
 --- !u!114 &881774178343299434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2838,7 +2862,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!59 &6196897286711672757
+--- !u!59 &7722119529508733088
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2877,7 +2901,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &3228734490152871979
+--- !u!59 &3827107458551571768
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2916,7 +2940,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &3215741464475153316
+--- !u!59 &5832758451078428886
 HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2926,8 +2950,8 @@ HingeJoint:
   serializedVersion: 3
   m_ConnectedBody: {fileID: 830768014060080845}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0.1856, y: 0.4095, z: -0.1619}
-  m_Axis: {x: 0.6941079, y: 0.22025631, z: -0.6853477}
+  m_Anchor: {x: 0.1785, y: 0.4104, z: -0.157}
+  m_Axis: {x: 0.5633642, y: -0.07020721, z: -0.8232203}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
@@ -2965,7 +2989,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -2978,7 +3002,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 7208674569273110044}
+      objectReference: {fileID: 3170086734644419887}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -3073,7 +3097,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 8749404417015896366}
+      objectReference: {fileID: 2345592804833297974}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 5
@@ -3159,7 +3183,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -3172,7 +3196,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 6931664851758956345}
+      objectReference: {fileID: 8543854068570585479}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -3267,7 +3291,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 5529325401408688512}
+      objectReference: {fileID: 8419243441969598726}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -3349,7 +3373,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -3362,7 +3386,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 3215741464475153316}
+      objectReference: {fileID: 5832758451078428886}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 4
@@ -3448,7 +3472,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -3457,7 +3481,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 5850799835551519194}
+      objectReference: {fileID: 6942049608910285174}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 2
@@ -3543,7 +3567,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -3556,7 +3580,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 6782151014797657917}
+      objectReference: {fileID: 4296479087010436269}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -3638,7 +3662,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -3647,7 +3671,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 4814843408445806924}
+      objectReference: {fileID: 1497695073696021163}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 1
@@ -3731,6 +3755,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5323053904241479296}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (2)
@@ -3742,7 +3770,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 4128772372531558003}
+      objectReference: {fileID: 6846303660711305571}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -3824,7 +3852,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -3837,7 +3865,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 1532863544436016874}
+      objectReference: {fileID: 8676843192680780644}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 7
@@ -3921,6 +3949,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5323053904241479296}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (3)
@@ -3932,7 +3964,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 2114726790889545034}
+      objectReference: {fileID: 1650513571503863105}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4027,7 +4059,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 6221530282391562678}
+      objectReference: {fileID: 6661856182762509086}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4107,6 +4139,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3393143116121684910}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (4)
@@ -4118,7 +4154,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 8480188627672671367}
+      objectReference: {fileID: 2394176986217018277}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4213,7 +4249,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 6125014191034001066}
+      objectReference: {fileID: 3840100257067013367}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4295,7 +4331,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -4308,7 +4344,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 4079579178645169649}
+      objectReference: {fileID: 8052520105090577150}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4388,6 +4424,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5323053904241479296}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (1)
@@ -4399,7 +4439,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 2646083020248893526}
+      objectReference: {fileID: 3696202410739357515}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4481,7 +4521,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -4494,7 +4534,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 560557030709507401}
+      objectReference: {fileID: 1493171839497122749}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4589,7 +4629,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 4948998387643284633}
+      objectReference: {fileID: 148803436734525393}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4669,6 +4709,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3393143116121684910}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (5)
@@ -4680,7 +4724,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 4628256731566659658}
+      objectReference: {fileID: 7706904256765915182}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4762,7 +4806,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -4775,7 +4819,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 6495596952915338069}
+      objectReference: {fileID: 3927405076174592986}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4870,7 +4914,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 8783306378795689991}
+      objectReference: {fileID: 4602327981873417398}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -4961,7 +5005,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 193118599218217645}
+      objectReference: {fileID: 2978749646291010650}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -5043,7 +5087,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -5056,7 +5100,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 7126054822569453957}
+      objectReference: {fileID: 4577999701696050198}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 6
@@ -5140,6 +5184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1954379147229117981}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D (1)
@@ -5147,7 +5195,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 1158572673069942911}
+      objectReference: {fileID: 3763515724487328545}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 1
@@ -5233,7 +5281,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -5246,7 +5294,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 3228734490152871979}
+      objectReference: {fileID: 3827107458551571768}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 4
@@ -5345,7 +5393,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 6196897286711672757}
+      objectReference: {fileID: 7722119529508733088}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 3
@@ -5431,7 +5479,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -5444,7 +5492,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 6119473818877061763}
+      objectReference: {fileID: 3628825477789762628}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -5539,7 +5587,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 3190981214521196250}
+      objectReference: {fileID: 6290875165523815663}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -5619,6 +5667,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6009573026766164972}
     m_Modifications:
+    - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
+      propertyPath: faction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
       value: Screw 3D
@@ -5630,7 +5682,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 5788504606000779422}
+      objectReference: {fileID: 4699036972880591586}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -5712,7 +5764,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -5725,7 +5777,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 7766758913093887209}
+      objectReference: {fileID: 1362232747302983289}
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: screwId
       value: 8
@@ -5824,7 +5876,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 2421671422157314961}
+      objectReference: {fileID: 8245647032311141753}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -5906,7 +5958,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -5919,7 +5971,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 1287344032551188357}
+      objectReference: {fileID: 5328238471492092333}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07
@@ -6001,7 +6053,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2480204014084754691, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: faction
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340868010685783976, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_Name
@@ -6014,7 +6066,7 @@ PrefabInstance:
     - target: {fileID: 5186568290948194950, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: joint
       value: 
-      objectReference: {fileID: 2353546137955807415}
+      objectReference: {fileID: 2732780850003712978}
     - target: {fileID: 5360214704487115019, guid: ddb6aaceec1f7aa40a991433bc29f32b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07

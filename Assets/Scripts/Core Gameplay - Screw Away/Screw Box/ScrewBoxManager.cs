@@ -54,7 +54,10 @@ public class ScrewBoxManager : MonoBehaviour
         {
             for (int i = 0; i < screwBoxs.Length; i++)
             {
-                ObjectPoolingEverything.ReturnToPool(GameConstants.SCREW_BOX, screwBoxs[i].gameObject);
+                if (screwBoxs[i] != null)
+                {
+                    ObjectPoolingEverything.ReturnToPool(GameConstants.SCREW_BOX, screwBoxs[i].gameObject);
+                }
             }
         }
 

@@ -69,33 +69,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
             {
                 _isFree = true;
 
-                Vector3 direction;
-
-                if (levelCenter != null)
-                {
-                    direction = transform.position - levelCenter.position;
-                }
-                else
-                {
-                    direction = transform.position - transform.parent.position;
-                }
-
-                direction = direction.normalized;
-
-                if (Mathf.Abs(direction.x) < 0.01f)
-                {
-                    direction.x = 1f;
-                }
-                if (Mathf.Abs(direction.y) < 0.01f)
-                {
-                    direction.y = 1f;
-                }
-                if (Mathf.Abs(direction.z) < 0.01f)
-                {
-                    direction.z = 1f;
-                }
-
-                partRigidbody.AddForce(TransformUtil.ComponentWiseMultiply(throwForceMultiplier, direction), ForceMode.Impulse);
+                Throw();
             }
         }
     }
@@ -151,6 +125,39 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
             }
         }
 
-        gameObject.SetActive(false);
+        Throw();
+
+        // gameObject.SetActive(false);
+    }
+
+    private void Throw()
+    {
+        Vector3 direction;
+
+        if (levelCenter != null)
+        {
+            direction = transform.position - levelCenter.position;
+        }
+        else
+        {
+            direction = transform.position - transform.parent.position;
+        }
+
+        direction = direction.normalized;
+
+        if (Mathf.Abs(direction.x) < 0.01f)
+        {
+            direction.x = 1f;
+        }
+        if (Mathf.Abs(direction.y) < 0.01f)
+        {
+            direction.y = 1f;
+        }
+        if (Mathf.Abs(direction.z) < 0.01f)
+        {
+            direction.z = 1f;
+        }
+
+        partRigidbody.AddForce(TransformUtil.ComponentWiseMultiply(throwForceMultiplier, direction), ForceMode.Impulse);
     }
 }

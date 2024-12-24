@@ -16,6 +16,7 @@ namespace Lean.Localization
 		[SerializeField] private string parameter;
 
 		#region PRIVATE FIELD
+		private LeanTranslation _cachedTranslation;
 		private string _cachedParameterValue;
 		#endregion
 
@@ -47,12 +48,27 @@ namespace Lean.Localization
 			// }
 
 			textTranslatedEvent?.Invoke();
+
+			_cachedTranslation = translation;
 		}
 
 		// SAFERIO - CUSTOMIZATION
 		public void UpdateTranslationWithParameter(string parameter, string value)
 		{
 			var textMeshPro = GetComponent<TextMeshProUGUI>();
+
+
+
+			if (_cachedTranslation != null && _cachedTranslation.Data is string)
+			{
+				textMeshPro.text = LeanTranslation.FormatText((string)_cachedTranslation.Data, textMeshPro.text, this, gameObject);
+			}
+			else
+			{
+				textMeshPro.text = LeanTranslation.FormatText(FallbackText, textMeshPro.text, this, gameObject);
+			}
+
+
 
 			StringBuilder pattern = new StringBuilder();
 

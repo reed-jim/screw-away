@@ -44,6 +44,8 @@ public class WinPopup : BasePopup
 
     private void Continue()
     {
+        Hide();
+
         nextLevelEvent?.Invoke();
     }
 

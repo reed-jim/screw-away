@@ -27,11 +27,13 @@ public class GameplayScreen : MonoBehaviour
         debugPrevLevelButton.onClick.AddListener(PrevLevel);
 
         localizedLevelText.textTranslatedEvent += OnLevelTextTranslated;
+        LevelLoader.startLevelEvent += SetLevelText;
     }
 
     void OnDestroy()
     {
         localizedLevelText.textTranslatedEvent -= OnLevelTextTranslated;
+        LevelLoader.startLevelEvent -= SetLevelText;
     }
 
     private async void Pause()
@@ -59,6 +61,11 @@ public class GameplayScreen : MonoBehaviour
     }
 
     private void OnLevelTextTranslated()
+    {
+        localizedLevelText.UpdateTranslationWithParameter(GameConstants.LEVEL_PARAMETER, $"{currentLevel.Value}");
+    }
+
+    private void SetLevelText()
     {
         localizedLevelText.UpdateTranslationWithParameter(GameConstants.LEVEL_PARAMETER, $"{currentLevel.Value}");
     }
