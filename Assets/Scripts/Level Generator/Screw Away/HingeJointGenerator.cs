@@ -223,9 +223,13 @@ public class HingeJointGenerator : EditorWindow
 
         int currentFaction = 0;
 
+        List<GameFaction> remainingFactionForScrews = new List<GameFaction>();
+
         for (int i = 0; i < screws.Length; i++)
         {
-            screws[i].Faction = factions[currentFaction];
+            remainingFactionForScrews.Add(factions[currentFaction]);
+
+            // screws[i].Faction = factions[currentFaction];
 
             if (i > 0 && (i + 1) % 3 == 0)
             {
@@ -236,6 +240,15 @@ public class HingeJointGenerator : EditorWindow
                     currentFaction = 0;
                 }
             }
+        }
+
+        for (int i = 0; i < screws.Length; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, remainingFactionForScrews.Count);
+
+            screws[i].Faction = remainingFactionForScrews[randomIndex];
+
+            remainingFactionForScrews.RemoveAt(randomIndex);
         }
 
         EditorUtility.SetDirty(levelPrefab);
@@ -256,6 +269,8 @@ public class HingeJointGenerator : EditorWindow
         dimensionSize.x = Mathf.Max(dimensionSize.x, 1);
         dimensionSize.y = Mathf.Max(dimensionSize.y, 1);
         dimensionSize.z = Mathf.Max(dimensionSize.z, 1);
+
+        Transform target = Selection.activeTransform;
 
         for (int i = 0; i < dimensionSize.x * dimensionSize.y * dimensionSize.z; i++)
         {
