@@ -48,6 +48,7 @@ public static class GameConstants
     public static string LOOSEN_SCREW_SOUND = "Loosen Screw Sound";
     public static string LOOSEN_SCREW_FAIL_SOUND = "Loosen Screw Fail Sound";
     public static string SCREW_BOX_DONE_SOUND = "Screw Box Done Sound";
+    public static string WIN_SOUND = "Win Sound";
     #endregion
 
     #region ANIMATION

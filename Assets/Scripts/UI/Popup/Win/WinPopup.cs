@@ -17,7 +17,7 @@ public class WinPopup : BasePopup
 
     protected override void RegisterMoreEvent()
     {
-        ScrewManager.winLevelEvent += Show;
+        ScrewManager.winLevelEvent += OnLevelWinAsync;
 
         continueButton.onClick.AddListener(Continue);
         returnHomeButton.onClick.AddListener(ReturnHome);
@@ -25,19 +25,36 @@ public class WinPopup : BasePopup
 
     protected override void UnregisterMoreEvent()
     {
-        ScrewManager.winLevelEvent -= Show;
+        ScrewManager.winLevelEvent -= OnLevelWinAsync;
     }
 
-    private async void OnEnable()
+    private async void OnLevelWinAsync()
     {
+        Show();
+
         await Task.Delay(500);
 
         SetLevelCompleted();
+
+        AudioSource winSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.WIN_SOUND);
+
+        winSound.Play();
     }
+
+    // private async void OnEnable()
+    // {
+    //     await Task.Delay(500);
+
+    //     SetLevelCompleted();
+
+    //     AudioSource winSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.WIN_SOUND);
+
+    //     winSound.Play();
+    // }
 
     public void SetLevelCompleted()
     {
-        localizedLevelCompleted.TranslationName = GameConstants.LEVEL_COMPLETED;
+        // localizedLevelCompleted.TranslationName = GameConstants.LEVEL_COMPLETED;
 
         localizedLevelCompleted.UpdateTranslationWithParameter(GameConstants.LEVEL_PARAMETER, $"{currentLevel.Value}");
     }
