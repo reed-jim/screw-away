@@ -141,23 +141,29 @@ public class HingeJointGenerator : EditorWindow
     {
         GameObject levelPrefab = PrefabUtility.LoadPrefabContents(path);
 
-        for (int i = 0; i < levelPrefab.transform.childCount; i++)
+        BasicObjectPart[] objectParts = GetComponentsFromAllChildren<BasicObjectPart>(levelPrefab.transform).ToArray();
+
+        for (int i = 0; i < objectParts.Length; i++)
         {
-            GameObject target = levelPrefab.transform.GetChild(i).gameObject;
+            RemoveOldHingeJoints(objectParts[i].gameObject);
 
-            BasicObjectPart objectPart = target.transform.GetComponent<BasicObjectPart>();
-
-            // REMOVE OLD HINGE JOINTS
-            RemoveOldHingeJoints(objectPart.gameObject);
-            // HingeJoint[] hingeJoints = objectPart.GetComponents<HingeJoint>();
-
-            // for (int j = 0; j < hingeJoints.Length; j++)
-            // {
-            //     DestroyImmediate(hingeJoints[j]);
-            // }
-
-            GenerateHingeJoint(target);
+            GenerateHingeJoint(objectParts[i].gameObject);
         }
+
+        // for (int i = 0; i < levelPrefab.transform.childCount; i++)
+        // {
+        //     GameObject target = levelPrefab.transform.GetChild(i).gameObject;
+
+        //     BasicObjectPart objectPart = target.transform.GetComponent<BasicObjectPart>();
+
+        //     if (objectPart != null)
+        //     {
+        //         // REMOVE OLD HINGE JOINTS
+        //         RemoveOldHingeJoints(objectPart.gameObject);
+
+        //         GenerateHingeJoint(target);
+        //     }
+        // }
 
         void GenerateHingeJoint(GameObject target)
         {

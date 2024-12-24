@@ -90,7 +90,6 @@ public class ScrewBox : MonoBehaviour
             // CLEAR SCREWS
             for (int i = 0; i < screwBoxSlots.Length; i++)
             {
-                Debug.Log(screwBoxSlots[i].IsFilled);
                 if (screwBoxSlots[i].IsFilled)
                 {
                     screwBoxSlots[i].IsFilled = false;
