@@ -29,6 +29,7 @@ public class ScrewManager : MonoBehaviour
         BaseScrew.addScrewToListEvent += AddScrew;
         ScrewBox.spawnNewScrewBoxEvent += SpawnNewScrewBox;
         ScrewBox.setFactionForScrewBoxEvent += AssignFactionForNewScrewBox;
+        BasicScrew.screwLoosenedEvent += CheckWin;
     }
 
     void OnDestroy()
@@ -37,6 +38,7 @@ public class ScrewManager : MonoBehaviour
         BaseScrew.addScrewToListEvent -= AddScrew;
         ScrewBox.spawnNewScrewBoxEvent -= SpawnNewScrewBox;
         ScrewBox.setFactionForScrewBoxEvent -= AssignFactionForNewScrewBox;
+        BasicScrew.screwLoosenedEvent -= CheckWin;
     }
 
     private void AddScrew(BaseScrew screw)
@@ -87,14 +89,38 @@ public class ScrewManager : MonoBehaviour
             }
         }
 
+        // int remainingScrew = remainingScrewByFaction.Sum(item => item.Value);
+
+        return remainingScrewByFaction;
+    }
+
+    private void CheckWin()
+    {
+        Dictionary<GameFaction, int> remainingScrewByFaction = new Dictionary<GameFaction, int>();
+
+        GameFaction[] factions = new GameFaction[5] { GameFaction.Red, GameFaction.Blue, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
+
+        for (int i = 0; i < factions.Length; i++)
+        {
+            remainingScrewByFaction.Add(factions[i], 0);
+        }
+
+        for (int i = 0; i < _screws.Count; i++)
+        {
+            if (_screws[i].IsDone)
+            {
+                continue;
+            }
+
+            remainingScrewByFaction[_screws[i].Faction]++;
+        }
+
         int remainingScrew = remainingScrewByFaction.Sum(item => item.Value);
 
         if (remainingScrew == 0)
         {
             winLevelEvent?.Invoke();
         }
-
-        return remainingScrewByFaction;
     }
 
     private Dictionary<GameFaction, int> GetTotalBlockObjectsByFaction()

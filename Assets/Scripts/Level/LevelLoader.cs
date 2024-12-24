@@ -18,6 +18,7 @@ public class LevelLoader : MonoBehaviour
         DebugPopup.toLevelEvent += GoLevel;
         GameplayScreen.nextLevelEvent += NextLevel;
         GameplayScreen.prevLevelEvent += PrevLevel;
+        WinPopup.nextLevelEvent += NextLevel;
 
         GoLevel(currentLevel.Value);
     }
@@ -29,6 +30,7 @@ public class LevelLoader : MonoBehaviour
         DebugPopup.toLevelEvent -= GoLevel;
         GameplayScreen.nextLevelEvent -= NextLevel;
         GameplayScreen.prevLevelEvent -= PrevLevel;
+        WinPopup.nextLevelEvent -= NextLevel;
     }
 
     private void LoadLevel()
