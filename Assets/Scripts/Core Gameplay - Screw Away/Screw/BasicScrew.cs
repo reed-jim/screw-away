@@ -133,27 +133,6 @@ public class BasicScrew : BaseScrew
         return compensatedPosition;
     }
 
-    // private void OnDrawGizmos()
-    // {
-    //     // Define the start and end points of the capsule
-    //     Vector3 start = transform.position;
-    //     Vector3 end = transform.position + 10 * transform.forward;
-
-    //     // Draw the capsule shape as a wireframe using Gizmos
-    //     Gizmos.color = Color.green;
-
-    //     // Draw capsule ends as spheres
-    //     Gizmos.DrawWireSphere(start, 0.5f);   // Start point of the capsule
-    //     Gizmos.DrawWireSphere(end, 0.5f);     // End point of the capsule
-
-    //     // Draw a line connecting the start and end
-    //     Gizmos.color = Color.blue;
-    //     Gizmos.DrawLine(start, end);  // Connect the two spheres with a line
-
-    //     // Optionally, draw the capsule's direction as an arrow (helpful for visualizing direction)
-    //     Gizmos.DrawRay(start, 10 * transform.forward);
-    // }
-
     public override int CountBlockingObjects()
     {
         Vector3 start = transform.position + 0.3f * transform.forward;
