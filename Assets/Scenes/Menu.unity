@@ -1320,6 +1320,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435159277}
   m_CullTransparentMesh: 1
+--- !u!1 &449082118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 449082119}
+  - component: {fileID: 449082120}
+  m_Layer: 0
+  m_Name: Clear Holes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &449082119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449082118}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1341924456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &449082120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449082118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Clear Holes
+    Object: {fileID: 0}
+  - Language: French
+    Text: Trous clairs
+    Object: {fileID: 0}
+  - Language: German
+    Text: "Klare L\xF6cher"
+    Object: {fileID: 0}
+  - Language: Italian
+    Text: Buchi chiari
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "\u30AF\u30EA\u30A2\u30DB\u30FC\u30EB"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "\uAD6C\uBA4D \uC9C0\uC6B0\uAE30"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Limpar buracos
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u041E\u0447\u0438\u0441\u0442\u0438\u0442\u044C \u043E\u0442\u0432\u0435\u0440\u0441\u0442\u0438\u044F"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Borrar agujeros
+    Object: {fileID: 0}
 --- !u!1 &465165977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,6 +1837,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e21a75b0293790478caa36706601fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &619861786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619861787}
+  - component: {fileID: 619861788}
+  m_Layer: 0
+  m_Name: Add Hole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &619861787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619861786}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1341924456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619861788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619861786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Add Hole
+    Object: {fileID: 0}
+  - Language: French
+    Text: Ajouter un trou
+    Object: {fileID: 0}
+  - Language: German
+    Text: "Loch hinzuf\xFCgen"
+    Object: {fileID: 0}
+  - Language: Italian
+    Text: Aggiungi foro
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "\u7A74\u3092\u8FFD\u52A0\u3059\u308B"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "\uAD6C\uBA4D \uCD94\uAC00"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Adicionar furo
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043E\u0442\u0432\u0435\u0440\u0441\u0442\u0438\u0435"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Agregar agujero
+    Object: {fileID: 0}
 --- !u!1 &622630156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,6 +2151,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626605298}
   m_CullTransparentMesh: 1
+--- !u!1 &670440681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 670440682}
+  - component: {fileID: 670440683}
+  m_Layer: 0
+  m_Name: Break Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &670440682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670440681}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1341924456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &670440683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670440681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Break Object
+    Object: {fileID: 0}
+  - Language: French
+    Text: Casser un objet
+    Object: {fileID: 0}
+  - Language: German
+    Text: Objekt brechen
+    Object: {fileID: 0}
+  - Language: Italian
+    Text: Rompi oggetto
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u3092\u7834\u308B"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "\uAC1C\uCCB4 \uB04A\uAE30"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: Quebrar objeto
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0420\u0430\u0437\u0431\u0438\u0442\u044C \u043E\u0431\u044A\u0435\u043A\u0442"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Romper objeto
+    Object: {fileID: 0}
 --- !u!1001 &686765936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2508,7 +2727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level {level}
+  m_text: Niveau {level}
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea321c4dec4cdd74fae016f2a45adbe2, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e457c2cb9daee9c40a010770422f3d46, type: 2}
@@ -4394,7 +4613,7 @@ RectTransform:
   m_Father: {fileID: 1673665026}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5925926, y: 0.21052632}
+  m_AnchorMax: {x: 0.36203703, y: 0.4127193}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4826,7 +5045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLanguage: English
+  currentLanguage: French
   detectLanguage: 1
   defaultLanguage: English
   saveLoad: 1
@@ -4867,6 +5086,9 @@ Transform:
   - {fileID: 1006315756}
   - {fileID: 1769130283}
   - {fileID: 1823468930}
+  - {fileID: 619861787}
+  - {fileID: 670440682}
+  - {fileID: 449082119}
   m_Father: {fileID: 619569312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343520904

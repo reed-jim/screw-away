@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Lean.Localization;
 using UnityEngine;
 using UnityEngine.UI;
 using static GameEnum;
@@ -10,6 +11,9 @@ public class GameplayScreen : MonoBehaviour
     [SerializeField] private Button openDebugPopupButton;
     [SerializeField] private Button debugNextLevelButton;
     [SerializeField] private Button debugPrevLevelButton;
+    [SerializeField] private LeanLocalizedTextMeshProUGUI localizedLevelText;
+
+    [SerializeField] private IntVariable currentLevel;
 
     public static event Action<ScreenRoute> switchRouteEvent;
     public static event Action nextLevelEvent;
@@ -21,6 +25,13 @@ public class GameplayScreen : MonoBehaviour
         openDebugPopupButton.onClick.AddListener(OpenDebugPopupButton);
         debugNextLevelButton.onClick.AddListener(NextLevel);
         debugPrevLevelButton.onClick.AddListener(PrevLevel);
+
+        localizedLevelText.textTranslatedEvent += OnLevelTextTranslated;
+    }
+
+    void OnDestroy()
+    {
+        localizedLevelText.textTranslatedEvent -= OnLevelTextTranslated;
     }
 
     private async void Pause()
@@ -45,5 +56,10 @@ public class GameplayScreen : MonoBehaviour
     private void PrevLevel()
     {
         prevLevelEvent?.Invoke();
+    }
+
+    private void OnLevelTextTranslated()
+    {
+        localizedLevelText.UpdateTranslationWithParameter(GameConstants.LEVEL_PARAMETER, $"{currentLevel.Value}");
     }
 }

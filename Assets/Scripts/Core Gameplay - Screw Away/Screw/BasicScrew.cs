@@ -85,11 +85,16 @@ public class BasicScrew : BaseScrew
                 .OnComplete(() =>
                 {
                     transform.SetParent(screwBoxSlot.transform);
+
+                    // transform.position = ConvertPositionToAnotherCameraSpace();
+                    // transform.localScale *= 12f / 14;
                     gameObject.layer = LayerMask.NameToLayer("UI");
 
-                    _tweens.Add(Tween.Rotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: 0.3f));
-                    _tweens.Add(Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 0.3f));
-                    _tweens.Add(Tween.Scale(transform, scaleOnScrewBox * Vector3.one, duration: 0.3f)
+                    float duration = 0.3f;
+
+                    _tweens.Add(Tween.Rotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: duration));
+                    _tweens.Add(Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: duration));
+                    _tweens.Add(Tween.Scale(transform, scaleOnScrewBox * Vector3.one, duration: duration)
                     .OnComplete(() =>
                     {
                         screwBoxSlot.CompleteFill();
@@ -107,6 +112,27 @@ public class BasicScrew : BaseScrew
         }
     }
 
+    private Vector3 ConvertPositionToAnotherCameraSpace()
+    {
+        Vector3 camera1Position = new Vector3(0, 6.5f, -10);
+        Quaternion camera1Rotation = Quaternion.Euler(30, 0, 0);
+
+        Vector3 camera2Position = new Vector3(0, 0, -10);
+        Quaternion camera2Rotation = Quaternion.Euler(0, 0, 0);
+
+        Vector3 worldPos = gameObject.transform.position;
+
+        Vector3 localPosInCamera1 = camera1Position - worldPos;
+
+        Vector3 localPosInCamera2 = camera2Position + localPosInCamera1;
+
+        Vector3 compensatedPosition = transform.position;
+
+        compensatedPosition.y = transform.position.y * Mathf.Sin(30 * Mathf.Deg2Rad) + (camera1Position.y - camera2Position.y);
+
+        return compensatedPosition;
+    }
+
     public override int CountBlockingObjects()
     {
         RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward, 10);
@@ -117,6 +143,11 @@ public class BasicScrew : BaseScrew
         {
             for (int i = 0; i < hits.Length; i++)
             {
+                if (hits[i].collider.transform == transform.parent)
+                {
+                    continue;
+                }
+
                 if (hits[i].collider.GetComponent<IObjectPart>() != null)
                 {
                     if (Vector3.Distance(hits[i].point, transform.position) < 2)

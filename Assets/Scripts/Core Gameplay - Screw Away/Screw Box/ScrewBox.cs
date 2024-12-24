@@ -86,6 +86,20 @@ public class ScrewBox : MonoBehaviour
             setFactionForScrewBoxEvent?.Invoke(this);
 
             screwBoxUnlockedEvent?.Invoke();
+
+            // CLEAR SCREWS
+            for (int i = 0; i < screwBoxSlots.Length; i++)
+            {
+                Debug.Log(screwBoxSlots[i].IsFilled);
+                if (screwBoxSlots[i].IsFilled)
+                {
+                    screwBoxSlots[i].IsFilled = false;
+
+                    Destroy(screwBoxSlots[i].Screw.gameObject);
+
+                    screwBoxSlots[i].Screw = null;
+                }
+            }
         }
     }
 }

@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class BasicObjectPart : MonoBehaviour, IObjectPart
 {
-    public static event Action<int> selectObjectPartEvent;
-    public static event Action<int> deselectObjectPartEvent;
-    public static event Action<BaseScrew> loosenScrewOnObjectBrokenEvent;
-
+    [SerializeField] private Transform levelContainer;
     [SerializeField] private Rigidbody partRigidbody;
 
     [Header("CUSTOMIZE")]
@@ -18,6 +15,10 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
     private bool _isFree;
     private bool _isImmuneSwipeForce;
     [SerializeField] private int _totalJoint;
+
+    public static event Action<int> selectObjectPartEvent;
+    public static event Action<int> deselectObjectPartEvent;
+    public static event Action<BaseScrew> loosenScrewOnObjectBrokenEvent;
 
     void Awake()
     {
@@ -66,7 +67,16 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
             {
                 _isFree = true;
 
-                Vector3 direction = transform.position - transform.parent.position;
+                Vector3 direction;
+
+                if (levelContainer != null)
+                {
+                    direction = transform.position - levelContainer.position;
+                }
+                else
+                {
+                    direction = transform.position - transform.parent.position;
+                }
 
                 partRigidbody.AddForce(TransformUtil.ComponentWiseMultiply(throwForceMultiplier, direction));
             }

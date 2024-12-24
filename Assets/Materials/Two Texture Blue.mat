@@ -236,7 +236,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WoodTexture:
-        m_Texture: {fileID: 2800000, guid: 20e58a5d6270a6147801290f5f1889ae, type: 3}
+        m_Texture: {fileID: 2800000, guid: 741c8af1a7ae1f34dae1e370d8b60933, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -305,7 +305,7 @@ Material:
     - _Clipping_Level: 0
     - _CoatMask: 0
     - _ColorShift_Speed: 0
-    - _ColorStrength: 5
+    - _ColorStrength: 2.5
     - _ComposerMaskMode: 0
     - _Cull: 2
     - _CullMode: 2
@@ -588,7 +588,7 @@ Material:
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
     - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
     - _WoodTextureOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _WoodTextureTiling: {r: 1, g: 0.1, b: 0, a: 0}
+    - _WoodTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - emissive: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
