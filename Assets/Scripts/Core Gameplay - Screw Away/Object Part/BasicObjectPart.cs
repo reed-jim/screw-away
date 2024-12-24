@@ -9,7 +9,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
     [SerializeField] private Rigidbody partRigidbody;
 
     [Header("CUSTOMIZE")]
-    [SerializeField] private Vector3 throwForceMultiplier = new Vector3(133, 66, 133);
+    [SerializeField] private Vector3 throwForceMultiplier = new Vector3(0.003f, 0.001f, 0.003f);
 
     private bool _isSelecting;
     private bool _isFree;
@@ -29,6 +29,8 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
         partRigidbody = GetComponent<Rigidbody>();
 
         _totalJoint = GetComponents<HingeJoint>().Length;
+
+        throwForceMultiplier = new Vector3(13f, 3f, 13f);
     }
 
     void OnDestroy()
@@ -93,7 +95,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
                     direction.z = 1f;
                 }
 
-                partRigidbody.AddForce(TransformUtil.ComponentWiseMultiply(throwForceMultiplier, direction));
+                partRigidbody.AddForce(TransformUtil.ComponentWiseMultiply(throwForceMultiplier, direction), ForceMode.Impulse);
             }
         }
     }
