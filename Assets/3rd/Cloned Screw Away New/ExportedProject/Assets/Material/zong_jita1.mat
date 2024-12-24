@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: zong_jita1
+  m_Shader: {fileID: 4800000, guid: 64ac2e653b68f944d9ce50ef7bbce762, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - TCP2_DISABLE_WRAPPED_LIGHT
+  - _GLOSSYREFLECTIONS_OFF
+  - _SPECULARHIGHLIGHTS_OFF
+  - _TINTINSIDECOLOR_ON
+  - _WORLDCOORDINATES_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties:
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _Albedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Bordertexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Secondaryemission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Secondaryemissionnoise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Specular:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _Activateemission: 0
+      _Activatesecondaryemission: 0
+      _BorderWorldY: 0
+      _Borderwidth: 0
+      _BumpScale: 1
+      _Cutoff: 0.5
+      _DetailNormalMapScale: 1
+      _DissolveColorMode: 1
+      _DissolveDirection: 1
+      _DstBlend: 0
+      _EnableOutline: 0
+      _Enablerimlight: 0
+      _Fill: 1
+      _GlossMapScale: 1
+      _Glossiness: 0
+      _GlossyReflections: 0
+      _Invertmask: 0
+      _Layernoise: 0
+      _Metallic: 0
+      _Mode: 0
+      _Noisescale: 0
+      _Noisetexopacity: 1
+      _OcclusionStrength: 1
+      _Parallax: 0.02
+      _RampSmooth: 0.2
+      _RampSmoothAdd: 0.75
+      _RampThreshold: 0.5
+      _RimMax: 0.85
+      _RimMin: 0.6
+      _RimStrength: 0.5
+      _Rimlightbias: 0
+      _Rimlightpower: 3.5
+      _Rimlightscale: 1
+      _SecondaryEmissionDesaturation: 0
+      _SecondaryEmissionNoiseDesaturation: 0
+      _Smoothness: 0
+      _SmoothnessTextureChannel: 0
+      _SpecBlend: 1
+      _SpecSmooth: 1
+      _SpecularHighlights: 0
+      _SrcBlend: 1
+      _TCP2_DISABLE_WRAPPED_LIGHT: 1
+      _TCP2_RAMPTEXT: 0
+      _TCP2_SPEC_TOON: 0
+      _TCP2_STYLIZED_FRESNEL: 0
+      _Tintinsidecolor: 1
+      _UVSec: 0
+      _Wave1amplitude: 0
+      _Wave1frequency: 0
+      _Wave1offset: 0
+      _Wave2Frequency: 0
+      _Wave2amplitude: 0
+      _Wave2offset: 0
+      _Worldcoordinates: 1
+      _ZWrite: 1
+      __dirty: 1
+    m_Colors:
+      _AlbedoColor: {r: 0.74509805, g: 0.3647059, b: 0.08627451, a: 1}
+      _Basecolor: {r: 0, g: 0, b: 0, a: 1}
+      _Bordercolor: {r: 0, g: 0, b: 0, a: 0}
+      _Color: {r: 0.745283, g: 0.36389303, b: 0.08788714, a: 1}
+      _DiffuseColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+      _Emissiontexspeed: {r: 0, g: 0, b: 0, a: 0}
+      _Emissiontextiling: {r: 1, g: 1, b: 0, a: 0}
+      _Fillcolor: {r: 1, g: 0.5514706, b: 0.5514706, a: 1}
+      _HColor: {r: 1, g: 1, b: 1, a: 1}
+      _Mainoffset: {r: 0, g: 0, b: 0, a: 0}
+      _Maintiling: {r: 1, g: 1, b: 0, a: 0}
+      _Noisespeed: {r: 0, g: 0, b: 0, a: 0}
+      _Noisetexspeed: {r: 0, g: 0, b: 0, a: 0}
+      _Noisetextiling: {r: 1, g: 1, b: 0, a: 0}
+      _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
+      _Rimlightcolor: {r: 0, g: 0.8344827, b: 1, a: 1}
+      _SColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
+      _Secondaryemissioncolor: {r: 1, g: 0.9724138, b: 0, a: 1}
+      _Secondaryemissionspeed: {r: 0, g: 0, b: 0, a: 0}
+      _Secondaryemissiontiling: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []

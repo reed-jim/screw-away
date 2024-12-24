@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BasicObjectPart : MonoBehaviour, IObjectPart
 {
-    [SerializeField] private Transform levelContainer;
+    [SerializeField] private Transform levelCenter;
     [SerializeField] private Rigidbody partRigidbody;
 
     [Header("CUSTOMIZE")]
@@ -69,13 +69,28 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
                 Vector3 direction;
 
-                if (levelContainer != null)
+                if (levelCenter != null)
                 {
-                    direction = transform.position - levelContainer.position;
+                    direction = transform.position - levelCenter.position;
                 }
                 else
                 {
                     direction = transform.position - transform.parent.position;
+                }
+
+                direction = direction.normalized;
+
+                if (Mathf.Abs(direction.x) < 0.01f)
+                {
+                    direction.x = 1f;
+                }
+                if (Mathf.Abs(direction.y) < 0.01f)
+                {
+                    direction.y = 1f;
+                }
+                if (Mathf.Abs(direction.z) < 0.01f)
+                {
+                    direction.z = 1f;
                 }
 
                 partRigidbody.AddForce(TransformUtil.ComponentWiseMultiply(throwForceMultiplier, direction));
