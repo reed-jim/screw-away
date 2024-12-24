@@ -52,6 +52,16 @@ public class HingeJointGenerator : EditorWindow
             ResetLocalRotation(target.transform);
         }
 
+        if (GUILayout.Button("Flip Horizontally"))
+        {
+            FlipHorizontally(Selection.activeTransform);
+        }
+
+        if (GUILayout.Button("Flip Vertically"))
+        {
+            FlipVertically(Selection.activeTransform);
+        }
+
         if (GUILayout.Button("Auto Assign Screw Faction"))
         {
             AutoAssignScrewFaction(prefabPath);
@@ -73,6 +83,16 @@ public class HingeJointGenerator : EditorWindow
         target.localPosition = Vector3.zero;
         target.localRotation = Quaternion.Euler(Vector3.zero);
         target.localScale = new Vector3(1 / target.transform.parent.localScale.x, 1 / target.transform.parent.localScale.y, 1 / target.transform.parent.localScale.z);
+    }
+
+    private void FlipHorizontally(Transform target)
+    {
+        target.transform.Rotate(0, 180f, 0);
+    }
+
+    private void FlipVertically(Transform target)
+    {
+        target.transform.Rotate(180f, 0, 0);
     }
 
     private void Generate(string path)
