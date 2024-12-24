@@ -37,6 +37,15 @@ public class BasicScrew : BaseScrew
     {
         if (screwId == this.screwId)
         {
+            if (!_isInteractable)
+            {
+                return;
+            }
+            else
+            {
+                _isInteractable = false;
+            }
+
             if (_isDone)
             {
                 return;
@@ -64,6 +73,8 @@ public class BasicScrew : BaseScrew
                     fakeScrew.gameObject.SetActive(false);
 
                     GetComponent<MeshRenderer>().enabled = true;
+
+                    _isInteractable = true;
                 }));
 
                 return;
@@ -135,7 +146,7 @@ public class BasicScrew : BaseScrew
 
     public override int CountBlockingObjects()
     {
-        Vector3 start = transform.position + 0.3f * transform.forward;
+        Vector3 start = transform.position + transform.forward;
 
         Collider[] hits = Physics.OverlapCapsule(start, start + 10 * transform.forward, 0.2f);
 

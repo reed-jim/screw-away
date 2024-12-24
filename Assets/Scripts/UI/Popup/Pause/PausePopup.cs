@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PausePopup : BasePopup
 {
     [SerializeField] private Button returnHomeButton;
+    [SerializeField] private Button replayLevelButton;
     [SerializeField] private Toggle turnMusicToggle;
     [SerializeField] private Toggle turnSoundToggle;
 
@@ -13,6 +14,7 @@ public class PausePopup : BasePopup
 
     public static event Action<bool> enableBackgroundMusicEvent;
     public static event Action<bool> enableGameSoundEvent;
+    public static event Action replayLevelEvent;
 
     protected override void MoreActionInAwake()
     {
@@ -23,6 +25,7 @@ public class PausePopup : BasePopup
     protected override void RegisterMoreEvent()
     {
         returnHomeButton.onClick.AddListener(ReturnHome);
+        replayLevelButton.onClick.AddListener(Replay);
         turnMusicToggle.onValueChanged.AddListener(EnableGameMusic);
         turnSoundToggle.onValueChanged.AddListener(EnableGameSound);
     }
@@ -37,6 +40,11 @@ public class PausePopup : BasePopup
         Time.timeScale = 1;
 
         Addressables.LoadSceneAsync(GameConstants.MENU_SCENE);
+    }
+
+    private void Replay()
+    {
+        replayLevelEvent?.Invoke();
     }
 
     private void EnableGameMusic(bool isTurnOn)

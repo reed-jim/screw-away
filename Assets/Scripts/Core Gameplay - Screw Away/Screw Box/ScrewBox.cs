@@ -81,12 +81,6 @@ public class ScrewBox : MonoBehaviour
     {
         if (instanceId == gameObject.GetInstanceID())
         {
-            isLocked = false;
-
-            setFactionForScrewBoxEvent?.Invoke(this);
-
-            screwBoxUnlockedEvent?.Invoke();
-
             // CLEAR SCREWS
             for (int i = 0; i < screwBoxSlots.Length; i++)
             {
@@ -99,6 +93,12 @@ public class ScrewBox : MonoBehaviour
                     screwBoxSlots[i].Screw = null;
                 }
             }
+
+            isLocked = false;
+
+            setFactionForScrewBoxEvent?.Invoke(this);
+
+            screwBoxUnlockedEvent?.Invoke();
         }
     }
 }

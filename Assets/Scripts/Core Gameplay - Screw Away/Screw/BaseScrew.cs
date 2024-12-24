@@ -18,6 +18,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     protected List<Tween> _tweens = new List<Tween>();
     protected int _numberBlockingObjects;
     protected Vector3 _initialScale;
+    protected bool _isInteractable = true;
     protected bool _isDone;
     #endregion
 

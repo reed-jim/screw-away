@@ -13,6 +13,7 @@ public class LevelLoader : MonoBehaviour
 
     private void Awake()
     {
+        PausePopup.replayLevelEvent += Replay;
         LosePopup.replayLevelEvent += Replay;
         DebugPopup.toLevelEvent += GoLevel;
         GameplayScreen.nextLevelEvent += NextLevel;
@@ -23,6 +24,7 @@ public class LevelLoader : MonoBehaviour
 
     void OnDestroy()
     {
+        PausePopup.replayLevelEvent -= Replay;
         LosePopup.replayLevelEvent -= Replay;
         DebugPopup.toLevelEvent -= GoLevel;
         GameplayScreen.nextLevelEvent -= NextLevel;

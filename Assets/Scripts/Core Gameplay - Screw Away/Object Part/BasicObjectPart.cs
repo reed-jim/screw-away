@@ -30,7 +30,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
         _totalJoint = GetComponents<HingeJoint>().Length;
 
-        throwForceMultiplier = new Vector3(13f, 3f, 13f);
+        throwForceMultiplier = new Vector3(66f, 9f, 66f);
     }
 
     void OnDestroy()
