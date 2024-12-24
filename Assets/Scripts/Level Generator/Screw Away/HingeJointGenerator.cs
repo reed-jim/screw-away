@@ -253,13 +253,17 @@ public class HingeJointGenerator : EditorWindow
         int currentY = 0;
         int currentZ = 0;
 
+        dimensionSize.x = Mathf.Max(dimensionSize.x, 1);
+        dimensionSize.y = Mathf.Max(dimensionSize.y, 1);
+        dimensionSize.z = Mathf.Max(dimensionSize.z, 1);
+
         for (int i = 0; i < dimensionSize.x * dimensionSize.y * dimensionSize.z; i++)
         {
             GameObject screw = (GameObject)PrefabUtility.InstantiatePrefab(screwPrefab, target.transform);
 
-            position.x = (-(dimensionSize.x - 1) / 2f + currentX) * distance.x + target.transform.position.x;
-            position.y = (-(dimensionSize.y - 1) / 2f + currentY) * distance.y + target.transform.position.y;
-            position.z = (-(dimensionSize.z - 1) / 2f + currentZ) * distance.z + target.transform.position.z;
+            position.x = (-(dimensionSize.x - 1) / 2f + currentX) * distance.x;
+            position.y = (-(dimensionSize.y - 1) / 2f + currentY) * distance.y;
+            position.z = (-(dimensionSize.z - 1) / 2f + currentZ) * distance.z;
 
             currentX++;
 
@@ -292,7 +296,7 @@ public class HingeJointGenerator : EditorWindow
             //     position.z = (-(dimensionSize.z - 1) / 2f + currentZ) * distance.z + target.transform.position.z;
             // }
 
-            screw.transform.position = position;
+            screw.transform.localPosition = position;
             screw.transform.localScale = TransformUtil.ComponentWiseDivine(expectedScale * Vector3.one, target.transform.localScale);
         }
 
