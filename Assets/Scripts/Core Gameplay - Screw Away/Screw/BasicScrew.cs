@@ -133,9 +133,32 @@ public class BasicScrew : BaseScrew
         return compensatedPosition;
     }
 
+    // private void OnDrawGizmos()
+    // {
+    //     // Define the start and end points of the capsule
+    //     Vector3 start = transform.position;
+    //     Vector3 end = transform.position + 10 * transform.forward;
+
+    //     // Draw the capsule shape as a wireframe using Gizmos
+    //     Gizmos.color = Color.green;
+
+    //     // Draw capsule ends as spheres
+    //     Gizmos.DrawWireSphere(start, 0.5f);   // Start point of the capsule
+    //     Gizmos.DrawWireSphere(end, 0.5f);     // End point of the capsule
+
+    //     // Draw a line connecting the start and end
+    //     Gizmos.color = Color.blue;
+    //     Gizmos.DrawLine(start, end);  // Connect the two spheres with a line
+
+    //     // Optionally, draw the capsule's direction as an arrow (helpful for visualizing direction)
+    //     Gizmos.DrawRay(start, 10 * transform.forward);
+    // }
+
     public override int CountBlockingObjects()
     {
-        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward, 10);
+        Vector3 start = transform.position + 0.3f * transform.forward;
+
+        Collider[] hits = Physics.OverlapCapsule(start, start + 10 * transform.forward, 0.2f);
 
         int number = 0;
 
@@ -143,14 +166,14 @@ public class BasicScrew : BaseScrew
         {
             for (int i = 0; i < hits.Length; i++)
             {
-                if (hits[i].collider.transform == transform.parent)
+                if (hits[i].transform == transform.parent)
                 {
                     continue;
                 }
 
-                if (hits[i].collider.GetComponent<IObjectPart>() != null)
+                if (hits[i].GetComponent<IObjectPart>() != null)
                 {
-                    if (Vector3.Distance(hits[i].point, transform.position) < 2)
+                    if (Vector3.Distance(hits[i].ClosestPoint(transform.position), transform.position) < 2)
                     {
                         number++;
                     }
