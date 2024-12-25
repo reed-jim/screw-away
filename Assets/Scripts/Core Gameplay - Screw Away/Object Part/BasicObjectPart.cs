@@ -125,12 +125,14 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
             }
         }
 
-        Throw();
+        AudioSource breakObjectSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.BREAK_OBJECT_SOUND);
 
-        // gameObject.SetActive(false);
+        breakObjectSound.Play();
+
+        Throw(forceBoost: 2);
     }
 
-    private void Throw()
+    private void Throw(float forceBoost = 1)
     {
         Vector3 direction;
 
@@ -158,6 +160,6 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
             direction.z = 1f;
         }
 
-        partRigidbody.AddForce(TransformUtil.ComponentWiseMultiply(throwForceMultiplier, direction), ForceMode.Impulse);
+        partRigidbody.AddForce(TransformUtil.ComponentWiseMultiply(forceBoost * throwForceMultiplier, direction), ForceMode.Impulse);
     }
 }

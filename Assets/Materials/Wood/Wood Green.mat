@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Two Texture Blue
-  m_Shader: {fileID: -6465566751694194690, guid: 4f9ab7fad1288674a91e96d58e65e783, type: 3}
+  m_Name: Wood Green
+  m_Shader: {fileID: -6465566751694194690, guid: f91ae575226fb3c4c934aff8efd6ef0c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -33,8 +33,8 @@ Material:
   stringTagMap:
     IgnoreProjection: False
   disabledShaderPasses:
-  - MOTIONVECTORS
   - SRPDEFAULTUNLIT
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -65,7 +65,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 6, y: 6}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
@@ -76,6 +76,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: c4d8396809b4a4649a702e8e20665aeb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClearCoatMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -139,6 +143,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 20e58a5d6270a6147801290f5f1889ae, type: 3}
         m_Scale: {x: 1, y: 0.15}
         m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -156,7 +164,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: cc7387fd85b341b48ae69de536749dd1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapForMatCap:
@@ -236,7 +244,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WoodTexture:
-        m_Texture: {fileID: 2800000, guid: d3ea0df6f306ced44a891c6f5b4a19fd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6d6b34ced9660b74fadefb679105b958, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -267,6 +275,7 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _Add_Antipodean_RimLight: 0
     - _AlbedoAffectEmissive: 0
+    - _Alpha: 1
     - _AlphaClip: 0
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
@@ -293,11 +302,13 @@ Material:
     - _Blend: 0
     - _BlendMode: 0
     - _BlendModePreserveSpecular: 1
+    - _BlendOp: 0
     - _BlurLevelMatcap: 0
     - _BlurLevelSGM: 0
     - _BumpScale: 1
     - _BumpScaleMatcap: 1
     - _CameraRolling_Stabilizer: 0
+    - _ClearCoat: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _ClippingMatteMode: 0
@@ -305,7 +316,7 @@ Material:
     - _Clipping_Level: 0
     - _CoatMask: 0
     - _ColorShift_Speed: 0
-    - _ColorStrength: 36
+    - _ColorStrength: 1.6
     - _ComposerMaskMode: 0
     - _Cull: 2
     - _CullMode: 2
@@ -322,6 +333,7 @@ Material:
     - _DisplacementLockObjectScale: 1
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
+    - _Distortion: 0
     - _DistortionBlendMode: 0
     - _DistortionBlurBlendMode: 0
     - _DistortionBlurDstBlend: 0
@@ -356,6 +368,7 @@ Material:
     - _GI_Intensity: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
+    - _GlossinessSource: 0
     - _GlossyReflections: 0
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
@@ -406,17 +419,23 @@ Material:
     - _Is_UseTweakMatCapOnShadow: 0
     - _Is_ViewCoord_Scroll: 0
     - _Is_ViewShift: 0
+    - _LightBumpIntensity: 0
     - _LightDirection_MaskOn: 0
+    - _LightIntensity: 0
+    - _LightSize: 0
     - _LinkDetailsWithBase: 1
-    - _MainTextureStrength: 8
+    - _MainTextureStrength: 1
     - _MatCap: 0
     - _MaterialID: 1
     - _Max: 1.5
-    - _Metallic: 0
+    - _Metallic: 0.1
     - _Min: 1
     - _Nearest_Distance: 0.5
+    - _NoiseStrength: 3
+    - _NormalMapRotation: 2
     - _NormalMapSpace: 0
     - _NormalScale: 1
+    - _NormalStrength: 9
     - _OUTLINE: 0
     - _ObjectAlpha: 1
     - _ObjectSpaceUVMapping: 0
@@ -436,7 +455,6 @@ Material:
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RThreshHold: 0
     - _ReceiveShadows: 1
     - _ReceivesSSR: 1
     - _RefractionModel: 0
@@ -449,6 +467,7 @@ Material:
     - _Rotate_EmissiveUV: 0
     - _Rotate_MatCapUV: 0
     - _Rotate_NormalMapForMatCapUV: 0
+    - _Rotation: 0
     - _SPRDefaultUnlitColorMask: 15
     - _SRPDefaultUnlitColMode: 1
     - _SSRefractionProjectionModel: 0
@@ -459,10 +478,13 @@ Material:
     - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0
     - _Shades: 0.85
+    - _Shininess: 0
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
+    - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
+    - _SpecSource: 0
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
     - _SpecularHighlights: 1
@@ -501,7 +523,8 @@ Material:
     - _TessellationShapeFactor: 0.75
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
-    - _TextureStrength: 6
+    - _TextureDensity: 0
+    - _TextureStrength: 8
     - _Thickness: 1
     - _ThicknessMultiplier: 1
     - _TransmissionEnable: 1
@@ -532,7 +555,7 @@ Material:
     - _UseShadowThreshold: 0
     - _Use_1stAs2nd: 0
     - _Use_BaseAs1st: 0
-    - _WoodTextureRotation: 0.8
+    - _WoodTextureRotation: 1
     - _WoodTextureStrength: 1
     - _WorkflowMode: 1
     - _ZOverDrawMode: 0
@@ -554,10 +577,10 @@ Material:
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.43529415, g: 0.73333335, b: 0.1137255, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColorMaskColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.2688679, g: 0.61981136, b: 1, a: 1}
+    - _Color: {r: 0.49411768, g: 0.7803922, b: 0.14509805, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
@@ -573,6 +596,8 @@ Material:
     - _MainTextureOffset: {r: 0, g: 0, b: 0, a: 0}
     - _MainTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
+    - _NormalMapOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _NormalMapTiling: {r: 3, g: 3, b: 0, a: 0}
     - _OutlineMaskColor: {r: 0, g: 0, b: 0, a: 1}
     - _Outline_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _RimLightColor: {r: 0.37020585, g: 1, b: 0.3160377, a: 1}
@@ -580,14 +605,14 @@ Material:
     - _SecondShadeMaskColor: {r: 0, g: 0, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Substract: {r: 0, g: 0, b: 0, a: 0}
+    - _TextureRect: {r: 0, g: 0, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
     - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
-    - _WoodTextureOffset: {r: 0, g: 0.1, b: 0, a: 0}
+    - _WoodTextureOffset: {r: 0, g: 0, b: 0, a: 0}
     - _WoodTextureTiling: {r: 0.1, g: 0.1, b: 0, a: 0}
     - emissive: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

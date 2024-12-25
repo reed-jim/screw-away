@@ -49,7 +49,7 @@ public class ScrewManager : MonoBehaviour
 
         _totalScrew++;
 
-        if (_totalScrew == levelDataContainer.LevelsData[currentLevel.Value].NumScrew)
+        if (_totalScrew == levelDataContainer.LevelsData[currentLevel.Value - 1].NumScrew)
         {
             SpawnScrewBox();
         }

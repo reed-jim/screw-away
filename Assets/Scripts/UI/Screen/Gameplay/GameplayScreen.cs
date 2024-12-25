@@ -42,7 +42,7 @@ public class GameplayScreen : MonoBehaviour
 
         await Task.Delay(1000);
 
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
     }
 
     private void OpenDebugPopupButton()

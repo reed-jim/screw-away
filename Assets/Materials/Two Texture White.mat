@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Two Texture White
-  m_Shader: {fileID: -6465566751694194690, guid: 4f9ab7fad1288674a91e96d58e65e783, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: f91ae575226fb3c4c934aff8efd6ef0c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -73,6 +73,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: c4d8396809b4a4649a702e8e20665aeb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -111,7 +115,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _ColorStrength: 48
+    - _ColorStrength: 0.9
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -126,6 +130,9 @@ Material:
     - _Max: 2
     - _Metallic: 0
     - _Min: 1
+    - _NoiseStrength: 3
+    - _NormalMapRotation: 1
+    - _NormalStrength: 20
     - _ObjectAlpha: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -150,6 +157,8 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainTextureOffset: {r: 0, g: 0, b: 0, a: 0}
     - _MainTextureTiling: {r: 0, g: 0, b: 0, a: 0}
+    - _NormalMapOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _NormalMapTiling: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _WoodTextureOffset: {r: 0, g: 0.1, b: 0, a: 0}
     - _WoodTextureTiling: {r: 0.1, g: 0.1, b: 0, a: 0}

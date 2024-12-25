@@ -51,7 +51,7 @@ public class ObjectPartMaterialPropertyBlock : MonoBehaviour
     {
         if (instanceId == gameObject.GetInstanceID())
         {
-            Tween.Custom(1, 0.5f, duration: 0.3f, onValueChange: newVal =>
+            Tween.Custom(1, 0.3f, duration: 0.3f, onValueChange: newVal =>
             {
                 _propertyBlock.SetFloat(alphaValueReference, newVal);
 

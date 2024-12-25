@@ -30,14 +30,14 @@ public class PausePopup : BasePopup
         turnSoundToggle.onValueChanged.AddListener(EnableGameSound);
     }
 
-    protected override void AfterHide()
-    {
-        Time.timeScale = 1;
-    }
+    // protected override void AfterHide()
+    // {
+    //     Time.timeScale = 1;
+    // }
 
     private void ReturnHome()
     {
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
 
         Addressables.LoadSceneAsync(GameConstants.MENU_SCENE);
     }
@@ -45,6 +45,8 @@ public class PausePopup : BasePopup
     private void Replay()
     {
         replayLevelEvent?.Invoke();
+
+        Hide();
     }
 
     private void EnableGameMusic(bool isTurnOn)

@@ -27,7 +27,7 @@ public class PopupFadeBackground : MonoBehaviour
     {
         fadeBackground.gameObject.SetActive(true);
 
-        Tween.Alpha(fadeBackground, 0.85f, duration: transitionDuration);
+        Tween.Alpha(fadeBackground, 0.9f, duration: transitionDuration);
     }
 
     private void OnPopupClose()

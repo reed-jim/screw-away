@@ -318,6 +318,7 @@ public class ScrewBoxManager : MonoBehaviour
 
         screwBoxSlot.transform.SetParent(screwPorts[0].transform.parent);
 
+        screwBoxSlot.transform.localRotation = Quaternion.Euler(Vector3.zero);
         screwBoxSlot.transform.localScale = screwPorts[0].transform.localScale;
 
         Vector3 position = screwPorts[0].transform.position;

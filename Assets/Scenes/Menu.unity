@@ -4004,7 +4004,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 861b1180736195a429c3dc14180e62e6, type: 3}
   m_Resource: {fileID: 8300000, guid: 861b1180736195a429c3dc14180e62e6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8125,7 +8125,9 @@ MonoBehaviour:
   loosenScrewSoundPrefab: {fileID: 7606835583939712495, guid: 417e3d5be33e2fc46a8408e8402f46d7, type: 3}
   loosenScrewFailSoundPrefab: {fileID: 7606835583939712495, guid: 7f34b7c9be49f164daab10167200312d, type: 3}
   screwBoxDoneSoundPrefab: {fileID: 7606835583939712495, guid: 4353fc19929d8054184a760392157bd0, type: 3}
+  breakObjectSoundPrefab: {fileID: 7606835583939712495, guid: b4eb1927c2c7d0540b971ba3090538ba, type: 3}
   winSoundPrefab: {fileID: 7606835583939712495, guid: 4b7367c6506663f42ad5dc279e22b081, type: 3}
+  loseSoundPrefab: {fileID: 7606835583939712495, guid: d571507b8a405ee4f930e0336f00a3ad, type: 3}
   taskItemUIPrefab: {fileID: 413993787269842527, guid: cfbf48fdb9ee8ba438323f24aaa9fe07, type: 3}
 --- !u!4 &2114209551
 Transform:
