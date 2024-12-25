@@ -11,6 +11,8 @@ public class ScrewManager : MonoBehaviour
 
     [SerializeField] private ScrewBoxManager screwBoxManager;
 
+    [SerializeField] private IntVariable currentLevel;
+    [SerializeField] private LevelDataContainer levelDataContainer;
     [SerializeField] private LevelDifficultyConfiguration levelDifficultyConfiguration;
 
     #region PRIVATE FIELD
@@ -46,6 +48,11 @@ public class ScrewManager : MonoBehaviour
         _screws.Add(screw);
 
         _totalScrew++;
+
+        if (_totalScrew == levelDataContainer.LevelsData[currentLevel.Value].NumScrew)
+        {
+            SpawnScrewBox();
+        }
     }
 
     private void OnLevelStart()
@@ -53,8 +60,6 @@ public class ScrewManager : MonoBehaviour
         _screws = new List<BaseScrew>();
 
         _totalScrew = 0;
-
-        SpawnScrewBox();
     }
 
     private Dictionary<GameFaction, int> GetRemainingScrewByFaction()
@@ -157,8 +162,6 @@ public class ScrewManager : MonoBehaviour
 
     private async void SpawnScrewBox()
     {
-        await Task.Delay(1000);
-
         Debug.Log("TOTAL: " + _totalScrew);
 
         GameFaction? lastFaction = null;
@@ -166,6 +169,8 @@ public class ScrewManager : MonoBehaviour
         for (int i = 0; i < _screws.Count; i++)
         {
             _screws[i].CountBlockingObjects();
+
+            await Task.Delay(13);
         }
 
         for (int i = 0; i < _screws.Count; i++)
