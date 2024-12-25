@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack05
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_5
+  PackTag: dinosaurs
+  ItemUnlockedDialogScales:
+  - 1.1
+  - 0
+  - 0.9
+  - 0
+  - 0.95
+  - 1.1
+  - 0.9
+  - 0
+  UnlockLevel: 450
+  Items:
+  - {fileID: 11400000, guid: e3657e12a7eed2b41bae066860a3c082, type: 2}
+  - {fileID: 11400000, guid: 80c03c21521df12498c325e581cd22b5, type: 2}
+  - {fileID: 11400000, guid: 37326f930433af3488a83aad98b68bcf, type: 2}
+  - {fileID: 11400000, guid: 4716f6b9f73d93f45a85fe356be77e62, type: 2}
+  - {fileID: 11400000, guid: f2bfeda664178a149960eb589b1b2fd0, type: 2}
+  - {fileID: 11400000, guid: 58008667e41302549a15c237b988e562, type: 2}
+  - {fileID: 11400000, guid: 60ee134acb2851845a25c7bff40b06c4, type: 2}
+  - {fileID: 11400000, guid: efa380b1fb18d1c48a997915a552b89e, type: 2}
+  ItemPackEntry: {fileID: 114064056553396148, guid: f7b19aa371f26ab4e8e8ce5a846bc8cc, type: 2}

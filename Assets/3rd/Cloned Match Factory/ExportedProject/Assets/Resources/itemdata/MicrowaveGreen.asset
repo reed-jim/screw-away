@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: MicrowaveGreen
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: b01d1d98f3409384ab6bcb6c17382ec4, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: c2bd2df6d286d394a90de64fe182959c, type: 2}
+  Texture: {fileID: 2800000, guid: 41589b67e17bfcb4db0a9db072f5cee8, type: 3}
+  Scale: 2.3
+  Width: 0.979
+  Height: 0.611
+  Depth: 0.703
+  Volume: 0.421
+  Tags:
+  - kitchen1
+  - electronic
+  - green
+  - black
+  - cubic
+  - large
+  GoalSprite: {fileID: 21300000, guid: afa554e69edb2c64a84f54ffbb03ea5f, type: 2}

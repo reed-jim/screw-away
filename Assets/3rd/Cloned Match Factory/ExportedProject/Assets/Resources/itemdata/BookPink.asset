@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: BookPink
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 3d154a9ede1e6284482d53aeb08fe4dc, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 745e90dffa5b8b144ae62ced6bf1fffe, type: 2}
+  Texture: {fileID: 2800000, guid: f3ec6ad2d28ff8640a12a3f041ce57aa, type: 3}
+  Scale: 1.9
+  Width: 0.644
+  Height: 0.927
+  Depth: 0.241
+  Volume: 0.144
+  Tags:
+  - school
+  - game
+  - pink
+  - sharp
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 83d113116f8772f4790859bd138b7c6d, type: 2}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: CratePink
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 675bdf0dda0f68244a5c6268f273e702, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: be6bacbc48fe569468ae7d5d25f14e5b, type: 2}
+  Texture: {fileID: 2800000, guid: 8c01fea761c605840852b6685e0b1d9c, type: 3}
+  Scale: 1.4
+  Width: 0.913
+  Height: 0.928
+  Depth: 0.893
+  Volume: 0.757
+  Tags:
+  - cubic
+  - toy
+  - pink
+  - sharp
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 5ee41b2dac51d414aa8f5e5728b99aaf, type: 2}

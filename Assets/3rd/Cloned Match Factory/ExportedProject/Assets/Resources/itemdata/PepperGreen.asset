@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: PepperGreen
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: fda1ebffdf72ad447b88872962f425ca, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 59c0961a808705948a27ea0d98301253, type: 2}
+  Texture: {fileID: 2800000, guid: a9ce36451cde6a544a5a5b8049ede7bc, type: 3}
+  Scale: 2
+  Width: 0.267
+  Height: 0.931
+  Depth: 0.251
+  Volume: 0.062
+  Tags:
+  - fruit
+  - junkfood
+  - green
+  - bar
+  - small
+  GoalSprite: {fileID: 21300000, guid: 76551d1faaa618b40abc53e69f141c45, type: 2}

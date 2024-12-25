@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: MakiGreen
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 24c49a115902d9b40a43bc3282df845a, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 9668ffeb69ddd6b4a9b0072c5f5df68b, type: 2}
+  Texture: {fileID: 2800000, guid: b2d5d5b26d21a6e478214721bb9d9792, type: 3}
+  Scale: 1
+  Width: 0.949
+  Height: 0.946
+  Depth: 0.667
+  Volume: 0.599
+  Tags:
+  - food
+  - junkfood
+  - green
+  - black
+  - circle
+  - small
+  GoalSprite: {fileID: 21300000, guid: 2e2626278144f6b4eaf619bc4aa3fde2, type: 2}

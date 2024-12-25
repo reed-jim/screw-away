@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: WhiskPurple
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 50dc4f12212c10f478f5526c04ab5422, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: bc9e0a9e7725e6046b6923f316bdf206, type: 2}
+  Texture: {fileID: 2800000, guid: d42986d6acd1655469c71e4ac6ed2f9d, type: 3}
+  Scale: 2.1
+  Width: 0.35
+  Height: 0.868
+  Depth: 0.422
+  Volume: 0.128
+  Tags:
+  - kitchen1
+  - kitchen
+  - purple
+  - grey
+  - mix
+  - small
+  GoalSprite: {fileID: 21300000, guid: afada6d4fe01f474991962d46dfe23fe, type: 2}

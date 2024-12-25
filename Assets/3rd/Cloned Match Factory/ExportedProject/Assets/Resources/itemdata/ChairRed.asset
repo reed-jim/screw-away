@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ChairRed
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: b97fc1d0c0ec25844986db32deb0085b, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: f180874f42bb6d940824ab2a5ea6be2c, type: 2}
+  Texture: {fileID: 2800000, guid: f7edbc455577b8a41988b7ef2af024df, type: 3}
+  Scale: 1.6
+  Width: 0.98
+  Height: 0.896
+  Depth: 0.98
+  Volume: 0.861
+  Tags:
+  - school
+  - kitchen
+  - red
+  - brown
+  - circle
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 0ca8b80f9fa81c741bad05480bee075b, type: 2}

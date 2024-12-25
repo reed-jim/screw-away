@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: PencilOrange
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 8abf943afffb41a448eaa34e7f524247, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: d2fc0fa1d5688ad468632713f9a8275e, type: 2}
+  Texture: {fileID: 2800000, guid: b97dbdd825ee09c4ea295538518a347b, type: 3}
+  Scale: 1.6
+  Width: 0.254
+  Height: 0.974
+  Depth: 0.253
+  Volume: 0.063
+  Tags:
+  - school
+  - game
+  - orange
+  - bar
+  - small
+  GoalSprite: {fileID: 21300000, guid: db4d291224221cb4fb4fcfbe883d3b01, type: 2}

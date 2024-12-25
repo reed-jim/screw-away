@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: TextI
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: edaa92501cc287b47a8d42094f8c2b09, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 4f981e7eaa0cd2d469aceef681e2eace, type: 2}
+  Texture: {fileID: 2800000, guid: 5b93f0d94511ec84b9bfb9cf055e985d, type: 3}
+  Scale: 1.5
+  Width: 0.205
+  Height: 0.91
+  Depth: 0.169
+  Volume: 0.032
+  Tags:
+  - text
+  - school
+  - grey
+  - bar
+  - small
+  GoalSprite: {fileID: 21300000, guid: d2f32e776e07a5f4eba1925de0338485, type: 2}

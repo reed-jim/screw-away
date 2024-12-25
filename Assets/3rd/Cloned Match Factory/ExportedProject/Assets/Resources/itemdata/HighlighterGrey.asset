@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: HighlighterGrey
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 92bbb312cb1e8ff4887dac691a0ba307, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 2ea7ab04440ee47458ee039a443b8938, type: 2}
+  Texture: {fileID: 2800000, guid: 498721f90f4e38c4b817d67a16d1a3f1, type: 3}
+  Scale: 1.7
+  Width: 0.352
+  Height: 0.971
+  Depth: 0.232
+  Volume: 0.079
+  Tags:
+  - school
+  - toy
+  - grey
+  - bar
+  - small
+  GoalSprite: {fileID: 21300000, guid: 0d8cd41f8e32d7a4abe9cd1568db1809, type: 2}

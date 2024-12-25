@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: MouseRed
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: fa4169966d7ed9f4685ba91318f7f5ec, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 52b6f444558f38947a78047f5d468a4e, type: 2}
+  Texture: {fileID: 2800000, guid: 96bb3ce4a9b99b54ebfe870b037025ab, type: 3}
+  Scale: 2
+  Width: 0.746
+  Height: 0.98
+  Depth: 0.668
+  Volume: 0.488
+  Tags:
+  - animals1
+  - toy
+  - red
+  - yellow
+  - cylinder
+  - medium
+  GoalSprite: {fileID: 21300000, guid: b42625de6c10a014495ae27e97866606, type: 2}

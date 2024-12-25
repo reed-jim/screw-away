@@ -9,6 +9,7 @@ public class ObjectPartMaterialPropertyBlock : MonoBehaviour
     #region PRIVATE FIELD
     [SerializeField] private Renderer _renderer;
     private MaterialPropertyBlock _propertyBlock;
+    private Tween _currentAlphaTransition;
     #endregion
 
     private void Awake()
@@ -51,7 +52,9 @@ public class ObjectPartMaterialPropertyBlock : MonoBehaviour
     {
         if (instanceId == gameObject.GetInstanceID())
         {
-            Tween.Custom(1, 0.3f, duration: 0.3f, onValueChange: newVal =>
+            _currentAlphaTransition.Complete();
+
+            _currentAlphaTransition = Tween.Custom(1, 0.3f, duration: 0.3f, onValueChange: newVal =>
             {
                 _propertyBlock.SetFloat(alphaValueReference, newVal);
 
@@ -64,7 +67,9 @@ public class ObjectPartMaterialPropertyBlock : MonoBehaviour
     {
         if (instanceId == gameObject.GetInstanceID())
         {
-            Tween.Custom(0.5f, 1, duration: 0.3f, onValueChange: newVal =>
+            _currentAlphaTransition.Complete();
+
+            _currentAlphaTransition = Tween.Custom(0.3f, 1, duration: 0.3f, onValueChange: newVal =>
             {
                 _propertyBlock.SetFloat(alphaValueReference, newVal);
 

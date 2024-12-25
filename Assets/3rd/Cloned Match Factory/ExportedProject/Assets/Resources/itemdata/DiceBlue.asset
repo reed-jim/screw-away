@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: DiceBlue
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: ebcd2860240bdc6459994492c0ded866, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: f1c1237216348dc4a9b11dd7078537ea, type: 2}
+  Texture: {fileID: 2800000, guid: 6d10e9d91fe75e04dadb7f614541caba, type: 3}
+  Scale: 1
+  Width: 1
+  Height: 1
+  Depth: 1
+  Volume: 1
+  Tags:
+  - cubic
+  - game
+  - blue
+  - black
+  - sharp
+  - medium
+  GoalSprite: {fileID: 21300000, guid: f15f2f7d50a6bf744903c6ad45c74561, type: 2}

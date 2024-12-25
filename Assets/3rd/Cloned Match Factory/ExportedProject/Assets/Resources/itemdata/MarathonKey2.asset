@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: MarathonKey2
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: de6467d7ae122eb45abf634e43b2da85, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 4e0b72349414c8949bd812cec75fa6ae, type: 2}
+  Texture: {fileID: 2800000, guid: 26f6ffcea8d4ebd44bdcd42eaf9f4d0b, type: 3}
+  Scale: 1.8
+  Width: 0.495
+  Height: 0.925
+  Depth: 0.168
+  Volume: 0.077
+  Tags: []
+  GoalSprite: {fileID: 21300000, guid: 296ada32fc879e64bb13035deafd036d, type: 2}

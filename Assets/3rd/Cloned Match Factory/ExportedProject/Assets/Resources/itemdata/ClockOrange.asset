@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ClockOrange
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 751d39ff9aded2a4886d5f8ba7805f34, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 55ae582caa25cd948a9e2c3318e3c8e6, type: 2}
+  Texture: {fileID: 2800000, guid: a6bb8334d02760545a294ae3489405e7, type: 3}
+  Scale: 2.2
+  Width: 0.624
+  Height: 0.979
+  Depth: 0.372
+  Volume: 0.227
+  Tags:
+  - vintage
+  - electronic
+  - orange
+  - brown
+  - sharp
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 8d4296b3026e1634b866adaf4724183f, type: 2}

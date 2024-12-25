@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: PoolBall2
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: b0d4f1ac9d19cb447a9ccd81bce6f6b2, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 202b8c2e8560b724e8e8214be8259ec8, type: 2}
+  Texture: {fileID: 2800000, guid: c0f9481824e5c9f418eaa69bd8e79313, type: 3}
+  Scale: 1.1
+  Width: 1.01
+  Height: 1.01
+  Depth: 1.01
+  Volume: 1.03
+  Tags:
+  - sport
+  - game
+  - blue
+  - sphere
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 7c9e7d611ad7fb54985797fa1c557d6e, type: 2}

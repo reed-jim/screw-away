@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: MushroomPink
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 2cc44fccabc665c44a8ad8e6d7571dd1, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 0bef0b1dcd6d5ce4b991c6f24ad8123b, type: 2}
+  Texture: {fileID: 2800000, guid: 400516fd7ad05c8478d446d4d784dfae, type: 3}
+  Scale: 1.5
+  Width: 0.648
+  Height: 0.601
+  Depth: 0.654
+  Volume: 0.255
+  Tags:
+  - garden
+  - food
+  - pink
+  - white
+  - mix
+  - small
+  GoalSprite: {fileID: 21300000, guid: 44d67a7b2eec79743b5cfa7e62355509, type: 2}

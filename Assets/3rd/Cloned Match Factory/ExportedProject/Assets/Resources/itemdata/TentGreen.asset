@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: TentGreen
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: b47ca4a8acc644f42aacc0d00b6a8f42, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 239be4fb26e241546938f549e764b861, type: 2}
+  Texture: {fileID: 2800000, guid: f48ee284df6ea4247968fac730bb37f6, type: 3}
+  Scale: 2.1
+  Width: 0.993
+  Height: 0.565
+  Depth: 0.988
+  Volume: 0.554
+  Tags:
+  - camping
+  - sport
+  - green
+  - yellow
+  - mix
+  - large
+  GoalSprite: {fileID: 21300000, guid: 6a0d492cd3340e6498d5c3bcbf9253b2, type: 2}

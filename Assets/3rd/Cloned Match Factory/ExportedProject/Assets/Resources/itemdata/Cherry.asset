@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: Cherry
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: b6e1ed18d4ec75c49bef4360277ae909, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 20359305c99e9b946b24799668bd2526, type: 2}
+  Texture: {fileID: 2800000, guid: af9022ce7de62e142b1bea76c473ad08, type: 3}
+  Scale: 1.5
+  Width: 0.841
+  Height: 0.951
+  Depth: 0.415
+  Volume: 0.332
+  Tags:
+  - fruit
+  - bakery
+  - red
+  - sphere
+  - small
+  GoalSprite: {fileID: 21300000, guid: 2ab380241fb8ebb499f6ed826a6bc919, type: 2}

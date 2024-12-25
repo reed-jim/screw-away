@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: MakeupBrushBlue
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 4c805c215a8e93f43be726976a5130c9, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 694426822cd253a41a272176782b954f, type: 2}
+  Texture: {fileID: 2800000, guid: bc88dd826d46e4042aecb7d2dd1cbf6f, type: 3}
+  Scale: 2
+  Width: 0.373
+  Height: 0.951
+  Depth: 0.369
+  Volume: 0.131
+  Tags:
+  - makeup
+  - school
+  - blue
+  - grey
+  - bar
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 724019a87730ad64da4ad3d3bd62848d, type: 2}

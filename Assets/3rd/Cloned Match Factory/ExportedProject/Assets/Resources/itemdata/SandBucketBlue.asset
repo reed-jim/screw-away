@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: SandBucketBlue
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: d103af51c4a99bd428c0b264b91b21ce, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 7c7000e4b548b0c46b76c91000339c7f, type: 2}
+  Texture: {fileID: 2800000, guid: 1e1a97da5927cb44e9e165371b457ff6, type: 3}
+  Scale: 2.1
+  Width: 0.759
+  Height: 0.951
+  Depth: 0.723
+  Volume: 0.522
+  Tags:
+  - beach
+  - school
+  - blue
+  - yellow
+  - curved
+  - medium
+  GoalSprite: {fileID: 21300000, guid: b423512b7ea24654ab929ebdfe694a6b, type: 2}

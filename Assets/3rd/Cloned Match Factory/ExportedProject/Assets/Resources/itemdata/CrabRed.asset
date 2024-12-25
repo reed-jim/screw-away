@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: CrabRed
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 224f56ec21014d641ac8bf50d8c08c50, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: d7f68d35da957e441b2eb56d901a2e9c, type: 2}
+  Texture: {fileID: 2800000, guid: 44077273264a46947b992a0781d370c5, type: 3}
+  Scale: 1.4
+  Width: 0.973
+  Height: 0.712
+  Depth: 0.986
+  Volume: 0.683
+  Tags:
+  - underwater
+  - animal
+  - red
+  - mix
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 930823572fcb9db459a368824acc9281, type: 2}

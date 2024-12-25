@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack17
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_17
+  PackTag: wintersports
+  ItemUnlockedDialogScales:
+  - 1
+  - 1.3
+  - 1
+  - 0.65
+  - 0.55
+  - 0.95
+  - 1.2
+  - 1
+  UnlockLevel: 1100
+  Items:
+  - {fileID: 11400000, guid: 8a333de8f02f7544a9e142d221f8bfa9, type: 2}
+  - {fileID: 11400000, guid: 951eaf443adbc514fb255129283bf234, type: 2}
+  - {fileID: 11400000, guid: d6c412759b0a7104094e8a6c1ecee1b0, type: 2}
+  - {fileID: 11400000, guid: 983a4152164472b43abdf86c89c98b15, type: 2}
+  - {fileID: 11400000, guid: 86954f23ec5437a479386cc1a7e25aa3, type: 2}
+  - {fileID: 11400000, guid: 1b610f074f564a44f8d5172f0bd22def, type: 2}
+  - {fileID: 11400000, guid: fb262466eed96534ba51da44603f4d80, type: 2}
+  - {fileID: 11400000, guid: 69d5f381fd3c7e344aba90e131e5bccd, type: 2}
+  ItemPackEntry: {fileID: 114318612029316963, guid: 53a1830f9be99a441ba4ac148f1991de, type: 2}

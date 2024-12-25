@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: Domino00
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 50ce17ed5680fbf41a1010fb236ac6fc, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: b76b701014f18de44ac73feec23814db, type: 2}
+  Texture: {fileID: 2800000, guid: 539b8824bd1709240ad4114d27eb4a96, type: 3}
+  Scale: 1.4
+  Width: 0.539
+  Height: 0.947
+  Depth: 0.228
+  Volume: 0.116
+  Tags:
+  - cubic
+  - game
+  - white
+  - black
+  - sharp
+  - small
+  GoalSprite: {fileID: 21300000, guid: 3a603b7bce1723f4b846214a4533b926, type: 2}

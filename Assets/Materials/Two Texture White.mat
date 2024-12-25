@@ -74,7 +74,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: c4d8396809b4a4649a702e8e20665aeb, type: 3}
+        m_Texture: {fileID: 2800000, guid: cc7387fd85b341b48ae69de536749dd1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -158,7 +158,7 @@ Material:
     - _MainTextureOffset: {r: 0, g: 0, b: 0, a: 0}
     - _MainTextureTiling: {r: 0, g: 0, b: 0, a: 0}
     - _NormalMapOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _NormalMapTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _NormalMapTiling: {r: 1, g: 0.1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _WoodTextureOffset: {r: 0, g: 0.1, b: 0, a: 0}
     - _WoodTextureTiling: {r: 0.1, g: 0.1, b: 0, a: 0}

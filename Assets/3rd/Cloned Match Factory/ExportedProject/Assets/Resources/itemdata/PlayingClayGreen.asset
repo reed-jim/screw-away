@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: PlayingClayGreen
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: b09f7c634efcc2c4b99e09140e48b1ee, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 3d663ae9a6fb54d4c8c9da3eb9c5b878, type: 2}
+  Texture: {fileID: 2800000, guid: 732b005967304c04bafdd291f7f9fa49, type: 3}
+  Scale: 1.5
+  Width: 0.777
+  Height: 0.843
+  Depth: 0.777
+  Volume: 0.509
+  Tags:
+  - game
+  - school
+  - green
+  - yellow
+  - cylinder
+  - medium
+  GoalSprite: {fileID: 21300000, guid: da46df9b47883154cb4333b48aa240f6, type: 2}

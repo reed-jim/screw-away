@@ -12,7 +12,7 @@ public class LosePopup : BasePopup
 
     protected override void RegisterMoreEvent()
     {
-        ScrewBoxManager.loseLevelEvent += OnLevelLose;
+        GameStateLose.loseLevelEvent += OnLevelLose;
 
         replayButton.onClick.AddListener(Replay);
         returnHomeButton.onClick.AddListener(ReturnHome);
@@ -20,7 +20,7 @@ public class LosePopup : BasePopup
 
     protected override void UnregisterMoreEvent()
     {
-        ScrewBoxManager.loseLevelEvent -= OnLevelLose;
+        GameStateLose.loseLevelEvent -= OnLevelLose;
     }
 
     private void OnLevelLose()

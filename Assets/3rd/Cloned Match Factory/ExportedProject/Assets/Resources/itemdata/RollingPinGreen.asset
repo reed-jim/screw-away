@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: RollingPinGreen
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 4a4b12229d3275a439b5af444bf7f616, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: df8eac8142f2dbc4f81e01aa8d0e4d30, type: 2}
+  Texture: {fileID: 2800000, guid: 4e84990827f331a47b5a08388f10e3fc, type: 3}
+  Scale: 2.6
+  Width: 0.248
+  Height: 0.984
+  Depth: 0.248
+  Volume: 0.061
+  Tags:
+  - kitchen1
+  - kitchen
+  - green
+  - bar
+  - medium
+  GoalSprite: {fileID: 21300000, guid: d6449fa692cac0b49884c0a69b840356, type: 2}

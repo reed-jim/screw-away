@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: JuiceRed
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 0428a7997100e1d4cbb46bef2f389ae4, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 1c9ee0fac8196de4da06e7b6dd25b263, type: 2}
+  Texture: {fileID: 2800000, guid: 7c519e86a481cd24aae9dd17ddbc3d78, type: 3}
+  Scale: 2.4
+  Width: 0.362
+  Height: 0.929
+  Depth: 0.366
+  Volume: 0.123
+  Tags:
+  - drink
+  - school
+  - red
+  - sharp
+  - large
+  GoalSprite: {fileID: 21300000, guid: 799bd07bf22fe6b4a8facd09f9f594d7, type: 2}

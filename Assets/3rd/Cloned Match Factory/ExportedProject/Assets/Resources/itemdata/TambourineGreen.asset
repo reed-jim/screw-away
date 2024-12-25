@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: TambourineGreen
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: a030f020b0137c044ac90adf346173c5, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 653a7dcf6bd033647abb12edec5198c8, type: 2}
+  Texture: {fileID: 2800000, guid: a6fbb2bc9376b334c9efaf4f648ea1d7, type: 3}
+  Scale: 1.8
+  Width: 0.976
+  Height: 0.952
+  Depth: 0.252
+  Volume: 0.234
+  Tags:
+  - music
+  - school
+  - green
+  - yellow
+  - circle
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 14a8731fef0bc6e4a83e634a86aaae1b, type: 2}

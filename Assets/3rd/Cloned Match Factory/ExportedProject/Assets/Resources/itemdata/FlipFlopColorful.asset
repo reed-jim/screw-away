@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: FlipFlopColorful
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 3f49bb3c4c903c04f8faa50c4df4fbba, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: caea52cbb18c5624e96cc4da05f88ec4, type: 2}
+  Texture: {fileID: 2800000, guid: 39ba8c77edaf5a242a1884b9f4575e58, type: 3}
+  Scale: 1.8
+  Width: 0.487
+  Height: 0.323
+  Depth: 0.968
+  Volume: 0.152
+  Tags:
+  - beach
+  - sport
+  - colorful
+  - grey
+  - flat
+  - small
+  GoalSprite: {fileID: 21300000, guid: 11622398a691899408abc5de0b266fdf, type: 2}

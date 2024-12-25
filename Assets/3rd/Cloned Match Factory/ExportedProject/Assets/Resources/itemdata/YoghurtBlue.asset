@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: YoghurtBlue
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 6cac265346e95aa439acf69252685930, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 384fb69dd9cb2ef41a69cfc261eff099, type: 2}
+  Texture: {fileID: 2800000, guid: e6f462e6465a0744fbe14370a8d84114, type: 3}
+  Scale: 1.4
+  Width: 0.657
+  Height: 0.738
+  Depth: 0.657
+  Volume: 0.319
+  Tags:
+  - food
+  - fruit
+  - blue
+  - white
+  - cylinder
+  - small
+  GoalSprite: {fileID: 21300000, guid: 0585137b64d7ef7468ac194353253fc5, type: 2}

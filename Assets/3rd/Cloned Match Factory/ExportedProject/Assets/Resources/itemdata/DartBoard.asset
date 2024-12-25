@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: DartBoard
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: a1833d9c87e160c428a71a26f9e11500, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 1a186fe97fe69644c8e5cd736383586c, type: 2}
+  Texture: {fileID: 2800000, guid: 72c5ee05ace0e98448768dfe096f3c05, type: 3}
+  Scale: 1.9
+  Width: 0.922
+  Height: 0.922
+  Depth: 0.102
+  Volume: 0.087
+  Tags:
+  - sport
+  - game
+  - black
+  - circle
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 36baa99417595d94bbbb974ec163367f, type: 2}

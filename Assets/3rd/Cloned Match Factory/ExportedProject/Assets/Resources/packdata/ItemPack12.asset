@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack12
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_12
+  PackTag: pirate
+  ItemUnlockedDialogScales:
+  - 0.9
+  - 1
+  - 0.9
+  - 0.9
+  - 0.95
+  - 1
+  - 0.95
+  - 1
+  UnlockLevel: 800
+  Items:
+  - {fileID: 11400000, guid: 92c2b27406478874a84c54735daa9e7f, type: 2}
+  - {fileID: 11400000, guid: 63c61a7541c566d4c9b2055e4551525a, type: 2}
+  - {fileID: 11400000, guid: 82f3f02043b12e743abaedb72bf39ed4, type: 2}
+  - {fileID: 11400000, guid: a5a13ff0658ce5e4dad43b6901a69501, type: 2}
+  - {fileID: 11400000, guid: f1de33e85c59709499769165e3507b6d, type: 2}
+  - {fileID: 11400000, guid: 92caed65f120ecd41b54aabc5dd8c7af, type: 2}
+  - {fileID: 11400000, guid: cae7e5557183cb348b4e0ce9974026e9, type: 2}
+  - {fileID: 11400000, guid: 3374b07ea8a91884b9143eb506806a28, type: 2}
+  ItemPackEntry: {fileID: 114443685016242155, guid: f825f538f41df924aa856f83ac9a40ee, type: 2}

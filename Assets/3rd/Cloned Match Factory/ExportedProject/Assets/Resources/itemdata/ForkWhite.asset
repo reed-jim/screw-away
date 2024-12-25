@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ForkWhite
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 384655b403f22a345be7dd629daa761a, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 3180b138d13ced9458357f55966f5ece, type: 2}
+  Texture: {fileID: 2800000, guid: 1038ec509f1172a4d9fb78e9684d37fa, type: 3}
+  Scale: 1.7
+  Width: 0.337
+  Height: 1.097
+  Depth: 0.097
+  Volume: 0.036
+  Tags:
+  - kitchen
+  - junkfood
+  - white
+  - grey
+  - flat
+  - small
+  GoalSprite: {fileID: 21300000, guid: a121ab6e09763604a8e96c3d63bd706e, type: 2}

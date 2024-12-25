@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack16
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_16
+  PackTag: candy
+  ItemUnlockedDialogScales:
+  - 0.95
+  - 1
+  - 1
+  - 0.9
+  - 1
+  - 0.95
+  - 0.95
+  - 0.9
+  UnlockLevel: 1000
+  Items:
+  - {fileID: 11400000, guid: de779c95ca8796c40836b28e78801a71, type: 2}
+  - {fileID: 11400000, guid: abe351c18512de14e85c4d9b218a28ed, type: 2}
+  - {fileID: 11400000, guid: d2ae6a4c06bbd2240994e494a2fb29c3, type: 2}
+  - {fileID: 11400000, guid: 822519d6b59256344a430e27904a8482, type: 2}
+  - {fileID: 11400000, guid: ee982c048c4dc424db2f0fb34804edac, type: 2}
+  - {fileID: 11400000, guid: ed498130a3c055841a0753c167dbabea, type: 2}
+  - {fileID: 11400000, guid: e53a789419119fb45a6898398b2882cf, type: 2}
+  - {fileID: 11400000, guid: 7e6d61855f21ba2448fee748b991b44a, type: 2}
+  ItemPackEntry: {fileID: 114139960781175059, guid: 0a5003870074ad74aa1b02d61e3786c0, type: 2}

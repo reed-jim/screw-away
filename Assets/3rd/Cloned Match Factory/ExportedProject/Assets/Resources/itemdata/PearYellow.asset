@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: PearYellow
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 334db8502c4d39e48a9376490ea1bb56, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 55d50d686b05c0c4d97cb0ef00c22908, type: 2}
+  Texture: {fileID: 2800000, guid: 2da204094c01f6b4fa4b5c71b06eef30, type: 3}
+  Scale: 1.8
+  Width: 0.668
+  Height: 0.966
+  Depth: 0.657
+  Volume: 0.424
+  Tags:
+  - fruit
+  - bakery
+  - yellow
+  - curved
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 5471c10f05ce6b44d8c6af8a7408beff, type: 2}

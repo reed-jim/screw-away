@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: CanGreen
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 9b4391326d0bcd845bb0e5f7d423f059, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 4a0a0b1119346a94a88f3212b9fc2329, type: 2}
+  Texture: {fileID: 2800000, guid: d52495b01b1474b4d8d3edde4d2f78d2, type: 3}
+  Scale: 1.5
+  Width: 0.595
+  Height: 0.904
+  Depth: 0.595
+  Volume: 0.32
+  Tags:
+  - drink
+  - junkfood
+  - green
+  - cylinder
+  - small
+  GoalSprite: {fileID: 21300000, guid: fca9e0d9682e4544db656c59d52226a4, type: 2}

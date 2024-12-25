@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PreloadedShaders
+  m_Shaders:
+  - first: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9004, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9007, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9101, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9103, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 10757, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 70f8bba84f200b04fba4c66c2582ebe3, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 18fcf364aaa092e43981a7beaab040bc, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: d74d9b2be36d19448984e1f1717e8c5d, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 3d0b6c2eac1f5da46a7d171b11f160c9, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: OUTLINE_ON
+        passType: 0
+      - keywords: OUTLINE_ON UNDERLAY_ON
+        passType: 0
+      - keywords: UNDERLAY_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: 1cfec346e3c86ef4d8c51891085c1f4c, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 3250154b72358b54a952f9fe817907db, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 80506a777b43d7246b89b83eb1bcbeef, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: INSTANCING_ON
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+      - keywords: INSTANCING_ON _ADDITIONAL_LIGHT_SHADOWS _ALPHAPREMULTIPLY_ON _MAIN_LIGHT_SHADOWS_CASCADE _RECEIVE_SHADOWS_OFF _SPECULAR_COLOR _SURFACE_TYPE_TRANSPARENT
+        passType: 13
+      - keywords: INSTANCING_ON _ADDITIONAL_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: INSTANCING_ON _ADDITIONAL_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: _ADDITIONAL_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: d967f2dc964465d439ec85f4cb38e781, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: e9cda36d63da507489a04f1549c2e33a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 24ec8e2250eaccd419da19e4617b9c3b, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 579289e9c6dd3034681a8932fa1fa5e8, type: 3}
+    second:
+      variants:
+      - keywords: INSTANCING_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: df8fd9bafacf32c4c962c15d220f16f8, type: 3}
+    second:
+      variants:
+      - keywords: BOX_BLUR INSTANCING_ON USE_INFO_BUFFER
+        passType: 0
+  - first: {fileID: 4800000, guid: 3080a89c12543e24993694b4447a69ec, type: 3}
+    second:
+      variants:
+      - keywords: EDGE_MASK INSTANCING_ON
+        passType: 0
+      - keywords: INSTANCING_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: 992e3ef9cd5eeba4fbfb6dfc253e2179, type: 3}
+    second:
+      variants:
+      - keywords: INFO_BUFFER_STAGE INSTANCING_ON
+        passType: 0
+      - keywords: INSTANCING_ON USE_INFO_BUFFER
+        passType: 0
+  - first: {fileID: 4800000, guid: 288d78a5ba9218540baafc8e03c54800, type: 3}
+    second:
+      variants:
+      - keywords: INSTANCING_ON USE_INFO_BUFFER
+        passType: 0
+  - first: {fileID: 4800000, guid: b09bc61a5deb777498191d662803213e, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: USE_INFO_BUFFER
+        passType: 0
+  - first: {fileID: 4800000, guid: 6277db9b20cd4024da9ccb028a0b8f6d, type: 3}
+    second:
+      variants:
+      - keywords: USE_INFO_BUFFER
+        passType: 0
+  - first: {fileID: 4800000, guid: 74ad3e28ad3fea048993121378d2d724, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 6145fd4f574643948a96606e528a212e, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 88bdf143439eda3498d3a0a1fbd73ce1, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 19ea8c44fdecc5745bdb614da695f118, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 38aa2a6785b16d84db8b5366e8ddf364, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: a36f67ed154165a49baffc8758733802, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 8db0ddea81602fd4aa6f7904de3bc580, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 0}
+    second:
+      variants: []

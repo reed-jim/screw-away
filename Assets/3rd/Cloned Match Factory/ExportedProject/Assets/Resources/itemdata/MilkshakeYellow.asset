@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: MilkshakeYellow
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 7d51da7bef91dde4bb8222367108cc73, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 7fdc6b6f7771c6d49b2a76c58cd44353, type: 2}
+  Texture: {fileID: 2800000, guid: fecf0d4a4d30d884281756ebaa172929, type: 3}
+  Scale: 3.2
+  Width: 0.432
+  Height: 0.907
+  Depth: 0.281
+  Volume: 0.11
+  Tags:
+  - drink
+  - bakery
+  - yellow
+  - mix
+  - large
+  GoalSprite: {fileID: 21300000, guid: 0d64f2eb13827374daeb74978f88a1d8, type: 2}

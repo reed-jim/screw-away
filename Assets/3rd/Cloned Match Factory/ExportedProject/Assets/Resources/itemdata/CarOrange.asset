@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: CarOrange
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 79a791966e852df40bc38ecd808432d9, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 24b0964b21746dd44bda4f2337dbcbc4, type: 2}
+  Texture: {fileID: 2800000, guid: ce65c51d4480ffa48a70c8d12bc1b50a, type: 3}
+  Scale: 2
+  Width: 0.406
+  Height: 0.476
+  Depth: 0.947
+  Volume: 0.183
+  Tags:
+  - vehicles
+  - toy
+  - orange
+  - curved
+  - small
+  GoalSprite: {fileID: 21300000, guid: 97d415b146a7ffe4ea4c6a3eb9a42770, type: 2}

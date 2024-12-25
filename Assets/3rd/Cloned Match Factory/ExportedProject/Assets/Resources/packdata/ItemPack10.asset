@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack10
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_10
+  PackTag: underwater
+  ItemUnlockedDialogScales:
+  - 0.9
+  - 0.85
+  - 0.95
+  - 0.9
+  - 1.05
+  - 1.05
+  - 0.85
+  - 0.8
+  UnlockLevel: 700
+  Items:
+  - {fileID: 11400000, guid: 22620f17614aedf4a9941beb9a5e692f, type: 2}
+  - {fileID: 11400000, guid: c258402c43f66d84b9f8739fa5678cc9, type: 2}
+  - {fileID: 11400000, guid: df2a52ae269e72f4a91ece40cf7005f3, type: 2}
+  - {fileID: 11400000, guid: e6764b5033111a54f908189f56503d18, type: 2}
+  - {fileID: 11400000, guid: 8b6c93ef7353a844da8c895a746d1827, type: 2}
+  - {fileID: 11400000, guid: 48d4ef5cf4e507e4a8d1e589c76ad8ac, type: 2}
+  - {fileID: 11400000, guid: 6f9a24723ac418345bada2775c55ec4d, type: 2}
+  - {fileID: 11400000, guid: 61befd367aae48441826ab682844f684, type: 2}
+  ItemPackEntry: {fileID: 114129028337743425, guid: cdde8d2beb2580746b3395eed54e1295, type: 2}

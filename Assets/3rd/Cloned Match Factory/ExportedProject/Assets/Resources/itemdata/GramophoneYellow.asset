@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: GramophoneYellow
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 5a471009ac688b745ae83613d48bdab2, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 9e75825a36c519347a5cd4e44b1c5239, type: 2}
+  Texture: {fileID: 2800000, guid: 1d98a1f7d3fbc404a8cdcd9e08b95e08, type: 3}
+  Scale: 2.6
+  Width: 0.894
+  Height: 0.985
+  Depth: 0.571
+  Volume: 0.503
+  Tags:
+  - vintage
+  - music
+  - yellow
+  - mix
+  - large
+  GoalSprite: {fileID: 21300000, guid: bf4102055821a654cac69185ab3aa5a8, type: 2}

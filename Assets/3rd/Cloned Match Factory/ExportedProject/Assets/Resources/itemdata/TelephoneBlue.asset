@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: TelephoneBlue
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 5bf4987f1f10c1449ad8e07014985d95, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 46e41d2e0f8db48499033af55109ad2f, type: 2}
+  Texture: {fileID: 2800000, guid: a18e45efcb8dea241bbb77e3ca852751, type: 3}
+  Scale: 1.9
+  Width: 0.874
+  Height: 0.687
+  Depth: 0.91
+  Volume: 0.546
+  Tags:
+  - toy
+  - electronic
+  - blue
+  - curved
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 8a7581685ab0b7f4fb0776642d2dc757, type: 2}

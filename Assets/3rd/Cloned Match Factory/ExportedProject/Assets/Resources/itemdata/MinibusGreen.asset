@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: MinibusGreen
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 1b6d419eb821a0b439cc6dea6abb35a9, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 8b6fc4dc42f5da841a886887a4adb1dc, type: 2}
+  Texture: {fileID: 2800000, guid: bfc37a30b7be8764aa2ddafab21f0d27, type: 3}
+  Scale: 2.7
+  Width: 0.594
+  Height: 0.59
+  Depth: 0.891
+  Volume: 0.312
+  Tags:
+  - vintagecars
+  - vehicles
+  - green
+  - grey
+  - sharp
+  - large
+  GoalSprite: {fileID: 21300000, guid: f44ff36c806051d4dbfc10fd43a990c8, type: 2}

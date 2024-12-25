@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: SnailBlue
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 99f7edae2a9216a4ab67064f6fce9847, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 85b5cd329b1ff794e99521e724210e3d, type: 2}
+  Texture: {fileID: 2800000, guid: cfda46fe7e71fdb4cbeba64f56a4edeb, type: 3}
+  Scale: 1.2
+  Width: 0.413
+  Height: 0.656
+  Depth: 0.735
+  Volume: 0.199
+  Tags:
+  - animals1
+  - toy
+  - blue
+  - green
+  - flat
+  - small
+  GoalSprite: {fileID: 21300000, guid: 9db1e3470adb2234aa6be18a654e0296, type: 2}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: DogGrey
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: d46cc321b4ac1b4478b76d67e90120ee, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 2a957a989134c944d9d8fac9fbafc222, type: 2}
+  Texture: {fileID: 2800000, guid: 9df85446741e0f24cad866a87755b7c0, type: 3}
+  Scale: 2.5
+  Width: 0.367
+  Height: 0.828
+  Depth: 0.712
+  Volume: 0.216
+  Tags:
+  - animals1
+  - toy
+  - grey
+  - sharp
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 913eb72ce4348e84d887db2e8eaf629a, type: 2}

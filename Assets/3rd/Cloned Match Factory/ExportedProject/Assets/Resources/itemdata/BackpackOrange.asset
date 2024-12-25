@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: BackpackOrange
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 3e52a6a8bbb380842a6eacb93c8bc239, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 5558943df8d6a1542860df72ab16f5cb, type: 2}
+  Texture: {fileID: 2800000, guid: e9fc233d1a501fa46910eb6502637807, type: 3}
+  Scale: 2.5
+  Width: 0.71
+  Height: 0.973
+  Depth: 0.649
+  Volume: 0.448
+  Tags:
+  - school
+  - sport
+  - orange
+  - curved
+  - large
+  GoalSprite: {fileID: 21300000, guid: 5a02f941027ae584ebf75c0dd9ca208a, type: 2}

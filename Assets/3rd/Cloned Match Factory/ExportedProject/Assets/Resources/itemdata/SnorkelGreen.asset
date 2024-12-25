@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: SnorkelGreen
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 7fa39be999a24f043bec2a5cd4977fd7, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 3459c61597db06e46a1810d63c0688a5, type: 2}
+  Texture: {fileID: 2800000, guid: 26f88f6db2934d24792c0311ebe9e5fd, type: 3}
+  Scale: 1.9
+  Width: 0.801
+  Height: 0.972
+  Depth: 0.694
+  Volume: 0.54
+  Tags:
+  - beach
+  - sport
+  - green
+  - yellow
+  - mix
+  - medium
+  GoalSprite: {fileID: 21300000, guid: d7e7cbc3811403943aa66720c3de9b1c, type: 2}

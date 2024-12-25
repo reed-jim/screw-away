@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: PoolStickBrown
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 1a3a15d73546c8043a54a852ee2f5698, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: db0ee4ddda1ced441bc2062bacffee0b, type: 2}
+  Texture: {fileID: 2800000, guid: 6ac6e987133837c47b2c6706432cb442, type: 3}
+  Scale: 5.4
+  Width: 0.085
+  Height: 1.019
+  Depth: 0.085
+  Volume: 0.007
+  Tags:
+  - sport
+  - game
+  - brown
+  - bar
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 76761ff1acd0f1b49b1b963fd5039960, type: 2}

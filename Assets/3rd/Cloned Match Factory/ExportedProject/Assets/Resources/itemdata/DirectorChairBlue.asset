@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: DirectorChairBlue
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 5e5c579d3c1df6f48a494c4e363644e6, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: d536e1c203b724a4f883dae6a07cb1c9, type: 2}
+  Texture: {fileID: 2800000, guid: 9c21fb2da729b81438be6718bdeb6e1b, type: 3}
+  Scale: 2.7
+  Width: 0.69
+  Height: 0.955
+  Depth: 0.466
+  Volume: 0.307
+  Tags:
+  - movie
+  - kitchen
+  - blue
+  - brown
+  - sharp
+  - large
+  GoalSprite: {fileID: 21300000, guid: e550142eb1f2c9440995adda858a34e1, type: 2}

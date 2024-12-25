@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack03
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_3
+  PackTag: kingdom
+  ItemUnlockedDialogScales:
+  - 0.675
+  - 1.045
+  - 0.9
+  - 0.585
+  - 0
+  - 0.9025
+  - 0.8
+  - 1.08
+  UnlockLevel: 350
+  Items:
+  - {fileID: 11400000, guid: 1dbede551e37ea245baaeef61ea5fc0e, type: 2}
+  - {fileID: 11400000, guid: c6f04edbf6d7d5e4e87298f526414b15, type: 2}
+  - {fileID: 11400000, guid: 286d7adb5b4751140875e97537f30572, type: 2}
+  - {fileID: 11400000, guid: a01ecd05c5e15784baadd284007f0d0e, type: 2}
+  - {fileID: 11400000, guid: 5d272fa08e75b3041b2a0f6a33938c6c, type: 2}
+  - {fileID: 11400000, guid: 8431303d68a244e4c8682e05b35f89be, type: 2}
+  - {fileID: 11400000, guid: 91342b01b0b6935498cd1a20f09fec38, type: 2}
+  - {fileID: 11400000, guid: bd86d7122d3389e46a0f3d8b61f88ec6, type: 2}
+  ItemPackEntry: {fileID: 114708525782304958, guid: e360d427551a6ce4fa790c54e18ab148, type: 2}

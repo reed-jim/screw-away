@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack09
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_9
+  PackTag: vintage
+  ItemUnlockedDialogScales:
+  - 0
+  - 0.9
+  - 0.8
+  - 1.15
+  - 1.1
+  - 0.9
+  - 1.1
+  - 1.05
+  UnlockLevel: 650
+  Items:
+  - {fileID: 11400000, guid: d86345165ec99d94ba53520c06130591, type: 2}
+  - {fileID: 11400000, guid: 1c88fa7808842d94a9484691e1d1bfa5, type: 2}
+  - {fileID: 11400000, guid: 7fbe934e2353f404fa93ad89e11c86fe, type: 2}
+  - {fileID: 11400000, guid: fc780e74a9712f046a4be168eba07d71, type: 2}
+  - {fileID: 11400000, guid: 8934cf63bd84cb04da4dfcb8e4213559, type: 2}
+  - {fileID: 11400000, guid: dda519feb5f94a64ca8753de8c036dc8, type: 2}
+  - {fileID: 11400000, guid: aef4e25be9ead8145bae6b317fec46f0, type: 2}
+  - {fileID: 11400000, guid: 9cfae858cf07c1b449a77c3f23c56b70, type: 2}
+  ItemPackEntry: {fileID: 114641982261701637, guid: 695702775aa08cc45a2f96241c15d52c, type: 2}

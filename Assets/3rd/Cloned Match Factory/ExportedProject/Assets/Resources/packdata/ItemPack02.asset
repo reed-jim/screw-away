@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack02
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_2
+  PackTag: egypt
+  ItemUnlockedDialogScales:
+  - 1.05
+  - 0
+  - 0.9
+  - 0.9
+  - 0
+  - 0
+  - 1.05
+  - 1.05
+  UnlockLevel: 300
+  Items:
+  - {fileID: 11400000, guid: 54338c9ae583d9f42bef90c5abb81813, type: 2}
+  - {fileID: 11400000, guid: 197f09b83bc229f4ab456f1d97c02f08, type: 2}
+  - {fileID: 11400000, guid: 286d526e397e05949945a6f38c5b0f03, type: 2}
+  - {fileID: 11400000, guid: ac26c1cfd58669a4985d6048822e2442, type: 2}
+  - {fileID: 11400000, guid: aa51de5843452ec48a9557f768a62e22, type: 2}
+  - {fileID: 11400000, guid: 5b16576661eb41d4586b233051e43ef2, type: 2}
+  - {fileID: 11400000, guid: 9138ffa9a11bcc643830cf0eb6fbaaf8, type: 2}
+  - {fileID: 11400000, guid: ab7ea1895006d9a4394fa56a38dede60, type: 2}
+  ItemPackEntry: {fileID: 114969261308627878, guid: 36b4cc5c5b6ed5840a696fc8844ac0d8, type: 2}

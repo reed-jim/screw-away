@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack13
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_13
+  PackTag: makeup
+  ItemUnlockedDialogScales:
+  - 0.9
+  - 1
+  - 0.9
+  - 0.9
+  - 0.95
+  - 1
+  - 0.9
+  - 1
+  UnlockLevel: 850
+  Items:
+  - {fileID: 11400000, guid: 8ecfb3f7f6be36b41ae9f5620a643551, type: 2}
+  - {fileID: 11400000, guid: cd619120a511fed4a9244850281ba4c0, type: 2}
+  - {fileID: 11400000, guid: 78d7a4de3f131184694438bfda427009, type: 2}
+  - {fileID: 11400000, guid: c3e1efdc5346c1846b352d896bd65fdd, type: 2}
+  - {fileID: 11400000, guid: 2c5aa49ec25b5bf459714986c0b6e77c, type: 2}
+  - {fileID: 11400000, guid: 67f975475427bcb4ba95fc0047cfc21e, type: 2}
+  - {fileID: 11400000, guid: c111e3102b3f0184eb266a804fa10525, type: 2}
+  - {fileID: 11400000, guid: a8097391eb0430a46addecf7b83651a0, type: 2}
+  ItemPackEntry: {fileID: 114950847013802672, guid: 5a61d2d6398fccf4caf2c05cf7b6253a, type: 2}

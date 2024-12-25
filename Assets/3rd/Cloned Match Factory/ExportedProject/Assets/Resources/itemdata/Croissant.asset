@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: Croissant
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 528c35c83c890924089c53da8e7fc38f, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 16fb7beb0d69eb94da0751c355285e59, type: 2}
+  Texture: {fileID: 2800000, guid: cff92b98d2131db41bad6257d67f1d82, type: 3}
+  Scale: 2.7
+  Width: 0.853
+  Height: 0.458
+  Depth: 0.39
+  Volume: 0.152
+  Tags:
+  - food
+  - bakery
+  - brown
+  - curved
+  - large
+  GoalSprite: {fileID: 21300000, guid: e8fbeef26fac8424684db441c62c13a9, type: 2}

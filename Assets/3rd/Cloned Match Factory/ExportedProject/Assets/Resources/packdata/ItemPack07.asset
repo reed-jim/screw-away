@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack07
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_7
+  PackTag: asia
+  ItemUnlockedDialogScales:
+  - 1.2
+  - 0.95
+  - 1
+  - 1.3
+  - 1.2
+  - 0.9
+  - 0.55
+  - 1.2
+  UnlockLevel: 550
+  Items:
+  - {fileID: 11400000, guid: 9260cde9d23e74443b740bbb53c637b3, type: 2}
+  - {fileID: 11400000, guid: 1f4ce8a3a877a254aa46dc30da31abfb, type: 2}
+  - {fileID: 11400000, guid: f34eebceaecdefa41bc65ef2c7055194, type: 2}
+  - {fileID: 11400000, guid: 71454626726e26c4390f424006086507, type: 2}
+  - {fileID: 11400000, guid: 159026049b4428d489f0a6cc016a5eb8, type: 2}
+  - {fileID: 11400000, guid: b4f9c2478679b3743ab3755bbd2ad4d1, type: 2}
+  - {fileID: 11400000, guid: 95b45694220f40d4ba52c78ed5443b05, type: 2}
+  - {fileID: 11400000, guid: 54d3f25555ea2614a8c824d919359969, type: 2}
+  ItemPackEntry: {fileID: 114988815662539572, guid: 79d2bd97ba08a4b43afb0446908cc114, type: 2}

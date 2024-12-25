@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack15
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_15
+  PackTag: farmanimals
+  ItemUnlockedDialogScales:
+  - 1.1
+  - 1
+  - 0.8
+  - 0.8
+  - 1.2
+  - 1
+  - 0.8
+  - 1.1
+  UnlockLevel: 950
+  Items:
+  - {fileID: 11400000, guid: c71a35fd2ced31040a826102cead7acb, type: 2}
+  - {fileID: 11400000, guid: e6cbeb78e63cc424aaa6dc37c915513e, type: 2}
+  - {fileID: 11400000, guid: 8ec4e629c68e03a4193dde231ebe6fd6, type: 2}
+  - {fileID: 11400000, guid: 024c0f2dcd5fe65499a944e14ee4d36e, type: 2}
+  - {fileID: 11400000, guid: 89e06fc3dd8870f4f9093b7fdfc5d2fd, type: 2}
+  - {fileID: 11400000, guid: c6f4bfb3b7e0e0a45acafaef28f25473, type: 2}
+  - {fileID: 11400000, guid: d19798ae6816f9940ac9077368ac7fc5, type: 2}
+  - {fileID: 11400000, guid: 4e031ced3d4fd5444903dde55f1a5c20, type: 2}
+  ItemPackEntry: {fileID: 114106173899312621, guid: 69a1028c0a12fef4cab794eded3858d0, type: 2}

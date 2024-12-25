@@ -17,7 +17,7 @@ public class WinPopup : BasePopup
 
     protected override void RegisterMoreEvent()
     {
-        ScrewManager.winLevelEvent += OnLevelWinAsync;
+        GameStateWin.winLevelEvent += OnLevelWinAsync;
 
         continueButton.onClick.AddListener(Continue);
         returnHomeButton.onClick.AddListener(ReturnHome);
@@ -25,7 +25,7 @@ public class WinPopup : BasePopup
 
     protected override void UnregisterMoreEvent()
     {
-        ScrewManager.winLevelEvent -= OnLevelWinAsync;
+        GameStateWin.winLevelEvent -= OnLevelWinAsync;
     }
 
     private async void OnLevelWinAsync()

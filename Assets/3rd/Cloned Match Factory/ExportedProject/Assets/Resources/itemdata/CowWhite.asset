@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: CowWhite
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 43e898af05bfa6244be3e1285546ef7c, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 9a58642568f929c4c94f6c301d7d8388, type: 2}
+  Texture: {fileID: 2800000, guid: 79ae6c2363c06714087d6977692e5c69, type: 3}
+  Scale: 2.5
+  Width: 0.668
+  Height: 0.989
+  Depth: 0.862
+  Volume: 0.569
+  Tags:
+  - farmanimals
+  - animals1
+  - white
+  - black
+  - mix
+  - large
+  GoalSprite: {fileID: 21300000, guid: 6a6856e3db5eb2e49ae4e5e7306a7332, type: 2}

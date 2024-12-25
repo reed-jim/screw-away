@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: PufferfishRed
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 30eaea08a114ee844a32f457fbc343ee, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: fb984bc898631f54d97d826f52dad3de, type: 2}
+  Texture: {fileID: 2800000, guid: fece13a7f6fba1c469688733b48f4097, type: 3}
+  Scale: 1.9
+  Width: 0.879
+  Height: 0.751
+  Depth: 0.974
+  Volume: 0.643
+  Tags:
+  - underwater
+  - animal
+  - red
+  - yellow
+  - sphere
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 75e1444023d867b4581747c1ada6112b, type: 2}

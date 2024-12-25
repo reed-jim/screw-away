@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: Duck
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 9b5c6fedf49e4e642a7dcb07d29e87f9, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: dcbc58736e0423e489833d50527be9e8, type: 2}
+  Texture: {fileID: 2800000, guid: 07f41c4a2d0b4604cab4808bff6e3f43, type: 3}
+  Scale: 1.7
+  Width: 0.733
+  Height: 0.856
+  Depth: 0.972
+  Volume: 0.61
+  Tags:
+  - toy
+  - game
+  - yellow
+  - orange
+  - curved
+  - medium
+  GoalSprite: {fileID: 21300000, guid: 6d09c8ef153203b42a83cc122e13a0e4, type: 2}

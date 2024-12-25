@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1656199363, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: ItemPack18
+  m_EditorClassIdentifier:
+  NameLocalizationKey: item_pack_18
+  PackTag: vintagecars
+  ItemUnlockedDialogScales:
+  - 0.93
+  - 0.9
+  - 0.8
+  - 1.05
+  - 1.2
+  - 1.05
+  - 0.78
+  - 0.8
+  UnlockLevel: 1200
+  Items:
+  - {fileID: 11400000, guid: acc26f5ae163c7641ad60e5289b4080b, type: 2}
+  - {fileID: 11400000, guid: 9da48191d3afc3149b7dd6ffaa33a7de, type: 2}
+  - {fileID: 11400000, guid: f9c2c6e5c0a14ee4a8a15e79a8feda63, type: 2}
+  - {fileID: 11400000, guid: 29891024aa8a59f4dbb106316920f1cb, type: 2}
+  - {fileID: 11400000, guid: 94b786c9995bf654c968b4f9d97bb67c, type: 2}
+  - {fileID: 11400000, guid: e69bd1878cddae64a92c95e5571cfb4c, type: 2}
+  - {fileID: 11400000, guid: 835580ffa38d1b54a83358ee6160e78f, type: 2}
+  - {fileID: 11400000, guid: 1e8d2dc2987cd154bb3c3c24684cf495, type: 2}
+  ItemPackEntry: {fileID: 114599400907953635, guid: 183b17a69354d624bb038e7fa1a0f4de, type: 2}

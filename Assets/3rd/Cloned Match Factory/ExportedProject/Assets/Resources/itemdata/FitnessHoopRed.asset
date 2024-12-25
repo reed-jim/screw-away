@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: FitnessHoopRed
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: a577d1e48cd7fb549ba0a7c132a8079a, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 710e23486b5b6584cbc6894e80bb2c3d, type: 2}
+  Texture: {fileID: 2800000, guid: 6b5e738b61c92b84896f0b3f4e43f411, type: 3}
+  Scale: 2.7
+  Width: 0.994
+  Height: 0.994
+  Depth: 0.101
+  Volume: 0.1
+  Tags:
+  - sport
+  - school
+  - red
+  - circle
+  - large
+  GoalSprite: {fileID: 21300000, guid: ae62a42de497c054285448393e7ae60a, type: 2}

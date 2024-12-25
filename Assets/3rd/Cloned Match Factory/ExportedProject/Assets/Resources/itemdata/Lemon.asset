@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -212705256, guid: 9b40359fc725e5e030ef997923cc4a3b, type: 3}
+  m_Name: Lemon
+  m_EditorClassIdentifier:
+  RenderMesh: {fileID: 4300000, guid: 2d426911fcd6ac94eb50fd2e8f958895, type: 2}
+  CollisionMesh: {fileID: 4300000, guid: 4f78645e82367b04d96172830687325b, type: 2}
+  Texture: {fileID: 2800000, guid: 9e4026148c4412643b142a2cfa770380, type: 3}
+  Scale: 1.3
+  Width: 0.714
+  Height: 0.956
+  Depth: 0.733
+  Volume: 0.5
+  Tags:
+  - fruit
+  - bakery
+  - yellow
+  - sphere
+  - small
+  GoalSprite: {fileID: 21300000, guid: d05d29fba8742d442b46ab3f9742a8fe, type: 2}
