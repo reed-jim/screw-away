@@ -46,9 +46,16 @@ public class ScrewBoxManager : MonoBehaviour
         BoosterUI.addMoreScrewPortEvent -= AddMoreScrewPort;
         BoosterUI.clearAllScrewPortsEvent -= ClearAllScrewPorts;
         BasicObjectPart.loosenScrewOnObjectBrokenEvent -= LoosenScrewOnObjectBroken;
+
+        ResetScrewBoxes();
     }
 
     private void OnLevelStart()
+    {
+        ResetScrewBoxes();
+    }
+
+    private void ResetScrewBoxes()
     {
         if (screwBoxs != null)
         {
@@ -56,9 +63,32 @@ public class ScrewBoxManager : MonoBehaviour
             {
                 if (screwBoxs[i] != null)
                 {
+                    for (int j = 0; j < screwBoxs[i].ScrewBoxSlots.Length; j++)
+                    {
+                        if (screwBoxs[i].ScrewBoxSlots[j].Screw != null)
+                        {
+                            screwBoxs[i].ScrewBoxSlots[j].IsFilled = false;
+
+                            Destroy(screwBoxs[i].ScrewBoxSlots[j].Screw.gameObject);
+                        }
+                    }
+
                     ObjectPoolingEverything.ReturnToPool(GameConstants.SCREW_BOX, screwBoxs[i].gameObject);
                 }
             }
+
+            // for (int i = 0; i < screwBoxs.Length; i++)
+            // {
+            //     for (int j = 0; j < screwBoxs[i].ScrewBoxSlots.Length; j++)
+            //     {
+            //         if (screwBoxs[i].ScrewBoxSlots[j].Screw != null)
+            //         {
+            //             screwBoxs[i].ScrewBoxSlots[j].IsFilled = false;
+
+            //             Destroy(screwBoxs[i].ScrewBoxSlots[j].Screw.gameObject);
+            //         }
+            //     }
+            // }
         }
 
         screwBoxs = new ScrewBox[maxScrewBox];
