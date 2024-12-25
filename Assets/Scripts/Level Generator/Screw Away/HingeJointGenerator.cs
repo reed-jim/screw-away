@@ -1,5 +1,6 @@
 #if UNITY_EDITOR
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class HingeJointGenerator : EditorWindow
 {
     private GameObject target;
     private GameObject screwPrefab;
+    private Material targetMaterial;
 
 
 
@@ -32,6 +34,7 @@ public class HingeJointGenerator : EditorWindow
 
         target = (GameObject)EditorGUILayout.ObjectField("Target", target, typeof(GameObject), true);
         screwPrefab = (GameObject)EditorGUILayout.ObjectField("Screw Prefab", screwPrefab, typeof(GameObject), true);
+        targetMaterial = (Material)EditorGUILayout.ObjectField("Target Material", targetMaterial, typeof(Material), true);
 
         dimensionSize = EditorGUILayout.Vector3Field("Dimension Size", dimensionSize);
         distance = EditorGUILayout.Vector3Field("Distance", distance);
@@ -70,6 +73,11 @@ public class HingeJointGenerator : EditorWindow
         if (GUILayout.Button("Spawn Screw"))
         {
             SpawnScrew(prefabPath);
+        }
+
+        if (GUILayout.Button("Assign Material"))
+        {
+            AssignMaterial(prefabPath);
         }
     }
 
@@ -336,6 +344,30 @@ public class HingeJointGenerator : EditorWindow
         //         screw.transform.localScale = TransformUtil.ComponentWiseDivine(expectedScale * Vector3.one, target.transform.localScale);
         //     }
         // }
+
+        EditorUtility.SetDirty(levelPrefab);
+
+        PrefabUtility.SaveAsPrefabAsset(levelPrefab, path);
+    }
+
+    private void AssignMaterial(string path)
+    {
+        GameObject levelPrefab = PrefabUtility.LoadPrefabContents(path);
+
+        BasicObjectPart[] objectParts = GetComponentsFromAllChildren<BasicObjectPart>(levelPrefab.transform).ToArray();
+
+        for (int i = 0; i < objectParts.Length; i++)
+        {
+            MeshRenderer meshRenderer = objectParts[i].GetComponent<MeshRenderer>();
+
+            Debug.Log(meshRenderer);
+
+            List<Material> materials = meshRenderer.materials.ToList();
+
+            materials[0] = targetMaterial;
+
+            meshRenderer.SetMaterials(materials);
+        }
 
         EditorUtility.SetDirty(levelPrefab);
 
