@@ -4,6 +4,8 @@ public class ScrewMaterialPropertyBlock : MonoBehaviour
 {
     [Header("CUSTOMIZE")]
     [SerializeField] private string colorReference;
+    [SerializeField] private string secondaryColorReference;
+    [SerializeField] private float secondaryColorMultiplier;
 
     #region PRIVATE FIELD
     [SerializeField] private Renderer _renderer;
@@ -33,6 +35,7 @@ public class ScrewMaterialPropertyBlock : MonoBehaviour
         Init();
 
         _propertyBlock.SetColor(colorReference, color);
+        _propertyBlock.SetColor(secondaryColorReference, secondaryColorMultiplier * color);
 
         _renderer.SetPropertyBlock(_propertyBlock);
     }

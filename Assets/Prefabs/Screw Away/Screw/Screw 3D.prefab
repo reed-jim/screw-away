@@ -212,6 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorReference: _BaseColor
+  secondaryColorReference: _SecondaryColor
+  secondaryColorMultiplier: 0.6
   _renderer: {fileID: 4437216730832237330}
 --- !u!135 &4820946931393587339
 SphereCollider:
@@ -266,6 +268,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: b4f7da03b416dad47b51f89bf56f3a39, type: 2}
+  - {fileID: 2100000, guid: f6ab20fdb935bb945b775776df6bbc12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
