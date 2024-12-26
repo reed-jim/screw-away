@@ -183,7 +183,7 @@ public class ScrewManager : MonoBehaviour
         {
             _screws[i].CountBlockingObjects();
 
-            await Task.Delay(13);
+            // await Task.Delay(13);
         }
 
         for (int i = 0; i < _screws.Count; i++)

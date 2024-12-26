@@ -252,6 +252,11 @@ public class ScrewsDataManager : MonoBehaviour
 
         for (int i = 0; i < _screws.Length; i++)
         {
+            if (_screws[i] == null)
+            {
+                break;
+            }
+
             screwsData[i] = new ScrewData();
 
             screwsData[i].ScrewId = _screws[i].ScrewId;
