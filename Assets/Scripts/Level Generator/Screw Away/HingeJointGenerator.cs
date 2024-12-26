@@ -322,6 +322,7 @@ public class HingeJointGenerator : EditorWindow
         {
             int randomIndex = UnityEngine.Random.Range(0, remainingFactionForScrews.Count);
 
+            screws[i].ScrewId = i;
             screws[i].Faction = remainingFactionForScrews[randomIndex];
 
             remainingFactionForScrews.RemoveAt(randomIndex);

@@ -5,10 +5,17 @@ using static GameEnum;
 [Serializable]
 public class ScrewData
 {
+    [SerializeField] private int _screwId;
     [SerializeField] private GameFaction _faction;
     [SerializeField] private bool _isDone;
     [SerializeField] private bool _isInScrewPort;
     [SerializeField] private bool _isDestroyed;
+
+    public int ScrewId
+    {
+        get => _screwId;
+        set => _screwId = value;
+    }
 
     public GameFaction Faction
     {

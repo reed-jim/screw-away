@@ -518,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f511f336a2fd964195cb30c0047b386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isScrewPort: 0
 --- !u!1 &181973223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,6 +2538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f511f336a2fd964195cb30c0047b386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isScrewPort: 0
 --- !u!1 &1177951913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,6 +2927,7 @@ Transform:
   - {fileID: 1649438915}
   - {fileID: 1234861722}
   - {fileID: 1799837578}
+  - {fileID: 1829304988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1480998844
@@ -3205,6 +3208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f511f336a2fd964195cb30c0047b386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isScrewPort: 0
 --- !u!224 &1550472032 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5244749375208565013, guid: 38d801c7ec7310b449e70a06025c5066, type: 3}
@@ -3310,6 +3314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f511f336a2fd964195cb30c0047b386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isScrewPort: 0
 --- !u!1 &1573065566
 GameObject:
   m_ObjectHideFlags: 0
@@ -4180,6 +4185,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1829304987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1829304988}
+  - component: {fileID: 1829304989}
+  m_Layer: 0
+  m_Name: Screws Data Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1829304988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829304987}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1438289005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1829304989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829304987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a332b071f535b49819750da6b16821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screws: []
+  screwBoxManager: {fileID: 1234861721}
+  currentLevel: {fileID: 11400000, guid: dfc7835bc5f6fb64d9f4b1582f01db6e, type: 2}
 --- !u!1 &1842160791
 GameObject:
   m_ObjectHideFlags: 0

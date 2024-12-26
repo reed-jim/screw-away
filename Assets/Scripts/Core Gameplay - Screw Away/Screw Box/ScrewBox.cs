@@ -91,28 +91,33 @@ public class ScrewBox : MonoBehaviour
         isLocked = true;
     }
 
+    public void Unlock()
+    {
+        // CLEAR SCREWS
+        for (int i = 0; i < screwBoxSlots.Length; i++)
+        {
+            if (screwBoxSlots[i].IsFilled)
+            {
+                screwBoxSlots[i].IsFilled = false;
+
+                Destroy(screwBoxSlots[i].Screw.gameObject);
+
+                screwBoxSlots[i].Screw = null;
+            }
+        }
+
+        isLocked = false;
+
+        setFactionForScrewBoxEvent?.Invoke(this);
+
+        screwBoxUnlockedEvent?.Invoke();
+    }
+
     private void Unlock(int instanceId)
     {
         if (instanceId == gameObject.GetInstanceID())
         {
-            // CLEAR SCREWS
-            for (int i = 0; i < screwBoxSlots.Length; i++)
-            {
-                if (screwBoxSlots[i].IsFilled)
-                {
-                    screwBoxSlots[i].IsFilled = false;
-
-                    Destroy(screwBoxSlots[i].Screw.gameObject);
-
-                    screwBoxSlots[i].Screw = null;
-                }
-            }
-
-            isLocked = false;
-
-            setFactionForScrewBoxEvent?.Invoke(this);
-
-            screwBoxUnlockedEvent?.Invoke();
+            Unlock();
         }
     }
 }

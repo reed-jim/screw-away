@@ -12,6 +12,11 @@ public class ScrewBoxManager : MonoBehaviour
 
     [SerializeField] private int maxScrewBox;
 
+    public ScrewBox[] ScrewBoxs
+    {
+        get => screwBoxs;
+    }
+
     public List<ScrewBoxSlot> ScrewPorts
     {
         get => screwPorts;
@@ -193,8 +198,65 @@ public class ScrewBoxManager : MonoBehaviour
         }
     }
 
-    private void SpawnScrewBox(GameFaction faction)
+    public void SpawnScrewBox(GameFaction faction)
     {
+        // ScrewBox screwBox = ObjectPoolingEverything.GetFromPool<ScrewBox>(GameConstants.SCREW_BOX);
+
+        // screwBox.Faction = faction;
+
+        // screwBox.transform.position = new Vector3(-10, 9, screwBox.transform.position.z);
+
+        // int index = 0;
+
+        // for (int i = 0; i < screwBoxs.Length; i++)
+        // {
+        //     if (screwBoxs[i] == null)
+        //     {
+        //         screwBoxs[i] = screwBox;
+
+        //         index = i;
+
+        //         break;
+        //     }
+        // }
+
+        // for (int i = 0; i < screwBox.ScrewBoxSlots.Length; i++)
+        // {
+        //     ScrewBoxSlot screwBoxSlot = screwBox.ScrewBoxSlots[i];
+
+        //     if (screwBoxSlot.IsFilled)
+        //     {
+        //         screwBoxSlot.Screw.gameObject.SetActive(false);
+
+        //         screwBoxSlot.Screw = null;
+
+        //         screwBoxSlot.IsFilled = false;
+        //     }
+        // }
+
+        // // if (isLocked)
+        // // {
+        // //     screwBox.Lock();
+        // // }
+
+        // Tween.LocalPositionX(screwBox.transform, (-(maxScrewBox - 1) / 2f + index) * 2.5f, duration: 0.5f).OnComplete(() =>
+        // {
+        //     MoveFromScrewPortToScrewBox();
+        // });
+        SpawnScrewBox(faction, false);
+    }
+
+    public void SpawnScrewBox(GameFaction faction, bool isLocked = false)
+    {
+        if (isLocked)
+        {
+            SpawnAdsScrewBox();
+
+            return;
+        }
+
+        Debug.Log("BOOXX");
+
         ScrewBox screwBox = ObjectPoolingEverything.GetFromPool<ScrewBox>(GameConstants.SCREW_BOX);
 
         screwBox.Faction = faction;
@@ -233,6 +295,38 @@ public class ScrewBoxManager : MonoBehaviour
         {
             MoveFromScrewPortToScrewBox();
         });
+    }
+
+    public void SpawnScrewBox(ScrewBoxData screwBoxData)
+    {
+
+    }
+
+    private void SpawnAdsScrewBox()
+    {
+        for (int i = 0; i < screwBoxs.Length; i++)
+        {
+            if (screwBoxs[i] == null)
+            {
+                ScrewBox screwBox = ObjectPoolingEverything.GetFromPool<ScrewBox>(GameConstants.SCREW_BOX);
+
+                screwBox.transform.position = new Vector3(10, 9, screwBox.transform.position.z);
+
+                screwBox.Lock();
+
+                int index = i;
+
+                Tween.LocalPositionX(screwBox.transform, (-(maxScrewBox - 1) / 2f + index) * 2.5f, duration: 0.5f)
+                .OnComplete(() =>
+                {
+                    screwBox.ScrewBoxServiceLocator.screwBoxUI.SetUnlockByAdsButtonPosition();
+                });
+
+                screwBoxs[i] = screwBox;
+
+                break;
+            }
+        }
     }
 
     private void SpawnAdsScrewBoxes()

@@ -4,6 +4,7 @@ using static GameEnum;
 
 public class ScrewBoxSlot : MonoBehaviour
 {
+    [Header("CUSTOMIZE")]
     [SerializeField] private bool isScrewPort;
 
     private BaseScrew _screw;

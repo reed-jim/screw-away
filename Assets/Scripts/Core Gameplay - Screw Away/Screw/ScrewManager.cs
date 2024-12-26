@@ -23,6 +23,7 @@ public class ScrewManager : MonoBehaviour
     public static event Action<GameFaction> spawnScrewBoxEvent;
     public static event Action spawnAdsScrewBoxesEvent;
     public static event Action winLevelEvent;
+    public static event Action<BaseScrew[]> setScrewsEvent;
     #endregion
 
     void Awake()
@@ -32,6 +33,7 @@ public class ScrewManager : MonoBehaviour
         ScrewBox.spawnNewScrewBoxEvent += SpawnNewScrewBox;
         ScrewBox.setFactionForScrewBoxEvent += AssignFactionForNewScrewBox;
         BasicScrew.screwLoosenedEvent += CheckWin;
+        ScrewsDataManager.spawnFreshLevelScrewBoxesEvent += SpawnFirstScrewBoxes;
     }
 
     void OnDestroy()
@@ -41,6 +43,7 @@ public class ScrewManager : MonoBehaviour
         ScrewBox.spawnNewScrewBoxEvent -= SpawnNewScrewBox;
         ScrewBox.setFactionForScrewBoxEvent -= AssignFactionForNewScrewBox;
         BasicScrew.screwLoosenedEvent -= CheckWin;
+        ScrewsDataManager.spawnFreshLevelScrewBoxesEvent -= SpawnFirstScrewBoxes;
     }
 
     private void AddScrew(BaseScrew screw)
@@ -51,7 +54,9 @@ public class ScrewManager : MonoBehaviour
 
         if (_totalScrew == levelDataContainer.LevelsData[currentLevel.Value - 1].NumScrew)
         {
-            SpawnScrewBox();
+            // SpawnScrewBox();
+
+            setScrewsEvent?.Invoke(_screws.ToArray());
         }
     }
 
@@ -160,7 +165,7 @@ public class ScrewManager : MonoBehaviour
         return totalBlockObjectsByFaction;
     }
 
-    private async void SpawnScrewBox()
+    private async void SpawnFirstScrewBoxes()
     {
         Debug.Log("TOTAL: " + _totalScrew);
 

@@ -5,14 +5,7 @@ using UnityEngine;
 
 public class BasicScrew : BaseScrew
 {
-    [SerializeField] private HingeJoint joint;
-
     private bool _isRotating;
-
-    public HingeJoint Joint
-    {
-        set => joint = value;
-    }
 
     public bool IsRotating
     {
@@ -21,7 +14,6 @@ public class BasicScrew : BaseScrew
     }
 
     public static event Action disableInputEvent;
-    public static event Action<int> breakJointEvent;
     public static event Action screwLoosenedEvent;
 
     private void Update()
@@ -82,7 +74,8 @@ public class BasicScrew : BaseScrew
 
             joint.breakForce = 0;
 
-            breakJointEvent?.Invoke(joint.gameObject.GetInstanceID());
+            // breakJointEvent?.Invoke(joint.gameObject.GetInstanceID());
+            InvokeBreakJointEvent();
 
             _isRotating = true;
 
@@ -111,6 +104,7 @@ public class BasicScrew : BaseScrew
                         screwBoxSlot.CompleteFill();
 
                         _isDone = true;
+                        _isInScrewPort = screwBoxSlot.IsScrewPort;
 
                         screwLoosenedEvent?.Invoke();
                     }));

@@ -11,6 +11,8 @@ public class BaseScrew : MonoBehaviour, IScrew
 
     [SerializeField] protected ScrewServiceLocator screwServiceLocator;
 
+    [SerializeField] protected HingeJoint joint;
+
     [Header("CUSTOMIZE")]
     [SerializeField] protected float scaleOnScrewBox;
 
@@ -20,6 +22,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     protected Vector3 _initialScale;
     protected bool _isInteractable = true;
     protected bool _isDone;
+    protected bool _isInScrewPort;
     protected ScrewData _screwData;
     #endregion
 
@@ -27,6 +30,11 @@ public class BaseScrew : MonoBehaviour, IScrew
     {
         get => screwId;
         set => screwId = value;
+    }
+
+    public HingeJoint Joint
+    {
+        set => joint = value;
     }
 
     public ScrewData ScrewData
@@ -51,9 +59,16 @@ public class BaseScrew : MonoBehaviour, IScrew
         set => _isDone = value;
     }
 
+    public bool IsInScrewPort
+    {
+        get => _isInScrewPort;
+        set => _isInScrewPort = value;
+    }
+
     #region EVENT
     public static event Action<int, GameFaction> selectScrewEvent;
     public static event Action<BaseScrew> addScrewToListEvent;
+    public static event Action<int> breakJointEvent;
     #endregion
 
     protected virtual void Awake()
@@ -61,7 +76,7 @@ public class BaseScrew : MonoBehaviour, IScrew
         ScrewBoxManager.looseScrewEvent += Loose;
         RegisterMoreEvent();
 
-        screwId = gameObject.GetInstanceID();
+        // screwId = gameObject.GetInstanceID();
 
         AddScrewToList();
 
@@ -130,6 +145,10 @@ public class BaseScrew : MonoBehaviour, IScrew
 
     public void ForceUnscrew()
     {
+        joint.breakForce = 0;
+
+        breakJointEvent?.Invoke(joint.gameObject.GetInstanceID());
+
         _isDone = true;
 
         gameObject.SetActive(false);
@@ -138,5 +157,10 @@ public class BaseScrew : MonoBehaviour, IScrew
     public virtual int CountBlockingObjects()
     {
         return 0;
+    }
+
+    protected void InvokeBreakJointEvent()
+    {
+        breakJointEvent?.Invoke(joint.gameObject.GetInstanceID());
     }
 }
