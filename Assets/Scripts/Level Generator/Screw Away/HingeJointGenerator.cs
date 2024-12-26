@@ -30,6 +30,12 @@ public class HingeJointGenerator : EditorWindow
 
     private void OnGUI()
     {
+        float padding = 20f;
+
+        Rect areaRect = new Rect(padding, padding, position.width - 2 * padding, position.height - 2 * padding);
+
+        GUILayout.BeginArea(areaRect);
+
         prefabPath = EditorGUILayout.TextField("Prefab Path", prefabPath);
 
         target = (GameObject)EditorGUILayout.ObjectField("Target", target, typeof(GameObject), true);
@@ -57,12 +63,17 @@ public class HingeJointGenerator : EditorWindow
 
         if (GUILayout.Button("Flip Horizontally"))
         {
-            FlipHorizontally(Selection.activeTransform);
+            FlipHorizontally(Selection.activeTransform, prefabPath);
         }
 
         if (GUILayout.Button("Flip Vertically"))
         {
-            FlipVertically(Selection.activeTransform);
+            FlipVertically(Selection.activeTransform, prefabPath);
+        }
+
+        if (GUILayout.Button("Move"))
+        {
+            Move(Selection.activeTransform, prefabPath);
         }
 
         if (GUILayout.Button("Auto Assign Screw Faction"))
@@ -79,6 +90,8 @@ public class HingeJointGenerator : EditorWindow
         {
             AssignMaterial(prefabPath);
         }
+
+        GUILayout.EndArea();
     }
 
     private void GetForwardVector(Transform target)
@@ -93,14 +106,69 @@ public class HingeJointGenerator : EditorWindow
         target.localScale = new Vector3(1 / target.transform.parent.localScale.x, 1 / target.transform.parent.localScale.y, 1 / target.transform.parent.localScale.z);
     }
 
-    private void FlipHorizontally(Transform target)
+    private void FlipHorizontally(Transform target, string path)
     {
-        target.transform.Rotate(0, 180f, 0);
+        GameObject levelPrefab = PrefabUtility.LoadPrefabContents(path);
+
+        Transform flippedObject = Instantiate(target, levelPrefab.transform);
+
+        flippedObject.name = $"{target.name.Replace("- Generated", "")} - Generated";
+
+        Vector3 position = target.transform.position;
+
+        position.y *= -1;
+
+        Vector3 eulerAngle = target.transform.rotation.eulerAngles;
+
+        eulerAngle.y *= -1;
+
+        flippedObject.transform.position = position;
+        flippedObject.transform.rotation = Quaternion.Euler(eulerAngle);
+
+        EditorUtility.SetDirty(levelPrefab);
+
+        PrefabUtility.SaveAsPrefabAsset(levelPrefab, path);
     }
 
-    private void FlipVertically(Transform target)
+    private void FlipVertically(Transform target, string path)
     {
-        target.transform.Rotate(180f, 0, 0);
+        GameObject levelPrefab = PrefabUtility.LoadPrefabContents(path);
+
+        Transform flippedObject = Instantiate(target, levelPrefab.transform);
+
+        flippedObject.name = $"{target.name.Replace("- Generated", "")} - Generated";
+
+        Vector3 position = target.transform.position;
+
+        position.x *= -1;
+
+        Vector3 eulerAngle = target.transform.rotation.eulerAngles;
+
+        eulerAngle.x *= -1;
+
+        flippedObject.transform.position = position;
+        flippedObject.transform.rotation = Quaternion.Euler(eulerAngle);
+
+        EditorUtility.SetDirty(levelPrefab);
+
+        PrefabUtility.SaveAsPrefabAsset(levelPrefab, path);
+    }
+
+    private void Move(Transform target, string path)
+    {
+        GameObject levelPrefab = PrefabUtility.LoadPrefabContents(path);
+
+        Transform clonedObject = Instantiate(target, levelPrefab.transform);
+
+        clonedObject.name = $"{target.name.Replace("- Generated", "")} - Generated";
+
+        clonedObject.transform.position += distance.x * clonedObject.transform.right;
+        clonedObject.transform.position += distance.y * clonedObject.transform.up;
+        clonedObject.transform.position += distance.z * clonedObject.transform.forward;
+
+        EditorUtility.SetDirty(levelPrefab);
+
+        PrefabUtility.SaveAsPrefabAsset(levelPrefab, path);
     }
 
     private void Generate(string path)
