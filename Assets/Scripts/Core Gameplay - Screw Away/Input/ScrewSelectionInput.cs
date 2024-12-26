@@ -41,10 +41,10 @@ public class ScrewSelectionInput : MonoBehaviour
             _holdTime += Time.deltaTime;
         }
 
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     Select();
-        // }
+        if (Input.GetMouseButtonDown(0))
+        {
+            SelectObjectPart();
+        }
 
         if (Input.GetMouseButtonUp(0))
         {
@@ -59,7 +59,7 @@ public class ScrewSelectionInput : MonoBehaviour
         }
     }
 
-    private void Select()
+    private void SelectObjectPart()
     {
         if (_inputMode == InputMode.Disabled)
         {
@@ -94,6 +94,44 @@ public class ScrewSelectionInput : MonoBehaviour
 
                 return;
             }
+        }
+    }
+
+    private void Select()
+    {
+        if (_inputMode == InputMode.Disabled)
+        {
+            return;
+        }
+
+        if (IsClickedOnUI())
+        {
+            return;
+        }
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        Physics.Raycast(ray, out RaycastHit hit, layerMaskCheck);
+
+        if (hit.collider != null)
+        {
+            // IObjectPart objectPart = hit.collider.GetComponent<IObjectPart>();
+
+            // if (objectPart != null)
+            // {
+            //     if (_inputMode == InputMode.BreakObject)
+            //     {
+            //         objectPart.Break();
+
+            //         _inputMode = InputMode.Select;
+            //     }
+            //     else
+            //     {
+            //         objectPart.Select();
+            //     }
+
+            //     return;
+            // }
 
             IScrew screw = hit.collider.GetComponent<IScrew>();
 

@@ -61,59 +61,7 @@ public class ScrewsDataManager : MonoBehaviour
             screwBoxManager.SpawnScrewBox(screwBoxesData[i].Faction, screwBoxesData[i].IsLocked);
         }
 
-        // GameFaction[] screwBoxfactions = screwsData
-        //     .Where(item => item != null)
-        //     .Where(item => item.IsDone && !item.IsInScrewPort && !item.IsDestroyed)
-        //     .Select(item => item.Faction).ToArray();
-
-        // for (int i = 0; i < screwBoxfactions.Length; i++)
-        // {
-        //     screwBoxManager.SpawnScrewBox(screwBoxfactions[i]);
-        // }
-
-        // // No data for current level
-        // if (screwBoxfactions.Length == 0)
-        // {
-        //     spawnFreshLevelScrewBoxesEvent?.Invoke();
-
-        //     return;
-        // }
-
         await Task.Delay(2000);
-
-        // foreach (var id in _screwsWithId.Keys)
-        // {
-        //     BaseScrew screw = _screwsWithId[id];
-        //     ScrewData screwData = screwsData.First(item => item.ScrewId == screw.ScrewId);
-
-        //     if (screwData == null)
-        //     {
-        //         continue;
-        //     }
-
-        //     if (screwData.IsDestroyed)
-        //     {
-        //         screw.gameObject.SetActive(false);
-
-        //         screw.IsDone = true;
-
-        //         continue;
-        //     }
-
-        //     if (screwData.IsInScrewPort)
-        //     {
-        //         ScrewBoxSlot screwBoxSlot = screwBoxManager.CheckAvailableScrewBoxes(screw.Faction, isIncludeScrewPorts: true);
-
-        //         screw.Loose(screw.ScrewId, screw.Faction, screwBoxSlot);
-        //     }
-
-        //     if (screwData.IsDone)
-        //     {
-        //         ScrewBoxSlot screwBoxSlot = screwBoxManager.CheckAvailableScrewBoxes(screw.Faction, isIncludeScrewPorts: true);
-
-        //         screw.Loose(screw.ScrewId, screw.Faction, screwBoxSlot);
-        //     }
-        // }
 
         Dictionary<BaseScrew, ScrewData> screwsWithData = new Dictionary<BaseScrew, ScrewData>();
 
@@ -127,6 +75,8 @@ public class ScrewsDataManager : MonoBehaviour
                 if (screwData.ScrewId == screw.ScrewId)
                 {
                     screwsWithData.Add(screw, screwData);
+
+                    break;
                 }
             }
         }
@@ -161,52 +111,6 @@ public class ScrewsDataManager : MonoBehaviour
                 screw.Loose(screw.ScrewId, screw.Faction, screwBoxSlot);
             }
         }
-
-        // for (int i = 0; i < screwsWithData.Keys.Count; i++)
-        // {
-        //     BaseScrew screw = _screws[i];
-        //     ScrewData screwData = screwsData[i];
-
-        //     if (screwData == null)
-        //     {
-        //         continue;
-        //     }
-
-        //     if (screwData.IsDestroyed)
-        //     {
-        //         screw.gameObject.SetActive(false);
-
-        //         screw.IsDone = true;
-
-        //         continue;
-        //     }
-
-        //     if (screwData.IsInScrewPort)
-        //     {
-        //         ScrewBoxSlot screwBoxSlot = screwBoxManager.CheckAvailableScrewBoxes(screw.Faction, isIncludeScrewPorts: true);
-
-        //         screw.Loose(screw.ScrewId, screw.Faction, screwBoxSlot);
-
-        //         // for (int j = 0; j < screwBoxManager.ScrewPorts.Count; j++)
-        //         // {
-        //         //     ScrewBoxSlot screwBoxSlot = screwBoxManager.ScrewPorts[j];
-
-        //         //     if (!screwBoxSlot.IsFilled)
-        //         //     {
-        //         //         screw.Loose(screw.ScrewId, screw.Faction, screwBoxSlot);
-
-        //         //         break;
-        //         //     }
-        //         // }
-        //     }
-
-        //     if (screwData.IsDone)
-        //     {
-        //         ScrewBoxSlot screwBoxSlot = screwBoxManager.CheckAvailableScrewBoxes(screw.Faction, isIncludeScrewPorts: true);
-
-        //         screw.Loose(screw.ScrewId, screw.Faction, screwBoxSlot);
-        //     }
-        // }
     }
 
     private ScrewBoxData[] GetScrewBoxesData()
@@ -219,6 +123,8 @@ public class ScrewsDataManager : MonoBehaviour
 
             if (screwBoxManager.ScrewBoxs[i] == null)
             {
+                screwBoxesData[i].IsLocked = true;
+
                 continue;
             }
 
