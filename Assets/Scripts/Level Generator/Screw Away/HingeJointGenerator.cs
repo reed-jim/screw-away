@@ -17,6 +17,8 @@ public class HingeJointGenerator : EditorWindow
     private Vector3 dimensionSize;
     private Vector3 distance;
     private float expectedScale;
+    private Vector3 expectedLocalPositionOffset;
+    private Vector3 expectedLocalRotationOffset;
 
 
 
@@ -45,6 +47,9 @@ public class HingeJointGenerator : EditorWindow
         dimensionSize = EditorGUILayout.Vector3Field("Dimension Size", dimensionSize);
         distance = EditorGUILayout.Vector3Field("Distance", distance);
         expectedScale = EditorGUILayout.FloatField("Expected Scale", expectedScale);
+
+        expectedLocalPositionOffset = EditorGUILayout.Vector3Field("Expected Local Position Offset", expectedLocalPositionOffset);
+        expectedLocalRotationOffset = EditorGUILayout.Vector3Field("Expected Local Rotation Offset", expectedLocalRotationOffset);
 
         if (GUILayout.Button("Generate"))
         {
@@ -388,7 +393,8 @@ public class HingeJointGenerator : EditorWindow
             //     position.z = (-(dimensionSize.z - 1) / 2f + currentZ) * distance.z + target.transform.position.z;
             // }
 
-            screw.transform.localPosition = position;
+            screw.transform.localPosition = position + expectedLocalPositionOffset;
+            screw.transform.localEulerAngles += expectedLocalRotationOffset;
             screw.transform.localScale = TransformUtil.ComponentWiseDivine(expectedScale * Vector3.one, target.transform.localScale);
         }
 
