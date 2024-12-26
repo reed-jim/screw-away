@@ -1,4 +1,5 @@
 using System.IO;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
@@ -38,7 +39,7 @@ public static class DataUtility
         File.WriteAllText(filePath, json.ToString());
     }
 
-    public async static void SaveAsync<T>(string fileName, string key, T data)
+    public async static Task SaveAsync<T>(string fileName, string key, T data)
     {
         string filePath = Application.persistentDataPath + $"/{fileName}.json";
 
@@ -61,6 +62,11 @@ public static class DataUtility
         }
 
         await File.WriteAllTextAsync(filePath, json.ToString());
+    }
+
+    public static async void SaveAsync<T>(string key, T data)
+    {
+        await SaveAsync(GameConstants.SAVE_FILE_NAME, key, data);
     }
 
     public static T Load<T>(string fileName, string key, T defaultValue)
@@ -93,5 +99,10 @@ public static class DataUtility
         {
             return defaultValue;
         }
+    }
+
+    public static T Load<T>(string key, T defaultValue)
+    {
+        return Load(GameConstants.SAVE_FILE_NAME, key, defaultValue);
     }
 }

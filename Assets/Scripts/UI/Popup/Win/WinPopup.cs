@@ -13,6 +13,7 @@ public class WinPopup : BasePopup
 
     [SerializeField] private IntVariable currentLevel;
 
+    public static event Action<int> goLevelEvent;
     public static event Action nextLevelEvent;
 
     protected override void RegisterMoreEvent()
@@ -30,6 +31,8 @@ public class WinPopup : BasePopup
 
     private async void OnLevelWinAsync()
     {
+        currentLevel.Value++;
+
         Show();
 
         await Task.Delay(500);
@@ -63,7 +66,7 @@ public class WinPopup : BasePopup
     {
         Hide();
 
-        nextLevelEvent?.Invoke();
+        goLevelEvent?.Invoke(currentLevel.Value);
     }
 
     private void ReturnHome()

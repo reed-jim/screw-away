@@ -79,6 +79,7 @@ public static class GameConstants
 
     #region SAVE/LOAD
     public static string SAVE_FILE_NAME = "Game Local Data";
+    public static string CURRENT_LEVEL = "Current Level";
     public static string WEEKLY_TASKS = "Weekly Tasks";
     #endregion
 }

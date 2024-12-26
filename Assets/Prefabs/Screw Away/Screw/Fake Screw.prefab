@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screwId: -1
   screwServiceLocator: {fileID: 8892752953658211009}
+  scaleOnScrewBox: 0
   joint: {fileID: 0}
 --- !u!114 &8892752953658211009
 MonoBehaviour:
@@ -123,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorReference: _BaseColor
+  secondaryColorReference: _SecondaryColor
+  secondaryColorMultiplier: 0.6
   _renderer: {fileID: 3605883866489035732}
 --- !u!135 &4184167494153281086
 SphereCollider:
@@ -177,6 +180,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: b4f7da03b416dad47b51f89bf56f3a39, type: 2}
+  - {fileID: 2100000, guid: f6ab20fdb935bb945b775776df6bbc12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -9,6 +9,13 @@ public class ScrewSelectionInput : MonoBehaviour
 
     [SerializeField] private InputMode _inputMode;
 
+    [Header("CUSTOMIZE")]
+    [SerializeField] private float maxHoldTime;
+
+    #region PRIVATE FIELD
+    private float _holdTime;
+    #endregion
+
     #region EVENT
     public static event Action mouseUpEvent;
     #endregion
@@ -29,14 +36,26 @@ public class ScrewSelectionInput : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
-            Select();
+            _holdTime += Time.deltaTime;
         }
+
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     Select();
+        // }
 
         if (Input.GetMouseButtonUp(0))
         {
+            if (_holdTime < maxHoldTime)
+            {
+                Select();
+            }
+
             mouseUpEvent?.Invoke();
+
+            _holdTime = 0;
         }
     }
 

@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using PrimeTween;
+using Saferio.Util.SaferioTween;
 using UnityEngine;
 using static GameEnum;
 
@@ -16,6 +18,10 @@ public class ScrewBox : MonoBehaviour
     public static event Action spawnNewScrewBoxEvent;
     public static event Action<ScrewBox> setFactionForScrewBoxEvent;
     public static event Action screwBoxUnlockedEvent;
+    #endregion
+
+    #region PRIVATE FIELD
+    private List<Tween> _tweens;
     #endregion
 
     public GameFaction Faction
@@ -44,12 +50,16 @@ public class ScrewBox : MonoBehaviour
     {
         ScrewBoxSlot.screwBoxCompleteEvent += OnScrewBoxCompleted;
         ScrewBoxUI.unlockScrewBox += Unlock;
+
+        _tweens = new List<Tween>();
     }
 
     private void OnDestroy()
     {
         ScrewBoxSlot.screwBoxCompleteEvent -= OnScrewBoxCompleted;
         ScrewBoxUI.unlockScrewBox -= Unlock;
+
+        CommonUtil.StopAllTweens(_tweens);
     }
 
     private void OnScrewBoxCompleted(int instanceId)
@@ -60,10 +70,14 @@ public class ScrewBox : MonoBehaviour
 
             screwBoxDoneSound.Play();
 
-            Tween.LocalPositionX(transform, 10, duration: 0.5f).OnComplete(() =>
+            float initialPositionY = transform.position.y;
+
+            Tween.LocalPositionY(transform, transform.position.y + 8, duration: 0.5f).OnComplete(() =>
             {
                 screwBoxCompletedEvent?.Invoke(this);
                 spawnNewScrewBoxEvent?.Invoke();
+
+                transform.position = transform.position.ChangeY(initialPositionY);
 
                 ObjectPoolingEverything.ReturnToPool(GameConstants.SCREW_BOX, gameObject);
             });
