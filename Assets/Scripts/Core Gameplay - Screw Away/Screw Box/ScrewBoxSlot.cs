@@ -4,6 +4,8 @@ using static GameEnum;
 
 public class ScrewBoxSlot : MonoBehaviour
 {
+    [SerializeField] private bool isScrewPort;
+
     private BaseScrew _screw;
     private bool _isFilled;
 
@@ -17,6 +19,12 @@ public class ScrewBoxSlot : MonoBehaviour
     {
         get => _isFilled;
         set => _isFilled = value;
+    }
+
+    public bool IsScrewPort
+    {
+        get => isScrewPort;
+        set => isScrewPort = value;
     }
 
     #region EVENT

@@ -20,12 +20,18 @@ public class BaseScrew : MonoBehaviour, IScrew
     protected Vector3 _initialScale;
     protected bool _isInteractable = true;
     protected bool _isDone;
+    protected ScrewData _screwData;
     #endregion
 
     public int ScrewId
     {
         get => screwId;
         set => screwId = value;
+    }
+
+    public ScrewData ScrewData
+    {
+        get => _screwData;
     }
 
     public GameFaction Faction
@@ -42,6 +48,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     public bool IsDone
     {
         get => _isDone;
+        set => _isDone = value;
     }
 
     #region EVENT

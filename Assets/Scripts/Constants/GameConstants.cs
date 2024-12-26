@@ -81,5 +81,6 @@ public static class GameConstants
     public static string SAVE_FILE_NAME = "Game Local Data";
     public static string CURRENT_LEVEL = "Current Level";
     public static string WEEKLY_TASKS = "Weekly Tasks";
+    public static string SCREWS_DATA = "Screws Data";
     #endregion
 }

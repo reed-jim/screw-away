@@ -106,12 +106,12 @@ public class ScrewBoxManager : MonoBehaviour
         }
     }
 
-    private ScrewBoxSlot CheckAvailableScrewBoxes(GameFaction selectedFaction)
+    public ScrewBoxSlot CheckAvailableScrewBoxes(GameFaction selectedFaction)
     {
         return CheckAvailableScrewBoxes(selectedFaction, isIncludeScrewPorts: true);
     }
 
-    private ScrewBoxSlot CheckAvailableScrewBoxes(GameFaction selectedFaction, bool isIncludeScrewPorts)
+    public ScrewBoxSlot CheckAvailableScrewBoxes(GameFaction selectedFaction, bool isIncludeScrewPorts)
     {
         foreach (var screwBox in screwBoxs)
         {
