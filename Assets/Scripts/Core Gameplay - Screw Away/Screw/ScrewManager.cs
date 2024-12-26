@@ -16,6 +16,7 @@ public class ScrewManager : MonoBehaviour
     [SerializeField] private LevelDifficultyConfiguration levelDifficultyConfiguration;
 
     #region PRIVATE FIELD
+    private int _totalScrewObserved;
     private int _totalScrew;
     #endregion
 
@@ -29,6 +30,7 @@ public class ScrewManager : MonoBehaviour
     void Awake()
     {
         LevelLoader.startLevelEvent += OnLevelStart;
+        LevelLoader.setLevelScrewNumberEvent += SetLevelScrewNumber;
         BaseScrew.addScrewToListEvent += AddScrew;
         ScrewBox.spawnNewScrewBoxEvent += SpawnNewScrewBox;
         ScrewBox.setFactionForScrewBoxEvent += AssignFactionForNewScrewBox;
@@ -39,6 +41,7 @@ public class ScrewManager : MonoBehaviour
     void OnDestroy()
     {
         LevelLoader.startLevelEvent -= OnLevelStart;
+        LevelLoader.setLevelScrewNumberEvent -= SetLevelScrewNumber;
         BaseScrew.addScrewToListEvent -= AddScrew;
         ScrewBox.spawnNewScrewBoxEvent -= SpawnNewScrewBox;
         ScrewBox.setFactionForScrewBoxEvent -= AssignFactionForNewScrewBox;
@@ -46,13 +49,18 @@ public class ScrewManager : MonoBehaviour
         ScrewsDataManager.spawnFreshLevelScrewBoxesEvent -= SpawnFirstScrewBoxes;
     }
 
+    private void SetLevelScrewNumber(int screwNumber)
+    {
+        _totalScrew = screwNumber;
+    }
+
     private void AddScrew(BaseScrew screw)
     {
         _screws.Add(screw);
 
-        _totalScrew++;
+        _totalScrewObserved++;
 
-        if (_totalScrew == levelDataContainer.LevelsData[currentLevel.Value - 1].NumScrew)
+        if (_totalScrewObserved == _totalScrew)
         {
             // SpawnScrewBox();
 

@@ -42,6 +42,11 @@ public class BaseScrew : MonoBehaviour, IScrew
         get => _screwData;
     }
 
+    public ScrewServiceLocator ScrewServiceLocator
+    {
+        get => screwServiceLocator;
+    }
+
     public GameFaction Faction
     {
         get => screwServiceLocator.screwFaction.Faction;

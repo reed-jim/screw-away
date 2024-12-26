@@ -94,4 +94,25 @@ public static class TransformUtil
     {
         return new Vector3(firstVector.x / secondVector.x, firstVector.y / secondVector.y, firstVector.z / secondVector.z);
     }
+
+    public static List<T> GetComponentsFromAllChildren<T>(Transform parent) where T : Component
+    {
+        List<T> components = new List<T>();
+        GetComponentsFromAllChildrenRecursive<T>(parent, components);
+        return components;
+    }
+
+    private static void GetComponentsFromAllChildrenRecursive<T>(Transform parent, List<T> components) where T : Component
+    {
+        T component = parent.GetComponent<T>();
+        if (component != null)
+        {
+            components.Add(component);
+        }
+
+        foreach (Transform child in parent)
+        {
+            GetComponentsFromAllChildrenRecursive<T>(child, components);
+        }
+    }
 }
