@@ -45,6 +45,7 @@ public static class GameConstants
     public static string SCREW_BOX = "Screw Box";
     public static string SCREW_PORT_SLOT = "Screw Port Slot";
     public static string FAKE_SCREW = "Fake Screw";
+    public static string HAMMER = "Hammer";
     #endregion
 
     #region SOUND

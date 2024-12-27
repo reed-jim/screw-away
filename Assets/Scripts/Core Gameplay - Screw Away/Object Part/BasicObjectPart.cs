@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using PrimeTween;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
     public static event Action<int> selectObjectPartEvent;
     public static event Action<int> deselectObjectPartEvent;
     public static event Action<BaseScrew> loosenScrewOnObjectBrokenEvent;
+    public static event Action shakeCameraEvent;
 
     void Awake()
     {
@@ -111,9 +113,74 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
     public async void Break()
     {
+        Transform hammer = ObjectPoolingEverything.GetFromPool<Transform>(GameConstants.HAMMER);
+
+        Vector3 position1 = transform.position + 5 * transform.forward;
+        Vector3 position2 = transform.position - 5 * transform.forward;
+
+        float expectedYDirection;
+        float expectedZDirection;
+
+        Vector3 expectedPosition;
+
+
+        if (Vector3.Distance(position1, Vector3.zero) < Vector3.Distance(position2, Vector3.zero))
+        {
+            // expectedPosition = position2 - 0.8f * transform.up;
+
+            expectedZDirection = -1;
+        }
+        else
+        {
+            // expectedPosition = position1 - 0.8f * transform.up;
+
+            expectedZDirection = 1;
+        }
+
+        if (Vector3.Distance(hammer.position + transform.up, transform.position) < Vector3.Distance(hammer.position - transform.up, transform.position))
+        {
+            expectedYDirection = 1;
+        }
+        else
+        {
+            expectedYDirection = -1;
+        }
+
+        // hammer.position = transform.position + 5 * expectedZDirection * transform.forward + 0 * transform.up;
+        hammer.rotation = Quaternion.LookRotation(transform.forward);
+        hammer.Rotate(new Vector3(0, 90, 0));
+
+        hammer.position = transform.position + 5 * expectedZDirection * transform.forward + 0 * transform.up;
+
+        Tween.Position(hammer, transform.position + 2f * expectedZDirection * transform.forward + 1 * expectedYDirection * transform.up, duration: 0.2f)
+        .Chain(Tween.Rotation(hammer, hammer.rotation.eulerAngles + new Vector3(0, 0, expectedZDirection * 45), duration: 0.6f))
+        .Chain(Tween.Rotation(hammer, hammer.rotation.eulerAngles + new Vector3(0, 0, -expectedZDirection * 15), duration: 0.2f)
+        .OnComplete(() =>
+        {
+            Tween.Position(hammer, 20f * expectedZDirection * transform.forward, duration: 0.3f);
+        }));
+
+        await Task.Delay(950);
+
+        AudioSource breakObjectSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.BREAK_OBJECT_SOUND);
+
+        breakObjectSound.Play();
+
+        shakeCameraEvent?.Invoke();
+
+        // BE CAREFUL OF USING childCount
+        List<BaseScrew> screws = new List<BaseScrew>();
+
         for (int i = 0; i < transform.childCount; i++)
         {
             BaseScrew screw = transform.GetChild(i).GetComponent<BaseScrew>();
+
+            screws.Add(screw);
+        }
+
+        for (int i = 0; i < screws.Count; i++)
+        {
+            BaseScrew screw = screws[i];
 
             if (screw.IsValidToLoose())
             {
@@ -127,9 +194,9 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
             await Task.Delay(133);
         }
 
-        AudioSource breakObjectSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.BREAK_OBJECT_SOUND);
+        // AudioSource breakObjectSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.BREAK_OBJECT_SOUND);
 
-        breakObjectSound.Play();
+        // breakObjectSound.Play();
 
         Throw(forceBoost: 2);
     }

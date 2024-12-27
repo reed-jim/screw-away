@@ -1,3 +1,4 @@
+using PrimeTween;
 using UnityEngine;
 
 public class GameplayCamera : MonoBehaviour
@@ -9,6 +10,7 @@ public class GameplayCamera : MonoBehaviour
     void Awake()
     {
         PinchGesture.pinchGestureEvent += Zoom;
+        BasicObjectPart.shakeCameraEvent += Shake;
 
         _targetOrthographicSize = gameplayCamera.orthographicSize;
     }
@@ -16,6 +18,7 @@ public class GameplayCamera : MonoBehaviour
     void OnDestroy()
     {
         PinchGesture.pinchGestureEvent -= Zoom;
+        BasicObjectPart.shakeCameraEvent -= Shake;
     }
 
     void Update()
@@ -26,5 +29,10 @@ public class GameplayCamera : MonoBehaviour
     private void Zoom(float orthographicSize)
     {
         _targetOrthographicSize = orthographicSize;
+    }
+
+    private void Shake()
+    {
+        Tween.ShakeCamera(gameplayCamera, 1, duration: 0.3f);
     }
 }
