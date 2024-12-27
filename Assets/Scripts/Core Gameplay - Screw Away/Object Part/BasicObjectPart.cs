@@ -114,6 +114,8 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
         for (int i = 0; i < transform.childCount; i++)
         {
             BaseScrew screw = transform.GetChild(i).GetComponent<BaseScrew>();
+            
+            Debug.Log(screw + "/" + screw.IsValidToLoose());
 
             if (screw.IsValidToLoose())
             {
@@ -124,7 +126,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
                 screw.ForceUnscrew();
             }
 
-            await Task.Delay(GameConstants.TYPICAL_FRAME_MILISECOND);
+            await Task.Delay(133);
         }
 
         AudioSource breakObjectSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.BREAK_OBJECT_SOUND);

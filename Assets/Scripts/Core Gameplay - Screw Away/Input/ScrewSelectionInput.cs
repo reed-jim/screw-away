@@ -18,19 +18,20 @@ public class ScrewSelectionInput : MonoBehaviour
 
     #region EVENT
     public static event Action mouseUpEvent;
+    public static event Action breakObjectEvent;
     #endregion
 
     void Awake()
     {
-        SwipeGesture.swipeGestureEvent += DisableInput;
-        SwipeGesture.stopSwipeGestureEvent += EnableInput;
+        // SwipeGesture.swipeGestureEvent += DisableInput;
+        // SwipeGesture.stopSwipeGestureEvent += EnableInput;
         BoosterUI.enableBreakObjectModeEvent += EnableBreakObjectMode;
     }
 
     void OnDestroy()
     {
-        SwipeGesture.swipeGestureEvent -= DisableInput;
-        SwipeGesture.stopSwipeGestureEvent -= EnableInput;
+        // SwipeGesture.swipeGestureEvent -= DisableInput;
+        // SwipeGesture.stopSwipeGestureEvent -= EnableInput;
         BoosterUI.enableBreakObjectModeEvent -= EnableBreakObjectMode;
     }
 
@@ -84,6 +85,8 @@ public class ScrewSelectionInput : MonoBehaviour
                 if (_inputMode == InputMode.BreakObject)
                 {
                     objectPart.Break();
+
+                    breakObjectEvent?.Invoke();
 
                     _inputMode = InputMode.Select;
                 }
@@ -165,8 +168,6 @@ public class ScrewSelectionInput : MonoBehaviour
         {
             position = Input.mousePosition
         };
-
-        RaycastResult raycastResult = new RaycastResult();
 
         var raycastResults = new System.Collections.Generic.List<RaycastResult>();
         EventSystem.current.RaycastAll(pointerData, raycastResults);

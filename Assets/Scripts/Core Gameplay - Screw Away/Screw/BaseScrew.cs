@@ -20,6 +20,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     protected List<Tween> _tweens = new List<Tween>();
     protected int _numberBlockingObjects;
     protected Vector3 _initialScale;
+    protected bool _isRotating;
     protected bool _isInteractable = true;
     protected bool _isDone;
     protected bool _isInScrewPort;
@@ -56,6 +57,12 @@ public class BaseScrew : MonoBehaviour, IScrew
     public int NumberBlockingObjects
     {
         get => _numberBlockingObjects;
+    }
+
+    public bool IsRotating
+    {
+        get => _isRotating;
+        set => _isRotating = value;
     }
 
     public bool IsDone
@@ -148,15 +155,29 @@ public class BaseScrew : MonoBehaviour, IScrew
         }
     }
 
-    public void ForceUnscrew()
+    public virtual void ForceUnscrew()
     {
         joint.breakForce = 0;
 
         breakJointEvent?.Invoke(joint.gameObject.GetInstanceID());
 
+        _isRotating = true;
         _isDone = true;
 
-        gameObject.SetActive(false);
+        if (transform.position.x > 0)
+        {
+            Tween.PositionX(transform, 10, duration: 0.3f).OnComplete(() =>
+            {
+                gameObject.SetActive(false);
+            });
+        }
+        else
+        {
+            Tween.PositionX(transform, -10, duration: 0.3f).OnComplete(() =>
+            {
+                gameObject.SetActive(false);
+            });
+        }
     }
 
     public virtual int CountBlockingObjects()

@@ -5,14 +5,7 @@ using UnityEngine;
 
 public class BasicScrew : BaseScrew
 {
-    private bool _isRotating;
     private float _distanceBlocked;
-
-    public bool IsRotating
-    {
-        get => _isRotating;
-        set => _isRotating = value;
-    }
 
     #region ACTION
     public static event Action disableInputEvent;
@@ -84,8 +77,11 @@ public class BasicScrew : BaseScrew
 
             InvokeBreakJointEvent();
 
+            screwBoxSlot.Fill(this);
+
             _isRotating = true;
 
+            // FOR ROTATING
             await Task.Delay(100);
 
             _tweens.Add(Tween.Position(transform, transform.position + 3f * transform.forward, duration: 0.3f).OnComplete(() =>
@@ -119,8 +115,6 @@ public class BasicScrew : BaseScrew
             }));
 
             SoundManager.Instance.PlaySoundLoosenScrew();
-
-            screwBoxSlot.Fill(this);
         }
     }
 
