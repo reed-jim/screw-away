@@ -8,10 +8,16 @@ using static GameEnum;
 public class ScrewBox : MonoBehaviour
 {
     [SerializeField] private ScrewBoxSlot[] screwBoxSlots;
+    [SerializeField] private Transform boxLid;
 
     [SerializeField] private ScrewBoxServiceLocator screwBoxServiceLocator;
 
     [SerializeField] private bool isLocked;
+
+    [Header("CUSTOMIZE")]
+    [SerializeField] private float closeBoxLidDuration;
+    [SerializeField] private float scaleDownDuration;
+    [SerializeField] private float moveOutDuration;
 
     #region EVENT
     public static event Action<ScrewBox> screwBoxCompletedEvent;
@@ -22,6 +28,7 @@ public class ScrewBox : MonoBehaviour
 
     #region PRIVATE FIELD
     private List<Tween> _tweens;
+    private Vector3 _initialScale;
     #endregion
 
     public GameFaction Faction
@@ -52,6 +59,10 @@ public class ScrewBox : MonoBehaviour
         ScrewBoxUI.unlockScrewBox += Unlock;
 
         _tweens = new List<Tween>();
+
+        _initialScale = transform.localScale;
+
+        boxLid.gameObject.SetActive(false);
     }
 
     private void OnDestroy()
@@ -72,15 +83,22 @@ public class ScrewBox : MonoBehaviour
 
             float initialPositionY = transform.position.y;
 
-            Tween.LocalPositionY(transform, transform.position.y + 8, duration: 0.5f).OnComplete(() =>
+            boxLid.gameObject.SetActive(true);
+
+            boxLid.localPosition = new Vector3(0, 9, 0);
+
+            Tween.LocalPositionY(boxLid, 0.35f, duration: closeBoxLidDuration).Chain(
+            Tween.ScaleY(transform, 0.7f * _initialScale.y, duration: scaleDownDuration)
+            .Chain(Tween.LocalPositionY(transform, transform.position.y + 8, duration: moveOutDuration).OnComplete(() =>
             {
                 screwBoxCompletedEvent?.Invoke(this);
                 spawnNewScrewBoxEvent?.Invoke();
 
                 transform.position = transform.position.ChangeY(initialPositionY);
+                transform.localScale = _initialScale;
 
                 ObjectPoolingEverything.ReturnToPool(GameConstants.SCREW_BOX, gameObject);
-            });
+            })));
         }
     }
 

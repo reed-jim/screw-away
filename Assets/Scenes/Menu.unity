@@ -4853,11 +4853,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dabe95e3ef164ab999733429ba777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  container: {fileID: 0}
   iconRT: {fileID: 823522796}
   canvasSize: {fileID: 11400000, guid: cff3c506c9f63d645a923fa57c7a07c1, type: 2}
   canvasScale: {fileID: 11400000, guid: 868c53afb89f6fb4eb2dc813d4847328, type: 2}
   testCollectCoinButton: {fileID: 736871572}
   coinText: {fileID: 0}
+  userResourcesObserver: {fileID: 0}
 --- !u!1 &1218984745
 GameObject:
   m_ObjectHideFlags: 0
@@ -6273,11 +6275,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2dabe95e3ef164ab999733429ba777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  container: {fileID: 0}
   iconRT: {fileID: 1727059740}
   canvasSize: {fileID: 11400000, guid: cff3c506c9f63d645a923fa57c7a07c1, type: 2}
   canvasScale: {fileID: 11400000, guid: 868c53afb89f6fb4eb2dc813d4847328, type: 2}
   testCollectCoinButton: {fileID: 929299500}
   coinText: {fileID: 0}
+  userResourcesObserver: {fileID: 0}
 --- !u!1 &1584253121
 GameObject:
   m_ObjectHideFlags: 0
