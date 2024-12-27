@@ -6,6 +6,7 @@ public class ScrewBoxFaction : MonoBehaviour
 {
     [SerializeField] private GameFaction faction;
     [SerializeField] private SpriteRenderer boxSpriteRenderer;
+    [SerializeField] private SpriteRenderer boxLidSpriteRenderer;
 
     [SerializeField] private ScrewBoxServiceLocator screwBoxServiceLocator;
 
@@ -27,6 +28,7 @@ public class ScrewBoxFaction : MonoBehaviour
         this.faction = faction;
 
         boxSpriteRenderer.sprite = screwBoxFactionsData[(int)faction].BoxSprite;
+        boxLidSpriteRenderer.sprite = screwBoxFactionsData[(int)faction].BoxLidSprite;
 
         // screwBoxServiceLocator.screwBoxMaterialPropertyBlock.SetColor(FactionUtility.GetColorForFaction(faction));
     }
@@ -37,9 +39,15 @@ public class ScrewBoxFactionData
 {
     [SerializeField] private GameFaction faction;
     [SerializeField] private Sprite boxSprite;
+    [SerializeField] private Sprite boxLid;
 
     public Sprite BoxSprite
     {
         get => boxSprite;
+    }
+
+    public Sprite BoxLidSprite
+    {
+        get => boxLid;
     }
 }

@@ -85,9 +85,9 @@ public class ScrewBox : MonoBehaviour
 
             boxLid.gameObject.SetActive(true);
 
-            boxLid.localPosition = new Vector3(0, 9, 0);
+            boxLid.localPosition = boxLid.localPosition.ChangeY(9);
 
-            Tween.LocalPositionY(boxLid, 0.35f, duration: closeBoxLidDuration).Chain(
+            Tween.LocalPositionY(boxLid, 0.4f, duration: closeBoxLidDuration).Chain(
             Tween.ScaleY(transform, 0.7f * _initialScale.y, duration: scaleDownDuration)
             .Chain(Tween.LocalPositionY(transform, transform.position.y + 8, duration: moveOutDuration).OnComplete(() =>
             {
@@ -96,6 +96,8 @@ public class ScrewBox : MonoBehaviour
 
                 transform.position = transform.position.ChangeY(initialPositionY);
                 transform.localScale = _initialScale;
+
+                boxLid.gameObject.SetActive(false);
 
                 ObjectPoolingEverything.ReturnToPool(GameConstants.SCREW_BOX, gameObject);
             })));

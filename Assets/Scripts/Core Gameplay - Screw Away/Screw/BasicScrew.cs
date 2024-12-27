@@ -99,7 +99,7 @@ public class BasicScrew : BaseScrew
                     float duration = 0.3f;
 
                     _tweens.Add(Tween.LocalRotation(transform, Quaternion.Euler(new Vector3(0, 180, 0)), duration: duration));
-                    _tweens.Add(Tween.LocalPosition(transform, new Vector3(0, 1.05f, -0.3f), duration: duration));
+                    _tweens.Add(Tween.LocalPosition(transform, new Vector3(0, 0, -0.3f), duration: duration));
                     _tweens.Add(Tween.Scale(transform, scaleOnScrewBox * Vector3.one, duration: duration)
                     .OnComplete(() =>
                     {

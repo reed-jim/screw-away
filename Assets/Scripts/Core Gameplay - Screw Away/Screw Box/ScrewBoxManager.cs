@@ -230,7 +230,7 @@ public class ScrewBoxManager : MonoBehaviour
 
         screwBox.Faction = faction;
 
-        screwBox.transform.position = new Vector3(-10, 9, screwBox.transform.position.z);
+        screwBox.transform.position = new Vector3(-10, 9.5f, screwBox.transform.position.z);
 
         int index = 0;
 
@@ -293,7 +293,7 @@ public class ScrewBoxManager : MonoBehaviour
             {
                 ScrewBox screwBox = ObjectPoolingEverything.GetFromPool<ScrewBox>(GameConstants.SCREW_BOX);
 
-                screwBox.transform.position = new Vector3(10, 9, screwBox.transform.position.z);
+                screwBox.transform.position = new Vector3(10, 9.5f, screwBox.transform.position.z);
 
                 screwBox.Lock();
 
@@ -320,7 +320,7 @@ public class ScrewBoxManager : MonoBehaviour
             {
                 ScrewBox screwBox = ObjectPoolingEverything.GetFromPool<ScrewBox>(GameConstants.SCREW_BOX);
 
-                screwBox.transform.position = new Vector3(10, 9, screwBox.transform.position.z);
+                screwBox.transform.position = new Vector3(10, 9.5f, screwBox.transform.position.z);
 
                 screwBox.Lock();
 
