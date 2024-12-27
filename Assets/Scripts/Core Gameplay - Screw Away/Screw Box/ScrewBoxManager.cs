@@ -468,11 +468,15 @@ public class ScrewBoxManager : MonoBehaviour
 
         Vector3 position = screwPorts[0].transform.position;
 
+        screwBoxSlot.transform.position = position + new Vector3(10, 0, 0);
+
         for (int i = 0; i < screwPorts.Count; i++)
         {
             position.x = (-(screwPorts.Count - 1) / 2f + i) * 0.8f;
 
-            screwPorts[i].transform.position = position;
+            Tween.Position(screwPorts[i].transform, position, duration: 0.2f);
+
+            // screwPorts[i].transform.position = position;
         }
     }
 

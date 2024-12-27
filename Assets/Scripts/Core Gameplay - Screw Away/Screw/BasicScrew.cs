@@ -6,6 +6,7 @@ using UnityEngine;
 public class BasicScrew : BaseScrew
 {
     private bool _isRotating;
+    private float _distanceBlocked;
 
     public bool IsRotating
     {
@@ -13,8 +14,10 @@ public class BasicScrew : BaseScrew
         set => _isRotating = value;
     }
 
+    #region ACTION
     public static event Action disableInputEvent;
     public static event Action screwLoosenedEvent;
+    #endregion
 
     private void Update()
     {
@@ -45,11 +48,14 @@ public class BasicScrew : BaseScrew
 
             CountBlockingObjects();
 
+            // BLOCKED
             if (_numberBlockingObjects > 0)
             {
                 FakeScrew fakeScrew = ObjectPoolingEverything.GetFromPool<FakeScrew>(GameConstants.FAKE_SCREW);
 
                 fakeScrew.CloneFromScrew(this);
+
+                fakeScrew.transform.SetParent(transform);
 
                 GetComponent<MeshRenderer>().enabled = false;
 
@@ -57,12 +63,14 @@ public class BasicScrew : BaseScrew
 
                 SoundManager.Instance.PlaySoundLoosenScrewFail();
 
-                _tweens.Add(Tween.Position(fakeScrew.transform, transform.position + 0.3f * transform.forward, cycles: 2, cycleMode: CycleMode.Yoyo, duration: 0.5f)
+                _tweens.Add(Tween.LocalPosition(fakeScrew.transform, 0.6f * _distanceBlocked * (fakeScrew.transform.localRotation * Vector3.forward),
+                    cycles: 2, cycleMode: CycleMode.Yoyo, duration: 0.5f)
                 .OnComplete(() =>
                 {
                     fakeScrew.IsRotating = false;
 
-                    fakeScrew.gameObject.SetActive(false);
+                    ObjectPoolingEverything.ReturnToPool(GameConstants.FAKE_SCREW, fakeScrew.gameObject);
+                    // fakeScrew.gameObject.SetActive(false);
 
                     GetComponent<MeshRenderer>().enabled = true;
 
@@ -74,7 +82,6 @@ public class BasicScrew : BaseScrew
 
             joint.breakForce = 0;
 
-            // breakJointEvent?.Invoke(joint.gameObject.GetInstanceID());
             InvokeBreakJointEvent();
 
             _isRotating = true;
@@ -146,6 +153,8 @@ public class BasicScrew : BaseScrew
 
         int number = 0;
 
+        float minBlockedDistance = float.MaxValue;
+
         if (hits != null)
         {
             for (int i = 0; i < hits.Length; i++)
@@ -157,7 +166,14 @@ public class BasicScrew : BaseScrew
 
                 if (hits[i].GetComponent<IObjectPart>() != null)
                 {
-                    if (Vector3.Distance(hits[i].ClosestPoint(transform.position), transform.position) < 2)
+                    float distance = Vector3.Distance(hits[i].ClosestPoint(transform.position), transform.position);
+
+                    if (distance < minBlockedDistance)
+                    {
+                        minBlockedDistance = distance;
+                    }
+
+                    if (distance < 2)
                     {
                         number++;
                     }
@@ -166,6 +182,7 @@ public class BasicScrew : BaseScrew
         }
 
         _numberBlockingObjects = number;
+        _distanceBlocked = minBlockedDistance;
 
         return number;
     }
