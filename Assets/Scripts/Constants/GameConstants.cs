@@ -83,4 +83,8 @@ public static class GameConstants
     public static string WEEKLY_TASKS = "Weekly Tasks";
     public static string SCREWS_DATA = "Screws Data";
     #endregion
+
+    #region SCREW AWAY
+    public static int DEFAULT_NUMBER_SCREW_PORT = 5; 
+    #endregion
 }

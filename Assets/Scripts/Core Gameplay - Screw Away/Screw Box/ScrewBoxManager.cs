@@ -86,6 +86,7 @@ public class ScrewBoxManager : MonoBehaviour
 
         screwBoxs = new ScrewBox[maxScrewBox];
 
+        // RESET SCREW PORTS
         for (int i = 0; i < screwPorts.Count; i++)
         {
             if (screwPorts[i].IsFilled)
@@ -96,6 +97,35 @@ public class ScrewBoxManager : MonoBehaviour
 
                 screwPorts[i].Screw = null;
             }
+        }
+
+        int toRemoveStartIndex = 0;
+        int toRemoveCount = 0;
+
+        for (int i = 0; i < screwPorts.Count; i++)
+        {
+            if (i >= GameConstants.DEFAULT_NUMBER_SCREW_PORT)
+            {
+                ObjectPoolingEverything.ReturnToPool(GameConstants.SCREW_PORT_SLOT, screwPorts[i].gameObject);
+
+                if (toRemoveStartIndex == 0)
+                {
+                    toRemoveStartIndex = i;
+                }
+
+                toRemoveCount++;
+            }
+        }
+
+        screwPorts.RemoveRange(toRemoveStartIndex, toRemoveCount);
+
+        Vector3 screwPortPosition = screwPorts[0].transform.position;
+
+        for (int i = 0; i < screwPorts.Count; i++)
+        {
+            screwPortPosition.x = (-(screwPorts.Count - 1) / 2f + i) * 0.8f;
+
+            screwPorts[i].transform.position = screwPortPosition;
         }
     }
 

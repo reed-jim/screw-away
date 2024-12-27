@@ -8,6 +8,9 @@ public class BottomBar : MonoBehaviour
 
     [SerializeField] private Vector2Variable canvasSize;
 
+    [Header("CUSTOMIZE")]
+    [SerializeField] private int screenNumber;
+
     #region PRIVATE FIELD
     private float _slotSize;
     private bool _isSwitchingByTap;
@@ -23,7 +26,7 @@ public class BottomBar : MonoBehaviour
         SwipeGesture.stopSwipeGestureEvent += OnStopSwiping;
         BottomBarItem.moveBottomBarHighlightEvent += MoveBottomBarHighlight;
 
-        _slotSize = canvasSize.Value.x / 5f;
+        _slotSize = canvasSize.Value.x / screenNumber;
     }
 
     private void Start()
@@ -45,9 +48,12 @@ public class BottomBar : MonoBehaviour
             return;
         }
 
-        highlight.localPosition -= new Vector3(direction.x / 5f, 0, 0);
+        if (Mathf.Abs(highlight.localPosition.x - direction.x / screenNumber) <= 0.5f * (canvasSize.Value.x - highlight.sizeDelta.x))
+        {
+            highlight.localPosition -= new Vector3(direction.x / screenNumber, 0, 0);
 
-        setHighlightPositionEvent?.Invoke(highlight.localPosition.x);
+            setHighlightPositionEvent?.Invoke(highlight.localPosition.x);
+        }
     }
 
     private void OnStopSwiping()
@@ -57,7 +63,7 @@ public class BottomBar : MonoBehaviour
             return;
         }
 
-        float unitValue = canvasSize.Value.x / 5f;
+        float unitValue = canvasSize.Value.x / screenNumber;
 
         float ratio = (highlight.localPosition.x % unitValue) / unitValue;
 

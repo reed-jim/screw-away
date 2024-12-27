@@ -8,6 +8,9 @@ public class SwipingScreen : MonoBehaviour
 
     [SerializeField] private Vector2Variable canvasSize;
 
+    [Header("CUSTOMIZE")]
+    [SerializeField] private int screenNumber;
+
     #region PRIVATE FIELD
     private float _slotSize;
     private bool _isSwitchingByTap;
@@ -43,7 +46,10 @@ public class SwipingScreen : MonoBehaviour
             return;
         }
 
-        container.localPosition += new Vector3(direction.x, 0, 0);
+        if (Mathf.Abs(container.localPosition.x + direction.x) <= 0.5f * screenNumber * canvasSize.Value.x)
+        {
+            container.localPosition += new Vector3(direction.x, 0, 0);
+        }
     }
 
     private void OnStopSwiping()

@@ -13,6 +13,7 @@ public class LevelLoader : MonoBehaviour
 
     public static event Action startLevelEvent;
     public static event Action<int> setLevelScrewNumberEvent;
+    public static event Action showSceneTransitionEvent;
 
     private void Awake()
     {
@@ -51,6 +52,8 @@ public class LevelLoader : MonoBehaviour
                 AutoAssignScrewFaction(level);
             }
         };
+
+        showSceneTransitionEvent?.Invoke();
     }
 
     private async void GoLevel(int level)
