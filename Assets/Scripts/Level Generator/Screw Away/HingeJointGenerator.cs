@@ -96,12 +96,30 @@ public class HingeJointGenerator : EditorWindow
             AssignMaterial(prefabPath);
         }
 
+        if (GUILayout.Button("Center Level Pivot"))
+        {
+            CenterLevelPivot(prefabPath);
+        }
+
         GUILayout.EndArea();
     }
 
-    private void GetForwardVector(Transform target)
+    private void CenterLevelPivot(string path)
     {
-        Debug.Log(target.forward);
+        GameObject levelPrefab = PrefabUtility.LoadPrefabContents(path);
+
+        BasicObjectPart[] objectParts = GetComponentsFromAllChildren<BasicObjectPart>(levelPrefab.transform).ToArray();
+
+        Vector3 averagePostition = new Vector3();
+
+        for (int i = 0; i < objectParts.Length; i++)
+        {
+            averagePostition += objectParts[i].transform.position;
+        }
+
+        averagePostition /= objectParts.Length;
+
+        Selection.activeTransform.position = averagePostition;
     }
 
     private void ResetLocalRotation(Transform target)

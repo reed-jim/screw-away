@@ -109,7 +109,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
         }
     }
 
-    public void Break()
+    public async void Break()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -123,6 +123,8 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
             {
                 screw.ForceUnscrew();
             }
+
+            await Task.Delay(GameConstants.TYPICAL_FRAME_MILISECOND);
         }
 
         AudioSource breakObjectSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.BREAK_OBJECT_SOUND);

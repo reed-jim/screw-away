@@ -87,4 +87,8 @@ public static class GameConstants
     #region SCREW AWAY
     public static int DEFAULT_NUMBER_SCREW_PORT = 5; 
     #endregion
+
+    #region SWIPE
+    public static int TYPICAL_FRAME_MILISECOND = 13; 
+    #endregion
 }
