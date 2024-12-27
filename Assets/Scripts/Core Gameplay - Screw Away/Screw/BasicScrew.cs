@@ -9,7 +9,6 @@ public class BasicScrew : BaseScrew
 
     #region ACTION
     public static event Action disableInputEvent;
-    public static event Action screwLoosenedEvent;
     #endregion
 
     private void Update()
@@ -109,7 +108,7 @@ public class BasicScrew : BaseScrew
                         _isDone = true;
                         _isInScrewPort = screwBoxSlot.IsScrewPort;
 
-                        screwLoosenedEvent?.Invoke();
+                        InvokeScrewLoosenedEvent();
                     }));
                 }));
             }));

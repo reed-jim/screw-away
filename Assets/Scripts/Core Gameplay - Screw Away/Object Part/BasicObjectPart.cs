@@ -114,8 +114,6 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
         for (int i = 0; i < transform.childCount; i++)
         {
             BaseScrew screw = transform.GetChild(i).GetComponent<BaseScrew>();
-            
-            Debug.Log(screw + "/" + screw.IsValidToLoose());
 
             if (screw.IsValidToLoose())
             {

@@ -81,6 +81,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     public static event Action<int, GameFaction> selectScrewEvent;
     public static event Action<BaseScrew> addScrewToListEvent;
     public static event Action<int> breakJointEvent;
+    public static event Action screwLoosenedEvent;
     #endregion
 
     protected virtual void Awake()
@@ -168,6 +169,8 @@ public class BaseScrew : MonoBehaviour, IScrew
         {
             Tween.PositionX(transform, 10, duration: 0.3f).OnComplete(() =>
             {
+                InvokeScrewLoosenedEvent();
+
                 gameObject.SetActive(false);
             });
         }
@@ -175,6 +178,8 @@ public class BaseScrew : MonoBehaviour, IScrew
         {
             Tween.PositionX(transform, -10, duration: 0.3f).OnComplete(() =>
             {
+                InvokeScrewLoosenedEvent();
+
                 gameObject.SetActive(false);
             });
         }
@@ -183,6 +188,11 @@ public class BaseScrew : MonoBehaviour, IScrew
     public virtual int CountBlockingObjects()
     {
         return 0;
+    }
+
+    protected void InvokeScrewLoosenedEvent()
+    {
+        screwLoosenedEvent?.Invoke();
     }
 
     protected void InvokeBreakJointEvent()

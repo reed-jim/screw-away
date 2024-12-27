@@ -16,7 +16,7 @@ public class MultiPhaseLevelManager : MonoBehaviour
     private void Awake()
     {
         MultiPhaseScrew.manageScrewEvent += ManageScrew;
-        BasicScrew.screwLoosenedEvent += OnScrewLoosened;
+        BaseScrew.screwLoosenedEvent += OnScrewLoosened;
 
         _screws = new List<MultiPhaseScrew>();
 
@@ -26,7 +26,7 @@ public class MultiPhaseLevelManager : MonoBehaviour
     private void OnDestroy()
     {
         MultiPhaseScrew.manageScrewEvent -= ManageScrew;
-        BasicScrew.screwLoosenedEvent -= OnScrewLoosened;
+        BaseScrew.screwLoosenedEvent -= OnScrewLoosened;
     }
 
     private void ManageScrew(MultiPhaseScrew screw)

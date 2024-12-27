@@ -35,7 +35,7 @@ public class ScrewManager : MonoBehaviour
         BaseScrew.addScrewToListEvent += AddScrew;
         ScrewBox.spawnNewScrewBoxEvent += SpawnNewScrewBox;
         ScrewBox.setFactionForScrewBoxEvent += AssignFactionForNewScrewBox;
-        BasicScrew.screwLoosenedEvent += CheckWin;
+        BaseScrew.screwLoosenedEvent += CheckWin;
         ScrewsDataManager.spawnFreshLevelScrewBoxesEvent += SpawnFirstScrewBoxes;
     }
 
@@ -46,7 +46,7 @@ public class ScrewManager : MonoBehaviour
         BaseScrew.addScrewToListEvent -= AddScrew;
         ScrewBox.spawnNewScrewBoxEvent -= SpawnNewScrewBox;
         ScrewBox.setFactionForScrewBoxEvent -= AssignFactionForNewScrewBox;
-        BasicScrew.screwLoosenedEvent -= CheckWin;
+        BaseScrew.screwLoosenedEvent -= CheckWin;
         ScrewsDataManager.spawnFreshLevelScrewBoxesEvent -= SpawnFirstScrewBoxes;
     }
     #endregion
