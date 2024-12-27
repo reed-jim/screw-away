@@ -162,27 +162,38 @@ public class BaseScrew : MonoBehaviour, IScrew
 
         breakJointEvent?.Invoke(joint.gameObject.GetInstanceID());
 
-        _isRotating = true;
         _isDone = true;
 
-        if (transform.position.x > 0)
+        ThrowOutside();
+    }
+
+    public virtual void ThrowOutside()
+    {
+        _isRotating = true;
+
+        Tween.Position(transform, transform.position + 3f * transform.forward, duration: 0.3f)
+        .OnComplete(() =>
         {
-            Tween.PositionX(transform, 10, duration: 0.3f).OnComplete(() =>
+            Vector3 destination = transform.position;
+
+            if (transform.position.x > 0)
+            {
+                destination.x = 10;
+            }
+            else
+            {
+                destination.x = -10;
+            }
+
+            destination.y = 0;
+
+            Tween.Position(transform, destination, duration: 0.3f).OnComplete(() =>
             {
                 InvokeScrewLoosenedEvent();
 
                 gameObject.SetActive(false);
             });
-        }
-        else
-        {
-            Tween.PositionX(transform, -10, duration: 0.3f).OnComplete(() =>
-            {
-                InvokeScrewLoosenedEvent();
-
-                gameObject.SetActive(false);
-            });
-        }
+        });
     }
 
     public virtual int CountBlockingObjects()

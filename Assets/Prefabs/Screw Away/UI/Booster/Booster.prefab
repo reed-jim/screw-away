@@ -469,6 +469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Break Object Button
       objectReference: {fileID: 0}
+    - target: {fileID: 3857345280886117483, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
+      propertyPath: translationName
+      value: Break Object
+      objectReference: {fileID: 0}
     - target: {fileID: 7643315751019044431, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -548,6 +552,10 @@ PrefabInstance:
     - target: {fileID: 7643315751019044431, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088260111148464627, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
+      propertyPath: m_text
+      value: Break Object
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -707,6 +715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clear Screw Ports Button
       objectReference: {fileID: 0}
+    - target: {fileID: 3857345280886117483, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
+      propertyPath: translationName
+      value: Clear Holes
+      objectReference: {fileID: 0}
     - target: {fileID: 7643315751019044431, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -786,6 +798,10 @@ PrefabInstance:
     - target: {fileID: 7643315751019044431, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088260111148464627, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
+      propertyPath: m_text
+      value: Clear Holes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

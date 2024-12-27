@@ -457,24 +457,34 @@ public class ScrewBoxManager : MonoBehaviour
 
     public void AddMoreScrewPort()
     {
-        ScrewBoxSlot screwBoxSlot = ObjectPoolingEverything.GetFromPool<ScrewBoxSlot>(GameConstants.SCREW_PORT_SLOT);
+        ScrewBoxSlot addedScrewBoxSlot = ObjectPoolingEverything.GetFromPool<ScrewBoxSlot>(GameConstants.SCREW_PORT_SLOT);
 
-        screwPorts.Add(screwBoxSlot);
+        screwPorts.Add(addedScrewBoxSlot);
 
-        screwBoxSlot.transform.SetParent(screwPorts[0].transform.parent);
+        addedScrewBoxSlot.transform.SetParent(screwPorts[0].transform.parent);
 
-        screwBoxSlot.transform.localRotation = Quaternion.Euler(Vector3.zero);
-        screwBoxSlot.transform.localScale = screwPorts[0].transform.localScale;
+        addedScrewBoxSlot.transform.localRotation = Quaternion.Euler(Vector3.zero);
+        addedScrewBoxSlot.transform.localScale = screwPorts[0].transform.localScale;
 
         Vector3 position = screwPorts[0].transform.position;
 
-        screwBoxSlot.transform.position = position + new Vector3(10, 0, 0);
+        // addedScrewBoxSlot.transform.position = position + new Vector3(10, 0, 0);
+        addedScrewBoxSlot.transform.localScale = Vector3.zero;
 
         for (int i = 0; i < screwPorts.Count; i++)
         {
+            int index = i;
+
             position.x = (-(screwPorts.Count - 1) / 2f + i) * 0.8f;
 
-            Tween.Position(screwPorts[i].transform, position, duration: 0.2f);
+            Tween.Position(screwPorts[i].transform, position, duration: 0.3f)
+            .OnComplete(() =>
+            {
+                if (index == screwPorts.Count - 1)
+                {
+                    Tween.Scale(addedScrewBoxSlot.transform, Vector3.one, duration: 0.3f);
+                }
+            });
 
             // screwPorts[i].transform.position = position;
         }
@@ -488,7 +498,9 @@ public class ScrewBoxManager : MonoBehaviour
             {
                 screwPorts[i].IsFilled = false;
 
-                screwPorts[i].Screw.gameObject.SetActive(false);
+                // screwPorts[i].Screw.gameObject.SetActive(false);
+
+                screwPorts[i].Screw.ThrowOutside();
 
                 screwPorts[i].Screw = null;
             }
