@@ -101,6 +101,11 @@ public class HingeJointGenerator : EditorWindow
             CenterLevelPivot(prefabPath);
         }
 
+        if (GUILayout.Button("Remove All Grandchildren Of"))
+        {
+            RemoveAllGrandchildrenOf();
+        }
+
         GUILayout.EndArea();
     }
 
@@ -318,23 +323,19 @@ public class HingeJointGenerator : EditorWindow
 
         BaseScrew[] screws = GetComponentsFromAllChildren<BaseScrew>(levelPrefab.transform).ToArray();
 
-        GameFaction[] factions = new GameFaction[5] { GameFaction.Blue, GameFaction.Red, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
-
         int currentFaction = 0;
 
         List<GameFaction> remainingFactionForScrews = new List<GameFaction>();
 
         for (int i = 0; i < screws.Length; i++)
         {
-            remainingFactionForScrews.Add(factions[currentFaction]);
-
-            // screws[i].Faction = factions[currentFaction];
+            remainingFactionForScrews.Add(GameConstants.SCREW_FACTION[currentFaction]);
 
             if (i > 0 && (i + 1) % 3 == 0)
             {
                 currentFaction++;
 
-                if (currentFaction >= factions.Length)
+                if (currentFaction >= GameConstants.SCREW_FACTION.Length)
                 {
                     currentFaction = 0;
                 }
@@ -467,6 +468,27 @@ public class HingeJointGenerator : EditorWindow
         PrefabUtility.SaveAsPrefabAsset(levelPrefab, path);
     }
 
+    #region REMOVE
+    private void RemoveAllGrandchildrenOf()
+    {
+        List<GameObject> toRemoveList = new List<GameObject>();
+
+        for (int i = 0; i < Selection.activeTransform.childCount; i++)
+        {
+            for (int j = 0; j < Selection.activeTransform.GetChild(i).childCount; j++)
+            {
+                toRemoveList.Add(Selection.activeTransform.GetChild(i).GetChild(j).gameObject);
+            }
+        }
+
+        foreach (var item in toRemoveList)
+        {
+            DestroyImmediate(item);
+        }
+
+        EditorUtility.SetDirty(Selection.activeTransform);
+    }
+    #endregion
 
     #region UTIL
     public List<T> GetComponentsFromAllChildren<T>(Transform parent) where T : Component

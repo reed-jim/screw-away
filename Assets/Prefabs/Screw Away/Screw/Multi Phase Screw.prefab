@@ -54,6 +54,7 @@ MonoBehaviour:
   screwId: 0
   screwServiceLocator: {fileID: 5531244131276348113}
   joint: {fileID: 0}
+  scaleOnScrewBox: 0.8
   phase: 0
   screwRenderer: {fileID: 7411641360957457357}
 --- !u!114 &5531244131276348113
@@ -68,6 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6679447111a83a408aa26887e959f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screw: {fileID: 0}
   screwFaction: {fileID: 8729152551475199452}
   screwMaterialPropertyBlock: {fileID: 2123561165631442456}
 --- !u!114 &8729152551475199452
@@ -97,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorReference: _BaseColor
+  secondaryColorReference: _SecondaryColor
+  secondaryColorMultiplier: 0.6
   _renderer: {fileID: 7411641360957457357}
 --- !u!54 &5585670854447434538
 Rigidbody:
@@ -178,6 +182,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: b4f7da03b416dad47b51f89bf56f3a39, type: 2}
+  - {fileID: 2100000, guid: f6ab20fdb935bb945b775776df6bbc12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

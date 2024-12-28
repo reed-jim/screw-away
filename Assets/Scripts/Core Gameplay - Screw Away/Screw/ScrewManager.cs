@@ -83,11 +83,9 @@ public class ScrewManager : MonoBehaviour
     {
         Dictionary<GameFaction, int> remainingScrewByFaction = new Dictionary<GameFaction, int>();
 
-        GameFaction[] factions = new GameFaction[5] { GameFaction.Red, GameFaction.Blue, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
-
-        for (int i = 0; i < factions.Length; i++)
+        for (int i = 0; i < GameConstants.SCREW_FACTION.Length; i++)
         {
-            remainingScrewByFaction.Add(factions[i], 0);
+            remainingScrewByFaction.Add(GameConstants.SCREW_FACTION[i], 0);
         }
 
         for (int i = 0; i < _screws.Count; i++)
@@ -120,11 +118,9 @@ public class ScrewManager : MonoBehaviour
     {
         Dictionary<GameFaction, int> totalBlockObjectsByFaction = new Dictionary<GameFaction, int>();
 
-        GameFaction[] factions = new GameFaction[5] { GameFaction.Red, GameFaction.Blue, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
-
-        for (int i = 0; i < factions.Length; i++)
+        for (int i = 0; i < GameConstants.SCREW_FACTION.Length; i++)
         {
-            totalBlockObjectsByFaction.Add(factions[i], 0);
+            totalBlockObjectsByFaction.Add(GameConstants.SCREW_FACTION[i], 0);
         }
 
         for (int i = 0; i < _screws.Count; i++)
@@ -152,11 +148,9 @@ public class ScrewManager : MonoBehaviour
     {
         Dictionary<GameFaction, int> remainingScrewByFaction = new Dictionary<GameFaction, int>();
 
-        GameFaction[] factions = new GameFaction[5] { GameFaction.Red, GameFaction.Blue, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
-
-        for (int i = 0; i < factions.Length; i++)
+        for (int i = 0; i < GameConstants.SCREW_FACTION.Length; i++)
         {
-            remainingScrewByFaction.Add(factions[i], 0);
+            remainingScrewByFaction.Add(GameConstants.SCREW_FACTION[i], 0);
         }
 
         for (int i = 0; i < _screws.Count; i++)

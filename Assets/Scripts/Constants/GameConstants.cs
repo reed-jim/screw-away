@@ -1,4 +1,5 @@
 using UnityEngine;
+using static GameEnum;
 
 public static class GameConstants
 {
@@ -86,10 +87,13 @@ public static class GameConstants
     #endregion
 
     #region SCREW AWAY
-    public static int DEFAULT_NUMBER_SCREW_PORT = 5; 
+    public static int DEFAULT_NUMBER_SCREW_PORT = 5;
+    public static GameFaction[] SCREW_FACTION = new GameFaction[8]
+        {   GameFaction.Red, GameFaction.Green, GameFaction.Orange, GameFaction.Purple,
+            GameFaction.Blue, GameFaction.Yellow, GameFaction.LightBlue,GameFaction.Pink };
     #endregion
 
     #region SWIPE
-    public static int TYPICAL_FRAME_MILISECOND = 13; 
+    public static int TYPICAL_FRAME_MILISECOND = 13;
     #endregion
 }

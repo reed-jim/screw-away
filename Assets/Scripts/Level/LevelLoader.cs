@@ -91,21 +91,19 @@ public class LevelLoader : MonoBehaviour
     {
         BaseScrew[] screws = TransformUtil.GetComponentsFromAllChildren<BaseScrew>(level.transform).ToArray();
 
-        GameFaction[] factions = new GameFaction[5] { GameFaction.Blue, GameFaction.Red, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
-
         int currentFaction = 0;
 
         List<GameFaction> remainingFactionForScrews = new List<GameFaction>();
 
         for (int i = 0; i < screws.Length; i++)
         {
-            remainingFactionForScrews.Add(factions[currentFaction]);
+            remainingFactionForScrews.Add(GameConstants.SCREW_FACTION[currentFaction]);
 
             if (i > 0 && (i + 1) % 3 == 0)
             {
                 currentFaction++;
 
-                if (currentFaction >= factions.Length)
+                if (currentFaction >= GameConstants.SCREW_FACTION.Length)
                 {
                     currentFaction = 0;
                 }

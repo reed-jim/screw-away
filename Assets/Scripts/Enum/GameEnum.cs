@@ -31,6 +31,9 @@ public class GameEnum : MonoBehaviour
         Green,
         Purple,
         Orange,
+        Yellow,
+        LightBlue,
+        Pink,
         All,
         None
     }

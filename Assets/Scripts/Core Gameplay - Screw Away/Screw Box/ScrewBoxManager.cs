@@ -410,11 +410,9 @@ public class ScrewBoxManager : MonoBehaviour
     {
         Dictionary<GameFaction, int> screwPortAvailableByFaction = new Dictionary<GameFaction, int>();
 
-        GameFaction[] factions = new GameFaction[5] { GameFaction.Red, GameFaction.Blue, GameFaction.Green, GameFaction.Purple, GameFaction.Orange };
-
-        for (int i = 0; i < factions.Length; i++)
+        for (int i = 0; i < GameConstants.SCREW_FACTION.Length; i++)
         {
-            screwPortAvailableByFaction.Add(factions[i], 0);
+            screwPortAvailableByFaction.Add(GameConstants.SCREW_FACTION[i], 0);
         }
 
         for (int i = 0; i < screwBoxs.Length; i++)
