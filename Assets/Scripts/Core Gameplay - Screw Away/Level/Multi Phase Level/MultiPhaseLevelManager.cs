@@ -40,13 +40,21 @@ public class MultiPhaseLevelManager : MonoBehaviour
     {
         await Task.Delay(1500);
 
-        Dictionary<int, int> numberScrewByPhase = GetNumberScrewByPhase();
+        if (_screws.Count > 0)
+        {
+            Dictionary<int, int> numberScrewByPhase = GetNumberScrewByPhase();
 
-        updateUIEvent?.Invoke(numberScrewByPhase, 0);
+            updateUIEvent?.Invoke(numberScrewByPhase, 0);
+        }
     }
 
     private void OnScrewLoosened()
     {
+        if (_screws.Count == 0)
+        {
+            return;
+        }
+
         Dictionary<int, int> numberScrewByPhase = GetNumberScrewByPhase();
 
         if (numberScrewByPhase[_currentPhase] == 0)
