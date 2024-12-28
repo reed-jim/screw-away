@@ -5,8 +5,6 @@ public class MultiPhaseScrew : BasicScrew
 {
     [SerializeField] private int phase;
 
-    [SerializeField] private MeshRenderer screwRenderer;
-
     #region PRIVATE FIELD
     private bool _isLocked;
     #endregion
