@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using PrimeTween;
@@ -32,7 +33,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
         _totalJoint = GetComponents<HingeJoint>().Length;
 
-        throwForceMultiplier = new Vector3(66f, 9f, 66f);
+        throwForceMultiplier = new Vector3(66f, 9f, 66f) * 0.1f;
     }
 
     void OnDestroy()
@@ -71,8 +72,21 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
             {
                 _isFree = true;
 
-                Throw();
+                StartCoroutine(Throwing());
+                // Throw();
             }
+        }
+    }
+
+    private IEnumerator Throwing()
+    {
+        WaitForSeconds waitForSeconds = new WaitForSeconds(0.2f);
+
+        while (true)
+        {
+            Throw();
+
+            yield return waitForSeconds;
         }
     }
 
