@@ -38,6 +38,7 @@ public class ScrewManager : MonoBehaviour
         ScrewBox.setFactionForScrewBoxEvent += AssignFactionForNewScrewBox;
         BaseScrew.screwLoosenedEvent += CheckWin;
         ScrewsDataManager.spawnFreshLevelScrewBoxesEvent += SpawnFirstScrewBoxes;
+        MultiPhaseLevelManager.switchPhaseEvent += SpawnFirstScrewBoxesNewPhase;
     }
 
     void OnDestroy()
@@ -49,6 +50,7 @@ public class ScrewManager : MonoBehaviour
         ScrewBox.setFactionForScrewBoxEvent -= AssignFactionForNewScrewBox;
         BaseScrew.screwLoosenedEvent -= CheckWin;
         ScrewsDataManager.spawnFreshLevelScrewBoxesEvent -= SpawnFirstScrewBoxes;
+        MultiPhaseLevelManager.switchPhaseEvent -= SpawnFirstScrewBoxesNewPhase;
     }
     #endregion
 
@@ -178,8 +180,6 @@ public class ScrewManager : MonoBehaviour
     {
         Debug.Log("TOTAL: " + _totalScrew);
 
-        GameFaction? lastFaction = null;
-
         GameFaction[] sortedFactionByBlockedObject = await GetSortedFactionsByBlockedObject();
 
         // Spawn 2 default screw boxes
@@ -191,6 +191,32 @@ public class ScrewManager : MonoBehaviour
         }
 
         spawnAdsScrewBoxesEvent?.Invoke();
+    }
+
+    private async void SpawnFirstScrewBoxesNewPhase(int phase)
+    {
+        await Task.Delay(1000);
+
+        GameFaction[] sortedFactionByBlockedObject = await GetSortedFactionsByBlockedObject();
+
+        int numberScrewBoxToSpawn = 0;
+
+        for (int i = 0; i < screwBoxManager.ScrewBoxs.Length; i++)
+        {
+            if (screwBoxManager.ScrewBoxs[i] == null)
+            {
+                numberScrewBoxToSpawn++;
+            }
+        }
+
+        Debug.Log("NUM BOX: " + numberScrewBoxToSpawn);
+
+        for (int i = 0; i < numberScrewBoxToSpawn; i++)
+        {
+            GameFaction faction = sortedFactionByBlockedObject[i];
+
+            spawnScrewBoxEvent?.Invoke(faction);
+        }
     }
 
     private async void SpawnNewScrewBox()

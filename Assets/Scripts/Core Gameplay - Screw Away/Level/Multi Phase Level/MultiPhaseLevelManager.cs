@@ -20,6 +20,7 @@ public class MultiPhaseLevelManager : MonoBehaviour
 
     private void Awake()
     {
+        LevelLoader.startLevelEvent += Reset;
         MultiPhaseScrew.manageScrewEvent += ManageScrew;
         BaseScrew.screwLoosenedEvent += OnScrewLoosened;
 
@@ -30,8 +31,18 @@ public class MultiPhaseLevelManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        LevelLoader.startLevelEvent -= Reset;
         MultiPhaseScrew.manageScrewEvent -= ManageScrew;
         BaseScrew.screwLoosenedEvent -= OnScrewLoosened;
+    }
+
+    private void Reset()
+    {
+        _screws = new List<MultiPhaseScrew>();
+
+        _currentPhase = 0;
+        _totalScrew = 0;
+        _totalScrewLoosened = 0;
     }
 
     private void ManageScrew(MultiPhaseScrew screw)
@@ -66,10 +77,13 @@ public class MultiPhaseLevelManager : MonoBehaviour
 
         Dictionary<int, int> numberScrewByPhase = GetNumberScrewByPhase();
 
-        Debug.Log(numberScrewByPhase[_currentPhase]);
-
         if (numberScrewByPhase[_currentPhase] == 0)
         {
+            if (_currentPhase == numberScrewByPhase.Keys.Count - 1)
+            {
+                return;
+            }
+
             _currentPhase++;
 
             switchPhaseEvent?.Invoke(_currentPhase);
