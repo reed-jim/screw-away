@@ -16,14 +16,8 @@ public class LevelDifficultyConfiguration : ScriptableObject
 [Serializable]
 public class LevelPhase
 {
-    [SerializeField] private float startProgress;
     [SerializeField] private float endProgress;
     [SerializeField] private LevelDifficulty levelDifficulty;
-
-    public float StartProgress
-    {
-        get => startProgress;
-    }
 
     public float EndProgress
     {

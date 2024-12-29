@@ -13,20 +13,25 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
     [Header("CUSTOMIZE")]
     [SerializeField] private Vector3 throwForceMultiplier = new Vector3(0.003f, 0.001f, 0.003f);
 
+    #region PRIVATE FIELD
     private bool _isSelecting;
     private bool _isFree;
     private bool _isImmuneSwipeForce;
-    [SerializeField] private int _totalJoint;
+    private int _totalJoint;
+    #endregion
 
+    #region EVENT
     public static event Action<int> selectObjectPartEvent;
     public static event Action<int> deselectObjectPartEvent;
     public static event Action<BaseScrew> loosenScrewOnObjectBrokenEvent;
     public static event Action shakeCameraEvent;
+    #endregion
 
+    #region LIFECYCLE
     void Awake()
     {
         ScrewSelectionInput.mouseUpEvent += Deselect;
-        BasicScrew.breakJointEvent += OnJointBreakCallback;
+        BaseScrew.breakJointEvent += OnJointBreakCallback;
         SwipeGesture.swipeGestureEvent += OnSwipe;
 
         partRigidbody = GetComponent<Rigidbody>();
@@ -39,9 +44,10 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
     void OnDestroy()
     {
         ScrewSelectionInput.mouseUpEvent -= Deselect;
-        BasicScrew.breakJointEvent -= OnJointBreakCallback;
+        BaseScrew.breakJointEvent -= OnJointBreakCallback;
         SwipeGesture.swipeGestureEvent -= OnSwipe;
     }
+    #endregion
 
     public void Select()
     {
@@ -73,7 +79,6 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
                 _isFree = true;
 
                 StartCoroutine(Throwing());
-                // Throw();
             }
         }
     }
@@ -92,37 +97,37 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
     private async void OnSwipe(Vector2 direction)
     {
-        return;
+        // return;
 
-        if (_totalJoint <= 1 && !_isImmuneSwipeForce)
-        {
-            // partRigidbody.AddForce(-30f * direction);
+        // if (_totalJoint <= 1 && !_isImmuneSwipeForce)
+        // {
+        //     // partRigidbody.AddForce(-30f * direction);
 
-            if (partRigidbody.linearVelocity.magnitude > 5)
-            {
-                return;
-            }
+        //     if (partRigidbody.linearVelocity.magnitude > 5)
+        //     {
+        //         return;
+        //     }
 
-            // OUT OF CENTER
-            if (_totalJoint == 0)
-            {
-                Vector3 forceDirection = direction;
+        //     // OUT OF CENTER
+        //     if (_totalJoint == 0)
+        //     {
+        //         Vector3 forceDirection = direction;
 
-                forceDirection.y = 0;
+        //         forceDirection.y = 0;
 
-                partRigidbody.AddForce(-20f * forceDirection);
-            }
-            else
-            {
-                partRigidbody.AddForce(20f * (Vector3.zero - transform.localPosition));
-            }
+        //         partRigidbody.AddForce(-20f * forceDirection);
+        //     }
+        //     else
+        //     {
+        //         partRigidbody.AddForce(20f * (Vector3.zero - transform.localPosition));
+        //     }
 
-            _isImmuneSwipeForce = true;
+        //     _isImmuneSwipeForce = true;
 
-            // await Task.Delay(1000);
+        //     // await Task.Delay(1000);
 
-            _isImmuneSwipeForce = false;
-        }
+        //     _isImmuneSwipeForce = false;
+        // }
     }
 
     public async void Break()
@@ -136,7 +141,6 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
         float expectedZDirection;
 
         Vector3 expectedPosition;
-
 
         if (Vector3.Distance(position1, Vector3.zero) < Vector3.Distance(position2, Vector3.zero))
         {
@@ -207,10 +211,6 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
             await Task.Delay(133);
         }
-
-        // AudioSource breakObjectSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.BREAK_OBJECT_SOUND);
-
-        // breakObjectSound.Play();
 
         Throw(forceBoost: 2);
     }

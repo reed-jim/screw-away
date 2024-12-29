@@ -310,7 +310,7 @@ public class ScrewManager : MonoBehaviour
         {
             LevelPhase levelPhase = levelDifficultyConfiguration.LevelPhases[i];
 
-            if (progress >= levelPhase.StartProgress && progress <= levelPhase.EndProgress)
+            if (progress <= levelPhase.EndProgress)
             {
                 levelDifficulty = i;
 

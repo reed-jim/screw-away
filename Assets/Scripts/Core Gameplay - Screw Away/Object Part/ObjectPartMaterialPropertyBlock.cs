@@ -10,12 +10,14 @@ public class ObjectPartMaterialPropertyBlock : MonoBehaviour
     [SerializeField] private Renderer _renderer;
     private MaterialPropertyBlock _propertyBlock;
     private Tween _currentAlphaTransition;
+    private bool _isDissolving;
     #endregion
 
     private void Awake()
     {
         BasicObjectPart.selectObjectPartEvent += OnObjectPartSelected;
         BasicObjectPart.deselectObjectPartEvent += OnObjectPartDeselected;
+        ObjectPartHolder.dissolveObjectPartEvent += Dissolve;
 
         Init();
     }
@@ -24,6 +26,7 @@ public class ObjectPartMaterialPropertyBlock : MonoBehaviour
     {
         BasicObjectPart.selectObjectPartEvent -= OnObjectPartSelected;
         BasicObjectPart.deselectObjectPartEvent -= OnObjectPartDeselected;
+        ObjectPartHolder.dissolveObjectPartEvent -= Dissolve;
     }
 
     private void Init()
@@ -76,5 +79,28 @@ public class ObjectPartMaterialPropertyBlock : MonoBehaviour
                 _renderer.SetPropertyBlock(_propertyBlock);
             });
         }
+    }
+
+    private void Dissolve(int instanceId)
+    {
+        if (instanceId != gameObject.GetInstanceID() || _isDissolving)
+        {
+            return;
+        }
+
+        ParticleSystem fx = ObjectPoolingEverything.GetFromPool<ParticleSystem>(GameConstants.DESTROY_OBJECT_PART_FX);
+
+        fx.transform.position = transform.position;
+
+        fx.Play();
+
+        Tween.Custom(0f, 1, duration: 0.6f, onValueChange: newVal =>
+        {
+            _propertyBlock.SetFloat("_DissolveStrength", newVal);
+
+            _renderer.SetPropertyBlock(_propertyBlock);
+        });
+
+        _isDissolving = true;
     }
 }

@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b0abec1b51aad4c866d9ebd51ff589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorReference: _BaseColor
+  colorReference: _Color
   secondaryColorReference: _SecondaryColor
   secondaryColorMultiplier: 0.6
   _renderer: {fileID: 4437216730832237330}
@@ -267,7 +267,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b4f7da03b416dad47b51f89bf56f3a39, type: 2}
+  - {fileID: 2100000, guid: 6cde52824801d9649ba7b5beb1405c93, type: 2}
   - {fileID: 2100000, guid: f6ab20fdb935bb945b775776df6bbc12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

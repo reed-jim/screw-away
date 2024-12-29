@@ -16,6 +16,7 @@ public static class GameConstants
     public static string HIT_OBSTACLE_SOUND = "Hit Obstacle Sound";
     public static string GET_IN_VEHICLE_SOUND = "Get In Vehicle Sound";
     public static string VEHICLE_MOVE_OUT_SOUND = "Vehicle Move Out Sound";
+    public static string DESTROY_OBJECT_PART_FX = "Destroy Object Part Fx";
     #endregion
 
     #region COMMON TEXT
