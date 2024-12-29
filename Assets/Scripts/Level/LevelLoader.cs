@@ -96,6 +96,11 @@ public class LevelLoader : MonoBehaviour
 
         Dictionary<int, int> currentFactionByPhase = new Dictionary<int, int>();
 
+        if (screws.Length == 0)
+        {
+            return;
+        }
+
         for (int i = 0; i < screws.Length; i++)
         {
             int phase = screws[i].Phase;

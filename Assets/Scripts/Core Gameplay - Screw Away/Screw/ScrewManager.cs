@@ -195,7 +195,7 @@ public class ScrewManager : MonoBehaviour
 
     private async void SpawnFirstScrewBoxesNewPhase(int phase)
     {
-        await Task.Delay(1000);
+        await Task.Delay(2000);
 
         GameFaction[] sortedFactionByBlockedObject = await GetSortedFactionsByBlockedObject();
 

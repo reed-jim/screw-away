@@ -55,7 +55,7 @@ public class ObjectPoolingEverythingInitializer : MonoBehaviour
         RegisterPool<ScrewBox>(GameConstants.SCREW_BOX, screwBox, 5);
         RegisterPool<ScrewBoxSlot>(GameConstants.SCREW_PORT_SLOT, screwPortPrefab, 3);
         RegisterPool<FakeScrew>(GameConstants.FAKE_SCREW, fakeScrewPrefab, 3);
-        RegisterPool<Transform>(GameConstants.HAMMER, hammerPrefab, 3);
+        RegisterPool<BoosterHammer>(GameConstants.HAMMER, hammerPrefab, 3);
         RegisterPool<AudioSource>(GameConstants.LOOSEN_SCREW_SOUND, loosenScrewSoundPrefab, 3);
         RegisterPool<AudioSource>(GameConstants.LOOSEN_SCREW_FAIL_SOUND, loosenScrewFailSoundPrefab, 3);
         RegisterPool<AudioSource>(GameConstants.SCREW_BOX_DONE_SOUND, screwBoxDoneSoundPrefab, 3);

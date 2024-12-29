@@ -135,7 +135,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
     public async void Break()
     {
-        Transform hammer = ObjectPoolingEverything.GetFromPool<Transform>(GameConstants.HAMMER);
+        BoosterHammer hammer = ObjectPoolingEverything.GetFromPool<BoosterHammer>(GameConstants.HAMMER);
 
         Vector3 position1 = transform.position + 5 * transform.forward;
         Vector3 position2 = transform.position - 5 * transform.forward;
@@ -158,7 +158,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
             expectedZDirection = 1;
         }
 
-        if (Vector3.Distance(hammer.position + transform.up, transform.position) < Vector3.Distance(hammer.position - transform.up, transform.position))
+        if (Vector3.Distance(hammer.transform.position + transform.up, transform.position) < Vector3.Distance(hammer.transform.position - transform.up, transform.position))
         {
             expectedYDirection = 1;
         }
@@ -167,18 +167,18 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
             expectedYDirection = -1;
         }
 
-        // hammer.position = transform.position + 5 * expectedZDirection * transform.forward + 0 * transform.up;
-        hammer.rotation = Quaternion.LookRotation(transform.forward);
-        hammer.Rotate(new Vector3(0, 90, 0));
+        // hammer.transform.position = transform.position + 5 * expectedZDirection * transform.forward + 0 * transform.up;
+        hammer.transform.rotation = Quaternion.LookRotation(transform.forward);
+        hammer.transform.Rotate(new Vector3(0, 90, 0));
 
-        hammer.position = transform.position + 5 * expectedZDirection * transform.forward + 0 * transform.up;
+        hammer.transform.position = transform.position + 5 * expectedZDirection * transform.forward + 0 * transform.up;
 
-        Tween.Position(hammer, transform.position + 2f * expectedZDirection * transform.forward + 1 * expectedYDirection * transform.up, duration: 0.2f)
-        .Chain(Tween.Rotation(hammer, hammer.rotation.eulerAngles + new Vector3(0, 0, expectedZDirection * 45), duration: 0.6f))
-        .Chain(Tween.Rotation(hammer, hammer.rotation.eulerAngles + new Vector3(0, 0, -expectedZDirection * 15), duration: 0.2f)
+        Tween.Position(hammer.transform, transform.position + 2f * expectedZDirection * transform.forward + 1 * expectedYDirection * transform.up, duration: 0.2f)
+        .Chain(Tween.Rotation(hammer.transform, hammer.transform.rotation.eulerAngles + new Vector3(0, 0, expectedZDirection * 45), duration: 0.6f))
+        .Chain(Tween.Rotation(hammer.transform, hammer.transform.rotation.eulerAngles + new Vector3(0, 0, -expectedZDirection * 15), duration: 0.2f)
         .OnComplete(() =>
         {
-            Tween.Position(hammer, 20f * expectedZDirection * transform.forward, duration: 0.3f);
+            Tween.Position(hammer.transform, 50f * expectedZDirection * transform.forward, startDelay: 0.3f, duration: 0.3f);
         }));
 
         await Task.Delay(950);
@@ -186,6 +186,8 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
         AudioSource breakObjectSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.BREAK_OBJECT_SOUND);
 
         breakObjectSound.Play();
+
+        hammer.PlayHitFx();
 
         shakeCameraEvent?.Invoke();
 
