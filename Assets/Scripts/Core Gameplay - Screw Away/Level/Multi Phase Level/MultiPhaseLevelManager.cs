@@ -10,9 +10,13 @@ public class MultiPhaseLevelManager : MonoBehaviour
     private int _totalScrew;
     private int _totalScrewLoosened;
 
+    [SerializeField] private IntVariable currentLevel;
+    [SerializeField] private MultiPhaseLevelDataContainer multiPhaseLevelDataContainer;
+
     public static event Action<int> switchPhaseEvent;
     public static event Action<Dictionary<int, int>, float> updateUIEvent;
     public static event Action disableMultiPhaseLevelUIEvent;
+    public static event Action<float> zoomCameraEvent;
 
     private void Awake()
     {
@@ -62,11 +66,29 @@ public class MultiPhaseLevelManager : MonoBehaviour
 
         Dictionary<int, int> numberScrewByPhase = GetNumberScrewByPhase();
 
+        Debug.Log(numberScrewByPhase[_currentPhase]);
+
         if (numberScrewByPhase[_currentPhase] == 0)
         {
             _currentPhase++;
 
             switchPhaseEvent?.Invoke(_currentPhase);
+
+            for (int i = 0; i < multiPhaseLevelDataContainer.Items.Length; i++)
+            {
+                if (multiPhaseLevelDataContainer.Items[i].Level == currentLevel.Value)
+                {
+                    for (int j = 0; j < multiPhaseLevelDataContainer.Items[i].PhasesData.Length; j++)
+                    {
+                        if (multiPhaseLevelDataContainer.Items[i].PhasesData[j].phase == _currentPhase)
+                        {
+                            zoomCameraEvent?.Invoke(multiPhaseLevelDataContainer.Items[i].PhasesData[j].cameraOrthographicSize);
+
+                            break;
+                        }
+                    }
+                }
+            }
         }
 
         _totalScrewLoosened++;

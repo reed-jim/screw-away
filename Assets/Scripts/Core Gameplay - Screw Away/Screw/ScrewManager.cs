@@ -91,7 +91,7 @@ public class ScrewManager : MonoBehaviour
 
         for (int i = 0; i < _screws.Count; i++)
         {
-            if (_screws[i].IsDone)
+            if (_screws[i].IsDone || _screws[i].IsLocked)
             {
                 continue;
             }
@@ -126,7 +126,7 @@ public class ScrewManager : MonoBehaviour
 
         for (int i = 0; i < _screws.Count; i++)
         {
-            if (_screws[i].IsDone)
+            if (_screws[i].IsDone || _screws[i].IsLocked)
             {
                 continue;
             }
@@ -190,35 +190,6 @@ public class ScrewManager : MonoBehaviour
             spawnScrewBoxEvent?.Invoke(faction);
         }
 
-        // for (int i = 0; i < _screws.Count; i++)
-        // {
-        //     _screws[i].CountBlockingObjects();
-        // }
-
-        // for (int i = 0; i < _screws.Count; i++)
-        // {
-        //     if (_screws[i].NumberBlockingObjects == 0)
-        //     {
-        //         GameFaction faction = _screws[i].Faction;
-
-        //         if (lastFaction == null)
-        //         {
-        //             spawnScrewBoxEvent?.Invoke(faction);
-
-        //             lastFaction = faction;
-        //         }
-        //         else
-        //         {
-        //             if (faction != lastFaction)
-        //             {
-        //                 spawnScrewBoxEvent?.Invoke(faction);
-
-        //                 break;
-        //             }
-        //         }
-        //     }
-        // }
-
         spawnAdsScrewBoxesEvent?.Invoke();
     }
 
@@ -281,7 +252,7 @@ public class ScrewManager : MonoBehaviour
         float progress;
         int doneScrew = 0;
 
-        int maxNumberBlockingObject = 0;
+        // int maxNumberBlockingObject = 0;
 
         for (int i = 0; i < _screws.Count; i++)
         {
@@ -293,10 +264,10 @@ public class ScrewManager : MonoBehaviour
             {
                 _screws[i].CountBlockingObjects();
 
-                if (_screws[i].NumberBlockingObjects > maxNumberBlockingObject)
-                {
-                    maxNumberBlockingObject = _screws[i].NumberBlockingObjects;
-                }
+                // if (_screws[i].NumberBlockingObjects > maxNumberBlockingObject)
+                // {
+                //     maxNumberBlockingObject = _screws[i].NumberBlockingObjects;
+                // }
             }
 
             // await Task.Delay(9);

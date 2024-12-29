@@ -5,25 +5,36 @@ public class GameplayCamera : MonoBehaviour
 {
     [SerializeField] private Camera gameplayCamera;
 
+    private float _initialOrthographicSize;
     private float _targetOrthographicSize;
 
-    void Awake()
+    private void Awake()
     {
+        LevelLoader.startLevelEvent += OnLevelStart;
         PinchGesture.pinchGestureEvent += Zoom;
         BasicObjectPart.shakeCameraEvent += Shake;
+        MultiPhaseLevelManager.zoomCameraEvent += Zoom;
 
+        _initialOrthographicSize = gameplayCamera.orthographicSize;
         _targetOrthographicSize = gameplayCamera.orthographicSize;
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
+        LevelLoader.startLevelEvent -= OnLevelStart;
         PinchGesture.pinchGestureEvent -= Zoom;
         BasicObjectPart.shakeCameraEvent -= Shake;
+        MultiPhaseLevelManager.zoomCameraEvent -= Zoom;
     }
 
-    void Update()
+    private void Update()
     {
         gameplayCamera.orthographicSize = Mathf.Lerp(gameplayCamera.orthographicSize, _targetOrthographicSize, 0.333f);
+    }
+
+    private void OnLevelStart()
+    {
+        _targetOrthographicSize = _initialOrthographicSize;
     }
 
     private void Zoom(float orthographicSize)

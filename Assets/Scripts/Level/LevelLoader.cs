@@ -50,6 +50,7 @@ public class LevelLoader : MonoBehaviour
                 GameObject level = Instantiate(op.Result, transform);
 
                 AutoAssignScrewFaction(level);
+                AutoAssignScrewFactionMultiPhaseLevel(level);
             }
         };
 
@@ -85,6 +86,57 @@ public class LevelLoader : MonoBehaviour
     private void Replay()
     {
         GoLevel(currentLevel.Value);
+    }
+
+    private void AutoAssignScrewFactionMultiPhaseLevel(GameObject level)
+    {
+        MultiPhaseScrew[] screws = TransformUtil.GetComponentsFromAllChildren<MultiPhaseScrew>(level.transform).ToArray();
+
+        Dictionary<int, List<GameFaction>> remainingFactionForScrewsByPhase = new Dictionary<int, List<GameFaction>>();
+
+        Dictionary<int, int> currentFactionByPhase = new Dictionary<int, int>();
+
+        for (int i = 0; i < screws.Length; i++)
+        {
+            int phase = screws[i].Phase;
+
+            if (!remainingFactionForScrewsByPhase.ContainsKey(phase))
+            {
+                currentFactionByPhase.Add(phase, 0);
+
+                remainingFactionForScrewsByPhase.Add(phase, new List<GameFaction>() { GameConstants.SCREW_FACTION[currentFactionByPhase[phase]] });
+            }
+            else
+            {
+                remainingFactionForScrewsByPhase[phase].Add(GameConstants.SCREW_FACTION[currentFactionByPhase[phase]]);
+
+                if (i > 0 && (i + 1) % 3 == 0)
+                {
+                    currentFactionByPhase[phase]++;
+
+                    if (currentFactionByPhase[phase] >= GameConstants.SCREW_FACTION.Length)
+                    {
+                        currentFactionByPhase[phase] = 0;
+                    }
+                }
+            }
+        }
+
+        for (int i = 0; i < screws.Length; i++)
+        {
+            int phase = screws[i].Phase;
+
+            int randomIndex = UnityEngine.Random.Range(0, remainingFactionForScrewsByPhase[phase].Count);
+
+            screws[i].ScrewId = i;
+            screws[i].Faction = remainingFactionForScrewsByPhase[phase][randomIndex];
+
+            screws[i].ScrewServiceLocator.screwFaction.SetColorByFaction();
+
+            remainingFactionForScrewsByPhase[phase].RemoveAt(randomIndex);
+        }
+
+        setLevelScrewNumberEvent?.Invoke(screws.Length);
     }
 
     private void AutoAssignScrewFaction(GameObject level)

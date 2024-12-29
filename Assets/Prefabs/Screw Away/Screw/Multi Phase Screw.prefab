@@ -56,7 +56,6 @@ MonoBehaviour:
   joint: {fileID: 0}
   scaleOnScrewBox: 0.8
   phase: 0
-  screwRenderer: {fileID: 7411641360957457357}
 --- !u!114 &5531244131276348113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b0abec1b51aad4c866d9ebd51ff589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorReference: _BaseColor
+  colorReference: _Color
   secondaryColorReference: _SecondaryColor
   secondaryColorMultiplier: 0.6
   _renderer: {fileID: 7411641360957457357}
@@ -181,7 +180,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b4f7da03b416dad47b51f89bf56f3a39, type: 2}
+  - {fileID: 2100000, guid: 1aa2c8dd276fe13458970fa3fd533e27, type: 2}
   - {fileID: 2100000, guid: f6ab20fdb935bb945b775776df6bbc12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

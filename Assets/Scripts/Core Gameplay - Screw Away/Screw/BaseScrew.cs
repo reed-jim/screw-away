@@ -23,6 +23,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     protected bool _isRotating;
     protected bool _isInteractable = true;
     protected bool _isDone;
+    protected bool _isLocked;
     protected bool _isInScrewPort;
     protected ScrewData _screwData;
     #endregion
@@ -69,6 +70,12 @@ public class BaseScrew : MonoBehaviour, IScrew
     {
         get => _isDone;
         set => _isDone = value;
+    }
+
+    public bool IsLocked
+    {
+        get => _isLocked;
+        set => _isLocked = value;
     }
 
     public bool IsInScrewPort

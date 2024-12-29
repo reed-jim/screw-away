@@ -64,7 +64,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &8339948159850401032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,7 +482,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &5211134445123694586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,7 +924,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &8628273153483597161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1295,7 +1292,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &7607345305403088585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1829,7 +1825,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &4747635695251351168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2422,7 +2417,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &2778598690633170375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2957,7 +2951,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &4615877457241961598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3365,7 +3358,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &5243248431063331803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3624,7 +3616,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &4850778763238572093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4092,7 +4083,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &3067666898879645026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4508,7 +4498,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &4276380346754995710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4924,7 +4913,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &1615675782991012184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5344,7 +5332,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &7743099397303745805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6404,7 +6391,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &1856255246498573760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7316,6 +7302,10 @@ PrefabInstance:
       propertyPath: joint
       value: 
       objectReference: {fileID: 5394067607359031911}
+    - target: {fileID: 4406917708356741030, guid: c06ff84da2fecf847ab5b96eb018b619, type: 3}
+      propertyPath: phase
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4406917708356741030, guid: c06ff84da2fecf847ab5b96eb018b619, type: 3}
       propertyPath: screwId
       value: 94
@@ -13811,6 +13801,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2201346669129961819}
     - target: {fileID: 4406917708356741030, guid: c06ff84da2fecf847ab5b96eb018b619, type: 3}
+      propertyPath: phase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406917708356741030, guid: c06ff84da2fecf847ab5b96eb018b619, type: 3}
       propertyPath: screwId
       value: 93
       objectReference: {fileID: 0}
@@ -14556,7 +14550,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &387670313796788030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15380,7 +15373,6 @@ MonoBehaviour:
   levelCenter: {fileID: 0}
   partRigidbody: {fileID: 0}
   throwForceMultiplier: {x: 0.003, y: 0.001, z: 0.003}
-  _totalJoint: 0
 --- !u!114 &8416107273863645860
 MonoBehaviour:
   m_ObjectHideFlags: 0

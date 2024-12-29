@@ -7,7 +7,7 @@ public class BasicScrew : BaseScrew
 {
     private float _distanceBlocked;
 
-    #region ACTION
+    #region EVENT
     public static event Action disableInputEvent;
     #endregion
 

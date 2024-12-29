@@ -106,6 +106,11 @@ public class HingeJointGenerator : EditorWindow
             RemoveAllGrandchildrenOf();
         }
 
+        if (GUILayout.Button("Get Screw Number By Phase"))
+        {
+            GetScrewNumberByPhase(prefabPath);
+        }
+
         GUILayout.EndArea();
     }
 
@@ -487,6 +492,34 @@ public class HingeJointGenerator : EditorWindow
         }
 
         EditorUtility.SetDirty(Selection.activeTransform);
+    }
+    #endregion
+
+    #region INFO
+    private void GetScrewNumberByPhase(string path)
+    {
+        GameObject levelPrefab = PrefabUtility.LoadPrefabContents(path);
+
+        MultiPhaseScrew[] screws = GetComponentsFromAllChildren<MultiPhaseScrew>(levelPrefab.transform).ToArray();
+
+        Dictionary<int, int> numberScrewByPhase = new Dictionary<int, int>();
+
+        for (int i = 0; i < screws.Length; i++)
+        {
+            if (numberScrewByPhase.ContainsKey(screws[i].Phase))
+            {
+                numberScrewByPhase[screws[i].Phase]++;
+            }
+            else
+            {
+                numberScrewByPhase.Add(screws[i].Phase, 1);
+            }
+        }
+
+        foreach (var phase in numberScrewByPhase.Keys)
+        {
+            Debug.Log($"Phase {phase}: {numberScrewByPhase[phase]}");
+        }
     }
     #endregion
 

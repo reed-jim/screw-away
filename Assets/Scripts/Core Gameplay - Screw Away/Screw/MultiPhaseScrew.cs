@@ -1,13 +1,11 @@
 using System;
+using PrimeTween;
+using Saferio.Util.SaferioTween;
 using UnityEngine;
 
 public class MultiPhaseScrew : BasicScrew
 {
     [SerializeField] private int phase;
-
-    #region PRIVATE FIELD
-    private bool _isLocked;
-    #endregion
 
     public static event Action<MultiPhaseScrew> manageScrewEvent;
 
@@ -21,7 +19,11 @@ public class MultiPhaseScrew : BasicScrew
     {
         if (phase != 0)
         {
-            screwServiceLocator.screwMaterialPropertyBlock.SetColor(Color.black);
+            // screwServiceLocator.screwMaterialPropertyBlock.SetColor(Color.black);
+
+            _initialScale = transform.localScale;
+
+            transform.localScale = transform.localScale.ChangeZ(0);
 
             _isLocked = true;
         }
@@ -56,7 +58,9 @@ public class MultiPhaseScrew : BasicScrew
     {
         if (phase == this.phase)
         {
-            screwServiceLocator.screwFaction.SetColorByFaction();
+            // screwServiceLocator.screwFaction.SetColorByFaction();
+
+            Tween.Scale(transform, _initialScale, duration: 0.3f);
 
             _isLocked = false;
         }
