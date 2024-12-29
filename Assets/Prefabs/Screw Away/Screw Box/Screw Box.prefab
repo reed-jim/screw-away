@@ -242,7 +242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Unlock Box
+  m_text: Sblocca casella
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea321c4dec4cdd74fae016f2a45adbe2, type: 2}
   m_sharedMaterial: {fileID: -8589212015780818781, guid: ea321c4dec4cdd74fae016f2a45adbe2, type: 2}
@@ -803,6 +803,7 @@ MonoBehaviour:
   isLocked: 0
   closeBoxLidDuration: 0.3
   scaleDownDuration: 0.2
+  delayMoveOutDuration: 0.05
   moveOutDuration: 0.4
 --- !u!114 &2012672908965376577
 MonoBehaviour:

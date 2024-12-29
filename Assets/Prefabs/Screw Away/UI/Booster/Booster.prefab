@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 360}
+  m_AnchoredPosition: {x: 0, y: 280}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2096608096378969977
@@ -439,6 +439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boosterContainer: {fileID: 8115178826921894898}
   addMoreScrewPortButtonRT: {fileID: 961789708373448798}
+  breakModeButtonRT: {fileID: 3308839793245109696}
+  clearAllScrewPortsButtonRT: {fileID: 2260182569893516513}
   breakModeContainer: {fileID: 4691125696244298152}
   addMoreScrewPortButton: {fileID: 8247697082063482431}
   breakObjectButton: {fileID: 5964487923651808161}
@@ -555,7 +557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088260111148464627, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
       propertyPath: m_text
-      value: Break Object
+      value: Add Hole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -669,6 +671,10 @@ PrefabInstance:
     - target: {fileID: 7643315751019044431, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088260111148464627, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
+      propertyPath: m_text
+      value: Add Hole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -801,7 +807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088260111148464627, guid: 1db6b43edf64adf4caac8313382dad69, type: 3}
       propertyPath: m_text
-      value: Clear Holes
+      value: Add Hole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

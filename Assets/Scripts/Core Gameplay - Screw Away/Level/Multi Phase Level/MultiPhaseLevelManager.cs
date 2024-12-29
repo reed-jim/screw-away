@@ -12,6 +12,7 @@ public class MultiPhaseLevelManager : MonoBehaviour
 
     public static event Action<int> switchPhaseEvent;
     public static event Action<Dictionary<int, int>, float> updateUIEvent;
+    public static event Action disableMultiPhaseLevelUIEvent;
 
     private void Awake()
     {
@@ -45,6 +46,10 @@ public class MultiPhaseLevelManager : MonoBehaviour
             Dictionary<int, int> numberScrewByPhase = GetNumberScrewByPhase();
 
             updateUIEvent?.Invoke(numberScrewByPhase, 0);
+        }
+        else
+        {
+            disableMultiPhaseLevelUIEvent?.Invoke();
         }
     }
 

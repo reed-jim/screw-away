@@ -16,15 +16,22 @@ public class MultiPhaseLevelUI : MonoBehaviour
     private void Awake()
     {
         MultiPhaseLevelManager.updateUIEvent += UpdateMultiPhaseLevelUI;
+        MultiPhaseLevelManager.disableMultiPhaseLevelUIEvent += DisableMultiPhaseLevelUI;
     }
 
     private void OnDestroy()
     {
         MultiPhaseLevelManager.updateUIEvent -= UpdateMultiPhaseLevelUI;
+        MultiPhaseLevelManager.disableMultiPhaseLevelUIEvent -= DisableMultiPhaseLevelUI;
     }
 
     private void UpdateMultiPhaseLevelUI(Dictionary<int, int> numberScrewByPhase, float progress)
     {
+        if (!container.gameObject.activeSelf)
+        {
+            container.gameObject.SetActive(true);
+        }
+
         if (_milestones == null)
         {
             _milestones = new RectTransform[numberScrewByPhase.Keys.Count];
@@ -50,5 +57,10 @@ public class MultiPhaseLevelUI : MonoBehaviour
         {
             progressBar.value = newVal;
         });
+    }
+
+    private void DisableMultiPhaseLevelUI()
+    {
+        container.gameObject.SetActive(false);
     }
 }

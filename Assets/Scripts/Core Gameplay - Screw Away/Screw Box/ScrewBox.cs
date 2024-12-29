@@ -17,6 +17,7 @@ public class ScrewBox : MonoBehaviour
     [Header("CUSTOMIZE")]
     [SerializeField] private float closeBoxLidDuration;
     [SerializeField] private float scaleDownDuration;
+    [SerializeField] private float delayMoveOutDuration;
     [SerializeField] private float moveOutDuration;
 
     #region EVENT
@@ -87,9 +88,9 @@ public class ScrewBox : MonoBehaviour
 
             boxLid.localPosition = boxLid.localPosition.ChangeY(9);
 
-            Tween.LocalPositionY(boxLid, 0.4f, duration: closeBoxLidDuration).Chain(
-            Tween.ScaleY(transform, 0.7f * _initialScale.y, duration: scaleDownDuration)
-            .Chain(Tween.LocalPositionY(transform, transform.position.y + 8, duration: moveOutDuration).OnComplete(() =>
+            Tween.LocalPositionY(boxLid, 0.4f, duration: closeBoxLidDuration)
+            .Chain(Tween.ScaleY(transform, 0.6f * _initialScale.y, duration: scaleDownDuration)
+            .Chain(Tween.LocalPositionY(transform, transform.position.y + 8, startDelay: delayMoveOutDuration, duration: moveOutDuration).OnComplete(() =>
             {
                 screwBoxCompletedEvent?.Invoke(this);
                 spawnNewScrewBoxEvent?.Invoke();
