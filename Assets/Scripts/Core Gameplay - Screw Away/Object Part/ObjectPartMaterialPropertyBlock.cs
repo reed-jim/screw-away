@@ -18,6 +18,7 @@ public class ObjectPartMaterialPropertyBlock : MonoBehaviour
         BasicObjectPart.selectObjectPartEvent += OnObjectPartSelected;
         BasicObjectPart.deselectObjectPartEvent += OnObjectPartDeselected;
         ObjectPartHolder.dissolveObjectPartEvent += Dissolve;
+        BasicObjectPart.dissolveObjectPartEvent += Dissolve;
 
         Init();
     }
@@ -27,6 +28,7 @@ public class ObjectPartMaterialPropertyBlock : MonoBehaviour
         BasicObjectPart.selectObjectPartEvent -= OnObjectPartSelected;
         BasicObjectPart.deselectObjectPartEvent -= OnObjectPartDeselected;
         ObjectPartHolder.dissolveObjectPartEvent -= Dissolve;
+        BasicObjectPart.dissolveObjectPartEvent -= Dissolve;
     }
 
     private void Init()
@@ -99,6 +101,10 @@ public class ObjectPartMaterialPropertyBlock : MonoBehaviour
             _propertyBlock.SetFloat("_DissolveStrength", newVal);
 
             _renderer.SetPropertyBlock(_propertyBlock);
+        })
+        .OnComplete(() =>
+        {
+            gameObject.SetActive(false);
         });
 
         _isDissolving = true;

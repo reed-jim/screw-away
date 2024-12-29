@@ -25,6 +25,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
     public static event Action<int> deselectObjectPartEvent;
     public static event Action<BaseScrew> loosenScrewOnObjectBrokenEvent;
     public static event Action shakeCameraEvent;
+    public static event Action<int> dissolveObjectPartEvent;
     #endregion
 
     #region LIFECYCLE
@@ -38,7 +39,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
         _totalJoint = GetComponents<HingeJoint>().Length;
 
-        throwForceMultiplier = new Vector3(66f, 9f, 66f) * 0.1f;
+        throwForceMultiplier = new Vector3(66f, 9f, 66f) * 0.02f;
     }
 
     void OnDestroy()
@@ -79,6 +80,8 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
                 _isFree = true;
 
                 StartCoroutine(Throwing());
+
+                dissolveObjectPartEvent?.Invoke(gameObject.GetInstanceID());
             }
         }
     }
