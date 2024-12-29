@@ -114,6 +114,8 @@ public class BasicScrew : BaseScrew
             }));
 
             SoundManager.Instance.PlaySoundLoosenScrew();
+
+            Handheld.Vibrate();
         }
     }
 
