@@ -1,4 +1,5 @@
 #if UNITY_EDITOR
+using System.Diagnostics;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -15,6 +16,14 @@ public class SaferioSceneOpener : EditorWindow
     public static void OpenGameplayScene()
     {
         EditorSceneManager.OpenScene("Assets/Scenes/Gameplay - Screw Away.unity");
+    }
+
+    [MenuItem("Tools/Open Persistent Save Path")]
+    public static void OpenPersistentSavePath()
+    {
+        string path = Application.persistentDataPath;
+
+        Process.Start($"\"{path}\"");
     }
 }
 #endif

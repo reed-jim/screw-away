@@ -263,7 +263,7 @@ public class ScrewBoxManager : MonoBehaviour
         Vector3 destination = screwBox.transform.position;
 
         destination.x = (-(maxScrewBox - 1) / 2f + index) * 2.5f;
-        destination.z -= 0.0001f;
+        destination.z = -0.001f * index;
 
         if (_isSpawnScrewBoxFirstTimeInLevel)
         {
@@ -273,7 +273,7 @@ public class ScrewBoxManager : MonoBehaviour
         }
         else
         {
-            Tween.LocalPositionX(screwBox.transform, destination.x, duration: 0.5f).OnComplete(() =>
+            Tween.LocalPosition(screwBox.transform, destination, duration: 0.5f).OnComplete(() =>
             {
                 MoveFromScrewPortToScrewBox();
             });
@@ -287,6 +287,8 @@ public class ScrewBoxManager : MonoBehaviour
 
     private void SpawnAdsScrewBox()
     {
+        Vector3 destination;
+
         for (int i = 0; i < screwBoxs.Length; i++)
         {
             if (screwBoxs[i] == null)
@@ -299,7 +301,11 @@ public class ScrewBoxManager : MonoBehaviour
 
                 int index = i;
 
-                Tween.LocalPositionX(screwBox.transform, (-(maxScrewBox - 1) / 2f + index) * 2.5f, duration: 0.5f)
+                destination = screwBox.transform.position;
+                destination.x = (-(maxScrewBox - 1) / 2f + index) * 2.5f;
+                destination.z = -0.001f * index;
+
+                Tween.LocalPosition(screwBox.transform, destination, duration: 0.5f)
                 .OnComplete(() =>
                 {
                     screwBox.ScrewBoxServiceLocator.screwBoxUI.SetUnlockByAdsButtonPosition();
@@ -332,7 +338,7 @@ public class ScrewBoxManager : MonoBehaviour
                 Vector3 destination = screwBox.transform.position;
 
                 destination.x = (-(maxScrewBox - 1) / 2f + index) * 2.5f;
-                destination.z -= 0.0001f;
+                destination.z = -0.001f * index;
 
                 if (_isSpawnScrewBoxFirstTimeInLevel)
                 {
@@ -342,15 +348,12 @@ public class ScrewBoxManager : MonoBehaviour
                 }
                 else
                 {
-                    Tween.LocalPositionX(screwBox.transform, destination.x, duration: 0.5f)
+                    Tween.LocalPosition(screwBox.transform, destination, duration: 0.5f)
                     .OnComplete(() =>
                     {
                         screwBox.ScrewBoxServiceLocator.screwBoxUI.SetUnlockByAdsButtonPosition();
                     });
                 }
-
-
-
 
                 screwBoxs[i] = screwBox;
             }
