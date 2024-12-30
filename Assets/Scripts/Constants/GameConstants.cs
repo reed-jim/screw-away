@@ -57,6 +57,9 @@ public static class GameConstants
     public static string BREAK_OBJECT_SOUND = "Break Object Sound";
     public static string WIN_SOUND = "Win Sound";
     public static string LOSE_SOUND = "Lose Sound";
+    public static string CLICK_SOUND = "Click Sound";
+    public static string UNLOCK_ADS_SCREW_BOX_SOUND = "Unlock Ads Screw Box Sound";
+    public static string CLEAR_SCREW_PORTS_SOUND = "Clear Screw Ports Sound";
     #endregion
 
     #region ANIMATION

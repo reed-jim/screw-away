@@ -102,5 +102,9 @@ public class BoosterUI : MonoBehaviour
     private void ClearAllScrewPorts()
     {
         clearAllScrewPortsEvent?.Invoke();
+
+        AudioSource sound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.CLEAR_SCREW_PORTS_SOUND);
+
+        sound.Play();
     }
 }

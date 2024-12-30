@@ -18,6 +18,9 @@ public class ObjectPoolingEverythingInitializer : MonoBehaviour
     [SerializeField] private GameObject breakObjectSoundPrefab;
     [SerializeField] private GameObject winSoundPrefab;
     [SerializeField] private GameObject loseSoundPrefab;
+    [SerializeField] private GameObject clickSoundPrefab;
+    [SerializeField] private GameObject unlockAdsScrewBoxSoundPrefab;
+    [SerializeField] private GameObject clearScrewPortsSoundPrefab;
     [SerializeField] private GameObject destroyObjectPartFxPrefab;
 
     [SerializeField] private GameObject taskItemUIPrefab;
@@ -62,6 +65,9 @@ public class ObjectPoolingEverythingInitializer : MonoBehaviour
         RegisterPool<AudioSource>(GameConstants.BREAK_OBJECT_SOUND, breakObjectSoundPrefab, 3);
         RegisterPool<AudioSource>(GameConstants.WIN_SOUND, winSoundPrefab, 3);
         RegisterPool<AudioSource>(GameConstants.LOSE_SOUND, loseSoundPrefab, 3);
+        RegisterPool<AudioSource>(GameConstants.CLICK_SOUND, clickSoundPrefab, 3);
+        RegisterPool<AudioSource>(GameConstants.UNLOCK_ADS_SCREW_BOX_SOUND, unlockAdsScrewBoxSoundPrefab, 3);
+        RegisterPool<AudioSource>(GameConstants.CLEAR_SCREW_PORTS_SOUND, clearScrewPortsSoundPrefab, 3);
         RegisterPool<TaskItemUI>(GameConstants.TASK_ITEM_UI, taskItemUIPrefab, 5);
         RegisterPool<ParticleSystem>(GameConstants.DESTROY_OBJECT_PART_FX, destroyObjectPartFxPrefab, 5);
     }

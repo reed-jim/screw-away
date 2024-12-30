@@ -56,7 +56,7 @@ public class ScrewSelectionInput : MonoBehaviour
 
     private void SelectScrew()
     {
-        if (_inputMode == InputMode.Disabled)
+        if (_inputMode != InputMode.Select)
         {
             return;
         }

@@ -58,5 +58,14 @@ public class ScrewBoxUI : MonoBehaviour
         });
 
         unlockScrewBox?.Invoke(gameObject.GetInstanceID());
+
+        PlayUnlockSound();
+    }
+
+    private void PlayUnlockSound()
+    {
+        AudioSource sound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.UNLOCK_ADS_SCREW_BOX_SOUND);
+
+        sound.Play();
     }
 }

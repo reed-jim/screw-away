@@ -242,7 +242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sblocca casella
+  m_text: "\u30DC\u30C3\u30AF\u30B9\u306E\u30ED\u30C3\u30AF\u3092\u89E3\u9664\u3059\u308B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea321c4dec4cdd74fae016f2a45adbe2, type: 2}
   m_sharedMaterial: {fileID: -8589212015780818781, guid: ea321c4dec4cdd74fae016f2a45adbe2, type: 2}
@@ -801,7 +801,7 @@ MonoBehaviour:
   boxLid: {fileID: 2922332451361325574}
   screwBoxServiceLocator: {fileID: 2012672908965376577}
   isLocked: 0
-  closeBoxLidDuration: 0.25
+  closeBoxLidDuration: 0.2
   scaleDownDuration: 0.2
   delayMoveOutDuration: 0.05
   moveOutDuration: 0.4
