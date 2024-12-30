@@ -78,7 +78,7 @@ public class BasicScrew : BaseScrew
             // FOR ROTATING
             await Task.Delay(100);
 
-            _tweens.Add(Tween.Position(transform, transform.position + 3f * transform.forward, duration: 0.3f).OnComplete(() =>
+            _tweens.Add(Tween.Position(transform, transform.position + 2f * transform.forward, duration: 0.3f).OnComplete(() =>
             {
                 _isRotating = false;
 
