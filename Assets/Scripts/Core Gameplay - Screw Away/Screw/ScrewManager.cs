@@ -403,7 +403,7 @@ public class ScrewManager : MonoBehaviour
             {
                 GameFaction faction = factionSortedByDifficulty[i];
 
-                if ((remainingScrewByFaction[faction] - screwPortAvailableByFaction[faction]) < 3)
+                if (remainingScrewByFaction[faction] > 0 && (remainingScrewByFaction[faction] - screwPortAvailableByFaction[faction]) < 3)
                 {
                     nextFaction = faction;
 
