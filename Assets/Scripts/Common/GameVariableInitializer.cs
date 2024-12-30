@@ -1,4 +1,6 @@
 using System;
+using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 
 public class GameVariableInitializer : MonoBehaviour
@@ -13,6 +15,8 @@ public class GameVariableInitializer : MonoBehaviour
 
     public static event Action currentLevelFetchedEvent;
 
+    [SerializeField] private TMP_Text testCXurrentLevel;
+
     private void Awake()
     {
         canvasSize.Value = canvas.sizeDelta;
@@ -22,6 +26,16 @@ public class GameVariableInitializer : MonoBehaviour
         userResourcesObserver.Load();
 
         currentLevelFetchedEvent?.Invoke();
+
+        Testing();
+    }
+
+    private async void Testing() {
+        while(true) {
+            testCXurrentLevel.text = currentLevel.Value.ToString();
+
+            await Task.Delay(500);
+        }
     }
 
     private void Start()
