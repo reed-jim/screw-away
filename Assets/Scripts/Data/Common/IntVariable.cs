@@ -9,17 +9,10 @@ public class IntVariable : ScriptableObject
 
     public int Value
     {
-        get
-        {
-            Debug.Log("CURRENT LEVEL GET " + saveKey + " / " + this.value);
-
-            return value;
-        }
+        get => DataUtility.Load(saveKey, 1);
         set
         {
             this.value = value;
-
-            Debug.Log("CURRENT LEVEL SET " + saveKey + " / " + this.value);
 
             if (isSave)
             {
