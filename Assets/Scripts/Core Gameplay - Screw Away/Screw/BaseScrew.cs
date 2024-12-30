@@ -28,6 +28,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     protected ScrewData _screwData;
     #endregion
 
+    #region PROPERTY
     public int ScrewId
     {
         get => screwId;
@@ -83,6 +84,7 @@ public class BaseScrew : MonoBehaviour, IScrew
         get => _isInScrewPort;
         set => _isInScrewPort = value;
     }
+    #endregion
 
     #region EVENT
     public static event Action<int, GameFaction> selectScrewEvent;
@@ -91,12 +93,11 @@ public class BaseScrew : MonoBehaviour, IScrew
     public static event Action screwLoosenedEvent;
     #endregion
 
+    #region LIFE CYCLE
     protected virtual void Awake()
     {
         ScrewBoxManager.looseScrewEvent += Loose;
         RegisterMoreEvent();
-
-        // screwId = gameObject.GetInstanceID();
 
         AddScrewToList();
 
@@ -127,6 +128,7 @@ public class BaseScrew : MonoBehaviour, IScrew
     {
 
     }
+    #endregion
 
     public void Select()
     {
@@ -135,11 +137,7 @@ public class BaseScrew : MonoBehaviour, IScrew
 
     public virtual void Loose(int screwId, GameFaction faction, ScrewBoxSlot screwBoxSlot)
     {
-        if (screwId == this.screwId)
-        {
-            Tween.Rotation(transform, Quaternion.Euler(new Vector3(-30, 180, 0)), duration: 1f);
-            Tween.Position(transform, screwBoxSlot.transform.position + new Vector3(0, 0, -0.3f), duration: 1f);
-        }
+
     }
 
     private async void AddScrewToList()

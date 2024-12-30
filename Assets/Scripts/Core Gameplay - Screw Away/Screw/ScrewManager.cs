@@ -8,15 +8,15 @@ using static GameEnum;
 
 public class ScrewManager : MonoBehaviour
 {
-    [SerializeField] private List<BaseScrew> _screws;
-
     [SerializeField] private ScrewBoxManager screwBoxManager;
 
+    [Header("SCRIPTABLE OBJECT")]
     [SerializeField] private IntVariable currentLevel;
     [SerializeField] private LevelDataContainer levelDataContainer;
     [SerializeField] private LevelDifficultyConfiguration levelDifficultyConfiguration;
 
     #region PRIVATE FIELD
+    private List<BaseScrew> _screws;
     private int _totalScrewObserved;
     private int _totalScrew;
     #endregion

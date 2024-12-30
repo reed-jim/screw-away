@@ -7,15 +7,10 @@ public class BasicScrew : BaseScrew
 {
     private float _distanceBlocked;
 
-    #region EVENT
-    public static event Action disableInputEvent;
-    #endregion
-
     private void Update()
     {
         if (_isRotating)
         {
-            // transform.Rotate(transform.forward * 300f * Time.deltaTime);
             transform.RotateAround(transform.forward, 0.3f);
         }
     }

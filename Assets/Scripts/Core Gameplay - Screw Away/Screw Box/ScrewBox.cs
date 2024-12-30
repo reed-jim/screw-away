@@ -12,9 +12,8 @@ public class ScrewBox : MonoBehaviour
 
     [SerializeField] private ScrewBoxServiceLocator screwBoxServiceLocator;
 
-    [SerializeField] private bool isLocked;
-
     [Header("CUSTOMIZE")]
+    [SerializeField] private bool isLocked;
     [SerializeField] private float closeBoxLidDuration;
     [SerializeField] private float scaleDownDuration;
     [SerializeField] private float delayMoveOutDuration;
