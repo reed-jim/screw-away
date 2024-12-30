@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameVariableInitializer : MonoBehaviour
@@ -10,6 +11,8 @@ public class GameVariableInitializer : MonoBehaviour
     [SerializeField] private IntVariable currentLevel;
     [SerializeField] private UserResourcesObserver userResourcesObserver;
 
+    public static event Action currentLevelFetchedEvent;
+
     private void Awake()
     {
         canvasSize.Value = canvas.sizeDelta;
@@ -17,6 +20,8 @@ public class GameVariableInitializer : MonoBehaviour
         currentLevel.Load();
 
         userResourcesObserver.Load();
+
+        currentLevelFetchedEvent?.Invoke();
     }
 
     private void Start()

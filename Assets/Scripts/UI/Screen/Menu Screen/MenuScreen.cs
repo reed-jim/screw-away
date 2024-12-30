@@ -20,16 +20,20 @@ public class MenuScreen : MonoBehaviour
 
     private void Awake()
     {
+        GameVariableInitializer.currentLevelFetchedEvent += UpdateCurrentLevelText;
+
+        localizedLevelText.textTranslatedEvent += OnLevelTextTranslated;
+
         startGameButton.onClick.AddListener(StartGame);
         openRemoveAdPopupButton.onClick.AddListener(OpenRemoveAdPopup);
         luckyWheelButton.onClick.AddListener(OpenLuckyWheelScreen);
         weeklyTaskButton.onClick.AddListener(OpenWeeklyTaskScreen);
-
-        localizedLevelText.textTranslatedEvent += OnLevelTextTranslated;
     }
 
     void OnDestroy()
     {
+        GameVariableInitializer.currentLevelFetchedEvent -= UpdateCurrentLevelText;
+
         localizedLevelText.textTranslatedEvent -= OnLevelTextTranslated;
     }
 
@@ -71,5 +75,10 @@ public class MenuScreen : MonoBehaviour
         AudioSource clickSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.CLICK_SOUND);
 
         clickSound.Play();
+    }
+
+    private void UpdateCurrentLevelText()
+    {
+        localizedLevelText.UpdateTranslationWithParameter(GameConstants.LEVEL_PARAMETER, $"{currentLevel.Value}");
     }
 }

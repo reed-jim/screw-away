@@ -5,6 +5,7 @@ public class IntVariable : ScriptableObject
 {
     [SerializeField] private int value;
     [SerializeField] private bool isSave;
+    [SerializeField] private string saveKey;
 
     public int Value
     {
@@ -15,18 +16,18 @@ public class IntVariable : ScriptableObject
 
             if (isSave)
             {
-                Save();
+                Save(saveKey);
             }
         }
     }
 
-    public void Save()
+    public void Save(string key)
     {
-        DataUtility.SaveAsync(GameConstants.CURRENT_LEVEL, value);
+        DataUtility.SaveAsync(key, value);
     }
 
     public void Load()
     {
-        value = DataUtility.Load(GameConstants.CURRENT_LEVEL, value);
+        value = DataUtility.Load(saveKey, value);
     }
 }

@@ -66,6 +66,8 @@ public class LevelLoader : MonoBehaviour
             Destroy(gameObject.transform.GetChild(0).gameObject);
         }
 
+        Debug.Log("CURRENT LEVEL " + level);
+
         currentLevel.Value = level;
 
         startLevelEvent?.Invoke();

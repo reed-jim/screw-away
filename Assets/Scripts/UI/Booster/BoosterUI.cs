@@ -21,12 +21,15 @@ public class BoosterUI : MonoBehaviour
 
     [Header("CUSTOMIZE")]
     [SerializeField] private float transitionTime;
+    [SerializeField] private float waitTimeBetweenClicks;
 
     public static event Action addMoreScrewPortEvent;
     public static event Action enableBreakObjectModeEvent;
     public static event Action clearAllScrewPortsEvent;
 
     private int _numScrewPortsAdded;
+    private bool _isInTransition;
+
     private Vector2 _initialBoosterContainerPosition;
     private Vector2 _initialAddMoreScrewPortButtonPosition;
     private Vector2 _initialbreakObjectButtonPosition;
@@ -55,13 +58,30 @@ public class BoosterUI : MonoBehaviour
 
     private void Reset()
     {
-        Tween.LocalPosition(addMoreScrewPortButtonRT, _initialAddMoreScrewPortButtonPosition, duration: 0.3f);
-        Tween.LocalPosition(breakModeButtonRT, _initialbreakObjectButtonPosition, duration: 0.3f);
-        Tween.LocalPosition(clearAllScrewPortsButtonRT, _initialClearAllScrewPortsButtonPosition, duration: 0.3f);
+        Tween.LocalPosition(boosterContainer, _initialBoosterContainerPosition, duration: transitionTime);
+        Tween.LocalPosition(addMoreScrewPortButtonRT, _initialAddMoreScrewPortButtonPosition, duration: transitionTime);
+        Tween.LocalPosition(breakModeButtonRT, _initialbreakObjectButtonPosition, duration: transitionTime);
+        Tween.LocalPosition(clearAllScrewPortsButtonRT, _initialClearAllScrewPortsButtonPosition, duration: transitionTime);
+
+        breakModeContainer.gameObject.SetActive(false);
+
+        addMoreScrewPortButton.interactable = true;
+
+        _numScrewPortsAdded = 0;
+        _isInTransition = false;
     }
 
     private void AddMoreScrewPort()
     {
+        if (_isInTransition)
+        {
+            return;
+        }
+        else
+        {
+            _isInTransition = true;
+        }
+
         addMoreScrewPortEvent?.Invoke();
 
         _numScrewPortsAdded++;
@@ -75,10 +95,24 @@ public class BoosterUI : MonoBehaviour
             Tween.LocalPositionX(breakModeButtonRT, -0.2f * canvasSize.Value.x, duration: 0.3f);
             Tween.LocalPositionX(clearAllScrewPortsButtonRT, 0.2f * canvasSize.Value.x, duration: 0.3f);
         }
+
+        Tween.Delay(waitTimeBetweenClicks).OnComplete(() =>
+        {
+            _isInTransition = false;
+        });
     }
 
     private void EnableBreakObjectMode()
     {
+        if (_isInTransition)
+        {
+            return;
+        }
+        else
+        {
+            _isInTransition = true;
+        }
+
         breakModeContainer.gameObject.SetActive(true);
 
         Tween.LocalPositionY(boosterContainer, -canvasSize.Value.y, duration: transitionTime);
@@ -86,6 +120,8 @@ public class BoosterUI : MonoBehaviour
         .OnComplete(() =>
         {
             enableBreakObjectModeEvent?.Invoke();
+
+            _isInTransition = false;
         });
     }
 
@@ -101,10 +137,24 @@ public class BoosterUI : MonoBehaviour
 
     private void ClearAllScrewPorts()
     {
+        if (_isInTransition)
+        {
+            return;
+        }
+        else
+        {
+            _isInTransition = true;
+        }
+
         clearAllScrewPortsEvent?.Invoke();
 
         AudioSource sound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.CLEAR_SCREW_PORTS_SOUND);
 
         sound.Play();
+
+        Tween.Delay(waitTimeBetweenClicks).OnComplete(() =>
+        {
+            _isInTransition = false;
+        });
     }
 }

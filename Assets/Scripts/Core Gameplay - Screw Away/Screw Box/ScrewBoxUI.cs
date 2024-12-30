@@ -52,10 +52,15 @@ public class ScrewBoxUI : MonoBehaviour
 
     private void Unlock()
     {
-        Tween.Scale(unlockByAdsButtonRT, 0, duration: 0.3f).OnComplete(() =>
+        Tween.LocalPositionY(unlockByAdsButtonRT, unlockByAdsButtonRT.localPosition.y + 0.5f * canvasSize.Value.y, duration: 0.3f).OnComplete(() =>
         {
             unlockByAdsButton.gameObject.SetActive(false);
         });
+
+        // Tween.Scale(unlockByAdsButtonRT, 0, duration: 0.3f).OnComplete(() =>
+        // {
+        //     unlockByAdsButton.gameObject.SetActive(false);
+        // });
 
         unlockScrewBox?.Invoke(gameObject.GetInstanceID());
 

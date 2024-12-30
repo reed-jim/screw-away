@@ -162,7 +162,7 @@ public class BasicScrew : BaseScrew
 
                     number++;
 
-                    if (distance < 2)
+                    if (distance < 1)
                     {
                         number++;
                     }

@@ -114,11 +114,20 @@ public class BasePopup : MonoBehaviour
             _isShown = false;
 
             AfterHide();
+
+            PlayClickSound();
         }
     }
 
     protected virtual void AfterHide()
     {
 
+    }
+
+    private void PlayClickSound()
+    {
+        AudioSource clickSound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.CLICK_SOUND);
+
+        clickSound.Play();
     }
 }

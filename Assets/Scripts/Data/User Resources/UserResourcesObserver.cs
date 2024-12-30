@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObject/Saferio/Screw Away/UserResourcesObserver")]
 public class UserResourcesObserver : ScriptableObject
 {
-    [SerializeField] private UserResources userResources;
+    [SerializeField] private UserResources userResources = new UserResources();
 
     public UserResources UserResources
     {
