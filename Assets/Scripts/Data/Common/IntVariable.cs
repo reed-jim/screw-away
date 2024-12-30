@@ -9,16 +9,18 @@ public class IntVariable : ScriptableObject
 
     public int Value
     {
-        get => DataUtility.Load(saveKey, 1);
-        set
-        {
-            this.value = value;
+        // get => DataUtility.Load(saveKey, 1);
+        // set
+        // {
+        //     this.value = value;
 
-            if (isSave)
-            {
-                Save(saveKey);
-            }
-        }
+        //     if (isSave)
+        //     {
+        //         Save(saveKey);
+        //     }
+        // }
+        get => value;
+        set => this.value = value;
     }
 
     public void Save(string key)
