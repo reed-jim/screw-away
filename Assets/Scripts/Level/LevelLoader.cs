@@ -25,6 +25,8 @@ public class LevelLoader : MonoBehaviour
         WinPopup.nextLevelEvent += NextLevel;
         WinPopup.goLevelEvent += GoLevel;
 
+        currentLevel.Load();
+
         GoLevel(currentLevel.Value);
     }
 
@@ -65,8 +67,6 @@ public class LevelLoader : MonoBehaviour
         {
             Destroy(gameObject.transform.GetChild(0).gameObject);
         }
-
-        Debug.Log("CURRENT LEVEL " + level);
 
         currentLevel.Value = level;
 
