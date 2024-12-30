@@ -39,7 +39,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
         _totalJoint = GetComponents<HingeJoint>().Length;
 
-        throwForceMultiplier = new Vector3(66f, 9f, 66f) * 0.02f;
+        throwForceMultiplier = new Vector3(66f, 9f, 66f) * 0.1f;
     }
 
     void OnDestroy()
@@ -81,7 +81,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
                 StartCoroutine(Throwing());
 
-                dissolveObjectPartEvent?.Invoke(gameObject.GetInstanceID());
+                // dissolveObjectPartEvent?.Invoke(gameObject.GetInstanceID());
             }
         }
     }

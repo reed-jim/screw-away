@@ -117,13 +117,14 @@ public class ScrewManager : MonoBehaviour
         return remainingScrewByFaction;
     }
 
-    private Dictionary<GameFaction, int> GetTotalBlockObjectsByFaction()
+    private Dictionary<GameFaction, int> GetDifficultyLevelByFaction()
     {
-        Dictionary<GameFaction, int> totalBlockObjectsByFaction = new Dictionary<GameFaction, int>();
+        Dictionary<GameFaction, int> difficultyLevelByFactions = new Dictionary<GameFaction, int>();
+        Dictionary<GameFaction, int> totalNotBlockedScrewByFaction = new Dictionary<GameFaction, int>();
 
         for (int i = 0; i < GameConstants.SCREW_FACTION.Length; i++)
         {
-            totalBlockObjectsByFaction.Add(GameConstants.SCREW_FACTION[i], 0);
+            difficultyLevelByFactions.Add(GameConstants.SCREW_FACTION[i], 0);
         }
 
         for (int i = 0; i < _screws.Count; i++)
@@ -133,18 +134,35 @@ public class ScrewManager : MonoBehaviour
                 continue;
             }
 
+            GameFaction faction = _screws[i].Faction;
+
             int numberBlockObject = _screws[i].NumberBlockingObjects;
 
             // Compensate
             if (numberBlockObject == 0)
             {
-                numberBlockObject = -2;
+                // numberBlockObject = -GameConstants.SCREW_FACTION.Length;
+                // numberBlockObject = -1;
+
+                if (totalNotBlockedScrewByFaction.ContainsKey(faction))
+                {
+                    totalNotBlockedScrewByFaction[faction]++;
+                }
+                else
+                {
+                    totalNotBlockedScrewByFaction.Add(faction, 1);
+                }
             }
 
-            totalBlockObjectsByFaction[_screws[i].Faction] += numberBlockObject;
+            difficultyLevelByFactions[faction] += numberBlockObject;
         }
 
-        return totalBlockObjectsByFaction;
+        foreach (var faction in totalNotBlockedScrewByFaction.Keys)
+        {
+            difficultyLevelByFactions[faction] -= (totalNotBlockedScrewByFaction[faction] / GameConstants.NUMBER_SLOT_PER_SCREW_BOX) * GameConstants.SCREW_FACTION.Length;
+        }
+
+        return difficultyLevelByFactions;
     }
 
     private void CheckWin()
@@ -178,8 +196,6 @@ public class ScrewManager : MonoBehaviour
     #region MANAGE SCREW BOX
     private async void SpawnFirstScrewBoxes()
     {
-        Debug.Log("TOTAL: " + _totalScrew);
-
         GameFaction[] sortedFactionByBlockedObject = await GetSortedFactionsByBlockedObject();
 
         // Spawn 2 default screw boxes
@@ -208,8 +224,6 @@ public class ScrewManager : MonoBehaviour
                 numberScrewBoxToSpawn++;
             }
         }
-
-        Debug.Log("NUM BOX: " + numberScrewBoxToSpawn);
 
         for (int i = 0; i < numberScrewBoxToSpawn; i++)
         {
@@ -264,11 +278,11 @@ public class ScrewManager : MonoBehaviour
 
         Dictionary<GameFaction, int> screwPortAvailableByFaction = screwBoxManager.GetScrewPortAvailableByFaction();
         Dictionary<GameFaction, int> remainingScrewByFaction = GetRemainingScrewByFaction();
-        Dictionary<GameFaction, int> totalBlockObjectsByFaction = GetTotalBlockObjectsByFaction();
+        Dictionary<GameFaction, int> difficultyLevelByFaction = GetDifficultyLevelByFaction();
 
-        Dictionary<GameFaction, int> shuffledTotalBlockObjectsByFaction = ShuffleUtil.ShuffleItemsWithSameValue(totalBlockObjectsByFaction);
+        Dictionary<GameFaction, int> shuffledDifficultyLevelByFaction = ShuffleUtil.ShuffleItemsWithSameValue(difficultyLevelByFaction);
 
-        GameFaction[] factionSortedByDifficulty = shuffledTotalBlockObjectsByFaction.OrderBy(item => item.Value).Select(item => item.Key).ToArray();
+        GameFaction[] factionSortedByDifficulty = shuffledDifficultyLevelByFaction.OrderBy(item => item.Value).Select(item => item.Key).ToArray();
 
         return factionSortedByDifficulty;
     }
@@ -317,7 +331,7 @@ public class ScrewManager : MonoBehaviour
 
         Dictionary<GameFaction, int> screwPortAvailableByFaction = screwBoxManager.GetScrewPortAvailableByFaction();
         Dictionary<GameFaction, int> remainingScrewByFaction = GetRemainingScrewByFaction();
-        Dictionary<GameFaction, int> totalBlockObjectsByFaction = GetTotalBlockObjectsByFaction();
+        Dictionary<GameFaction, int> totalBlockObjectsByFaction = GetDifficultyLevelByFaction();
 
         GameFaction[] factionSortedByDifficulty = totalBlockObjectsByFaction.OrderBy(item => item.Value).Select(item => item.Key).ToArray();
 
@@ -327,15 +341,19 @@ public class ScrewManager : MonoBehaviour
 
         bool isFound = false;
 
-        // Debug.Log("---------------------------------------");
+        Debug.Log("---------------------------------------");
 
-        // for (int i = 0; i < factionSortedByDifficulty.Length; i++)
-        // {
-        //     GameFaction faction = factionSortedByDifficulty[i];
+        for (int i = 0; i < factionSortedByDifficulty.Length; i++)
+        {
+            GameFaction faction = factionSortedByDifficulty[i];
 
-        //     Debug.Log($"{faction} Remaining: {remainingScrewByFaction[faction]} Available: {screwPortAvailableByFaction[faction]}");
-        //     Debug.Log($"Blocked: {totalBlockObjectsByFaction[faction]}");
-        // }
+            string debugString = $"{faction} Remaining: {remainingScrewByFaction[faction]}";
+
+            debugString += $" Available: {screwPortAvailableByFaction[faction]}";
+            debugString += $" <color=#FF6060>Difficulty: {totalBlockObjectsByFaction[faction]}</color>";
+
+            Debug.Log(debugString);
+        }
 
         for (int i = 0; i < factionSortedByDifficulty.Length; i++)
         {

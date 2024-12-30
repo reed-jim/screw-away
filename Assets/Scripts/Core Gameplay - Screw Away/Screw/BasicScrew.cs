@@ -92,8 +92,6 @@ public class BasicScrew : BaseScrew
                 {
                     transform.SetParent(screwBoxSlot.transform);
 
-                    // transform.position = ConvertPositionToAnotherCameraSpace();
-                    // transform.localScale *= 12f / 14;
                     gameObject.layer = LayerMask.NameToLayer("UI");
 
                     float duration = 0.3f;
@@ -115,29 +113,23 @@ public class BasicScrew : BaseScrew
 
             SoundManager.Instance.PlaySoundLoosenScrew();
 
-            Handheld.Vibrate();
+            // VibrateSlightly();
         }
     }
 
-    private Vector3 ConvertPositionToAnotherCameraSpace()
+    public void VibrateSlightly()
     {
-        Vector3 camera1Position = new Vector3(0, 6.5f, -10);
-        Quaternion camera1Rotation = Quaternion.Euler(30, 0, 0);
-
-        Vector3 camera2Position = new Vector3(0, 0, -10);
-        Quaternion camera2Rotation = Quaternion.Euler(0, 0, 0);
-
-        Vector3 worldPos = gameObject.transform.position;
-
-        Vector3 localPosInCamera1 = camera1Position - worldPos;
-
-        Vector3 localPosInCamera2 = camera2Position + localPosInCamera1;
-
-        Vector3 compensatedPosition = transform.position;
-
-        compensatedPosition.y = transform.position.y * Mathf.Sin(30 * Mathf.Deg2Rad) + (camera1Position.y - camera2Position.y);
-
-        return compensatedPosition;
+#if UNITY_ANDROID
+        using (AndroidJavaClass vibratorClass = new AndroidJavaClass("android.os.Vibrator"))
+        {
+            using (AndroidJavaObject vibrator = vibratorClass.Call<AndroidJavaObject>("getSystemService", "vibrator"))
+            {
+                // Pattern: start immediately, vibrate for 50ms, then pause for 50ms, and repeat
+                long[] pattern = { 0, 20, 20 };  // Vibrate for 50ms, pause for 50ms
+                vibrator.Call("vibrate", pattern, -1); // -1 means no repeat
+            }
+        }
+#endif
     }
 
     public override int CountBlockingObjects()

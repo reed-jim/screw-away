@@ -17,15 +17,15 @@ public class LevelDifficultyConfiguration : ScriptableObject
 public class LevelPhase
 {
     [SerializeField] private float endProgress;
-    [SerializeField] private LevelDifficulty levelDifficulty;
+    // [SerializeField] private LevelDifficulty levelDifficulty;
 
     public float EndProgress
     {
         get => endProgress;
     }
 
-    public LevelDifficulty LevelDifficulty
-    {
-        get => levelDifficulty;
-    }
+    // public LevelDifficulty LevelDifficulty
+    // {
+    //     get => levelDifficulty;
+    // }
 }
