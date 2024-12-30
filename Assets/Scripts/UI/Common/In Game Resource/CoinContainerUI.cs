@@ -35,7 +35,7 @@ public class CoinContainerUI : MonoBehaviour
 
         _tweens = new List<Tween>();
 
-        coinText.text = $"{userResourcesObserver.CoinValue}";
+        coinText.text = $"{userResourcesObserver.UserResources.CoinQuantity}";
     }
 
     private void OnDestroy()

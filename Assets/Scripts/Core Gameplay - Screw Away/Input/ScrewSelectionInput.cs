@@ -107,7 +107,7 @@ public class ScrewSelectionInput : MonoBehaviour
             {
                 if (_inputMode == InputMode.BreakObject)
                 {
-                    objectPart.Break();
+                    objectPart.Break(hit.point);
 
                     breakObjectEvent?.Invoke();
 

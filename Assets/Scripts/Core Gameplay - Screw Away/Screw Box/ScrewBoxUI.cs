@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using PrimeTween;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,12 +45,17 @@ public class ScrewBoxUI : MonoBehaviour
 
     public void Lock()
     {
+        unlockByAdsButtonRT.localScale = Vector3.one;
+
         unlockByAdsButton.gameObject.SetActive(true);
     }
 
     private void Unlock()
     {
-        unlockByAdsButton.gameObject.SetActive(false);
+        Tween.Scale(unlockByAdsButtonRT, 0, duration: 0.3f).OnComplete(() =>
+        {
+            unlockByAdsButton.gameObject.SetActive(false);
+        });
 
         unlockScrewBox?.Invoke(gameObject.GetInstanceID());
     }

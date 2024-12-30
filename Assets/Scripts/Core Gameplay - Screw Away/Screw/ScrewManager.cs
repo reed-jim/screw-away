@@ -341,19 +341,19 @@ public class ScrewManager : MonoBehaviour
 
         bool isFound = false;
 
-        Debug.Log("---------------------------------------");
+        // Debug.Log("---------------------------------------");
 
-        for (int i = 0; i < factionSortedByDifficulty.Length; i++)
-        {
-            GameFaction faction = factionSortedByDifficulty[i];
+        // for (int i = 0; i < factionSortedByDifficulty.Length; i++)
+        // {
+        //     GameFaction faction = factionSortedByDifficulty[i];
 
-            string debugString = $"{faction} Remaining: {remainingScrewByFaction[faction]}";
+        //     string debugString = $"{faction} Remaining: {remainingScrewByFaction[faction]}";
 
-            debugString += $" Available: {screwPortAvailableByFaction[faction]}";
-            debugString += $" <color=#FF6060>Difficulty: {totalBlockObjectsByFaction[faction]}</color>";
+        //     debugString += $" Available: {screwPortAvailableByFaction[faction]}";
+        //     debugString += $" <color=#FF6060>Difficulty: {totalBlockObjectsByFaction[faction]}</color>";
 
-            Debug.Log(debugString);
-        }
+        //     Debug.Log(debugString);
+        // }
 
         for (int i = 0; i < factionSortedByDifficulty.Length; i++)
         {
@@ -392,6 +392,22 @@ public class ScrewManager : MonoBehaviour
                     isFound = true;
 
                     break;
+                }
+            }
+        }
+
+        // CASE: there are a few screws left, but no screw box spawned and player can't win
+        if (!isFound)
+        {
+            for (int i = 0; i < factionSortedByDifficulty.Length; i++)
+            {
+                GameFaction faction = factionSortedByDifficulty[i];
+
+                if ((remainingScrewByFaction[faction] - screwPortAvailableByFaction[faction]) < 3)
+                {
+                    nextFaction = faction;
+
+                    isFound = true;
                 }
             }
         }

@@ -3,5 +3,5 @@ using UnityEngine;
 public interface IObjectPart
 {
     public void Select();
-    public void Break();
+    public void Break(Vector3 touchPosition);
 }

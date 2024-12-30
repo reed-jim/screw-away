@@ -85,6 +85,8 @@ public static class GameConstants
     public static string CURRENT_LEVEL = "Current Level";
     public static string WEEKLY_TASKS = "Weekly Tasks";
     public static string SCREWS_DATA = "Screws Data";
+    public static string COIN_ = "User Coin";
+    public static string USER_RESOURCES = "User Resources";
     #endregion
 
     #region SCREW AWAY

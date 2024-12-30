@@ -39,7 +39,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
 
         _totalJoint = GetComponents<HingeJoint>().Length;
 
-        throwForceMultiplier = new Vector3(66f, 9f, 66f) * 0.1f;
+        throwForceMultiplier = new Vector3(66f, 9f, 66f) * 0.2f;
     }
 
     void OnDestroy()
@@ -133,7 +133,7 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
         // }
     }
 
-    public async void Break()
+    public async void Break(Vector3 touchPosition)
     {
         BoosterHammer hammer = ObjectPoolingEverything.GetFromPool<BoosterHammer>(GameConstants.HAMMER);
 
@@ -171,11 +171,12 @@ public class BasicObjectPart : MonoBehaviour, IObjectPart
         hammer.transform.rotation = Quaternion.LookRotation(transform.forward);
         hammer.transform.Rotate(new Vector3(0, 90, 0));
 
-        hammer.transform.position = transform.position + 5 * expectedZDirection * transform.forward + 0 * transform.up;
+        // hammer.transform.position = transform.position + 5 * expectedZDirection * transform.forward + 0 * transform.up;
+        hammer.transform.position = touchPosition;
 
         Tween.Position(hammer.transform, transform.position + 2f * expectedZDirection * transform.forward + 1 * expectedYDirection * transform.up, duration: 0.2f)
-        .Chain(Tween.Rotation(hammer.transform, hammer.transform.rotation.eulerAngles + new Vector3(0, 0, expectedZDirection * 45), duration: 0.6f))
-        .Chain(Tween.Rotation(hammer.transform, hammer.transform.rotation.eulerAngles + new Vector3(0, 0, -expectedZDirection * 15), duration: 0.2f)
+        .Chain(Tween.Rotation(hammer.transform, hammer.transform.rotation.eulerAngles + new Vector3(0, 0, expectedZDirection * 60), duration: 0.6f))
+        .Chain(Tween.Rotation(hammer.transform, hammer.transform.rotation.eulerAngles + new Vector3(0, 0, -expectedZDirection * 30), duration: 0.2f)
         .OnComplete(() =>
         {
             Tween.Position(hammer.transform, 50f * expectedZDirection * transform.forward, startDelay: 0.3f, duration: 0.3f);

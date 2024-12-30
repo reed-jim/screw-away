@@ -357,6 +357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7643315751019044431}
+  - component: {fileID: 7443728272882612845}
   - component: {fileID: 1519438519885064531}
   - component: {fileID: 1674414317526947859}
   - component: {fileID: 1531154902287509550}
@@ -391,6 +392,25 @@ RectTransform:
   m_AnchoredPosition: {x: -300, y: 0}
   m_SizeDelta: {x: 268, y: 192}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7443728272882612845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803360258022319673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3ef491580c1924eb5207f0661df4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantityTextContainer: {fileID: 7649664079938059089}
+  quantityTextRT: {fileID: 2425928740028114085}
+  addButtonRT: {fileID: 5339193976586966690}
+  quantityText: {fileID: 3898994048903722052}
+  addButton: {fileID: 6191695911771590696}
+  boosterIndex: 0
+  userResourcesObserver: {fileID: 11400000, guid: 9f7c1dbaae3ef634e8295c3cc55ef7cf, type: 2}
 --- !u!222 &1519438519885064531
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -485,7 +505,7 @@ GameObject:
   - component: {fileID: 138212119556909601}
   - component: {fileID: 7159549544556700713}
   m_Layer: 5
-  m_Name: Number Container
+  m_Name: Quantity Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -697,7 +717,7 @@ GameObject:
   - component: {fileID: 2464829844786553723}
   - component: {fileID: 3898994048903722052}
   m_Layer: 5
-  m_Name: Number Text
+  m_Name: Quantity Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

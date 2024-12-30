@@ -55,7 +55,7 @@ public class BasicScrew : BaseScrew
 
                 SoundManager.Instance.PlaySoundLoosenScrewFail();
 
-                _tweens.Add(Tween.LocalPosition(fakeScrew.transform, 0.6f * _distanceBlocked * (fakeScrew.transform.localRotation * Vector3.forward),
+                _tweens.Add(Tween.LocalPosition(fakeScrew.transform, 0.1f * (fakeScrew.transform.localRotation * Vector3.forward),
                     cycles: 2, cycleMode: CycleMode.Yoyo, duration: 0.5f)
                 .OnComplete(() =>
                 {
@@ -162,10 +162,10 @@ public class BasicScrew : BaseScrew
 
                     number++;
 
-                    // if (distance < 2)
-                    // {
-                    //     number++;
-                    // }
+                    if (distance < 2)
+                    {
+                        number++;
+                    }
                 }
             }
         }

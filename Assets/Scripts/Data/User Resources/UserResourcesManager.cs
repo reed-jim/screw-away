@@ -21,8 +21,8 @@ public class UserResourcesManager : MonoBehaviour
 
     private void AddCoin(float value)
     {
-        userResourcesObserver.CoinValue += value;
+        userResourcesObserver.UserResources.CoinQuantity += value;
 
-        updateCoinTextEvent?.Invoke(userResourcesObserver.CoinValue);
+        updateCoinTextEvent?.Invoke(userResourcesObserver.UserResources.CoinQuantity);
     }
 }

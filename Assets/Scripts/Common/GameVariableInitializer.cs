@@ -8,12 +8,15 @@ public class GameVariableInitializer : MonoBehaviour
     [SerializeField] private Vector2Variable canvasScale;
 
     [SerializeField] private IntVariable currentLevel;
+    [SerializeField] private UserResourcesObserver userResourcesObserver;
 
     private void Awake()
     {
         canvasSize.Value = canvas.sizeDelta;
 
         currentLevel.Load();
+
+        userResourcesObserver.Load();
     }
 
     private void Start()
