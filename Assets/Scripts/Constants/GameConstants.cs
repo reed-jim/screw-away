@@ -52,6 +52,7 @@ public static class GameConstants
 
     #region SOUND
     public static string LOOSEN_SCREW_SOUND = "Loosen Screw Sound";
+    public static string TIGHTEN_SCREW_SOUND = "Tighten Screw Sound";
     public static string LOOSEN_SCREW_FAIL_SOUND = "Loosen Screw Fail Sound";
     public static string SCREW_BOX_DONE_SOUND = "Screw Box Done Sound";
     public static string BREAK_OBJECT_SOUND = "Break Object Sound";

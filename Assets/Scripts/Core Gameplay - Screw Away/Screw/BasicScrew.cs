@@ -96,6 +96,8 @@ public class BasicScrew : BaseScrew
                     _tweens.Add(Tween.Scale(transform, scaleOnScrewBox * Vector3.one, duration: duration)
                     .OnComplete(() =>
                     {
+                        SoundManager.Instance.PlaySoundTightenScrew();
+
                         screwBoxSlot.CompleteFill();
 
                         _isDone = true;

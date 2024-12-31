@@ -55,6 +55,18 @@ public class SoundManager : MonoBehaviour
         sound.Play();
     }
 
+    public void PlaySoundTightenScrew()
+    {
+        if (!_isEnableGameSound)
+        {
+            return;
+        }
+
+        AudioSource sound = ObjectPoolingEverything.GetFromPool<AudioSource>(GameConstants.TIGHTEN_SCREW_SOUND);
+
+        sound.Play();
+    }
+
     public void PlaySoundLoosenScrewFail()
     {
         if (!_isEnableGameSound)
